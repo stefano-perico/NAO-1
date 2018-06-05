@@ -1,0 +1,23 @@
+{
+  "name": "nao",
+  "version": "1.0.0",
+  "description": "Site web de l'association NAO (Nos Amis les Oiseaux)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fildus/NAO.git"
+  },
+  "author": "Web.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fildus/NAO/issues"
+  },
+  "homepage": "https://github.com/Fildus/NAO#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}
