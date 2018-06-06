@@ -107,4 +107,14 @@ class TestController extends Controller
         dump($repository->findAll());
         return new Response('<html><body></body></html>');
     }
+
+    /**
+     * @Route("/", name="home")
+     */
+    public function home()
+    {
+        return $this->render('views/home.html.twig');
+    }
+
+
 }
