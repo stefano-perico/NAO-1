@@ -4,8 +4,17 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <script defer src="{{ asset('build/js/scattered/turbolinks-min.js') }}" data-turbolinks-eval="false"></script>
+        <script defer src="{{ asset('build/js/compact/compact-min.js') }}" data-turbolinks-eval="false"></script>
     </head>
     <body>
+        <header>
+            <a href="{{ path('users') }}">{{ path('users') }}</a>
+            <a href="{{ path('articles') }}">{{ path('articles') }}</a>
+            <a href="{{ path('categories') }}">{{ path('categories') }}</a>
+            <a href="{{ path('comments') }}">{{ path('comments') }}</a>
+            <a href="{{ path('event') }}">{{ path('event') }}</a>
+        </header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
