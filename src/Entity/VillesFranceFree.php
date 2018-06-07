@@ -690,5 +690,4 @@ class VillesFranceFree
         return $this;
     }
 
-
 }
