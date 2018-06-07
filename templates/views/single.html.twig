@@ -1,27 +1,36 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <!-- section a -->
-    <section id="section-a">
-        <div class="content-wrap">
-            <h2 class="content-title">Qui sommes-nous</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Distinctio facere facilis illo in modi neque
-                officia placeat quas reprehenderit rerum!
-            </p>
-        </div>
-    </section>
+    <section class="container">
+        <!-- section a -->
+        <section id="section-a" class="row">
+            <div class="content-wrap">
+                <h1 class="content-title">{{ title }}</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Distinctio facere facilis illo in modi neque
+                    officia placeat quas reprehenderit rerum!
+                </p>
+            </div>
+        </section>
 
-    <!-- section b -->
-    <section id="sectuion-b">
-        <div class="box">
-            <h2 class="content-title">Nous contacter</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                A aliquid distinctio dolorum esse ex non perferendis, quos
-                repellat saepe veniam?
-            </p>
-            <p>contact@nao.test</p>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3><i class="pr-3 fa fa-comment"></i>10 Comments</h3>
+                <hr>
+
+                <!-- section b -->
+                <section id="sectuion-b" class="row">
+                    <div class="col-sm-12">
+                        <!-- <img class="comment-img rounded-circle" src="#"> -->
+                        <div class="comment-container d-inline-block pl-3 align-top">
+                            <span class="commenter-name">John Doe</span>
+                            <br>
+                            <span class="comment"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A doloribus earum enim facilis fuga illum laborum necessitatibus quasi repellat tempora..</span>
+                            <p><a href="#">Reply</a></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </section>
 {% endblock %}
