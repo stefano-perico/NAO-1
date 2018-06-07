@@ -39,7 +39,7 @@ class Event
     private $UpdatedAt;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="event")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="event")
      */
     private $author;
 
@@ -54,14 +54,10 @@ class Event
     private $slug;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\VillesFranceFree", mappedBy="event")
+     * @ORM\ManyToOne(targetEntity="App\Entity\VillesFranceFree")
+     * @ORM\JoinColumn(name="location_id", referencedColumnName="ville_id")
      */
     private $location;
-
-    public function __construct()
-    {
-        $this->author = new ArrayCollection();
-    }
 
     public function getId()
     {
@@ -124,26 +120,13 @@ class Event
         return $this->author;
     }
 
-    public function addAuthor(User $author): self
+    /**
+     * @param mixed $author
+     * @return Event
+     */
+    public function setAuthor($author)
     {
-        if (!$this->author->contains($author)) {
-            $this->author[] = $author;
-            $author->setEvent($this);
-        }
-
-        return $this;
-    }
-
-    public function removeAuthor(User $author): self
-    {
-        if ($this->author->contains($author)) {
-            $this->author->removeElement($author);
-            // set the owning side to null (unless already changed)
-            if ($author->getEvent() === $this) {
-                $author->setEvent(null);
-            }
-        }
-
+        $this->author = $author;
         return $this;
     }
 
@@ -171,34 +154,15 @@ class Event
         return $this;
     }
 
-    /**
-     * @return Collection|VillesFranceFree[]
-     */
-    public function getLocation(): Collection
+    public function getLocation()
     {
         return $this->location;
     }
 
-    public function addLocation(VillesFranceFree $location): self
+    public function setLocation($location):self
     {
-        if (!$this->location->contains($location)) {
-            $this->location[] = $location;
-            $location->setEvent($this);
-        }
-
+        $this->location = $location;
         return $this;
     }
 
-    public function removeLocation(VillesFranceFree $location): self
-    {
-        if ($this->location->contains($location)) {
-            $this->location->removeElement($location);
-            // set the owning side to null (unless already changed)
-            if ($location->getEvent() === $this) {
-                $location->setEvent(null);
-            }
-        }
-
-        return $this;
-    }
 }

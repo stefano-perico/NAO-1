@@ -5,13 +5,16 @@ namespace App\Controller;
 use App\Entity\Article;
 use App\Entity\Category;
 use App\Entity\Comments;
+use App\Entity\Event;
 use App\Entity\User;
 use App\Form\ArticleType;
 use App\Form\CategoryType;
 use App\Form\CommentType;
+use App\Form\EventType;
 use App\Form\UserType;
 use App\Repository\ArticleRepository;
 use App\Repository\CategoryRepository;
+use App\Repository\EventRepository;
 use App\Repository\UserRepository;
 use App\Services\CommentsService;
 use App\Services\LocationService;
@@ -49,7 +52,7 @@ class TestController extends Controller
     public function usersShow(UserRepository $repository): Response
     {
         dump($repository->findAll());
-        return new Response('<html><body></body></html>');
+        return new Response($this->renderView('test/index.html.twig'));
     }
 
     /**
@@ -79,7 +82,7 @@ class TestController extends Controller
     public function articleShow(ArticleRepository $repository): Response
     {
         dump($repository->findAll());
-        return new Response('<html><body></body></html>');
+        return new Response($this->renderView('test/index.html.twig'));
     }
 
     /**
@@ -109,7 +112,7 @@ class TestController extends Controller
     public function categoryShow(CategoryRepository $repository): Response
     {
         dump($repository->findAll());
-        return new Response('<html><body></body></html>');
+        return new Response($this->renderView('test/index.html.twig'));
     }
 
     /**
@@ -141,7 +144,7 @@ class TestController extends Controller
         $commentaires = $commentsService->getComments($articleRepository->find($article));
         dump($commentaires);
 
-        return new Response('<html><body></body></html>');
+        return new Response($this->renderView('test/index.html.twig'));
     }
 
     /**
@@ -150,7 +153,7 @@ class TestController extends Controller
     public function locationShow(LocationService $locationService, $villeA, $villeB): Response
     {
         echo '<p>'.$locationService->distanceBetwenVille($villeA,$villeB).' km</p>';
-        return new Response('<html><body></body></html>');
+        return new Response($this->renderView('test/index.html.twig'));
     }
 
     /**
@@ -159,7 +162,39 @@ class TestController extends Controller
     public function distanceToVille(LocationService $locationService, $longitude, $latitude,  $ville): Response
     {
         echo '<p>'.$locationService->distanceToVille($latitude, $longitude, $ville).' km</p>';
-        return new Response('<html><body></body></html>');
+        return new Response($this->renderView('test/index.html.twig'));
+    }
+
+    /**
+     * @Route("/event", name="event")
+     * @throws \Doctrine\ORM\ORMException
+     */
+    public function eventForm(Request $request)
+    {
+        $entity = new Event();
+        $entityForm = $this->createForm(EventType::class, $entity);
+        $entityForm->handleRequest($request);
+
+        if ($entityForm->isSubmitted() && $entityForm->isValid()){
+            $em = $this->get('doctrine.orm.entity_manager');
+            $em->persist($entity);
+            $em->flush();
+        }
+
+        return $this->render('test/index.html.twig', [
+            'form'  => $entityForm->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/comments/{event}", name="eventShow", defaults={"event"=1})
+     */
+    public function eventShow(EventRepository $eventRepository, $event): Response
+    {
+        $evenement = $eventRepository->findOneBy(['id'=>$event]);
+        dump($evenement);
+
+        return new Response($this->renderView('test/index.html.twig'));
     }
 
 }
