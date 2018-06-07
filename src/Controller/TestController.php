@@ -197,4 +197,20 @@ class TestController extends Controller
         return new Response($this->renderView('test/index.html.twig'));
     }
 
+    /**
+     * @Route("/single/{title}")
+     */
+    public function show($title)
+    {
+        return $this->render('views/single.html.twig', ['title' => $title]);
+    }
+
+    /**
+     * @Route("/")
+     */
+    public function home()
+    {
+        return $this->render('views/home.htm.twig');
+    }
+
 }
