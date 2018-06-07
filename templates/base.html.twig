@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -11,6 +12,8 @@
     {% block stylesheets %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <script defer src="{{ asset('build/js/scattered/turbolinks-min.js') }}" data-turbolinks-eval="false"></script>
+        <script defer src="{{ asset('build/js/compact/compact-min.js') }}" data-turbolinks-eval="false"></script>
         <style>
             /* Core Style */
             body {
@@ -119,11 +122,11 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Page d'accueil</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span> Observations</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> Evénements</a></li>
+                    <li><a href="{{ path('event') }}"><span class="glyphicon glyphicon-calendar"></span> Evénements</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Carte interactive</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-picture"></span> Galerie photos</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-leaf"></span> Blog</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-book"></span> Articles</a></li>
+                    <li><a href="{{ path('articles') }}"><span class="glyphicon glyphicon-book"></span> Articles</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> S'inscrire</a></li>
@@ -132,6 +135,13 @@
             </div>
         </div>
     </nav>
+</header>
+<header>
+    <a href="{{ path('users') }}">{{ path('users') }}</a>
+    <a href="{{ path('articles') }}">{{ path('articles') }}</a>
+    <a href="{{ path('categories') }}">{{ path('categories') }}</a>
+    <a href="{{ path('comments') }}">{{ path('comments') }}</a>
+    <a href="{{ path('event') }}">{{ path('event') }}</a>
 </header>
 
 {% block body %}{% endblock %}
