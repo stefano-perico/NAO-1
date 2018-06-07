@@ -58,6 +58,11 @@ class User
      */
     private $articles;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Event", inversedBy="author")
+     */
+    private $event;
+
     public function __construct()
     {
         if ($this->registrationDate === null){
@@ -162,6 +167,18 @@ class User
                 $article->setAuthor(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getEvent(): ?Event
+    {
+        return $this->event;
+    }
+
+    public function setEvent(?Event $event): self
+    {
+        $this->event = $event;
 
         return $this;
     }
