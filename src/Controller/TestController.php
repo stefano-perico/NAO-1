@@ -12,7 +12,6 @@ use App\Form\CommentType;
 use App\Form\UserType;
 use App\Repository\ArticleRepository;
 use App\Repository\CategoryRepository;
-use App\Repository\CommentsRepository;
 use App\Repository\UserRepository;
 use App\Services\CommentsService;
 use Symfony\Component\HttpFoundation\Request;
