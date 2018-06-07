@@ -6,15 +6,18 @@ use App\Entity\Article;
 use App\Entity\Category;
 use App\Entity\Comments;
 use App\Entity\Event;
+use App\Entity\Image;
 use App\Entity\User;
 use App\Form\ArticleType;
 use App\Form\CategoryType;
 use App\Form\CommentType;
 use App\Form\EventType;
+use App\Form\ImageType;
 use App\Form\UserType;
 use App\Repository\ArticleRepository;
 use App\Repository\CategoryRepository;
 use App\Repository\EventRepository;
+use App\Repository\ImageRepository;
 use App\Repository\UserRepository;
 use App\Services\CommentsService;
 use App\Services\LocationService;
@@ -192,6 +195,38 @@ class TestController extends Controller
     public function eventShow(EventRepository $eventRepository, $event): Response
     {
         $evenement = $eventRepository->findOneBy(['id'=>$event]);
+        dump($evenement);
+
+        return new Response($this->renderView('test/index.html.twig'));
+    }
+
+    /**
+     * @Route("/image", name="image")
+     * @throws \Doctrine\ORM\ORMException
+     */
+    public function imageForm(Request $request)
+    {
+        $entity = new Image();
+        $entityForm = $this->createForm(ImageType::class, $entity);
+        $entityForm->handleRequest($request);
+
+        if ($entityForm->isSubmitted() && $entityForm->isValid()){
+            $em = $this->get('doctrine.orm.entity_manager');
+            $em->persist($entity);
+            $em->flush();
+        }
+
+        return $this->render('test/index.html.twig', [
+            'form'  => $entityForm->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/images", name="imageShow")
+     */
+    public function imageShow(ImageRepository $imageRepository, $image): Response
+    {
+        $evenement = $imageRepository->findOneBy(['id'=>$image]);
         dump($evenement);
 
         return new Response($this->renderView('test/index.html.twig'));
