@@ -11,10 +11,6 @@ class CommentsService
 
     private $commentsRepository;
 
-    private $commentsById = [];
-
-    private $array = [];
-
     private $formatedComments = [];
 
     public function __construct(CommentsRepository $commentsRepository)
@@ -24,22 +20,25 @@ class CommentsService
 
     public function setComments(array $comments): self
     {
+        $commentsById = [];
+        $commentsByParent = [];
+
         foreach ($comments as $comment) {
-            $this->commentsById[$comment->getId()] = $comment;
+            $commentsById[$comment->getId()] = $comment;
         }
 
-        foreach ($this->commentsById as $k => $v) {
+        foreach ($commentsById as $k => $v) {
             $class = new \stdClass();
             null !== $v->getParent()?$class->parent = $v->getParent()->getId():$class->parent = null;
             $class->comment = $v;
             $class->children = null;
-            $this->array[$k] = $class;
+            $commentsByParent[$k] = $class;
         }
 
-        $this->formatedComments = $this->array;
+        $this->formatedComments = $commentsByParent;
         foreach ($this->formatedComments as $k => $item){
             if ($item->parent !== null){
-                $this->array[$item->parent]->children[] = $item;
+                $commentsByParent[$item->parent]->children[] = $item;
                 unset($this->formatedComments[$k]);
             }
         }

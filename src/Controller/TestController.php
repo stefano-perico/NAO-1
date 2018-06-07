@@ -14,6 +14,7 @@ use App\Repository\ArticleRepository;
 use App\Repository\CategoryRepository;
 use App\Repository\UserRepository;
 use App\Services\CommentsService;
+use App\Services\LocationService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -140,6 +141,24 @@ class TestController extends Controller
         $commentaires = $commentsService->getComments($articleRepository->find($article));
         dump($commentaires);
 
+        return new Response('<html><body></body></html>');
+    }
+
+    /**
+     * @Route("/locationVille/{villeA}/{villeB}", name="locationVille")
+     */
+    public function locationShow(LocationService $locationService, $villeA, $villeB): Response
+    {
+        echo '<p>'.$locationService->distanceBetwenVille($villeA,$villeB).' km</p>';
+        return new Response('<html><body></body></html>');
+    }
+
+    /**
+     * @Route("/distanceToVille/{longitude}/{latitude}/{ville}", name="locationSelf")
+     */
+    public function distanceToVille(LocationService $locationService, $longitude, $latitude,  $ville): Response
+    {
+        echo '<p>'.$locationService->distanceToVille($latitude, $longitude, $ville).' km</p>';
         return new Response('<html><body></body></html>');
     }
 
