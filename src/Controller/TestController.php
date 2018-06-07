@@ -133,12 +133,12 @@ class TestController extends Controller
     }
 
     /**
-     * @Route("/comments/{article}", name="comments")
+     * @Route("/comments/{article}", name="comments", defaults={"article"=1})
      */
     public function commentShow(CommentsService $commentsService, ArticleRepository $articleRepository, $article): Response
     {
         $commentaires = $commentsService->getComments($articleRepository->find($article));
-        dd($commentaires);
+        dump($commentaires);
 
         return new Response('<html><body></body></html>');
     }
