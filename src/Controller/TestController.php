@@ -116,5 +116,13 @@ class TestController extends Controller
         return $this->render('views/home.html.twig');
     }
 
+    /**
+     * @Route("/show/{slug})
+     */
+    public function show($slug)
+    {
+        return $this->render('single.html.twig', [sprintf('slug', $slug)]);
+    }
+
 
 }
