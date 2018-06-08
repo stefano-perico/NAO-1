@@ -19,4 +19,13 @@ class CategoryRepository extends ServiceEntityRepository
         parent::__construct($registry, Category::class);
     }
 
+    public function nameAndId():array
+    {
+        $categoriesInArray = [];
+        foreach ($this->findAll() as $category) {
+            $categoriesInArray[$category->getName()] = $category;
+        }
+        return $categoriesInArray;
+    }
+
 }

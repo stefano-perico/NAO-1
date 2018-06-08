@@ -19,4 +19,13 @@ class UserRepository extends ServiceEntityRepository
         parent::__construct($registry, User::class);
     }
 
+    public function nameAndId():array
+    {
+        $usersInArray = [];
+        foreach ($this->findAll() as $user) {
+            $usersInArray[$user->getFirstName()] = $user;
+        }
+        return $usersInArray;
+    }
+    
 }

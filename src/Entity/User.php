@@ -59,16 +59,17 @@ class User
     private $articles;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Event", inversedBy="author")
+     * @ORM\OneToMany(targetEntity="App\Entity\Event", mappedBy="author")
      */
     private $event;
 
     public function __construct()
     {
         if ($this->registrationDate === null){
-            $this->registrationDate = new \DateTime();
+            $this->setRegistrationDate(new \DateTime());
         }
         $this->articles = new ArrayCollection();
+        $this->event = new ArrayCollection();
     }
     
     public function getId()
@@ -135,6 +136,12 @@ class User
         return $this;
     }
 
+    public function setRegistrationDate(\DateTime $registrationDate):self
+    {
+        $this->registrationDate = $registrationDate;
+        return $this;
+    }
+
     public function getRegistrationDate(): ?\DateTime
     {
         return $this->registrationDate;
@@ -171,14 +178,33 @@ class User
         return $this;
     }
 
-    public function getEvent(): ?Event
+    /**
+     * @return Collection|Event[]
+     */
+    public function getEvent(): Collection
     {
         return $this->event;
     }
 
-    public function setEvent(?Event $event): self
+    public function addEvent(Event $event): self
     {
-        $this->event = $event;
+        if (!$this->event->contains($event)) {
+            $this->event[] = $event;
+            $event->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeEvent(Event $event): self
+    {
+        if ($this->event->contains($event)) {
+            $this->event->removeElement($event);
+            // set the owning side to null (unless already changed)
+            if ($event->getAuthor() === $this) {
+                $event->setAuthor(null);
+            }
+        }
 
         return $this;
     }
