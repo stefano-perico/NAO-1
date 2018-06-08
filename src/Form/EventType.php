@@ -6,9 +6,10 @@ use App\Entity\Event;
 use App\Repository\UserRepository;
 use App\Repository\VillesFranceFreeRepository;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\CallbackTransformer;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\FormEvent;
-use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class EventType extends AbstractType
@@ -28,18 +29,26 @@ class EventType extends AbstractType
         $builder
             ->add('title')
             ->add('date')
-            ->add('publishedAt')
-            ->add('UpdatedAt')
             ->add('content')
-            ->add('slug')
-//            ->add('location', ChoiceType::class)
-//            ->add('author')
-            ->addEventListener(FormEvents::POST_SUBMIT, function (FormEvent $event){
-                $this
-                    ->setLocation($event)
-                    ->setAuthor($event)
-                ;
-            })
+            ->add('slug', TextType::class,[
+                'required' => false
+            ])
+            ->add('location', TextType::class)
+            ->add('author', ChoiceType::class,[
+                'choices'    => $this->userRepository->nameAndId()
+            ])
+            ->get('location')
+            ->addModelTransformer(new CallbackTransformer(
+                function ($locationAsString){
+                    if ($locationAsString !== null){
+                        return $locationAsString->getVilleNom();
+                    }
+                    return null;
+                },
+                function ($locationAsEntity){
+                    return $this->villesFranceFreeRepository->findOneBy(['villeNom'=>$locationAsEntity]);
+                }
+            ))
         ;
     }
 
@@ -48,20 +57,6 @@ class EventType extends AbstractType
         $resolver->setDefaults([
             'data_class' => Event::class,
         ]);
-    }
-
-    private function setLocation($event)
-    {
-        $location = $this->villesFranceFreeRepository->findOneBy(['villeNom'=>'toulouse']);
-        $event->getData()->setLocation($location);
-        return $this;
-    }
-
-    private function setAuthor($event)
-    {
-        $author = $this->userRepository->findOneBy(['id'=>1]);
-        $event->getData()->setAuthor($author);
-        return $this;
     }
 
 }

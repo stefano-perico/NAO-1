@@ -4,10 +4,12 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Article
 {
@@ -45,7 +47,8 @@ class Article
     private $published = false;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Category")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category")
+     * @ORM\JoinColumn(name="Category_id", referencedColumnName="id")
      */
     private $categories;
 
@@ -60,7 +63,7 @@ class Article
     private $updateAt;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $slug;
 
@@ -71,7 +74,6 @@ class Article
 
     public function __construct()
     {
-        $this->categories = new ArrayCollection();
         $this->comments = new ArrayCollection();
     }
 
@@ -141,28 +143,20 @@ class Article
     }
 
     /**
-     * @return Collection|Category[]
+     * @return mixed
      */
-    public function getCategories(): Collection
+    public function getCategories()
     {
         return $this->categories;
     }
 
-    public function addCategory(Category $category): self
+    /**
+     * @param mixed $categories
+     * @return Article
+     */
+    public function setCategories($categories)
     {
-        if (!$this->categories->contains($category)) {
-            $this->categories[] = $category;
-        }
-
-        return $this;
-    }
-
-    public function removeCategory(Category $category): self
-    {
-        if ($this->categories->contains($category)) {
-            $this->categories->removeElement($category);
-        }
-
+        $this->categories = $categories;
         return $this;
     }
 
@@ -195,7 +189,7 @@ class Article
         return $this->slug;
     }
 
-    public function setSlug(string $slug): self
+    public function setSlug(?string $slug): self
     {
         $this->slug = $slug;
 
@@ -233,4 +227,21 @@ class Article
         return $this;
     }
 
+    /**
+     * @ORM\PreUpdate()
+     */
+    public function updatedAt()
+    {
+        $this->setUpdateAt(new \DateTime());
+    }
+
+    /**
+     * @ORM\PreFlush()
+     */
+    public function slug()
+    {
+        $this->slug === null || empty($this->slug) ?
+            $this->slug = str_replace(' ','_',$this->getTitle()):
+            null;
+    }
 }

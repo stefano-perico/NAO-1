@@ -2,12 +2,13 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EventRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Event
 {
@@ -50,6 +51,7 @@ class Event
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\Length(max="100")
      */
     private $slug;
 
@@ -112,19 +114,12 @@ class Event
         return $this;
     }
 
-    /**
-     * @return Collection|User[]
-     */
-    public function getAuthor(): Collection
+    public function getAuthor(): ?User
     {
         return $this->author;
     }
 
-    /**
-     * @param mixed $author
-     * @return Event
-     */
-    public function setAuthor($author)
+    public function setAuthor(?User $author): self
     {
         $this->author = $author;
         return $this;
@@ -147,7 +142,7 @@ class Event
         return $this->slug;
     }
 
-    public function setSlug(string $slug): self
+    public function setSlug(?string $slug): self
     {
         $this->slug = $slug;
 
@@ -163,6 +158,36 @@ class Event
     {
         $this->location = $location;
         return $this;
+    }
+
+    /**
+     * @ORM\PreFlush()
+     */
+    public function publishedAt()
+    {
+        $this->getPublishedAt() === null || empty($this->publishedAt) ?
+            $this->setPublishedAt(new \DateTime()):
+            null;
+    }
+
+    /**
+     * @ORM\PreUpdate()
+     */
+    public function updatedAt()
+    {
+        $this->getUpdatedAt() === null ?
+            $this->setUpdatedAt(new \DateTime()):
+            null;
+    }
+
+    /**
+     * @ORM\PreFlush()
+     */
+    public function slug()
+    {
+        $this->slug === null || empty($this->slug) ?
+            $this->slug = str_replace(' ','_',$this->getTitle()):
+            null;
     }
 
 }
