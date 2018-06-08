@@ -1,4 +1,4 @@
-/*
+s/*
 Turbolinks 5.1.1
 Copyright © 2018 Basecamp, LLC
  */

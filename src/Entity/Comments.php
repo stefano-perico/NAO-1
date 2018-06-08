@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CommentsRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Comments
 {
@@ -18,7 +19,7 @@ class Comments
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Article", inversedBy="comments")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(name="Article_id", referencedColumnName="id")
      */
     private $article;
 
@@ -52,13 +53,6 @@ class Comments
      * @ORM\Column(type="date", nullable=true)
      */
     private $updatedAt;
-
-    public function __construct()
-    {
-        if ($this->date === null){
-            $this->date = new \DateTime();
-        }
-    }
 
     public function getId()
     {
@@ -141,4 +135,25 @@ class Comments
 
         return $this;
     }
+
+    /**
+     * @ORM\PreFlush()
+     */
+    public function date()
+    {
+        $this->date === null || empty($this->date) ?
+            $this->date = new \DateTime():
+            null;
+    }
+
+    /**
+     * @ORM\PreUpdate()
+     */
+    public function updatedAt()
+    {
+        $this->updatedAt === null || empty($this->updatedAt) ?
+            $this->updatedAt = new \DateTime():
+            null;
+    }
+
 }
