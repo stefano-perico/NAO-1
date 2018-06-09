@@ -11,13 +11,17 @@
                 <th>Id</th>
                 <td>{{ image.id }}</td>
             </tr>
-            {#<tr>#}
-                {#<th>UpdatedAt</th>#}
-                {#<td>{{ image.updatedAt ? image.updatedAt|date('Y-m-d H:i:s') : '' }}</td>#}
-            {#</tr>#}
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ image.updatedAt ? image.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
             <tr>
                 <th>Image.name</th>
                 <td>{{ image.image.name }}</td>
+            </tr>
+            <tr>
+                <th>Image.alt</th>
+                <td>{{ image.alt }}</td>
             </tr>
             <tr>
                 <th>Image.originalName</th>
@@ -31,10 +35,10 @@
                 <th>Image.size</th>
                 <td>{{ image.image.size }}</td>
             </tr>
-            {#<tr>#}
-                {#<th>Image.dimensions</th>#}
-                {#<td>{{ image.image.dimensions }}</td>#}
-            {#</tr>#}
+            <tr>
+                <th>Image.dimensions</th>
+                <td>{{ image.image.dimensions.0 }}/{{ image.image.dimensions.1 }}</td>
+            </tr>
         </tbody>
     </table>
 

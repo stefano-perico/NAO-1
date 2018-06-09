@@ -47,6 +47,11 @@ class Image
      */
     private $updatedAt;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $alt;
+
     public function __construct()
     {
         $this->image = new EmbeddedFile();
@@ -80,12 +85,25 @@ class Image
         return $this->image;
     }
 
-    /**
-     * @return mixed
-     */
     public function getId()
     {
         return $this->id;
+    }
+
+    public function getAlt():string
+    {
+        return $this->alt;
+    }
+
+    public function setAlt(string $alt):self
+    {
+        $this->alt = $alt;
+        return $this;
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
     }
 
 }

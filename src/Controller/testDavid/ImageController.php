@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/image")
+ * @Route("/DAVID/image")
  */
 class ImageController extends Controller
 {
@@ -51,6 +51,7 @@ class ImageController extends Controller
      */
     public function show(Image $image): Response
     {
+//        dd($image);
         return $this->render('testingDavid/image/show.html.twig', ['image' => $image]);
     }
 

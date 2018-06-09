@@ -5,6 +5,13 @@
 {% block body %}
     <h1>Event</h1>
 
+    {% if event.image.image is defined %}
+        <figure>
+            <img src="{{ asset('img/'~event.image.image.name) }}" alt="{{ event.image.image.name }}" width="100%">
+            <figcaption>{{ event.image.image.name }}</figcaption>
+        </figure>
+    {% endif %}
+
     <table class="table">
         <tbody>
             <tr>

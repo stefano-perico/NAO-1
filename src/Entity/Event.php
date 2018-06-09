@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -60,6 +59,12 @@ class Event
      * @ORM\JoinColumn(name="location_id", referencedColumnName="ville_id")
      */
     private $location;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Image")
+     * @ORM\JoinColumn(name="image_id", referencedColumnName="id")
+     */
+    private $image;
 
     public function getId()
     {
@@ -157,6 +162,17 @@ class Event
     public function setLocation($location):self
     {
         $this->location = $location;
+        return $this;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image):self
+    {
+        $this->image = $image;
         return $this;
     }
 
