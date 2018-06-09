@@ -5,6 +5,13 @@
 {% block body %}
     <h1>Image</h1>
 
+    {% if image.image is defined %}
+        <figure>
+            <img src="{{ asset('img/'~image.image.name) }}" alt="{{ image.image.name }}" width="100%">
+            <figcaption>{{ image.alt }}</figcaption>
+        </figure>
+    {% endif %}
+
     <table class="table">
         <tbody>
             <tr>

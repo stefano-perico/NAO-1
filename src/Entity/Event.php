@@ -66,6 +66,24 @@ class Event
      */
     private $image;
 
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param mixed $image
+     * @return Event
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+        return $this;
+    }
+
     public function getId()
     {
         return $this->id;
@@ -162,17 +180,6 @@ class Event
     public function setLocation($location):self
     {
         $this->location = $location;
-        return $this;
-    }
-
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    public function setImage($image):self
-    {
-        $this->image = $image;
         return $this;
     }
 

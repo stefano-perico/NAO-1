@@ -3,8 +3,10 @@
 namespace App\Form;
 
 use App\Entity\Event;
+use App\Repository\ImageRepository;
 use App\Repository\UserRepository;
 use App\Repository\VillesFranceFreeRepository;
+use function Sodium\add;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -17,11 +19,17 @@ class EventType extends AbstractType
 
     private $villesFranceFreeRepository;
     private $userRepository;
+    private $imageRepository;
 
-    public function __construct(VillesFranceFreeRepository $villesFranceFreeRepository, UserRepository $userRepository)
-    {
+    public function __construct
+    (
+        VillesFranceFreeRepository $villesFranceFreeRepository,
+        UserRepository $userRepository,
+        ImageRepository $imageRepository
+    ){
         $this->villesFranceFreeRepository = $villesFranceFreeRepository;
         $this->userRepository = $userRepository;
+        $this->imageRepository = $imageRepository;
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -37,6 +45,26 @@ class EventType extends AbstractType
             ->add('author', ChoiceType::class,[
                 'choices'    => $this->userRepository->nameAndId()
             ])
+            ->add('image', ChoiceType::class,[
+                'choices'   => $this->imageRepository->nameAndId()
+            ])
+        ;
+        $builder
+            ->get('image')
+            ->addModelTransformer(new CallbackTransformer(
+                function ($imageAsString){
+                    if ($imageAsString !== null){
+                        return $imageAsString->getAlt();
+                    }
+                    return null;
+                },
+                function ($imageAsEntity){
+                    return $imageAsEntity;
+                }
+            ))
+        ;
+
+        $builder
             ->get('location')
             ->addModelTransformer(new CallbackTransformer(
                 function ($locationAsString){

@@ -11,6 +11,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImageRepository")
  * @Vich\Uploadable()
+ * @ORM\HasLifecycleCallbacks()
  */
 class Image
 {
@@ -90,12 +91,12 @@ class Image
         return $this->id;
     }
 
-    public function getAlt():string
+    public function getAlt(): ?string
     {
         return $this->alt;
     }
 
-    public function setAlt(string $alt):self
+    public function setAlt(?string $alt):self
     {
         $this->alt = $alt;
         return $this;
@@ -104,6 +105,17 @@ class Image
     public function getUpdatedAt()
     {
         return $this->updatedAt;
+    }
+
+    /**
+     * @ORM\PreFlush()
+     * @ORM\PreUpdate()
+     */
+    public function imagePreFlush()
+    {
+        null === $this->alt || empty($this->alt) ?
+            $this->alt = $this->image->getOriginalName() :
+            null;
     }
 
 }

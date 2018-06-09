@@ -16,6 +16,7 @@
                 <th>Image.mimeType</th>
                 <th>Image.size</th>
                 <th>Image.dimensions</th>
+                <th>Image</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -30,6 +31,9 @@
                 <td>{{ image.image.mimeType }}</td>
                 <td>{{ image.image.size }}</td>
                 <td>{{ image.image.dimensions.0 }}/{{ image.image.dimensions.1 }}</td>
+                <td>
+                    <img src="{{ asset('img/'~image.image.name) }}" alt="" width="100%">
+                </td>
                 <td>
                     <a href="{{ path('image_show', {'id': image.id}) }}">show</a>
                     <a href="{{ path('image_edit', {'id': image.id}) }}">edit</a>

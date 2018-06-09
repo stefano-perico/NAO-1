@@ -8,7 +8,7 @@
     {% if event.image.image is defined %}
         <figure>
             <img src="{{ asset('img/'~event.image.image.name) }}" alt="{{ event.image.image.name }}" width="100%">
-            <figcaption>{{ event.image.image.name }}</figcaption>
+            <figcaption>{{ event.image.alt }}</figcaption>
         </figure>
     {% endif %}
 
