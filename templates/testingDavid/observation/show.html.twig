@@ -1,0 +1,53 @@
+{% extends 'testingDavid/base.html.twig' %}
+
+{% block title %}Observation{% endblock %}
+
+{% block body %}
+    <h1>Observation</h1>
+
+    {% if observation.image.image is defined %}
+        <figure>
+            <img src="{{ asset('img/'~observation.image.image.name) }}" alt="{{ observation.image.image.name }}" width="100%">
+            <figcaption>{{ observation.image.alt }}</figcaption>
+        </figure>
+    {% endif %}
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ observation.id }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ observation.description }}</td>
+            </tr>
+            <tr>
+                <th>Species</th>
+                <td>{{ observation.species }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ observation.date ? observation.date|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ observation.updatedAt ? observation.updatedAt|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Position</th>
+                <td>{{ observation.position.address.villeNom }}</td>
+            </tr>
+            <tr>
+                <th>Checked</th>
+                <td>{{ observation.checked ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('observation_index') }}">back to list</a>
+
+    <a href="{{ path('observation_edit', {'id': observation.id}) }}">edit</a>
+
+    {{ include('testingDavid/observation/_delete_form.html.twig') }}
+{% endblock %}

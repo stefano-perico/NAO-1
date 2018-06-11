@@ -1,0 +1,51 @@
+{% extends 'testingDavid/base.html.twig' %}
+
+{% block title %}Observation index{% endblock %}
+
+{% block body %}
+    <h1>Observation index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Species</th>
+                <th>Date</th>
+                <th>UpdatedAt</th>
+                <th>Position.id</th>
+                <th>Checked</th>
+                <th>image</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for observation in observations %}
+            <tr>
+                <td>{{ observation.id }}</td>
+                <td>{{ observation.description }}</td>
+                <td>{{ observation.species }}</td>
+                <td>{{ observation.date ? observation.date|date('Y-m-d') : '' }}</td>
+                <td>{{ observation.updatedAt ? observation.updatedAt|date('Y-m-d') : '' }}</td>
+                <td>{{ observation.position.id }}</td>
+                <td>{{ observation.checked ? 'Yes' : 'No' }}</td>
+                <td>
+                    {% if observation.image.image is defined %}
+                        <img src="{{ asset('img/'~observation.image.image.name) }}" width="100%">
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ path('observation_show', {'id': observation.id}) }}">show</a>
+                    <a href="{{ path('observation_edit', {'id': observation.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('observation_new') }}">Create new</a>
+{% endblock %}

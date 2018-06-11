@@ -53,6 +53,11 @@ class Image
      */
     private $alt;
 
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $section;
+
     public function __construct()
     {
         $this->image = new EmbeddedFile();
@@ -105,6 +110,17 @@ class Image
     public function getUpdatedAt()
     {
         return $this->updatedAt;
+    }
+
+    public function getSection()
+    {
+        return $this->section;
+    }
+
+    public function setSection(string $section):self
+    {
+        $this->section = $section;
+        return $this;
     }
 
     /**

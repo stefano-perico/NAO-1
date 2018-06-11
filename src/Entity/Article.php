@@ -72,6 +72,12 @@ class Article
      */
     private $comments;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Image")
+     * @ORM\JoinColumn(name="image_id", referencedColumnName="id")
+     */
+    private $image;
+
     public function __construct()
     {
         $this->comments = new ArrayCollection();
@@ -244,4 +250,16 @@ class Article
             $this->slug = str_replace(' ','_',$this->getTitle()):
             null;
     }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage(Image $image) :self
+    {
+        $this->image = $image;
+        return $this;
+    }
+
 }

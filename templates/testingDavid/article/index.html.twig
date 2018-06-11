@@ -18,6 +18,7 @@
                 <th>UpdateAt</th>
                 <th>Catégoprie</th>
                 <th>Slug</th>
+                <th>Image</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -33,6 +34,11 @@
                 <td>{{ article.updateAt ? article.updateAt|date('Y-m-d') : '' }}</td>
                 <td>{{ article.categories.name }}</td>
                 <td>{{ article.slug }}</td>
+                <td>
+                    {% if article.image.image is defined %}
+                        <img src="{{ asset('img/'~article.image.image.name) }}" width="100%">
+                    {% endif %}
+                </td>
                 <td>
                     <a href="{{ path('article_show', {'id': article.id}) }}">show</a>
                     <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>

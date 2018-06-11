@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <script defer src="{{ asset('/build/js/compact/compact-min.js') }}" data-turbolinks-eval="false"></script>
         <script defer src="{{ asset('/build/js/scattered/turbolinks-min.js') }}" data-turbolinks-eval="false"></script>
+        <script defer src="{{ asset('/build/js/compact/compact-min.js') }}" data-turbolinks-eval="false"></script>
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('/build/css/app.css') }}">
         {% endblock %}
@@ -37,6 +37,12 @@
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="{{ path('image_index') }}">Images</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('observation_index') }}">Observations</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('position_index') }}">Positions</a>
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">

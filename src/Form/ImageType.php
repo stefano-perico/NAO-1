@@ -2,8 +2,10 @@
 
 namespace App\Form;
 
+use App\Entity\Article;
 use App\Entity\Image;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -17,6 +19,14 @@ class ImageType extends AbstractType
             ->add('imageFile', FileType::class)
             ->add('alt', TextType::class,[
                 'required' => false
+            ])
+            ->add('section', ChoiceType::class,[
+                'choices' => [
+                    'indéfini'      => 'indefini',
+                    'article'       => 'article',
+                    'évènement'     => 'evenement',
+                    'observation'   => 'observation'
+                ]
             ])
         ;
     }
