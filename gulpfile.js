@@ -9,11 +9,11 @@ let plumber = require('gulp-plumber');
 gulp.task('sass', function () {
     return gulp.src('./assets/css/app.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(cleanCSS({compatibility: 'edge'}))
-        .pipe(uglifycss({
-            "maxLineLen": 80,
-            "uglyComments": true
-        }))
+        // .pipe(cleanCSS({compatibility: 'edge'}))
+        // .pipe(uglifycss({
+        //     "maxLineLen": 80,
+        //     "uglyComments": true
+        // }))
         .pipe(gulp.dest('./public/build/css'));
 });
 
@@ -33,5 +33,7 @@ gulp.task('scriptsScattered', function() {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./assets/**/*', ['sass','scriptsCompact','scriptsScattered']);
+    gulp.watch('./assets/**/*', ['sass'
+        // ,'scriptsCompact','scriptsScattered'
+    ]);
 });

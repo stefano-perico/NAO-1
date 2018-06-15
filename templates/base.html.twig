@@ -1,162 +1,25 @@
-
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    {% block stylesheets %}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <script defer src="{{ asset('build/js/scattered/turbolinks-min.js') }}" data-turbolinks-eval="false"></script>
-        <script defer src="{{ asset('build/js/compact/compact-min.js') }}" data-turbolinks-eval="false"></script>
-        <style>
-            /* Core Style */
-            body {
-                margin: 0;
-                font-family: Arial, Helvetica, sans-serif;
-                background: #333;
-                color: #fff;
-                font-size: 1.1em;
-                line-height: 1.5;
-                text-align: center;
-            }
-            img {
-                display: block;
-                width: 100%;
-                height: auto;
-            }
-            h1, h2, h3 {
-                margin: 0;
-                padding: 1em 0;
-            }
-            p {
-                margin: 0;
-                padding: 1em 0;
-            }
-            /* navbar */
-            .navbar-nav {
-                padding-top: 15px;
-                padding-bottom: 15px;
-                border: 0;
-                border-radius: 0;
-                margin-bottom: 0;
-            }
-            .navbar-nav  li a:hover {
-                color: #1abc9c;
-            }
-            /* showcase */
-            #showcase {
-                min-height: 450px;
-                color: #fff;
-                text-align: center;
-            }
-            #showcase .bg-image {
-                position: absolute;
-                background: #333 url("https://images.pexels.com/photos/39627/flamingo-valentine-heart-valentine-s-day-39627.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                width: 100%;
-                height: 450px;
-                z-index: -1;
-                opacity: 0.4;
-            }
-            #showcase h1 {
-                padding-top: 100px;
-                padding-bottom: 0;
-            }
-            #showcase .content-wrap,
-            #section-a .content-wrap {
-                padding: 0 1.5em;
-            }
-            /* Section A */
-            #section-a {
-                background: #eaeaea;
-                color: #333;
-                padding-bottom: 2em;
-            }
-            /* Section B */
-            #sectuion-b {
-                padding: 2em 1em 1em;
-            }
-            /* Call to action */
-            #cta {
-                background: #1abc9c;
-            }
-            #cta .btn {
-                margin: 10px;
-            }
-            /* Footer */
-            #main-footer {
-                padding: 2em;
-                background: #000;
-                color: #fff;
-                text-align: center;
-            }
-            #main-footer a {
-                color: #2690d4;
-                text-decoration: none;
-            }
-        </style>
+    {% block style %}
+    <link rel="stylesheet" href="{{ asset('/build/css/app.css') }}">
     {% endblock %}
 
+    {% block script %}
+    <script defer src="{{ asset('/build/js/compact/compact.js') }}" data-turbolinks-eval="false"></script>
+    <script defer src="{{ asset('/build/js/scattered/turbolinks.js') }}" data-turbolinks-eval="false"></script>
+    <script defer src="{{ asset('/build/js/scattered/turbolinksConfig.js') }}" data-turbolinks-eval="false"></script>
+    {% endblock %}
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">NAO</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Page d'accueil</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span> Observations</a></li>
-                    <li><a href="{{ path('event') }}"><span class="glyphicon glyphicon-calendar"></span> Evénements</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Carte interactive</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-picture"></span> Galerie photos</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-leaf"></span> Blog</a></li>
-                    <li><a href="{{ path('articles') }}"><span class="glyphicon glyphicon-book"></span> Articles</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> S'inscrire</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<header>
-    <a href="{{ path('users') }}">{{ path('users') }}</a>
-    <a href="{{ path('articles') }}">{{ path('articles') }}</a>
-    <a href="{{ path('categories') }}">{{ path('categories') }}</a>
-    <a href="{{ path('comments') }}">{{ path('comments') }}</a>
-    <a href="{{ path('event') }}">{{ path('event') }}</a>
-</header>
+    {% include 'default/navbar.html.twig' %}
 
-{% block body %}{% endblock %}
+    {% block body %}{% endblock %}
 
-<footer id="main-footer" class="row">
-    <div class="col-sm-4">Réseaux sociaux</div>
-    <div class="col-sm-4">Nous contacter</div>
-    <div class="col-sm-4">Project By <a href="http://www.web.com" target="_blank">Web.com</a></div>
-</footer>
-
-
-{% block javascripts %}
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-{% endblock %}
+    {% include 'default/footer.html.twig' %}
 </body>
 </html>

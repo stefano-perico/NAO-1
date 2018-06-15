@@ -1,3 +1,11 @@
-@import "bootstrap/bootstrap.min.css";
-@import "turbolinks";
-@import "custom/main";
+@import "bootstrap/bootstrap";
+@import "turbolinks/turbolinks";
+
+/*CUSTOM*/
+@import "custom/color";
+@import "custom/font";
+@import "custom/nav";
+@import "custom/footer";
+@import "custom/general";
+@import "div/div";
+
