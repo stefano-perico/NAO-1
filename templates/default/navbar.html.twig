@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/accueil">
         <img src="{{ asset('imgSite/logo NAO lettrage.png') }}" alt="logo NAO">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +10,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('event_index') }}">
                     <img src="
-                    {% if app.request.requestUri == '/app/articles' %}
+                    {% if app.request.requestUri matches '#^(\/accueil)+#' %}
                         {{ asset('imgSite/buttons/accueiL1.png') }}
                     {% else %}
                         {{ asset('imgSite/buttons/accueiL.png') }}
@@ -21,7 +21,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('event_index') }}">
                     <img src="
-                    {% if app.request.requestUri == '/app/observation' %}
+                    {% if app.request.requestUri matches '#^(\/observation)+#' %}
                         {{ asset('imgSite/buttons/observation 1.png') }}
                     {% else %}
                         {{ asset('imgSite/buttons/observation.png') }}
@@ -32,7 +32,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('event_index') }}">
                     <img src="
-                    {% if app.request.requestUri == '/app/carte' %}
+                    {% if app.request.requestUri matches '#^(\/carte)+#' %}
                         {{ asset('imgSite/buttons/carte1.png') }}
                     {% else %}
                         {{ asset('imgSite/buttons/carte.png') }}
@@ -43,7 +43,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('event_index') }}">
                     <img src="
-                    {% if app.request.requestUri == '/app/evenements' %}
+                    {% if app.request.requestUri matches '#^(\/connexion)+#' %}
                         {{ asset('imgSite/buttons/evenements1.png') }}
                     {% else %}
                         {{ asset('imgSite/buttons/evenements.png') }}
@@ -54,7 +54,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('event_index') }}">
                     <img src="
-                    {% if app.request.requestUri == '/blog/index' or app.request.requestUri == '/blog/article' %}
+                    {% if app.request.requestUri matches '#^(\/blog)+#' %}
                         {{ asset('imgSite/buttons/blog1.png') }}
                     {% else %}
                         {{ asset('imgSite/buttons/blog.png') }}
@@ -65,7 +65,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('event_index') }}">
                     <img src="
-                    {% if app.request.requestUri == '/app/connexion' %}
+                    {% if app.request.requestUri matches '#^(\/connexion)+#' %}
                         {{ asset('imgSite/buttons/connexion1.png') }}
                     {% else %}
                         {{ asset('imgSite/buttons/connexion.png') }}

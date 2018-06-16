@@ -30,6 +30,11 @@
                             <div class="text-right">
                                 <a href="{{ path('blogArticle' ,{slug : article.Slug}) }}">
                                     <img src="{{ asset('imgSite/buttons/Symbole 3 – 6.png') }}" alt="" height="50px;">
+                                    <div class="col-12 mt-5">
+                                        <button class="btn btn-outline-secondary float-right" onclick="changeHidden(null, null)">
+                                            Répondre
+                                        </button>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -51,8 +56,8 @@
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Nom de l'article..">
                             <span class="input-group-btn">
-                  <button class="btn btn-secondary search" type="button"><img src="{{ asset('imgSite/ic_search.png') }}" alt="" height="30px"></button>
-                </span>
+                                <button class="btn btn-secondary search" type="button"><img src="{{ asset('imgSite/ic_search.png') }}" alt="" height="30px"></button>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -64,7 +69,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <ul class="list-unstyled mb-0">
-                                    {% for article in article %}
+                                    {% for article in articlestodiscover %}
                                         <li>
                                             <a href="{{ path('article_show', {'id': article.id}) }}">{{ article.title }}</a>
                                         </li>
@@ -86,6 +91,67 @@
 
         </div>
         <!-- /.row -->
+        <div class="card my-4">
+            <h5 class="card-header" >Laisser un commentaire à <span id="commentateur">l'article</span></h5>
+            <div class="card-body">
+                {#<div class="input-group">#}
+                {{ form_start(comment) }}
+                <div class="row">
+                   {{ form_widget(comment.content, {'attr':{'class':'form-group col-12'}}) }}
+                    <input type="text" id="parent" hidden>
+                    <div class="col-12">
+                        <input class="btn btn-primary float-right mt-2" type="submit" value="Soumettre">
+                    </div>
+                </div>
+                {{ form_end(comment) }}
+            </div>
+        </div>
+
+        {% for comment in comments %}
+            <div class="
+                {% if comment.lvl is not defined %}
+                col-12
+                {% else %}
+                col-{{ 12-comment.lvl }} offset-{{ comment.lvl }}
+                {% endif %}
+                ">
+                <div class="row mb-2">
+                    <div class="col-2 col-md-1">
+                        <img class="rounded-circle" width="40" height="40" style="background: lightgrey">
+                    </div>
+                    <div class="col-10 col-md-11">
+                        <p class="font-weight-bold">Commentaire de {{ comment.author.firstName }} {{ comment.author.lastName }}</p>
+                        <p>{{ comment.content }}</p>
+                        <button
+                                class="btn btn-outline-secondary float-right"
+                                onclick="changeHidden({{ comment.id }},
+                                        '{{ comment.author.firstName ~ ' ' ~ comment.author.lastName }}')
+                                        ">
+                            Répondre
+                        </button>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
 
     </div>
+{% endblock %}
+
+{% block script %}
+    {{ parent() }}
+    <script >
+        function changeHidden(id, author){
+            if (id !== null && author !== null){
+                let commentElt = document.getElementById('parent');
+                commentElt.setAttribute('value',id);
+                let repondreElt = document.getElementById('commentateur');
+                repondreElt.innerText = author;
+            }else{
+                let commentElt = document.getElementById('parent');
+                commentElt.removeAttribute('value');
+                let repondreElt = document.getElementById('commentateur');
+                repondreElt.innerText = "";
+            }
+        }
+    </script>
 {% endblock %}

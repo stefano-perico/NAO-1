@@ -15,6 +15,10 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 class CommentType extends AbstractType
 {
 
+    private $articleRepository;
+    private $userRepository;
+    private $commentsRepository;
+
     public function __construct(ArticleRepository $articleRepository, UserRepository $userRepository, CommentsRepository $commentsRepository)
     {
         $this->articleRepository = $articleRepository;
@@ -25,15 +29,7 @@ class CommentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
             ->add('content')
-            ->addEventListener(FormEvents::POST_SUBMIT, function (FormEvent $event){
-            $this
-                ->setArticle($event)
-                ->setAuthor($event)
-                ->setParent($event)
-            ;
-        })
         ;
     }
 
@@ -44,24 +40,4 @@ class CommentType extends AbstractType
         ]);
     }
 
-    private function setArticle($event)
-    {
-        $article = $this->articleRepository->find(1);
-        $test = $event->getData()->setArticle($article);
-        return $this;
-    }
-
-    private function setAuthor($event)
-    {
-        $author = $this->userRepository->find(11);
-        $test = $event->getData()->setAuthor($author);
-        return $this;
-    }
-
-    private function setParent($event)
-    {
-        $comment = $this->commentsRepository->find(7);
-        $test = $event->getData()->setParent($comment);
-        return $this;
-    }
 }
