@@ -63,6 +63,12 @@ class User
      */
     private $event;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Image")
+     * @ORM\JoinColumn(name="image_id", referencedColumnName="id")
+     */
+    private $image;
+
     public function __construct()
     {
         if ($this->registrationDate === null){
@@ -207,6 +213,21 @@ class User
         }
 
         return $this;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+        return $this;
+    }
+
+    public function __toString() {
+        return $this->firstName.' '.$this->lastName;
     }
 
 }

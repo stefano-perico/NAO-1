@@ -3,10 +3,14 @@
 namespace App\Form;
 
 use App\Entity\Comments;
+use App\Entity\User;
 use App\Repository\ArticleRepository;
 use App\Repository\CommentsRepository;
 use App\Repository\UserRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\CallbackTransformer;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
@@ -30,6 +34,18 @@ class CommentType extends AbstractType
     {
         $builder
             ->add('content')
+            ->add('parent', HiddenType::class,[
+                'data' => null
+            ])
+            ->get('parent')
+            ->addModelTransformer(new CallbackTransformer(
+                function ($a){
+                    return $a;
+                },
+                function($b){
+                    return $this->commentsRepository->findOneBy(['id'=>$b]);
+                }
+                ))
         ;
     }
 

@@ -24,7 +24,6 @@ class AppController extends Controller
      */
     public function blog(ArticleRepository $articleRepository)
     {
-//        dd($articleRepository->findAll());
         return $this->render('views/blog/index.html.twig', [
             'articles' => $articleRepository->findAll()
         ]);
@@ -43,11 +42,9 @@ class AppController extends Controller
 
         if ($form->isSubmitted()) {
             $user = $userRepository->find(1);
-            $parent = $commentsRepository->find(1);
             $comment
                 ->setArticle($article)
                 ->setAuthor($user)
-                ->setParent($parent)
             ;
             if  ($form->isValid()){
                 $em = $this->getDoctrine()->getManager();

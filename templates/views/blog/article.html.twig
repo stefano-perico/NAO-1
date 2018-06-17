@@ -98,7 +98,6 @@
                 {{ form_start(comment) }}
                 <div class="row">
                    {{ form_widget(comment.content, {'attr':{'class':'form-group col-12'}}) }}
-                    <input type="text" id="parent" hidden>
                     <div class="col-12">
                         <input class="btn btn-primary float-right mt-2" type="submit" value="Soumettre">
                     </div>
@@ -117,13 +116,13 @@
                 ">
                 <div class="row mb-2">
                     <div class="col-2 col-md-1">
-                        <img class="rounded-circle" width="40" height="40" style="background: lightgrey">
+                        <img class="rounded-circle" width="40" height="40" src="{{ asset('img/'~comment.author.image.image.name) }}">
                     </div>
                     <div class="col-10 col-md-11">
                         <p class="font-weight-bold">Commentaire de {{ comment.author.firstName }} {{ comment.author.lastName }}</p>
                         <p>{{ comment.content }}</p>
                         <button
-                                class="btn btn-outline-secondary float-right"
+                                class="btn btn-outline-secondary float-right mb-2"
                                 onclick="changeHidden({{ comment.id }},
                                         '{{ comment.author.firstName ~ ' ' ~ comment.author.lastName }}')
                                         ">
@@ -142,12 +141,12 @@
     <script >
         function changeHidden(id, author){
             if (id !== null && author !== null){
-                let commentElt = document.getElementById('parent');
+                let commentElt = document.getElementById('comment_parent');
                 commentElt.setAttribute('value',id);
                 let repondreElt = document.getElementById('commentateur');
                 repondreElt.innerText = author;
             }else{
-                let commentElt = document.getElementById('parent');
+                let commentElt = document.getElementById('comment_parent');
                 commentElt.removeAttribute('value');
                 let repondreElt = document.getElementById('commentateur');
                 repondreElt.innerText = "";
