@@ -1,0 +1,11 @@
+@media screen and (min-width: 200px) and (max-width: 991px) {
+  .cover-custom{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.observation-image-custom{
+  border-radius: 25px;
+}

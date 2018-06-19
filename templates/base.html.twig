@@ -18,6 +18,10 @@
 <body>
     {% include 'default/navbar.html.twig' %}
 
+    {% for flash in flashs %}
+        {{ flash | raw }}
+    {% endfor %}
+
     {% block body %}{% endblock %}
 
     {% include 'default/footer.html.twig' %}

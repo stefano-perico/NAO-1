@@ -6305,7 +6305,7 @@ nav {
         margin-top: -5px;
         margin-bottom: -5px; }
   nav .nav-link img {
-    height: 2.5em; }
+    height: 2.3em; }
 
 @media screen and (min-width: 200px) and (max-width: 991px) {
   nav .nav-link img {
@@ -6325,9 +6325,33 @@ footer {
 body {
   margin-top: 78px; }
 
+@media screen and (min-width: 200px) and (max-width: 991px) {
+  .cover-custom {
+    height: 500px;
+    width: 100%;
+    object-fit: cover; } }
+
+.observation-image-custom {
+  border-radius: 25px; }
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.9); }
+
 .search {
   background: #0066B2;
   border: none; }
 
 .articles-decouvrir a {
   color: #E84C18; }
+
+@media screen and (min-width: 1199px) {
+  .truncate-custom {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 190px; } }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .truncate-custom {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 145px; } }

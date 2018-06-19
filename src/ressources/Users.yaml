@@ -1,0 +1,15 @@
+role:
+    0:
+        name: visitor
+    1:
+        name: professional
+    2:
+        name: author
+    3:
+        name: admin
+
+access:
+    0: null
+    1: [0,1]
+    2: [0,1,2]
+    3: [0,1,2,3]

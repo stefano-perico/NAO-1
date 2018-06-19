@@ -8,9 +8,9 @@
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mt-3">
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('event_index') }}">
+                <a class="nav-link" href="{{ path('home') }}">
                     <img src="
-                    {% if app.request.requestUri matches '#^(\/accueil)+#' %}
+                    {% if app.request.requestUri matches '#^(\/)+$#' %}
                         {{ asset('imgSite/buttons/accueiL1.png') }}
                     {% else %}
                         {{ asset('imgSite/buttons/accueiL.png') }}
@@ -19,7 +19,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('event_index') }}">
+                <a class="nav-link" href="{{ path('observation') }}">
                     <img src="
                     {% if app.request.requestUri matches '#^(\/observation)+#' %}
                         {{ asset('imgSite/buttons/observation 1.png') }}
@@ -52,7 +52,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('event_index') }}">
+                <a class="nav-link" href="{{ path('blogIndex') }}">
                     <img src="
                     {% if app.request.requestUri matches '#^(\/blog)+#' %}
                         {{ asset('imgSite/buttons/blog1.png') }}
@@ -63,16 +63,11 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('event_index') }}">
-                    <img src="
-                    {% if app.request.requestUri matches '#^(\/connexion)+#' %}
-                        {{ asset('imgSite/buttons/connexion1.png') }}
-                    {% else %}
-                        {{ asset('imgSite/buttons/connexion.png') }}
-                    {% endif %}
-                    " alt="Connexion">
+                <a class="nav-link btn" data-toggle="modal" data-target="#optionsModal" >
+                    <img src="{{ asset('imgSite/buttons/connexion.png') }}" alt="Connexion">
                 </a>
             </li>
         </ul>
     </div>
 </nav>
+{{ include('connexion/optionsModal.html.twig') }}

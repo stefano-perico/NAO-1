@@ -1,0 +1,36 @@
+<div class="modal fade" id="optionsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Connection</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="row">
+                    <div class="col-12 mb-2">
+                        <a class="nav-link btn" data-toggle="modal" data-target="#connexionModal" >
+                            <img class="btn" src="{{ asset('imgSite/buttons/connexion.png') }}" alt="Connexion" width="40%">
+                        </a>
+                    </div>
+                    <div class="col-12 mb-2">
+                        <img class="btn" src="{{ asset('imgSite/buttons/déconnexion.png') }}" alt="Connexion" width="40%">
+                    </div>
+                    <div class="col-12 mb-2">
+                        <img class="btn" src="{{ asset('imgSite/buttons/Creer - 1.png') }}" alt="Connexion" width="40%">
+                    </div>
+                    <div class="col-12 mb-2">
+                        <img class="btn" src="{{ asset('imgSite/buttons/mon compte.png') }}" alt="Connexion" width="40%">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{ include('connexion/connexionModal.html.twig') }}
+{#{{ include('connexion/createAccountModal.html.twig') }}#}
+{#{{ include('connexion/account.html.twig') }}#}

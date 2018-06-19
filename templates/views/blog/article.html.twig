@@ -29,7 +29,6 @@
                             <p class="card-text text-justify">{{ article.content }}</p>
                             <div class="text-right">
                                 <a href="{{ path('blogArticle' ,{slug : article.Slug}) }}">
-                                    <img src="{{ asset('imgSite/buttons/Symbole 3 – 6.png') }}" alt="" height="50px;">
                                     <div class="col-12 mt-5">
                                         <button class="btn btn-outline-secondary float-right" onclick="changeHidden(null, null)">
                                             Répondre
@@ -84,7 +83,7 @@
                 <div class="card my-4 border-0 text-center mt-5">
                     <p class="font-weight-bold">un peu de blabla</p>
                     <p class="text-muted mt-2">Un peu de texte et blabla et blabla et bla et encore blabla</p>
-                    <a href="#"><img class="align-self-center" src="{{ asset('imgSite/buttons/news.png') }}" alt="NewsLetter" width="80%"></a>
+                    <a href="#"><img class="align-self-center" src="{{ asset('imgSite/buttons/news.png') }}" alt="NewsLetter" width="300px"></a>
                 </div>
 
             </div>
@@ -120,9 +119,9 @@
                     </div>
                     <div class="col-10 col-md-11">
                         <p class="font-weight-bold">Commentaire de {{ comment.author.firstName }} {{ comment.author.lastName }}</p>
-                        <p>{{ comment.content }}</p>
+                        <p style="word-wrap: break-word;">{{ comment.content }}</p>
                         <button
-                                class="btn btn-outline-secondary float-right mb-2"
+                                class="btn btn-outline-secondary float-right mb-3"
                                 onclick="changeHidden({{ comment.id }},
                                         '{{ comment.author.firstName ~ ' ' ~ comment.author.lastName }}')
                                         ">

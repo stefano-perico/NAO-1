@@ -23,6 +23,11 @@ class User
     private $id;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $role;
+
+    /**
      * @ORM\Column(type="string", length=35, nullable=false)
      */
     private $firstName;
@@ -81,6 +86,18 @@ class User
     public function getId()
     {
         return $this->id;
+    }
+
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    public function setRole($role)
+    {
+        $this->role = $role;
+
+        return $this;
     }
 
     public function getFirstName(): ?string

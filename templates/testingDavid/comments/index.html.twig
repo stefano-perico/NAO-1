@@ -11,7 +11,6 @@
                 <th>Id</th>
                 <th>Article</th>
                 <th>Parent</th>
-                <th>Title</th>
                 <th>Content</th>
                 <th>Name</th>
                 <th>Date</th>
@@ -25,7 +24,6 @@
                 <td>{{ comment.id }}</td>
                 <td>{{ comment.article.Slug }}</td>
                 <td>{% if comment.parent.id is defined %}{{ comment.parent.id }}{% else %}null{% endif %}</td>
-                <td>{{ comment.title }}</td>
                 <td>{{ comment.content }}</td>
                 <td>{{ comment.author.firstName }} {{ comment.author.lastName }}</td>
                 <td>{{ comment.Date ? comment.Date|date('Y-m-d') : '' }}</td>

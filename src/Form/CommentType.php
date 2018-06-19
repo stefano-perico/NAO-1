@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Article;
 use App\Entity\Comments;
 use App\Entity\User;
 use App\Repository\ArticleRepository;
@@ -39,14 +40,15 @@ class CommentType extends AbstractType
             ])
             ->get('parent')
             ->addModelTransformer(new CallbackTransformer(
-                function ($a){
-                    return $a;
+                function ($null){
+                    return $null;
                 },
-                function($b){
-                    return $this->commentsRepository->findOneBy(['id'=>$b]);
-                }
-                ))
+                function($id){
+                    return $this->commentsRepository->findOneBy(['id'=>$id]);
+                })
+            )
         ;
+
     }
 
     public function configureOptions(OptionsResolver $resolver)

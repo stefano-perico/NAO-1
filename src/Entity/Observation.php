@@ -29,7 +29,7 @@ class Observation
     private $author;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Image")
+     * @ORM\OneToOne(targetEntity="App\Entity\Image")
      */
     private $image;
 
