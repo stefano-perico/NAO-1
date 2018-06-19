@@ -6313,10 +6313,24 @@ nav {
   nav .navbar-brand img {
     height: 2.5em; } }
 
+html {
+  position: absolute;
+  min-height: 100%;
+  width: 100%; }
+
+body {
+  margin-bottom: 100px; }
+
 footer {
   background: #fff;
   padding-top: 20px;
   padding-bottom: 20px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5; }
 
 .card-header {
   background: #f5c06b;

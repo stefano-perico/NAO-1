@@ -43,7 +43,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('event_index') }}">
                     <img src="
-                    {% if app.request.requestUri matches '#^(\/connexion)+#' %}
+                    {% if app.request.requestUri matches '#^(\/evenement)+#' %}
                         {{ asset('imgSite/buttons/evenements1.png') }}
                     {% else %}
                         {{ asset('imgSite/buttons/evenements.png') }}
@@ -63,11 +63,16 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn" data-toggle="modal" data-target="#optionsModal" >
-                    <img src="{{ asset('imgSite/buttons/connexion.png') }}" alt="Connexion">
+                <a class="nav-link" href="{{ path('connexion') }}">
+                    <img src="
+                    {% if app.request.requestUri matches '#^(\/connexion)+#' %}
+                        {{ asset('imgSite/buttons/connexion1.png') }}
+                    {% else %}
+                        {{ asset('imgSite/buttons/connexion.png') }}
+                    {% endif %}
+                    " alt="connexion">
                 </a>
             </li>
         </ul>
     </div>
 </nav>
-{{ include('connexion/optionsModal.html.twig') }}
