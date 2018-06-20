@@ -1,1 +1,5 @@
 observation: [visitor, professional, author, admin]
+connexion: [visitor, professional, author, admin]
+
+blogIndex: [visitor, professional, author, admin]
+article: [visitor, professional, author, admin]

@@ -8,6 +8,7 @@ use App\Repository\ArticleRepository;
 use App\Repository\UserRepository;
 use App\Services\CommentsService;
 use App\Services\FlashesService;
+use App\Services\UserService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -22,8 +23,13 @@ class BlogController extends Controller
     /**
      * @Route("/index", name="blogIndex")
      */
-    public function blog(ArticleRepository $articleRepository, Request $request, FlashesService $flashesService)
+    public function blogIndex(ArticleRepository $articleRepository, Request $request, FlashesService $flashesService, UserService $userService)
     {
+        if (!$userService->isAuthorized($request, __FUNCTION__)){
+            $flashesService->setFlashes($userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         return $this->render('views/blog/index.html.twig', [
             'articles' => $articleRepository->findAll(),
             'flashs'   => $flashesService->getFlashes($request)
@@ -33,8 +39,13 @@ class BlogController extends Controller
     /**
      * @Route("/article/{slug}", name="blogArticle")
      */
-    public function article(Request $request, FlashesService $flashesService, ArticleRepository $articleRepository,UserRepository $userRepository, CommentsService $commentsService, $slug)
+    public function article(Request $request, FlashesService $flashesService, ArticleRepository $articleRepository,UserRepository $userRepository, CommentsService $commentsService, $slug, UserService $userService)
     {
+        if (!$userService->isAuthorized($request, __FUNCTION__)){
+            $flashesService->setFlashes($userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $article = $articleRepository->findOneBy(['slug'=>$slug]);
         $user = $userRepository->find(1);//todo: connexion
 

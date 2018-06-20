@@ -21,9 +21,6 @@ class ObservationController extends Controller
      */
     public function observation(ObservationRepository $observationRepository, Request $request, UserService $userService, FlashesService $flashesService)
     {
-        $user = ['role' => 'visitor'];
-        $request->getSession()->set('user', $user);
-
         if (!$userService->isAuthorized($request, __FUNCTION__)){
             $flashesService->setFlashes($userService->getFlash());
             return $this->redirectToRoute('home');

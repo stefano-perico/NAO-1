@@ -21,24 +21,35 @@ class AccountController extends Controller
     /**
      * @Route("/connexion", name="connexion")
      */
-    public function connexion(Request $request, FlashesService $flashesService)
+    public function connexion(Request $request, FlashesService $flashesService, UserService $userService)
     {
-        $connexionForm = $this
+        if (!$userService->isAuthorized($request, __FUNCTION__)){
+            $flashesService->setFlashes($userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
+//        $request->getSession()->clear();
+        dump($request->getSession()->get('user'));
+        $form = $this
             ->createFormBuilder()
-            ->add('firstname')
+            ->add('email')
             ->add('password')
             ->getForm()
             ;
 
-        $connexionForm->handleRequest($request);
+        $form->handleRequest($request);
 
-        if ($connexionForm->isSubmitted() && $connexionForm->isValid()){
-            dd($connexionForm);
+        if ($form->isSubmitted() && $form->isValid()){
+            $user = $userService->connection($form->getViewData());
+            $user !== null ?
+                $request->getSession()->set('user', $user):
+                null;
+            $flashesService->setFlashes($userService->getFlash());
         }
 
         return new Response($this->renderView('views/connexion.html.twig',[
-            'flashs'        => $flashesService->getFlashes($request),
-            'connexionForm' => true
+            'flashs'    => $flashesService->getFlashes($request),
+            'form'      => $form->createView()
         ]));
     }
 
