@@ -6343,7 +6343,15 @@ body {
   .cover-custom {
     height: 500px;
     width: 100%;
-    object-fit: cover; } }
+    object-fit: cover; }
+  .image-face {
+    display: none; } }
+
+.image-face img {
+  box-shadow: 2px 2px 5px #555; }
+  .image-face img:hover {
+    transition-duration: 200ms;
+    box-shadow: 4px 4px 10px #555; }
 
 .observation-image-custom {
   border-radius: 25px; }

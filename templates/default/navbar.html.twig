@@ -73,6 +73,15 @@
                     " alt="connexion">
                 </a>
             </li>
+            <li class="nav-item image-face">
+                {% if app.session.get('user') is defined and app.session.get('user') != null %}
+                    {% if app.session.get('user').image is defined %}
+                        <img class="rounded-circle" src="{{ asset('img/'~app.session.get('user').image.image.name) }}" alt="" height="50px" width="50px">
+                    {% endif %}
+                {% endif %}
+            </li>
         </ul>
     </div>
 </nav>
+
+{#{{ dump(app.session.get('user')) }}#}

@@ -23,6 +23,8 @@ class AccountController extends Controller
      */
     public function connexion(Request $request, FlashesService $flashesService, UserService $userService)
     {
+//        $request->getSession()->clear();
+
         if (!$userService->isAuthorized($request, __FUNCTION__)){
             $flashesService->setFlashes($userService->getFlash());
             return $this->redirectToRoute('home');

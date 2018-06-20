@@ -39,7 +39,7 @@ class BlogController extends Controller
     /**
      * @Route("/article/{slug}", name="blogArticle")
      */
-    public function article(Request $request, FlashesService $flashesService, ArticleRepository $articleRepository,UserRepository $userRepository, CommentsService $commentsService, $slug, UserService $userService)
+    public function blogArticle(Request $request, FlashesService $flashesService, ArticleRepository $articleRepository,UserRepository $userRepository, CommentsService $commentsService, $slug, UserService $userService)
     {
         if (!$userService->isAuthorized($request, __FUNCTION__)){
             $flashesService->setFlashes($userService->getFlash());
@@ -47,11 +47,9 @@ class BlogController extends Controller
         };
 
         $article = $articleRepository->findOneBy(['slug'=>$slug]);
-        $user = $userRepository->find(1);//todo: connexion
-
         $comment = (new Comments())
             ->setArticle($article)
-            ->setAuthor($user)
+            ->setAuthor($request->getSession()->get('user'))
         ;
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);
