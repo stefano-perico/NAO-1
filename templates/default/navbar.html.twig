@@ -1,87 +1,75 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <a class="navbar-brand" href="/accueil">
+{% import _self as macro %}
+
+{% macro buttonNav(name, path) %}
+    <div class="buttons-custom buttons-custom-{{ name }}">
+        <span class="text-center">{{ name|upper|raw }}</span>
+        <img src="{{ asset('imgSite/NavButtons/'~path|lower~'.svg') }}" alt="" height="100%">
+    </div>
+{% endmacro %}
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <a class="navbar-brand" href="{{ path('home') }}">
         <img src="{{ asset('imgSite/logo NAO lettrage.png') }}" alt="logo NAO">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav mt-3">
+        <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('home') }}">
-                    <img src="
                     {% if app.request.requestUri matches '#^(\/)+$#' %}
-                        {{ asset('imgSite/buttons/accueiL1.png') }}
+                        {{ macro.buttonNav('accueil', 'accueil') }}
                     {% else %}
-                        {{ asset('imgSite/buttons/accueiL.png') }}
+                        {{ macro.buttonNav('accueil', 'accueil') }}
                     {% endif %}
-                    " alt="Accueil">
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('observation') }}">
-                    <img src="
                     {% if app.request.requestUri matches '#^(\/observation)+#' %}
-                        {{ asset('imgSite/buttons/observation 1.png') }}
+                        {{ macro.buttonNav('observation', 'observation') }}
                     {% else %}
-                        {{ asset('imgSite/buttons/observation.png') }}
+                        {{ macro.buttonNav('observation', 'observation') }}
                     {% endif %}
-                    " alt="Observation">
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('event_index') }}">
-                    <img src="
                     {% if app.request.requestUri matches '#^(\/carte)+#' %}
-                        {{ asset('imgSite/buttons/carte1.png') }}
+                        {{ macro.buttonNav('carte <br> interactive', 'carte') }}
                     {% else %}
-                        {{ asset('imgSite/buttons/carte.png') }}
+                        {{ macro.buttonNav('carte <br> interactive', 'carte') }}
                     {% endif %}
-                    " alt="carte intéractive">
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('event_index') }}">
-                    <img src="
                     {% if app.request.requestUri matches '#^(\/evenement)+#' %}
-                        {{ asset('imgSite/buttons/evenements1.png') }}
+                        {{ macro.buttonNav('évènements', 'événements') }}
                     {% else %}
-                        {{ asset('imgSite/buttons/evenements.png') }}
+                        {{ macro.buttonNav('évènements', 'événements') }}
                     {% endif %}
-                    " alt="Evènement">
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('blogIndex') }}">
-                    <img src="
                     {% if app.request.requestUri matches '#^(\/blog)+#' %}
-                        {{ asset('imgSite/buttons/blog1.png') }}
+                        {{ macro.buttonNav('blog', 'blog') }}
                     {% else %}
-                        {{ asset('imgSite/buttons/blog.png') }}
+                        {{ macro.buttonNav('blog', 'blog') }}
                     {% endif %}
-                    " alt="Blog">
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('connexion') }}">
-                    <img src="
                     {% if app.request.requestUri matches '#^(\/connexion)+#' %}
-                        {{ asset('imgSite/buttons/connexion1.png') }}
+                        {{ macro.buttonNav('connexion', 'connexion') }}
                     {% else %}
-                        {{ asset('imgSite/buttons/connexion.png') }}
+                        {{ macro.buttonNav('connexion', 'connexion') }}
                     {% endif %}
-                    " alt="connexion">
                 </a>
-            </li>
-            <li class="nav-item image-face">
-                {% if app.session.get('user') is defined and app.session.get('user') != null %}
-                    {% if app.session.get('user').image is defined %}
-                        <img class="rounded-circle" src="{{ asset('img/'~app.session.get('user').image.image.name) }}" alt="" height="50px" width="50px">
-                    {% endif %}
-                {% endif %}
             </li>
         </ul>
     </div>
 </nav>
-
-{#{{ dump(app.session.get('user')) }}#}

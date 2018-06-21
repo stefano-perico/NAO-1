@@ -1,0 +1,54 @@
+@mixin button($color){
+  font-family: Ubuntu, sans-serif, sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  height: 40px;
+  width: 130px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: 2px 2px 5px #555;
+  border-radius: 5px;
+  transition-duration: 200ms;
+  span{
+    margin: auto;
+  }
+  img{
+    border-radius: 0 5px 5px 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  &:hover{
+    background-color: $color;
+    color: #FFF;
+    box-shadow: 1px 1px 2px #555;
+    cursor: pointer;
+  }
+}
+
+.buttons-custom-accueil {
+ @include button($greenCustom)
+}
+
+.buttons-custom-observation {
+  @include button($blueCustom)
+}
+
+.buttons-custom-carte {
+  @include button($redCustom)
+}
+
+.buttons-custom-évènements {
+  @include button($blueCustom)
+}
+
+.buttons-custom-blog {
+  @include button($orangeDarkCustom)
+}
+
+.buttons-custom-connexion {
+  @include button($orangeLightCustom)
+}

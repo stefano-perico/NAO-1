@@ -127,10 +127,20 @@ class Image
      * @ORM\PreFlush()
      * @ORM\PreUpdate()
      */
-    public function imagePreFlush()
+    public function originalNamePreFlush()
     {
         null === $this->alt || empty($this->alt) ?
             $this->alt = $this->image->getOriginalName() :
+            null;
+    }
+
+    /**
+     * @ORM\PreFlush()
+     */
+    public function sectionPreFlush()
+    {
+        null === $this->section || empty($this->section) ?
+            $this->section = 'visitor' :
             null;
     }
 

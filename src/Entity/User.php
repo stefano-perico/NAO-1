@@ -12,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @UniqueEntity("email")
  * @UniqueEntity(fields={"firstName","lastName"})
+ * @ORM\HasLifecycleCallbacks()
  */
 class User
 {
@@ -69,8 +70,8 @@ class User
     private $event;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Image")
-     * @ORM\JoinColumn(name="image_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Image", cascade={"persist"})
+     * @ORM\JoinColumn(name="image_id", referencedColumnName="id", nullable=true)
      */
     private $image;
 
@@ -243,8 +244,14 @@ class User
         return $this;
     }
 
-    public function __toString() {
-        return $this->firstName.' '.$this->lastName;
+    /**
+     * @ORM\PreFlush()
+     */
+    public function PreFlushRole()
+    {
+        $this->role === null ?
+            $this->role = 'visitor':
+            null;
     }
 
 }

@@ -2,17 +2,18 @@
 
 namespace App\Controller;
 
-use App\Repository\ObservationRepository;
+use App\Entity\User;
+use App\Form\UserType;
 use App\Services\FlashesService;
 use App\Services\UserService;
-use function Sodium\add;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Yaml\Yaml;
 
 /**
+ * @Route("/compte")
  * Class HomeController
  * @package App\Controller
  */
@@ -23,26 +24,21 @@ class AccountController extends Controller
      */
     public function connexion(Request $request, FlashesService $flashesService, UserService $userService)
     {
-//        $request->getSession()->clear();
-
         if (!$userService->isAuthorized($request, __FUNCTION__)){
             $flashesService->setFlashes($userService->getFlash());
             return $this->redirectToRoute('home');
         };
 
-//        $request->getSession()->clear();
-        dump($request->getSession()->get('user'));
-        $form = $this
-            ->createFormBuilder()
-            ->add('email')
+        $formLogin = $this
+            ->createformBuilder()
+            ->add('email', EmailType::class)
             ->add('password')
-            ->getForm()
+            ->getform()
             ;
+        $formLogin->handleRequest($request);
 
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()){
-            $user = $userService->connection($form->getViewData());
+        if ($formLogin->isSubmitted() && $formLogin->isValid()){
+            $user = $userService->connection($formLogin->getViewData());
             $user !== null ?
                 $request->getSession()->set('user', $user):
                 null;
@@ -51,8 +47,35 @@ class AccountController extends Controller
 
         return new Response($this->renderView('views/connexion.html.twig',[
             'flashs'    => $flashesService->getFlashes($request),
-            'form'      => $form->createView()
+            'formLogin' => $formLogin->createView()
         ]));
     }
 
+    /**
+     * @Route("/creer", name="createAccount")
+     */
+    public function createAccount(Request $request, FlashesService $flashesService, UserService $userService)
+    {
+        if (!$userService->isAuthorized($request, __FUNCTION__)){
+            $flashesService->setFlashes($userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
+        $user = new User();
+        $formCreateAccount = $this->createForm(UserType::class, $user);
+        $formCreateAccount->handleRequest($request);
+
+        dump($request->getSession()->get('user'));
+        if ($formCreateAccount->isSubmitted() && $formCreateAccount->isValid()){
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
+//            $request->getSession()->set('user', $user); //todo: ajouter user à la session
+        }
+
+        return new Response($this->renderView('views/connexion.html.twig',[
+            'flashs'            => $flashesService->getFlashes($request),
+            'formCreateAccount' => $formCreateAccount->createView()
+        ]));
+    }
 }

@@ -1,5 +1,7 @@
-observation: [visitor, professional, author, admin]
-connexion: [visitor, professional, author, admin]
+observation:    [visitor, professional, author, admin]
 
-blogIndex: [visitor, professional, author, admin]
-blogArticle: [visitor, professional, author, admin]
+blogIndex:      [visitor, professional, author, admin]
+blogArticle:    [visitor, professional, author, admin]
+
+connexion:      [visitor, professional, author, admin]
+createAccount:  [visitor, professional, author, admin]

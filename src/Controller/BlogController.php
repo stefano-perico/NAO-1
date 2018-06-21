@@ -49,7 +49,9 @@ class BlogController extends Controller
         $article = $articleRepository->findOneBy(['slug'=>$slug]);
         $comment = (new Comments())
             ->setArticle($article)
-            ->setAuthor($request->getSession()->get('user'))
+            ->setAuthor(
+                $userRepository->find($request->getSession()->get('user')->getId())
+            )
         ;
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);

@@ -1,15 +1,62 @@
 {% extends('base.html.twig') %}
 
 {% block body %}
-    {% if form is defined %}
+
+    {% if formLogin is defined %}
+        {% form_theme formLogin 'bootstrap_4_layout.html.twig' %}
         <div class="container" style="margin-top: 250px">
-            {{ form_start(form, {'attr':{'class':'form-sign-in'}}) }}
+            {{ form_start(formLogin, {'attr':{'class':'form-sign-in'}}) }}
                 <img class="mb-4" src="https://www.megaebin.com/public/images/signin.gif" alt="" width="72" height="72">
                 <h1 class="h3 mb-3 font-weight-normal">Pour vous connecter</h1>
-                {{ form_widget(form.email, {'attr':{'class':'form-control', 'placeholder':'Votre email'}}) }}
-                {{ form_widget(form.password, {'attr':{'class':'form-control', 'placeholder':'Votre mot de pass'}}) }}
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Connectez-vous !</button>
-            {{ form_end(form) }}
+                <div class="form-group">
+                    {{ form_widget(formLogin.email, {'attr':{'class':'form-control mt-2', 'placeholder':'Votre email'}}) }}
+                    {{ form_widget(formLogin.password, {'attr':{'class':'form-control mt-2', 'placeholder':'Votre mot de pass'}}) }}
+                    <button class="btn btn-lg btn-success btn-block col-12 col-md-4 offset-md-8 mt-2" type="submit">Connectez-vous !</button>
+                </div>
+            {{ form_end(formLogin) }}
+            <div>
+                <div class="mt-4 text-center">
+                    <a class="btn" href="{{ path('createAccount') }}">
+                        <img class="mr-2 ml-2" src="{{ asset('imgSite/buttons/Creer - 1.png') }}" alt="connexion" width="200px">
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% if formCreateAccount is defined%}
+        {% form_theme formCreateAccount 'bootstrap_4_layout.html.twig' %}
+        <div class="container" style="margin-top: 250px">
+            {{ form_start(formCreateAccount) }}
+                <img class="mb-4" src="http://icons.iconarchive.com/icons/graphicloads/flat-finance/256/person-icon.png" alt="" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">Créez votre compte</h1>
+                <div class="form-group row">
+                    {{ form_errors(formCreateAccount.firstName) }}
+                    {{ form_widget(formCreateAccount.firstName, {'attr':{'class':'form-control col-12 col-md-6 mt-2', 'placeholder':'Votre prénom'}}) }}
+                    {{ form_errors(formCreateAccount.lastName) }}
+                    {{ form_widget(formCreateAccount.lastName, {'attr':{'class':'form-control col-12 col-md-6 mt-2', 'placeholder':'Votre nom'}}) }}
+
+
+                    {{ form_errors(formCreateAccount.email) }}
+                    {{ form_widget(formCreateAccount.email, {'attr':{'class':'form-control mt-2', 'placeholder':'Votre email'}}) }}
+                    {{ form_errors(formCreateAccount.password) }}
+                    {{ form_widget(formCreateAccount.password, {'attr':{'class':'form-control mt-2', 'placeholder':'Votre password'}}) }}
+                    {{ form_errors(formCreateAccount.summary) }}
+                    {{ form_widget(formCreateAccount.summary, {'attr':{'class':'form-control mt-2', 'placeholder':'Un bref sommaire'}}) }}
+                    <div class="input-group mt-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                            {{ form_widget(formCreateAccount.image.imageFile, {'attr':{'class':'custom-file-input mt-2'}}) }}
+                            <label class="custom-file-label" for="user_image_imageFile">Choisissez une image</label>
+                        </div>
+                    </div>
+                    {{ form_widget(formCreateAccount.image.alt, {'attr':{'class':'form-control mt-2', 'placeholder':'Description de l\'image'}}) }}
+                    {{ form_rest(formCreateAccount) }}
+                </div>
+                <button class="btn btn-lg btn-success btn-block col-12  col-md-4 offset-md-8 mt-2" type="submit">Créer un compte !</button>
+            {{ form_end(formCreateAccount) }}
         </div>
     {% endif %}
 {% endblock %}

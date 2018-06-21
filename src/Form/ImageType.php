@@ -16,18 +16,21 @@ class ImageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('imageFile', FileType::class)
+            ->add('imageFile', FileType::class,[
+                'label' => false
+            ])
             ->add('alt', TextType::class,[
-                'required' => false
+                'required' => false,
+                'label'    => false
             ])
-            ->add('section', ChoiceType::class,[
-                'choices' => [
-                    'indéfini'      => 'indefini',
-                    'article'       => 'article',
-                    'évènement'     => 'evenement',
-                    'observation'   => 'observation'
-                ]
-            ])
+//            ->add('section', ChoiceType::class,[
+//                'choices' => [
+//                    'indéfini'      => 'indefini',
+//                    'article'       => 'article',
+//                    'évènement'     => 'evenement',
+//                    'observation'   => 'observation'
+//                ]
+//            ])
         ;
     }
 
