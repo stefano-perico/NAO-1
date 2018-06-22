@@ -7,9 +7,9 @@
             <div class="col-md-10">
                 <div class="row" style="height: 100%">
                     <div class="col-12"></div>
-                    <div class="col-12 text-center mt-2">
+                    <div class="col-12 text-center mt-2  text-custom-shadow">
                         <img src="{{ asset('imgSite/nos actions.png') }}" alt="" height="100px">
-                        <h1 class="text-white" style="font-size: 2em">Bienvenue <br>L'ornithologie pour tous</h1>
+                        <h1 class="text-white mt-2" style="font-size: 2em;">BIENVENUE <br>L'ORNITHOLOGIE POUR TOUS</h1>
                     </div>
                     <div class="col-12 text-center">
                         <button class="btn btn-primary">Rejoignez-nous</button>
@@ -29,7 +29,7 @@
             </div>
 
             <div class="col-12 col-lg-6">
-                <h2 class="text-center">Nos dernières obsevations</h2>
+                <h2 class="text-center">Nos dernières observations</h2>
                 <div class="row">
                     {% for observation in observations %}
                         <div class="col-12 col-md-6">
@@ -37,7 +37,31 @@
                                 <img class="card-img observation-image-custom" src="{{ asset('img/'~observation.image.image.name) }}" alt="" width="100%" height="100%">
                                 <div class="card-img-overlay d-flex justify-content-end p-0">
                                     <div class="d-flex flex-column justify-content-end">
-                                        <img src="{{ asset('imgSite/buttons/plus-2.png') }}" alt="{{ observation.image.image.originalName }}" height="50px;">
+                                        <a data-toggle="modal" data-target="#modal-{{ loop.index }}" style="cursor: pointer;">
+                                            <img src="{{ asset('imgSite/buttons/plus-2.png') }}" alt="{{ observation.image.image.originalName }}" height="50px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="modal-{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">{{ 'Observation de : '~ observation.author.firstName ~' '~ observation.author.lastName }}</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>{{ 'Le : ' ~ observation.date |date('d-m-Y') }}</p>
+                                        <p>{{ 'Lieu d\'observation : ' ~ observation.position.address.villeNom }}</p>
+                                        <img class="mt-2 float-right pl-2" src="{{ asset('img/'~observation.image.image.name) }}" alt="" width="50%">
+                                        <p class="text-justify">{{ observation.description }}</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
                                     </div>
                                 </div>
                             </div>
