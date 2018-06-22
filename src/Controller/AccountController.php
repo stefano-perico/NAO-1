@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\UserType;
+use App\Repository\UserRepository;
 use App\Services\FlashesService;
 use App\Services\UserService;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -43,6 +44,7 @@ class AccountController extends Controller
                 $request->getSession()->set('user', $user):
                 null;
             $flashesService->setFlashes($userService->getFlash());
+            return $this->redirectToRoute('myAccount');
         }
 
         return new Response($this->renderView('views/connexion.html.twig',[
@@ -65,17 +67,59 @@ class AccountController extends Controller
         $formCreateAccount = $this->createForm(UserType::class, $user);
         $formCreateAccount->handleRequest($request);
 
-        dump($request->getSession()->get('user'));
         if ($formCreateAccount->isSubmitted() && $formCreateAccount->isValid()){
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
-//            $request->getSession()->set('user', $user); //todo: ajouter user à la session
         }
 
         return new Response($this->renderView('views/connexion.html.twig',[
             'flashs'            => $flashesService->getFlashes($request),
             'formCreateAccount' => $formCreateAccount->createView()
         ]));
+    }
+
+    /**
+     * @Route("/mon_compte", name="myAccount")
+     */
+    public function myAccount(Request $request, FlashesService $flashesService, UserService $userService, UserRepository $userRepository)
+    {
+//        $request->getSession()->clear();
+        if (!$userService->isAuthorized($request, __FUNCTION__)){
+            $flashesService->setFlashes($userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
+        if (!$request->getSession()->has('user')){
+            return $this->redirectToRoute('connexion');
+        }
+
+        return new Response($this->renderView('views/connexion.html.twig',[
+            'flashs'            => $flashesService->getFlashes($request),
+            'user'         => $userRepository->find($request->getSession()->get('user'))
+        ]));
+    }
+
+    /**
+     * @Route("/disconnect", name="disconnect")
+     */
+    public function disconnect(Request $request)
+    {
+        $user = $request->getSession()->get('user');
+        $request
+            ->getSession()
+            ->clear();
+        $request
+            ->getSession()
+            ->getFlashBag()
+            ->add(
+                'primary',
+                'Vous êtes maintenant déconnecté <strong>'
+                .$user->getFirstName()
+                .' '.
+                $user->getLastName()
+                .'</strong>'
+            );
+        return $this->redirectToRoute('home');
     }
 }

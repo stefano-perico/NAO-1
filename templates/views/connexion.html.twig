@@ -59,4 +59,23 @@
             {{ form_end(formCreateAccount) }}
         </div>
     {% endif %}
+
+    {#{{ dump(app.request.session.get('user')) }}#}
+    {% if user is defined %}
+        <div class="col-12 text-right mt-2">
+            <a href="{{ path('disconnect') }}">
+                <img src="{{ asset('imgSite/buttons/déconnexion.png') }}" alt="déconnexion" width="150px">
+            </a>
+        </div>
+        <div class="container">
+            <div class="card mt-5">
+                <img class="card-img-top" src="{{ asset('img/'~ user.image.image.name) }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 {% endblock %}

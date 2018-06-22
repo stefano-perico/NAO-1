@@ -88,3 +88,13 @@
   background-color: $orangeLightCustom;
   color: #FFF;
 }
+
+.buttons-custom-mon{
+  @include button($orangeLightCustom)
+}
+
+.button-on-page-mon{
+  @include button($orangeLightCustom);
+  background-color: $orangeLightCustom;
+  color: #FFF;
+}

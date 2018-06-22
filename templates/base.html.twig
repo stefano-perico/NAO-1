@@ -20,9 +20,11 @@
 <body>
     {% include 'default/navbar.html.twig' %}
 
-    {% for flash in flashs %}
-        {{ flash | raw }}
-    {% endfor %}
+    {% if flashs is defined %}
+        {% for flash in flashs %}
+            {{ flash | raw }}
+        {% endfor %}
+    {% endif %}
 
     {% block body %}{% endblock %}
 
