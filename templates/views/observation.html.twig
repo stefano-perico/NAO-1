@@ -16,8 +16,12 @@
                             </div>
                         </div>
                         <div class="mt-4">
-                            <img class="mr-2 ml-2" src="{{ asset('imgSite/buttons/connexion.png') }}" alt="connexion" width="200px">
-                            <img class="mr-2 ml-2" src="{{ asset('imgSite/buttons/Creer - 1.png') }}" alt="connexion" width="200px">
+                            <a href="{{ path('connexion') }}">
+                                <img class="mr-2 ml-2" src="{{ asset('imgSite/buttons/connexion.png') }}" alt="connexion" width="200px">
+                            </a>
+                            <a href="{{ path('createAccount') }}">
+                                <img class="mr-2 ml-2" src="{{ asset('imgSite/buttons/Creer - 1.png') }}" alt="connexion" width="200px">
+                            </a>
                         </div>
                     </div>
                 </div>

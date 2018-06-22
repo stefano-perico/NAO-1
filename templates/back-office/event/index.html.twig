@@ -1,0 +1,55 @@
+{% extends 'back-office/base.html.twig' %}
+
+{% block title %}Event index{% endblock %}
+
+{% block body %}
+    <h1>Event index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Auteur</th>
+                <th>Date</th>
+                <th>PublishedAt</th>
+                <th>UpdatedAt</th>
+                <th>Content</th>
+                <th>Localisation</th>
+                <th>Slug</th>
+                <th>actions</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+            <tr>
+                <td>{{ event.id }}</td>
+                <td>{{ event.title }}</td>
+                <td>{{ event.author.firstName }} {{ event.author.lastName }}</td>
+                <td>{{ event.date ? event.date|date('Y-m-d') : '' }}</td>
+                <td>{{ event.PublishedAt ? event.PublishedAt|date('Y-m-d') : '' }}</td>
+                <td>{{ event.UpdatedAt ? event.UpdatedAt|date('Y-m-d') : '' }}</td>
+                <td>{{ event.content }}</td>
+                <td>{{ event.location.villeNom }}</td>
+                <td>{{ event.Slug }}</td>
+                <td>
+                    {% if event.image.image is defined %}
+                    <img src="{{ asset('img/'~event.image.image.name) }}" width="100%">
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ path('event_show', {'id': event.id}) }}">show</a>
+                    <a href="{{ path('event_edit', {'id': event.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('event_new') }}">Create new</a>
+{% endblock %}

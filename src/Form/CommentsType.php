@@ -30,7 +30,6 @@ class CommentsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
             ->add('content')
             ->add('article', ChoiceType::class,[
                 'choices'   => $this->articleRepository->findAll()

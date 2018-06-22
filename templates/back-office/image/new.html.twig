@@ -1,0 +1,11 @@
+{% extends 'back-office/base.html.twig' %}
+
+{% block title %}New Image{% endblock %}
+
+{% block body %}
+    <h1>Create new Image</h1>
+
+    {{ include('back-office/image/_form.html.twig') }}
+
+    <a href="{{ path('image_index') }}">back to list</a>
+{% endblock %}

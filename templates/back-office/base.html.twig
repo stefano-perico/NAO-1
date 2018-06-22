@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <script defer src="{{ asset('/build/js/scattered/turbolinks-min.js') }}" data-turbolinks-eval="false"></script>
+        <script defer src="{{ asset('/build/js/compact/compact-min.js') }}" data-turbolinks-eval="false"></script>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('/build/css/app.css') }}">
+            <link rel="stylesheet" href="{{ asset('/build/adminCss/app.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <a class="navbar-brand" href="{{ path('article_index') }}">Admin</a>
+                <a class="navbar-brand" href="{{ path('home') }}">Site</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('article_index') }}">Articles</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('category_index') }}">Catégories</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('user_index') }}">Utilisateurs</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('event_index') }}">Evènements</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('comments_index') }}">Commentaires</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('image_index') }}">Images</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('observation_index') }}">Observations</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('position_index') }}">Positions</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+
+        </header>
+        <div class="container">
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+        </div>
+    </body>
+</html>

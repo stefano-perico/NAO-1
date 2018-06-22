@@ -17,6 +17,17 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./public/build/css'));
 });
 
+gulp.task('sassAdmin', function () {
+    return gulp.src('./assets/adminCss/app.scss')
+        .pipe(sass().on('error', sass.logError))
+        // .pipe(cleanCSS({compatibility: 'edge'}))
+        // .pipe(uglifycss({
+        //     "maxLineLen": 80,
+        //     "uglyComments": true
+        // }))
+        .pipe(gulp.dest('./public/build/adminCss'));
+});
+
 gulp.task('scriptsCompact', function() {
     return gulp.src('./assets/js/compact/**/*')
         .pipe(plumber())
@@ -33,7 +44,7 @@ gulp.task('scriptsScattered', function() {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./assets/**/*', ['sass'
+    gulp.watch('./assets/**/*', ['sass', 'sassAdmin',
         // ,'scriptsCompact','scriptsScattered'
     ]);
 });

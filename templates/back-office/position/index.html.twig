@@ -1,0 +1,43 @@
+{% extends 'back-office/base.html.twig' %}
+
+{% block title %}Position index{% endblock %}
+
+{% block body %}
+    <h1>Position index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Longitude</th>
+                <th>Latitude</th>
+                <th>Address</th>
+                <th>Date</th>
+                <th>UpdatetedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for position in positions %}
+            <tr>
+                <td>{{ position.id }}</td>
+                <td>{{ position.longitude }}</td>
+                <td>{{ position.latitude }}</td>
+                <td>{{ position.address.villeNom }}</td>
+                <td>{{ position.date ? position.date|date('Y-m-d') : '' }}</td>
+                <td>{{ position.updatetedAt ? position.updatetedAt|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('position_show', {'id': position.id}) }}">show</a>
+                    <a href="{{ path('position_edit', {'id': position.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('position_new') }}">Create new</a>
+{% endblock %}
