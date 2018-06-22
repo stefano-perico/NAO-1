@@ -1,7 +1,10 @@
 {% import _self as macro %}
 
-{% macro buttonNav(name, path) %}
-    <div class="buttons-custom buttons-custom-{{ name }}">
+{% macro buttonNav(name, path, on) %}
+    <div class="buttons-custom buttons-custom-{{ name }}
+    {% if on == 1 %}
+        button-on-page-{{ name }}
+    {% endif %}">
         <span class="text-center">{{ name|upper|raw }}</span>
         <img src="{{ asset('imgSite/NavButtons/'~path|lower~'.svg') }}" alt="" height="100%">
     </div>
@@ -19,54 +22,54 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('home') }}">
                     {% if app.request.requestUri matches '#^(\/)+$#' %}
-                        {{ macro.buttonNav('accueil', 'accueil') }}
+                        {{ macro.buttonNav('accueil', 'accueil', 1) }}
                     {% else %}
-                        {{ macro.buttonNav('accueil', 'accueil') }}
+                        {{ macro.buttonNav('accueil', 'accueil', 0) }}
                     {% endif %}
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('observation') }}">
                     {% if app.request.requestUri matches '#^(\/observation)+#' %}
-                        {{ macro.buttonNav('observation', 'observation') }}
+                        {{ macro.buttonNav('observation', 'observation', 1) }}
                     {% else %}
-                        {{ macro.buttonNav('observation', 'observation') }}
+                        {{ macro.buttonNav('observation', 'observation', 0) }}
                     {% endif %}
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('event_index') }}">
                     {% if app.request.requestUri matches '#^(\/carte)+#' %}
-                        {{ macro.buttonNav('carte <br> interactive', 'carte') }}
+                        {{ macro.buttonNav('carte <br> interactive', 'carte', 1) }}
                     {% else %}
-                        {{ macro.buttonNav('carte <br> interactive', 'carte') }}
+                        {{ macro.buttonNav('carte <br> interactive', 'carte', 0) }}
                     {% endif %}
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('event_index') }}">
                     {% if app.request.requestUri matches '#^(\/evenement)+#' %}
-                        {{ macro.buttonNav('évènements', 'événements') }}
+                        {{ macro.buttonNav('évènements', 'événements', 1) }}
                     {% else %}
-                        {{ macro.buttonNav('évènements', 'événements') }}
+                        {{ macro.buttonNav('évènements', 'événements', 0) }}
                     {% endif %}
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('blogIndex') }}">
                     {% if app.request.requestUri matches '#^(\/blog)+#' %}
-                        {{ macro.buttonNav('blog', 'blog') }}
+                        {{ macro.buttonNav('blog', 'blog', 1) }}
                     {% else %}
-                        {{ macro.buttonNav('blog', 'blog') }}
+                        {{ macro.buttonNav('blog', 'blog', 0) }}
                     {% endif %}
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('connexion') }}">
-                    {% if app.request.requestUri matches '#^(\/connexion)+#' %}
-                        {{ macro.buttonNav('connexion', 'connexion') }}
+                    {% if app.request.requestUri matches '#^(\/compte)+#' %}
+                        {{ macro.buttonNav('connexion', 'connexion', 1) }}
                     {% else %}
-                        {{ macro.buttonNav('connexion', 'connexion') }}
+                        {{ macro.buttonNav('connexion', 'connexion', 0) }}
                     {% endif %}
                 </a>
             </li>

@@ -6292,7 +6292,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: Ubuntu, sans-serif, sans-serif;
   font-size: 0.7em;
   font-weight: bold;
-  color: #000;
+  color: #111;
   display: flex;
   height: 40px;
   width: 130px;
@@ -6315,11 +6315,40 @@ a.text-dark:hover, a.text-dark:focus {
     box-shadow: 1px 1px 2px #555;
     cursor: pointer; }
 
+.button-on-page-accueil {
+  font-family: Ubuntu, sans-serif, sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #111;
+  display: flex;
+  height: 40px;
+  width: 130px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: 2px 2px 5px #555;
+  border-radius: 5px;
+  transition-duration: 200ms;
+  background-color: #94C01B;
+  color: #FFF; }
+  .button-on-page-accueil span {
+    margin: auto; }
+  .button-on-page-accueil img {
+    border-radius: 0 5px 5px 0;
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .button-on-page-accueil:hover {
+    background-color: #94C01B;
+    color: #FFF;
+    box-shadow: 1px 1px 2px #555;
+    cursor: pointer; }
+
 .buttons-custom-observation {
   font-family: Ubuntu, sans-serif, sans-serif;
   font-size: 0.7em;
   font-weight: bold;
-  color: #000;
+  color: #111;
   display: flex;
   height: 40px;
   width: 130px;
@@ -6342,11 +6371,40 @@ a.text-dark:hover, a.text-dark:focus {
     box-shadow: 1px 1px 2px #555;
     cursor: pointer; }
 
+.button-on-page-observation {
+  font-family: Ubuntu, sans-serif, sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #111;
+  display: flex;
+  height: 40px;
+  width: 130px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: 2px 2px 5px #555;
+  border-radius: 5px;
+  transition-duration: 200ms;
+  background-color: #0066B2;
+  color: #FFF; }
+  .button-on-page-observation span {
+    margin: auto; }
+  .button-on-page-observation img {
+    border-radius: 0 5px 5px 0;
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .button-on-page-observation:hover {
+    background-color: #0066B2;
+    color: #FFF;
+    box-shadow: 1px 1px 2px #555;
+    cursor: pointer; }
+
 .buttons-custom-carte {
   font-family: Ubuntu, sans-serif, sans-serif;
   font-size: 0.7em;
   font-weight: bold;
-  color: #000;
+  color: #111;
   display: flex;
   height: 40px;
   width: 130px;
@@ -6369,11 +6427,40 @@ a.text-dark:hover, a.text-dark:focus {
     box-shadow: 1px 1px 2px #555;
     cursor: pointer; }
 
+.button-on-page-carte {
+  font-family: Ubuntu, sans-serif, sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #111;
+  display: flex;
+  height: 40px;
+  width: 130px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: 2px 2px 5px #555;
+  border-radius: 5px;
+  transition-duration: 200ms;
+  background-color: #BD1320;
+  color: #FFF; }
+  .button-on-page-carte span {
+    margin: auto; }
+  .button-on-page-carte img {
+    border-radius: 0 5px 5px 0;
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .button-on-page-carte:hover {
+    background-color: #BD1320;
+    color: #FFF;
+    box-shadow: 1px 1px 2px #555;
+    cursor: pointer; }
+
 .buttons-custom-évènements {
   font-family: Ubuntu, sans-serif, sans-serif;
   font-size: 0.7em;
   font-weight: bold;
-  color: #000;
+  color: #111;
   display: flex;
   height: 40px;
   width: 130px;
@@ -6396,11 +6483,40 @@ a.text-dark:hover, a.text-dark:focus {
     box-shadow: 1px 1px 2px #555;
     cursor: pointer; }
 
+.button-on-page-évènements {
+  font-family: Ubuntu, sans-serif, sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #111;
+  display: flex;
+  height: 40px;
+  width: 130px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: 2px 2px 5px #555;
+  border-radius: 5px;
+  transition-duration: 200ms;
+  background-color: #0066B2;
+  color: #FFF; }
+  .button-on-page-évènements span {
+    margin: auto; }
+  .button-on-page-évènements img {
+    border-radius: 0 5px 5px 0;
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .button-on-page-évènements:hover {
+    background-color: #0066B2;
+    color: #FFF;
+    box-shadow: 1px 1px 2px #555;
+    cursor: pointer; }
+
 .buttons-custom-blog {
   font-family: Ubuntu, sans-serif, sans-serif;
   font-size: 0.7em;
   font-weight: bold;
-  color: #000;
+  color: #111;
   display: flex;
   height: 40px;
   width: 130px;
@@ -6423,11 +6539,40 @@ a.text-dark:hover, a.text-dark:focus {
     box-shadow: 1px 1px 2px #555;
     cursor: pointer; }
 
+.button-on-page-blog {
+  font-family: Ubuntu, sans-serif, sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #111;
+  display: flex;
+  height: 40px;
+  width: 130px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: 2px 2px 5px #555;
+  border-radius: 5px;
+  transition-duration: 200ms;
+  background-color: #E84C18;
+  color: #FFF; }
+  .button-on-page-blog span {
+    margin: auto; }
+  .button-on-page-blog img {
+    border-radius: 0 5px 5px 0;
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .button-on-page-blog:hover {
+    background-color: #E84C18;
+    color: #FFF;
+    box-shadow: 1px 1px 2px #555;
+    cursor: pointer; }
+
 .buttons-custom-connexion {
   font-family: Ubuntu, sans-serif, sans-serif;
   font-size: 0.7em;
   font-weight: bold;
-  color: #000;
+  color: #111;
   display: flex;
   height: 40px;
   width: 130px;
@@ -6445,6 +6590,35 @@ a.text-dark:hover, a.text-dark:focus {
     margin: 0;
     padding: 0; }
   .buttons-custom-connexion:hover {
+    background-color: #EA9610;
+    color: #FFF;
+    box-shadow: 1px 1px 2px #555;
+    cursor: pointer; }
+
+.button-on-page-connexion {
+  font-family: Ubuntu, sans-serif, sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #111;
+  display: flex;
+  height: 40px;
+  width: 130px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: 2px 2px 5px #555;
+  border-radius: 5px;
+  transition-duration: 200ms;
+  background-color: #EA9610;
+  color: #FFF; }
+  .button-on-page-connexion span {
+    margin: auto; }
+  .button-on-page-connexion img {
+    border-radius: 0 5px 5px 0;
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .button-on-page-connexion:hover {
     background-color: #EA9610;
     color: #FFF;
     box-shadow: 1px 1px 2px #555;

@@ -2,7 +2,7 @@
   font-family: Ubuntu, sans-serif, sans-serif;
   font-size: 0.7em;
   font-weight: bold;
-  color: #000;
+  color: $darkCustom;
   display: flex;
   height: 40px;
   width: 130px;
@@ -33,22 +33,58 @@
  @include button($greenCustom)
 }
 
+.button-on-page-accueil{
+  @include button($greenCustom);
+  background-color: $greenCustom;
+  color: #FFF;
+}
+
 .buttons-custom-observation {
   @include button($blueCustom)
+}
+
+.button-on-page-observation{
+  @include button($blueCustom);
+  background-color: $blueCustom;
+  color: #FFF;
 }
 
 .buttons-custom-carte {
   @include button($redCustom)
 }
 
+.button-on-page-carte{
+  @include button($redCustom);
+  background-color: $redCustom;
+  color: #FFF;
+}
+
 .buttons-custom-évènements {
   @include button($blueCustom)
+}
+
+.button-on-page-évènements{
+  @include button($blueCustom);
+  background-color: $blueCustom;
+  color: #FFF;
 }
 
 .buttons-custom-blog {
   @include button($orangeDarkCustom)
 }
 
+.button-on-page-blog{
+  @include button($orangeDarkCustom);
+  background-color: $orangeDarkCustom;
+  color: #FFF;
+}
+
 .buttons-custom-connexion {
   @include button($orangeLightCustom)
+}
+
+.button-on-page-connexion{
+  @include button($orangeLightCustom);
+  background-color: $orangeLightCustom;
+  color: #FFF;
 }
