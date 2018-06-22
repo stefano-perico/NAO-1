@@ -70,7 +70,7 @@
                                 <ul class="list-unstyled mb-0">
                                     {% for article in articlestodiscover %}
                                         <li>
-                                            <a href="{{ path('article_show', {'id': article.id}) }}">{{ article.title }}</a>
+                                            <a href="{{ path('blogArticle', {'slug': article.Slug}) }}">{{ article.title }}</a>
                                         </li>
                                     {% endfor %}
                                 </ul>

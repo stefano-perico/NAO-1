@@ -49,6 +49,11 @@ class Event
     private $content;
 
     /**
+     * @ORM\Column(type="text")
+     */
+    private $summary;
+
+    /**
      * @ORM\Column(type="string", length=100)
      * @Assert\Length(max="100")
      */
@@ -157,6 +162,17 @@ class Event
     {
         $this->content = $content;
 
+        return $this;
+    }
+
+    public function getSummary()
+    {
+        return $this->summary;
+    }
+
+    public function setSummary($summary)
+    {
+        $this->summary = $summary;
         return $this;
     }
 

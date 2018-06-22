@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 mt-5">
+                <h2 class="card-title">{{ event.title }}</h2>
+            </div>
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+
+                {% if event is defined %}
+                    <!-- Event Post -->
+
+                    <div>
+                        Posté le {{ event.date|date('d-M-Y') }} par
+                        <a href="{{ path('user_show', {'id': event.author.id}) }}">{{ event.author.firstName ~ ' ' ~ event.author.lastName }}</a>
+                    </div>
+
+                    <div class="card mb-4">
+                        {% if event.image.image is defined %}
+                            <figure>
+                                <img class="card-img-top" src="{{ asset('img/'~event.image.image.name) }}" alt="{{ event.image.image.name }}">
+                                <figcaption>{{ event.image.alt }}</figcaption>
+                            </figure>
+                        {% endif %}
+                        <div class="card-body">
+                            <p class="card-text text-justify">{{ event.content }}</p>
+                            <hr>
+                            <p><strong>Lieux de lévénement: </strong><span>{{ event.location.villeNomSimple|upper }}, {{ event.location.villeDepartement }}</span></p>
+                            <p><strong>Date: </strong><span>{{ event.date|date('d-m-Y') }}</span></p>
+                            <p><strong>auteur: </strong><span>{{ event.author.firstName~' '~event.author.lastName }}</span></p>
+                        </div>
+                        <div class="card-body">
+
+                        </div>
+                    </div>
+                {% endif %}
+
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+{##}
+                <!-- Search Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Rechercher</h5>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Nom de l'événement..">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary search" type="button"><img src="{{ asset('imgSite/ic_search.png') }}" alt="" height="30px"></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="card my-4 articles-decouvrir">
+                    <h5 class="card-header">D'autres événements à découvrir</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="list-unstyled mb-0">
+                                    {% for event in eventToDiscover %}
+                                        <li>
+                                            <a href="{{ path('evenement', {'slug': event.Slug}) }}">{{ event.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Widget -->
+                <div class="card my-4 border-0 text-center mt-5">
+                    <p class="font-weight-bold">un peu de blabla</p>
+                    <p class="text-muted mt-2">Un peu de texte et blabla et blabla et bla et encore blabla</p>
+                    <a href="#"><img class="align-self-center" src="{{ asset('imgSite/buttons/news.png') }}" alt="NewsLetter" width="300px"></a>
+                </div>
+
+            </div>
+
+        </div>
+{% endblock %}

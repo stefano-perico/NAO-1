@@ -21,7 +21,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class BlogController extends Controller
 {
     /**
-     * @Route("/index", name="blogIndex")
+     * @Route(name="blogIndex")
      */
     public function blogIndex(ArticleRepository $articleRepository, Request $request, FlashesService $flashesService, UserService $userService)
     {
@@ -37,7 +37,7 @@ class BlogController extends Controller
     }
 
     /**
-     * @Route("/article/{slug}", name="blogArticle")
+     * @Route("/{slug}", name="blogArticle")
      */
     public function blogArticle(Request $request, FlashesService $flashesService, ArticleRepository $articleRepository,UserRepository $userRepository, CommentsService $commentsService, $slug, UserService $userService)
     {

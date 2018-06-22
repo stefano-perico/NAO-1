@@ -2,11 +2,11 @@
 {% block body %}
 
 <div class="card text-white border-0 mb-5">
-    <img class="card-img cover-custom" src="{{ asset('imgSite/beach-bottle-cold-292426 (1).png') }}" alt="Bouteille à la mers">
+    <img class="card-img cover-custom" src="{{ asset('imgSite/animals-avian-beach-760984.png') }}" alt="Bouteille à la mers">
     <div class="card-img-overlay d-flex justify-content-center">
         <div class="col-md-10 text-left align-self-end">
-            <h1 class="font-weight-bold text-white mb-lg-5">Parlons-en..</h1>
-            <h2>Un éspace pour échanger</h2>
+            <h1 class="font-weight-bold text-white mb-lg-5">Evénements..</h1>
+            <h2>Près de chez vous</h2>
         </div>
     </div>
 </div>
@@ -18,27 +18,27 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8">
 
-            {% for article in articles %}
+            {% for event in events %}
                 <!-- Blog Post -->
                 <div class="card mb-4 mt-4">
-                    {% if article.image.image is defined %}
+                    {% if event.image.image is defined %}
                         <figure>
-                            <img class="card-img-top" src="{{ asset('img/'~article.image.image.name) }}" alt="{{ article.image.image.name }}">
-                            <figcaption>{{ article.image.alt }}</figcaption>
+                            <img class="card-img-top" src="{{ asset('img/'~event.image.image.name) }}" alt="{{ event.image.image.name }}">
+                            <figcaption>{{ event.image.alt }}</figcaption>
                         </figure>
                     {% endif %}
                     <div class="card-body">
-                        <h2 class="card-title">{{ article.title }}</h2>
-                        <p class="card-text text-justify">{{ article.content }}</p>
+                        <h2 class="card-title">{{ event.title }} - <span>le {{ event.date|date('d-m-Y') }}</span></h2>
+                        <p class="card-text text-justify">{{ event.summary }}</p>
                         <div class="text-right">
-                            <a href="{{ path('blogArticle' ,{slug : article.Slug}) }}">
+                            <a href="{{ path('evenement' ,{slug : event.Slug}) }}">
                                 <img src="{{ asset('imgSite/buttons/Symbole 3 – 6.png') }}" alt="" height="50px;">
                             </a>
                         </div>
                     </div>
                     <div class="card-footer text-muted">
-                        Posté le {{ article.date|date('d-M-Y') }} par
-                        <a href="{{ path('user_show', {'id': article.author.id}) }}">{{ article.author.firstName ~ ' ' ~ article.author.lastName }}</a>
+                        Posté le {{ event.date|date('d-M-Y') }} par
+                        <a href="{{ path('user_show', {'id': event.author.id}) }}">{{ event.author.firstName ~ ' ' ~ event.author.lastName }}</a>
                     </div>
                 </div>
             {% endfor %}
@@ -63,7 +63,7 @@
                 <h5 class="card-header">Rechercher</h5>
                 <div class="card-body">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Nom de l'article..">
+                        <input type="text" class="form-control" placeholder="Nom de l'événement..">
                         <span class="input-group-btn">
                   <button class="btn btn-secondary search" type="button"><img src="{{ asset('imgSite/ic_search.png') }}" alt="" height="30px"></button>
                 </span>
@@ -73,14 +73,14 @@
 
             <!-- Categories Widget -->
             <div class="card my-4 articles-decouvrir">
-                <h5 class="card-header">D'autres articles à découvrir</h5>
+                <h5 class="card-header">D'autres événements à découvrir</h5>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
                             <ul class="list-unstyled mb-0">
-                                {% for article in articles %}
+                                {% for event in events %}
                                     <li>
-                                        <a href="{{ path('blogArticle', {'slug': article.Slug}) }}">{{ article.title }}</a>
+                                        <a href="{{ path('evenement', {'slug': event.Slug}) }}">{{ event.title }}</a>
                                     </li>
                                 {% endfor %}
                             </ul>
