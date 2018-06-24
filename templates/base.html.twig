@@ -25,7 +25,7 @@
             {{ flash | raw }}
         {% endfor %}
     {% endif %}
-
+    {{ dump() }}
     {% block body %}{% endblock %}
 
     {% include 'default/footer.html.twig' %}
