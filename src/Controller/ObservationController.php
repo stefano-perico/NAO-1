@@ -3,11 +3,13 @@
 namespace App\Controller;
 
 use App\Entity\Observation;
+use App\Entity\User;
 use App\Form\FrontOffice\ObservationType;
 use App\Repository\ObservationRepository;
 use App\Repository\UserRepository;
 use App\Services\FlashesService;
 use App\Services\UserService;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -71,7 +73,7 @@ class ObservationController extends Controller
                     ->getFlashBag()
                     ->add('warning', 'Votre observation sera prise en compte sous peu')
                 ;
-                return $this->redirectToRoute('myAccount');
+//                return $this->redirectToRoute('myAccount');
             }
         }
 
@@ -85,8 +87,22 @@ class ObservationController extends Controller
     /**
      * @Route("/test", name="test")
      */
-    public function test()
+    public function test(Request $request, EntityManagerInterface $em)
     {
-        return new Response($this->renderView('new.html.twig'));
+        $observation = new Observation();
+        $observationForm = $this->createForm(ObservationType::class, $observation);
+        $observationForm->handleRequest($request);
+
+        if ($observationForm->isSubmitted() && $observationForm->isValid()) {
+            $author = $em->getRepository(User::class)->find(1);//FIXME: à modifier
+
+            $observation->setAuthor($author);
+
+            $em->persist($observation);
+            $em->flush();
+        }
+        return new Response($this->renderView('new.html.twig',[
+            'observationForm' => $observationForm->createView()
+        ]));
     }
 }

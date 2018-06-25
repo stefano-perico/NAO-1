@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
 
-
     {% block style %}
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('/build/css/app.css') }}">
     {% endblock %}
 
-    {% block script %}
-        <script src="{{ asset('/build/js/compact/compact.js') }}" data-turbolinks-eval="false"></script>
+    {% block turbo %}
         <script defer src="{{ asset('/build/js/scattered/turbolinks.js') }}" data-turbolinks-eval="false"></script>
         <script defer src="{{ asset('/build/js/scattered/turbolinksConfig.js') }}" data-turbolinks-eval="false"></script>
     {% endblock %}
-
 </head>
 <body>
     {% include 'default/navbar.html.twig' %}
@@ -26,9 +23,16 @@
             {{ flash | raw }}
         {% endfor %}
     {% endif %}
-    {{ dump() }}
+
     {% block body %}{% endblock %}
 
     {% include 'default/footer.html.twig' %}
+
+    {% block script %}
+        <script src="{{ asset('/build/js/scattered/jquery-3.3.1-min.js') }}"></script>
+        <script src="{{ asset('/build/js/scattered/jquery-ui-min.js') }}"></script>
+        <script src="{{ asset('/build/js/scattered/popper-min.js') }}"></script>
+        <script src="{{ asset('/build/js/scattered/bootstrap-min.js') }}"></script>
+    {% endblock %}
 </body>
 </html>

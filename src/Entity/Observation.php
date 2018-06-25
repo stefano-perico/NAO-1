@@ -23,7 +23,7 @@ class Observation
     private $description;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="event")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="observation")
      * @ORM\JoinColumn(nullable=false)
      */
     private $author;
@@ -197,13 +197,13 @@ class Observation
         return $this;
     }
 
-    /**
-     * @ORM\PrePersist()
-     */
-    public function setCountSpecies()
-    {
-        $species = $this->getSpecies();
-        $species->count();
-    }
+//    /**
+//     * @ORM\PrePersist()
+//     */
+//    public function setCountSpecies()
+//    {
+//        $species = $this->getSpecies();
+//        $species->count();
+//    }
 
 }

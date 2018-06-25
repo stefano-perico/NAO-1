@@ -44,7 +44,7 @@ gulp.task('scriptsScattered', function() {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./assets/**/*', ['sass', 'sassAdmin',
-        // ,'scriptsCompact','scriptsScattered'
+    gulp.watch('./assets/**/*', ['sass', 'sassAdmin'
+        ,'scriptsCompact','scriptsScattered'
     ]);
 });

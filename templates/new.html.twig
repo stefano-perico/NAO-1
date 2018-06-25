@@ -23,30 +23,33 @@
             </aside >
 
             <aside class="col-lg-6 mt-5 mt-lg-0">
-                <form>
+                {{ form_start(observationForm) }}
                     <h2 class="mb-4 text-sm-center text-lg-left">Observation</h2>
 
                     <div class="form-group">
-                        <label for="defaultFormContactSpiecie" class="grey-text">Espèce</label>
-                        <input type="text" id="defaultFormContactSpiecie" class="form-control">
+                        {{ form_label(observationForm.species, 'Espèce', {'label_attr':{'class':'grey-text'}}) }}
+                        {{ form_widget(observationForm.species, {'attr':{'class':'form-control'}}) }}
                     </div>
 
                     <div class="form-group">
-                        <label for="defaultFormContactMessageEx" class="grey-text">Description de votre observation</label>
-                        <textarea id="defaultFormContactMessageEx" class="form-control" rows="3"></textarea>
+                        {{ form_label(observationForm.description, 'Description de votre observation',
+                            {'label_attr':{'class':'grey-text'}}) }}
+                        {{ form_widget(observationForm.description, {'attr':{'class':'form-control','rows':3}}) }}
                     </div>
 
                     <hr>
 
                     <div class="row">
                         <div class="form-group col-6">
-                            <label for="lat" class="grey-text">Latitude</label>
-                            <input type="text" id="lat" class="form-control">
+                            {{ form_label(observationForm.position.latitude, 'Latitude',
+                                {'label_attr':{'class':'grey-text'}}) }}
+                            {{ form_widget(observationForm.position.latitude, {'attr':{'class':'form-control'}}) }}
                         </div>
 
                         <div class="form-group col-6">
-                            <label for="long" class="grey-text">longitude</label>
-                            <input type="text" id="long" class="form-control">
+                            {{ form_label(observationForm.position.longitude, 'Longitude',
+                                {'label_attr':{'class':'grey-text'}}) }}
+                            {{ form_widget(observationForm.position.longitude, {'attr':{'class':'form-control'}}) }}
                         </div>
 
                         <div class="form-group col-12">
@@ -56,13 +59,21 @@
                         </div>
                     </div>
 
+                    <div class="input-group">
+                        <div class="custom-file">
+                            {{ form_label(observationForm.image, 'Image d\'un oiseau',
+                                {'label_attr':{'class':'custom-file-label'}}) }}
+                            {{ form_widget(observationForm.image, {'attr':{'class':'ustom-file-input'}}) }}
+                        </div>
+                    </div>
+
                     <hr>
 
                     <div class="form-group text-right">
                         <button class="col-6 btn btn-success" type="submit">Envoyer<i class="fa fa-paper-plane-o ml-2"></i></button>
                     </div>
 
-                </form>
+                {{ form_end(observationForm) }}
                 <!-- Default form contact -->
             </aside>
         </div>
@@ -120,8 +131,8 @@
                     marker.setLatLng(e.latlng)
                         .bindPopup("Votre latitude et votre longitude a été renseigné en fonction de votre emplacement GPS (" + e.latlng + ")").openPopup();
                 }
-                $("#lat").val(e.latlng.lat); // a remplacer par l'id du champ latitude
-                $("#long").val(e.latlng.lng); // a remplacer par l'id du champ longitude
+                $("#observation_position_latitude").val(e.latlng.lat); // a remplacer par l'id du champ latitude
+                $("#observation_position_longitude").val(e.latlng.lng); // a remplacer par l'id du champ longitude
             }
 
             // Message d'erreur de l'ocalisation
@@ -142,7 +153,7 @@
 
     <script>
         $(document).ready(function() {
-        $("#defaultFormContactSpiecie")
+        $("#observation_species")
             .val("")
             .autocomplete({
                 source: "{{ path('species_autocomplete') }}",

@@ -23,14 +23,15 @@ class ImageType extends AbstractType
                 'required' => false,
                 'label'    => false
             ])
-//            ->add('section', ChoiceType::class,[
-//                'choices' => [
-//                    'indéfini'      => 'indefini',
-//                    'article'       => 'article',
-//                    'évènement'     => 'evenement',
-//                    'observation'   => 'observation'
-//                ]
-//            ])
+            ->add('section', ChoiceType::class,[
+                'choices' => [
+                    'indéfini'      => 'indefini',
+                    'article'       => 'article',
+                    'évènement'     => 'evenement',
+                    'observation'   => 'observation'
+                ],
+                'required' => false
+            ])
         ;
     }
 
