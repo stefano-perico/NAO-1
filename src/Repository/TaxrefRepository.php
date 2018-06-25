@@ -31,6 +31,15 @@ class TaxrefRepository extends ServiceEntityRepository
             ;
     }
 
+    public function findSpecies($term)
+    {
+        return $this->createQueryBuilder('t')
+            ->where('t.nom_fr LIKE :name')
+            ->setParameter('name', '%'.$term.'%')
+            ->getQuery()
+            ->getResult();
+    }
+
 
 //    /**
 //     * @return Taxref[] Returns an array of Taxref objects
