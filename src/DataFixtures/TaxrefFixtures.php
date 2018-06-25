@@ -1592,8 +1592,8 @@ array('id' => '1567','famille' => 'Tytonidae','lb_nom' => 'Tyto alba','nom_fr' =
             $taxref = new Taxref();
 
             $taxref
-                ->setFamille($v['id'])
-                ->setLbNom($v['famille'])
+                ->setFamille($v['famille'])
+                ->setLbNom($v['lb_nom'])
                 ->setNomFr($v['nom_fr'])
                 ->setObsCount($v['obs_count'])
                 ;
