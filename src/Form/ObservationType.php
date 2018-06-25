@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Observation;
 use App\Entity\Position;
+use App\Entity\Taxref;
 use App\Repository\ImageRepository;
 use App\Repository\UserRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -28,7 +29,10 @@ class ObservationType extends AbstractType
     {
         $builder
             ->add('description')
-            ->add('species')
+            ->add('species', EntityType::class,
+                [
+                    'class'     =>  Taxref::class,
+                ])
             ->add('date')
             ->add('checked')
             ->add('author', ChoiceType::class,[

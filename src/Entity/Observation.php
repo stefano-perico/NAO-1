@@ -33,10 +33,6 @@ class Observation
      */
     private $image;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $species;
 
     /**
      * @ORM\Column(type="date")
@@ -55,7 +51,7 @@ class Observation
     private $position;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $checked = false;
 
@@ -63,6 +59,12 @@ class Observation
      * @ORM\ManyToOne(targetEntity="App\Entity\User")
      */
     private $verifiedBy;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Taxref")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $species;
 
     public function getId()
     {
@@ -101,18 +103,6 @@ class Observation
     public function setImage(?Image $image): self
     {
         $this->image = $image;
-
-        return $this;
-    }
-
-    public function getSpecies(): ?string
-    {
-        return $this->species;
-    }
-
-    public function setSpecies(?string $species): self
-    {
-        $this->species = $species;
 
         return $this;
     }
@@ -193,6 +183,27 @@ class Observation
     public function PreUpdate()
     {
         $this->updatedAt = new \DateTime();
+    }
+
+    public function getSpecies(): ?Taxref
+    {
+        return $this->species;
+    }
+
+    public function setSpecies(?Taxref $species): self
+    {
+        $this->species = $species;
+
+        return $this;
+    }
+
+    /**
+     * @ORM\PrePersist()
+     */
+    public function setCountSpecies()
+    {
+        $species = $this->getSpecies();
+        $species->count();
     }
 
 }
