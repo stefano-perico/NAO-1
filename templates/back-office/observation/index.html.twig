@@ -27,7 +27,11 @@
                 <td>{{ observation.species }}</td>
                 <td>{{ observation.date ? observation.date|date('Y-m-d') : '' }}</td>
                 <td>{{ observation.updatedAt ? observation.updatedAt|date('Y-m-d') : '' }}</td>
-                <td>{{ observation.position.id }}</td>
+                {% if observation.position.id is defined %}
+                    <td>{{ observation.position.id }}</td>
+                    {% else %}
+                    <td>null</td>
+                {% endif %}
                 <td>{{ observation.checked ? 'Yes' : 'No' }}</td>
                 <td>
                     {% if observation.image.image is defined %}

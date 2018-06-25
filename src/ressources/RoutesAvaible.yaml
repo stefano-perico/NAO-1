@@ -1,4 +1,5 @@
-observation:    [visitor, professional, author, admin]
+observationIndex:    [visitor, professional, author, admin]
+observationCreate:   [visitor, professional, author, admin]
 
 blogIndex:      [visitor, professional, author, admin]
 blogArticle:    [visitor, professional, author, admin]

@@ -29,7 +29,7 @@ class Observation
     private $author;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Image")
+     * @ORM\OneToOne(targetEntity="App\Entity\Image", cascade={"persist"})
      */
     private $image;
 
@@ -57,7 +57,7 @@ class Observation
     /**
      * @ORM\Column(type="boolean")
      */
-    private $checked;
+    private $checked = false;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User")
@@ -175,6 +175,16 @@ class Observation
         $this->verifiedBy = $verifiedBy;
 
         return $this;
+    }
+
+    /**
+     * @ORM\PreFlush()
+     */
+    public function PreFlushDate()
+    {
+        $this->date === null ?
+            $this->date = new \DateTime():
+            null;
     }
 
     /**

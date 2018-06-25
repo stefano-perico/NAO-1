@@ -47,29 +47,32 @@ class BlogController extends Controller
         };
 
         $article = $articleRepository->findOneBy(['slug'=>$slug]);
-        $comment = (new Comments())
-            ->setArticle($article)
-            ->setAuthor(
-                $userRepository->find($request->getSession()->get('user')->getId())
-            )
-        ;
+
+        $comment = new Comments();
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($comment);
-            $em->flush();
+            if ($request->getSession()->has('user')){
+                $comment
+                    ->setArticle($article)
+                    ->setAuthor($userRepository->find($request->getSession()->get('user')->getId()));
 
-            return $this->redirectToRoute('blogArticle',['slug'=>$slug]);
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($comment);
+                $em->flush();
+
+                return $this->redirectToRoute('blogArticle',['slug'=>$slug]);
+            }
+            $request->getSession()->getFlashBag()->add('warning','Pour poster un commentaire vous devez être connecté');
         }
 
         return $this->render('views/blog/article.html.twig', [
-            'article' => $article,
-            'articlestodiscover' => $articleRepository->findAll(),
-            'comments' => $commentsService->getComments($article),
-            'comment'=> $form->createView(),
-            'flashs'       => $flashesService->getFlashes($request)
+            'article'               => $article,
+            'articlestodiscover'    => $articleRepository->findAll(),
+            'comments'              => $commentsService->getComments($article),
+            'comment'               => $form->createView(),
+            'flashs'                => $flashesService->getFlashes($request)
         ]);
     }
 }

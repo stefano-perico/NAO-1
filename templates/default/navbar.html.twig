@@ -29,7 +29,11 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('observation') }}">
+                {% if  app.request.session.get('user') is defined and app.request.session.get('user') is not empty%}
+                    <a class="nav-link" href="{{ path('observationCreate') }}">
+                {% else %}
+                    <a class="nav-link" href="{{ path('observationIndex') }}">
+                {% endif %}
                     {% if app.request.requestUri matches '#^(\/observation)+#' %}
                         {{ macro.buttonNav('observation', 'observation', 1) }}
                     {% else %}
@@ -69,7 +73,7 @@
                     <a class="nav-link" href="{{ path('myAccount') }}">
                         {% if app.request.requestUri matches '#^(\/compte)+#' %}
                             {{ macro.buttonNav('mon compte', 'connexion', 1) }}
-                            {% else %}
+                        {% else %}
                             {{ macro.buttonNav('mon compte', 'connexion', 0) }}
                         {% endif %}
                     </a>

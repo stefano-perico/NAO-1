@@ -56,7 +56,9 @@
                                     </div>
                                     <div class="modal-body">
                                         <p>{{ 'Le : ' ~ observation.date |date('d-m-Y') }}</p>
-                                        <p>{{ 'Lieu d\'observation : ' ~ observation.position.address.villeNom }}</p>
+                                        {% if observation.position.address is defined %}
+                                            <p>{{ 'Lieu d\'observation : ' ~ observation.position.address.villeNom }}</p>
+                                        {% endif %}
                                         <img class="mt-2 float-right pl-2" src="{{ asset('img/'~observation.image.image.name) }}" alt="" width="50%">
                                         <p class="text-justify">{{ observation.description }}</p>
                                     </div>

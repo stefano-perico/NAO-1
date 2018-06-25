@@ -34,10 +34,12 @@
                 <th>UpdatedAt</th>
                 <td>{{ observation.updatedAt ? observation.updatedAt|date('Y-m-d') : '' }}</td>
             </tr>
-            <tr>
-                <th>Position</th>
-                <td>{{ observation.position.address.villeNom }}</td>
-            </tr>
+                {% if observation.position.address is defined %}
+                <tr>
+                    <th>Position</th>
+                    <td>{{ observation.position.address.villeNom }}</td>
+                </tr>
+                {% endif %}
             <tr>
                 <th>Checked</th>
                 <td>{{ observation.checked ? 'Yes' : 'No' }}</td>
