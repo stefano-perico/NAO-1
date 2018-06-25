@@ -50,9 +50,9 @@
                         </div>
 
                         <div class="form-group col-12">
-                            <button class="btn btn-outline-info col-12" id="localisation" >
+                            <a class="btn btn-outline-info col-12" id="localisation" >
                                 Appuyer pour être localisé par GPS<i class="fa fa-map-marker ml-2"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -87,8 +87,9 @@
     <!-- Leaflet JS var -->
     <script>
         $(document).ready(function(){
+
             // initialisation de la map + position de la map
-            let mymap = L.map('mapid').setView([47, 1.9], 6);
+            var mymap = L.map('mapid').setView([48.857342405041436, 2.3520934581756596], 6);
             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
                 maxZoom: 8,
@@ -96,7 +97,7 @@
                 accessToken: 'pk.eyJ1IjoiZnJvc3RlIiwiYSI6ImNqaDd3OHdtbzAwbm0ycXFsbmFtOTJidTIifQ.C6l9gAch8EEE5fxzCIF35g'
             }).addTo(mymap);
 
-            let marker;
+            var marker;
             // fonction click sur la map pour donner la position du clic et remplit lat et long dans form
             function onMapClick(e) {
                 if (typeof (marker)==='undefined') {
@@ -107,17 +108,22 @@
                     marker.setLatLng(e.latlng)
                         .bindPopup("Votre latitude et votre longitude a été renseigné en fonction de l'endroit ou vous venez de cliquer (" + e.latlng + ")").openPopup();
                 }
-                $("#form_latitude").val(e.latlng.lat); // a remplacer par l'id du champ latitude
-                $("#form_longitude").val(e.latlng.lng); // a remplacer par l'id du champ longitude
+                $("#observation_latitude").val(e.latlng.lat); // a remplacer par l'id du champ latitude
+                $("#observation_longitude").val(e.latlng.lng); // a remplacer par l'id du champ longitude
             }
 
             // si localisation OK donne lat et long avec marker et remplit lat et long dans form
             function onLactionFound(e){
-                L.marker(e.latlng).addTo(mymap)
-                    .bindPopup("Votre latitude et votre longitude a été renseigné en fonction de votre emplacement GPS (" + e.latlng + ")").openPopup();
-
-                $("#form_latitude").val(e.latlng.lat); // a remplacer par l'id du champ latitude
-                $("#form_longitude").val(e.latlng.lng); // a remplacer par l'id du champ longitude
+                if (typeof (marker)==='undefined') {
+                    marker = new L.marker(e.latlng);
+                    marker.addTo(mymap)
+                        .bindPopup("Votre latitude et votre longitude a été renseigné en fonction de votre emplacement GPS (" + e.latlng + ")").openPopup();
+                }else {
+                    marker.setLatLng(e.latlng)
+                        .bindPopup("Votre latitude et votre longitude a été renseigné en fonction de votre emplacement GPS (" + e.latlng + ")").openPopup();
+                }
+                $("#observation_latitude").val(e.latlng.lat); // a remplacer par l'id du champ latitude
+                $("#observation_longitude").val(e.latlng.lng); // a remplacer par l'id du champ longitude
             }
 
             // Message d'erreur de l'ocalisation
