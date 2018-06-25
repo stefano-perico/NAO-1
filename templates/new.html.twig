@@ -68,6 +68,9 @@
         </div>
     </section>
 
+    <!-- JQuery-ui -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+
 {% endblock %}
 
 {% block script %}
@@ -78,13 +81,8 @@
             crossorigin="">
     </script>
     <!-- JQuery -->
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-            crossorigin="anonymous"></script>
-    <!-- JQuery-ui -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
-    <!-- Leaflet JS var -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- Leaflet JS var -->
     <script>
         $(document).ready(function(){
 
@@ -108,8 +106,8 @@
                     marker.setLatLng(e.latlng)
                         .bindPopup("Votre latitude et votre longitude a été renseigné en fonction de l'endroit ou vous venez de cliquer (" + e.latlng + ")").openPopup();
                 }
-                $("#observation_latitude").val(e.latlng.lat); // a remplacer par l'id du champ latitude
-                $("#observation_longitude").val(e.latlng.lng); // a remplacer par l'id du champ longitude
+                $("#lat").val(e.latlng.lat); // a remplacer par l'id du champ latitude
+                $("#long").val(e.latlng.lng); // a remplacer par l'id du champ longitude
             }
 
             // si localisation OK donne lat et long avec marker et remplit lat et long dans form
@@ -122,8 +120,8 @@
                     marker.setLatLng(e.latlng)
                         .bindPopup("Votre latitude et votre longitude a été renseigné en fonction de votre emplacement GPS (" + e.latlng + ")").openPopup();
                 }
-                $("#observation_latitude").val(e.latlng.lat); // a remplacer par l'id du champ latitude
-                $("#observation_longitude").val(e.latlng.lng); // a remplacer par l'id du champ longitude
+                $("#lat").val(e.latlng.lat); // a remplacer par l'id du champ latitude
+                $("#long").val(e.latlng.lng); // a remplacer par l'id du champ longitude
             }
 
             // Message d'erreur de l'ocalisation
@@ -143,17 +141,13 @@
     </script>
 
     <script>
-        // $(document).ready(function() {
-        //     var species = [
-                {#{% for specie in species %}#}
-                {#"{{ specie.nomFr }}",#}
-                {#{% endfor %}#}
-            // ];
-
-            // $('#form_species').autocomplete({
-            //     source: species,
-            //     minLength: 2
-            // });
-        // });
+        $(document).ready(function() {
+        $("#defaultFormContactSpiecie")
+            .val("")
+            .autocomplete({
+                source: "{{ path('species_autocomplete') }}",
+                minLength: 2,
+            });
+       });
     </script>
 {% endblock %}
