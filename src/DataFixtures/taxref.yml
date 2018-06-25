@@ -1,0 +1,7839 @@
+%YAML 1.1
+---
+# nao.taxref
+-
+  id: 1
+  famille: "Accipitridae"
+  lb_nom: "Accipiter gentilis"
+  nom_fr: "Autour des palombes"
+-
+  id: 2
+  famille: "Accipitridae"
+  lb_nom: "Astur palumbarius"
+  nom_fr: "Autour des palombes"
+-
+  id: 3
+  famille: "Accipitridae"
+  lb_nom: "Falco gentilis"
+  nom_fr: "Autour des palombes"
+-
+  id: 4
+  famille: "Accipitridae"
+  lb_nom: "Falco palumbarius"
+  nom_fr: "Autour des palombes"
+-
+  id: 5
+  famille: "Accipitridae"
+  lb_nom: "Accipiter gentilis arrigonii"
+  nom_fr: "Autour des palombes (ssp. de Corse)"
+-
+  id: 6
+  famille: "Accipitridae"
+  lb_nom: "Accipiter gentilis gentilis"
+  nom_fr: ""
+-
+  id: 7
+  famille: "Accipitridae"
+  lb_nom: "Accipiter nisus"
+  nom_fr: "Épervier d'Europe"
+-
+  id: 8
+  famille: "Accipitridae"
+  lb_nom: "Accipiter nisus nisus"
+  nom_fr: "Épervier d'Europe"
+-
+  id: 9
+  famille: "Accipitridae"
+  lb_nom: "Accipiter nisus wolterstorffi"
+  nom_fr: "Épervier d'Europe"
+-
+  id: 10
+  famille: "Accipitridae"
+  lb_nom: "Falco nisus"
+  nom_fr: "Épervier d'Europe"
+-
+  id: 11
+  famille: "Accipitridae"
+  lb_nom: "Aegypius monachus"
+  nom_fr: "Vautour moine"
+-
+  id: 12
+  famille: "Accipitridae"
+  lb_nom: "Vultur monachus"
+  nom_fr: "Vautour moine"
+-
+  id: 13
+  famille: "Accipitridae"
+  lb_nom: "Aquila adalberti"
+  nom_fr: "Aigle ibérique"
+-
+  id: 14
+  famille: "Accipitridae"
+  lb_nom: "Aquila chrysaetos"
+  nom_fr: "Aigle royal"
+-
+  id: 15
+  famille: "Accipitridae"
+  lb_nom: "Aquila fulva"
+  nom_fr: "Aigle royal"
+-
+  id: 16
+  famille: "Accipitridae"
+  lb_nom: "Falco chrysaetos"
+  nom_fr: "Aigle royal"
+-
+  id: 17
+  famille: "Accipitridae"
+  lb_nom: "Falco fulvus"
+  nom_fr: "Aigle royal"
+-
+  id: 18
+  famille: "Accipitridae"
+  lb_nom: "Aquila fasciata"
+  nom_fr: "Aigle de Bonelli"
+-
+  id: 19
+  famille: "Accipitridae"
+  lb_nom: "Hieraaetus fasciatus"
+  nom_fr: "Aigle de Bonelli"
+-
+  id: 20
+  famille: "Accipitridae"
+  lb_nom: "Aquila heliaca"
+  nom_fr: "Aigle impérial"
+-
+  id: 21
+  famille: "Accipitridae"
+  lb_nom: "Aquila nipalensis"
+  nom_fr: "Aigle des steppes"
+-
+  id: 22
+  famille: "Accipitridae"
+  lb_nom: "Buteo buteo"
+  nom_fr: "Buse variable"
+-
+  id: 23
+  famille: "Accipitridae"
+  lb_nom: "Falco buteo"
+  nom_fr: "Buse variable"
+-
+  id: 24
+  famille: "Accipitridae"
+  lb_nom: "Falco vulgaris"
+  nom_fr: 3
+-
+  id: 25
+  famille: "Accipitridae"
+  lb_nom: "Buteo buteo vulpinus"
+  nom_fr: ""
+-
+  id: 26
+  famille: "Accipitridae"
+  lb_nom: "Buteo lagopus"
+  nom_fr: "Buse pattue"
+-
+  id: 27
+  famille: "Accipitridae"
+  lb_nom: "Falco lagopus"
+  nom_fr: "Buse pattue"
+-
+  id: 28
+  famille: "Accipitridae"
+  lb_nom: "Buteo ferox"
+  nom_fr: "Buse féroce"
+-
+  id: 29
+  famille: "Accipitridae"
+  lb_nom: "Buteo rufinus"
+  nom_fr: "Buse féroce"
+-
+  id: 30
+  famille: "Accipitridae"
+  lb_nom: "Falco rufinus"
+  nom_fr: "Buse féroce"
+-
+  id: 31
+  famille: "Accipitridae"
+  lb_nom: "Buteo rufinus cirtensis"
+  nom_fr: ""
+-
+  id: 32
+  famille: "Accipitridae"
+  lb_nom: "Circaetus ferox"
+  nom_fr: 7
+-
+  id: 33
+  famille: "Accipitridae"
+  lb_nom: "Circaetus gallicus"
+  nom_fr: "Circaète Jean-le-Blanc"
+-
+  id: 34
+  famille: "Accipitridae"
+  lb_nom: "Falco gallicus"
+  nom_fr: "Circaète Jean-le-Blanc"
+-
+  id: 35
+  famille: "Accipitridae"
+  lb_nom: "Circus aeruginosus"
+  nom_fr: "Busard des roseaux"
+-
+  id: 36
+  famille: "Accipitridae"
+  lb_nom: "Falco aeruginosus"
+  nom_fr: "Busard des roseaux"
+-
+  id: 37
+  famille: "Accipitridae"
+  lb_nom: "Circus cyaneus"
+  nom_fr: "Busard Saint-Martin"
+-
+  id: 38
+  famille: "Accipitridae"
+  lb_nom: "Falco cyaneus"
+  nom_fr: "Busard Saint-Martin"
+-
+  id: 39
+  famille: "Accipitridae"
+  lb_nom: "Accipiter macrourus"
+  nom_fr: "Busard pâle"
+-
+  id: 40
+  famille: "Accipitridae"
+  lb_nom: "Circus macrourus"
+  nom_fr: "Busard pâle"
+-
+  id: 41
+  famille: "Accipitridae"
+  lb_nom: "Circus pygargus"
+  nom_fr: "Busard cendré"
+-
+  id: 42
+  famille: "Accipitridae"
+  lb_nom: "Falco pygargus"
+  nom_fr: "Busard cendré"
+-
+  id: 43
+  famille: "Accipitridae"
+  lb_nom: "Aquila clanga"
+  nom_fr: "Aigle criard"
+-
+  id: 44
+  famille: "Accipitridae"
+  lb_nom: "Clanga clanga"
+  nom_fr: "Aigle criard"
+-
+  id: 45
+  famille: "Accipitridae"
+  lb_nom: "Aquila pomarina"
+  nom_fr: "Aigle pomarin"
+-
+  id: 46
+  famille: "Accipitridae"
+  lb_nom: "Clanga pomarina"
+  nom_fr: "Aigle pomarin"
+-
+  id: 47
+  famille: "Accipitridae"
+  lb_nom: "Elanus caeruleus"
+  nom_fr: "Élanion blanc"
+-
+  id: 48
+  famille: "Accipitridae"
+  lb_nom: "Falco caeruleus"
+  nom_fr: "Élanion blanc"
+-
+  id: 49
+  famille: "Accipitridae"
+  lb_nom: "Gypaetus barbatus"
+  nom_fr: "Gypaète barbu"
+-
+  id: 50
+  famille: "Accipitridae"
+  lb_nom: "Vultur barbatus"
+  nom_fr: "Gypaète barbu"
+-
+  id: 51
+  famille: "Accipitridae"
+  lb_nom: "Gyps fulvus"
+  nom_fr: "Vautour fauve"
+-
+  id: 52
+  famille: "Accipitridae"
+  lb_nom: "Vultur fulvus"
+  nom_fr: "Vautour fauve"
+-
+  id: 53
+  famille: "Accipitridae"
+  lb_nom: "Gyps melitensis"
+  nom_fr: ""
+-
+  id: 54
+  famille: "Accipitridae"
+  lb_nom: "Gyps rueppellii"
+  nom_fr: "Vautour de Rüppell"
+-
+  id: 55
+  famille: "Accipitridae"
+  lb_nom: "Vultur rueppellii"
+  nom_fr: "Vautour de Rüppell"
+-
+  id: 56
+  famille: "Accipitridae"
+  lb_nom: "Falco albicilla"
+  nom_fr: "Pygargue à queue blanche"
+-
+  id: 57
+  famille: "Accipitridae"
+  lb_nom: "Haliaeetus albicilla"
+  nom_fr: "Pygargue à queue blanche"
+-
+  id: 58
+  famille: "Accipitridae"
+  lb_nom: "Aquila pennata"
+  nom_fr: "Aigle botté"
+-
+  id: 59
+  famille: "Accipitridae"
+  lb_nom: "Falco pennatus"
+  nom_fr: "Aigle botté"
+-
+  id: 60
+  famille: "Accipitridae"
+  lb_nom: "Hieraaetus pennatus"
+  nom_fr: "Aigle botté"
+-
+  id: 61
+  famille: "Accipitridae"
+  lb_nom: "Falco migrans"
+  nom_fr: "Milan noir"
+-
+  id: 62
+  famille: "Accipitridae"
+  lb_nom: "Milvus korschun"
+  nom_fr: 3
+-
+  id: 63
+  famille: "Accipitridae"
+  lb_nom: "Milvus migrans"
+  nom_fr: "Milan noir"
+-
+  id: 64
+  famille: "Accipitridae"
+  lb_nom: "Falco milvus"
+  nom_fr: "Milan royal"
+-
+  id: 65
+  famille: "Accipitridae"
+  lb_nom: "Milvus milvus"
+  nom_fr: "Milan royal"
+-
+  id: 66
+  famille: "Accipitridae"
+  lb_nom: "Neophron percnopterus"
+  nom_fr: "Vautour percnoptère"
+-
+  id: 67
+  famille: "Accipitridae"
+  lb_nom: "Vultur perenopterus"
+  nom_fr: "Vautour percnoptère"
+-
+  id: 68
+  famille: "Accipitridae"
+  lb_nom: "Falco apivorus"
+  nom_fr: "Bondrée apivore"
+-
+  id: 69
+  famille: "Accipitridae"
+  lb_nom: "Pernis apivorus"
+  nom_fr: "Bondrée apivore"
+-
+  id: 70
+  famille: "Accipitridae"
+  lb_nom: "Aegypius tracheliotus"
+  nom_fr: "Vautour oricou"
+-
+  id: 71
+  famille: "Accipitridae"
+  lb_nom: "Torgos tracheliotos"
+  nom_fr: "Vautour oricou"
+-
+  id: 72
+  famille: "Accipitridae"
+  lb_nom: "Torgos tracheliotus"
+  nom_fr: "Vautour oricou"
+-
+  id: 73
+  famille: "Accipitridae"
+  lb_nom: "Vultur tracheliotus"
+  nom_fr: "Vautour oricou"
+-
+  id: 74
+  famille: "Pandionidae"
+  lb_nom: "Falco haliaetus"
+  nom_fr: "Balbuzard pêcheur"
+-
+  id: 75
+  famille: "Pandionidae"
+  lb_nom: "Pandion haliaetus"
+  nom_fr: "Balbuzard pêcheur"
+-
+  id: 76
+  famille: "Anatidae"
+  lb_nom: "Aix galericulata"
+  nom_fr: "Canard mandarin"
+-
+  id: 77
+  famille: "Anatidae"
+  lb_nom: "Anas galericulata"
+  nom_fr: "Canard mandarin"
+-
+  id: 78
+  famille: "Anatidae"
+  lb_nom: "Aix sponsa"
+  nom_fr: "Canard carolin"
+-
+  id: 79
+  famille: "Anatidae"
+  lb_nom: "Anas sponsa"
+  nom_fr: "Canard carolin"
+-
+  id: 80
+  famille: "Anatidae"
+  lb_nom: "Alopochen aegyptiaca"
+  nom_fr: "Ouette d'Égypte"
+-
+  id: 81
+  famille: "Anatidae"
+  lb_nom: "Alopochen aegyptiacus"
+  nom_fr: "Ouette d'Égypte"
+-
+  id: 82
+  famille: "Anatidae"
+  lb_nom: "Anas aegyptiaca"
+  nom_fr: "Ouette d'Égypte"
+-
+  id: 83
+  famille: "Anatidae"
+  lb_nom: "Anas acuta"
+  nom_fr: "Canard pilet"
+-
+  id: 84
+  famille: "Anatidae"
+  lb_nom: "Anas bahamensis"
+  nom_fr: "Canard des Bahamas"
+-
+  id: 85
+  famille: "Anatidae"
+  lb_nom: "Anas crecca"
+  nom_fr: "Sarcelle d'hiver"
+-
+  id: 86
+  famille: "Anatidae"
+  lb_nom: "Anas carolinensis"
+  nom_fr: "Sarcelle à ailes vertes"
+-
+  id: 87
+  famille: "Anatidae"
+  lb_nom: "Anas crecca carolinensis"
+  nom_fr: "Sarcelle à ailes vertes"
+-
+  id: 88
+  famille: "Anatidae"
+  lb_nom: "Anas crecca crecca"
+  nom_fr: "Sarcelle d'hiver"
+-
+  id: 89
+  famille: "Anatidae"
+  lb_nom: "Anas cyanoptera"
+  nom_fr: "Sarcelle cannelle"
+-
+  id: 90
+  famille: "Anatidae"
+  lb_nom: "Spatula cyanoptera"
+  nom_fr: "Sarcelle cannelle"
+-
+  id: 91
+  famille: "Anatidae"
+  lb_nom: "Anas boschas"
+  nom_fr: "Canard colvert"
+-
+  id: 92
+  famille: "Anatidae"
+  lb_nom: "Anas platyrhynchos"
+  nom_fr: "Canard colvert"
+-
+  id: 93
+  famille: "Anatidae"
+  lb_nom: "Anas rubripes"
+  nom_fr: "Canard noir"
+-
+  id: 94
+  famille: "Anatidae"
+  lb_nom: "Aythya affinis"
+  nom_fr: "Fuligule à tête noire"
+-
+  id: 95
+  famille: "Anatidae"
+  lb_nom: "Fuligula affinis"
+  nom_fr: "Fuligule à tête noire"
+-
+  id: 96
+  famille: "Anatidae"
+  lb_nom: "Anas collaris"
+  nom_fr: "Fuligule à bec cerclé"
+-
+  id: 97
+  famille: "Anatidae"
+  lb_nom: "Aythya collaris"
+  nom_fr: "Fuligule à bec cerclé"
+-
+  id: 98
+  famille: "Anatidae"
+  lb_nom: "Anas ferina"
+  nom_fr: "Fuligule milouin"
+-
+  id: 99
+  famille: "Anatidae"
+  lb_nom: "Aythya ferina"
+  nom_fr: "Fuligule milouin"
+-
+  id: 100
+  famille: "Anatidae"
+  lb_nom: "Nyroca ferina"
+  nom_fr: 8
+-
+  id: 101
+  famille: "Anatidae"
+  lb_nom: "Anas fuligula"
+  nom_fr: "Fuligule morillon"
+-
+  id: 102
+  famille: "Anatidae"
+  lb_nom: "Aythya fuligula"
+  nom_fr: "Fuligule morillon"
+-
+  id: 103
+  famille: "Anatidae"
+  lb_nom: "Anas marila"
+  nom_fr: "Fuligule milouinan"
+-
+  id: 104
+  famille: "Anatidae"
+  lb_nom: "Aythya marila"
+  nom_fr: "Fuligule milouinan"
+-
+  id: 105
+  famille: "Anatidae"
+  lb_nom: "Anas nyroca"
+  nom_fr: "Fuligule nyroca"
+-
+  id: 106
+  famille: "Anatidae"
+  lb_nom: "Aythya nyroca"
+  nom_fr: "Fuligule nyroca"
+-
+  id: 107
+  famille: "Anatidae"
+  lb_nom: "Nyroca fuligula"
+  nom_fr: 8
+-
+  id: 108
+  famille: "Anatidae"
+  lb_nom: "Aythya valisineria"
+  nom_fr: "Fuligule à dos blanc"
+-
+  id: 109
+  famille: "Anatidae"
+  lb_nom: "Anas albeola"
+  nom_fr: "Garrot albéole"
+-
+  id: 110
+  famille: "Anatidae"
+  lb_nom: "Bucephala albeola"
+  nom_fr: "Garrot albéole"
+-
+  id: 111
+  famille: "Anatidae"
+  lb_nom: "Anas clangula"
+  nom_fr: "Garrot à oeil d'or"
+-
+  id: 112
+  famille: "Anatidae"
+  lb_nom: "Bucephala clangula"
+  nom_fr: "Garrot à oeil d'or"
+-
+  id: 113
+  famille: "Anatidae"
+  lb_nom: "Glaucionetta clangula"
+  nom_fr: 8
+-
+  id: 114
+  famille: "Anatidae"
+  lb_nom: "Anas islandica"
+  nom_fr: "Garrot d'Islande"
+-
+  id: 115
+  famille: "Anatidae"
+  lb_nom: "Bucephala islandica"
+  nom_fr: "Garrot d'Islande"
+-
+  id: 116
+  famille: "Anatidae"
+  lb_nom: "Anas moschata"
+  nom_fr: "Canard musqué"
+-
+  id: 117
+  famille: "Anatidae"
+  lb_nom: "Cairina moschata"
+  nom_fr: "Canard musqué"
+-
+  id: 118
+  famille: "Anatidae"
+  lb_nom: "Anas leucophrys"
+  nom_fr: "Canard à collier noir"
+-
+  id: 119
+  famille: "Anatidae"
+  lb_nom: "Callonetta leucophrys"
+  nom_fr: "Canard à collier noir"
+-
+  id: 120
+  famille: "Anatidae"
+  lb_nom: "Anas hyemalis"
+  nom_fr: "Harelde de Miquelon"
+-
+  id: 121
+  famille: "Anatidae"
+  lb_nom: "Clangula hyemalis"
+  nom_fr: "Harelde de Miquelon"
+-
+  id: 122
+  famille: "Anatidae"
+  lb_nom: "Histrionicus histrionicus"
+  nom_fr: "Arlequin plongeur"
+-
+  id: 123
+  famille: "Anatidae"
+  lb_nom: "Lophodytes cucullatus"
+  nom_fr: "Harle couronné"
+-
+  id: 124
+  famille: "Anatidae"
+  lb_nom: "Mergellus cucullatus"
+  nom_fr: "Harle couronné"
+-
+  id: 125
+  famille: "Anatidae"
+  lb_nom: "Mergus cucullatus"
+  nom_fr: "Harle couronné"
+-
+  id: 126
+  famille: "Anatidae"
+  lb_nom: "Anas americana"
+  nom_fr: "Canard à front blanc"
+-
+  id: 127
+  famille: "Anatidae"
+  lb_nom: "Mareca americana"
+  nom_fr: "Canard à front blanc"
+-
+  id: 128
+  famille: "Anatidae"
+  lb_nom: "Anas penelope"
+  nom_fr: "Canard siffleur"
+-
+  id: 129
+  famille: "Anatidae"
+  lb_nom: "Mareca penelope"
+  nom_fr: "Canard siffleur"
+-
+  id: 130
+  famille: "Anatidae"
+  lb_nom: "Anas strepera"
+  nom_fr: "Canard chipeau"
+-
+  id: 131
+  famille: "Anatidae"
+  lb_nom: "Mareca strepera"
+  nom_fr: "Canard chipeau"
+-
+  id: 132
+  famille: "Anatidae"
+  lb_nom: "Anas angustirostris"
+  nom_fr: "Sarcelle marbrée"
+-
+  id: 133
+  famille: "Anatidae"
+  lb_nom: "Marmaronetta angustirostris"
+  nom_fr: "Sarcelle marbrée"
+-
+  id: 134
+  famille: "Anatidae"
+  lb_nom: "Melanitta americana"
+  nom_fr: "Macreuse à bec jaune"
+-
+  id: 135
+  famille: "Anatidae"
+  lb_nom: "Melanitta nigra americana"
+  nom_fr: "Macreuse à bec jaune"
+-
+  id: 136
+  famille: "Anatidae"
+  lb_nom: "Melanitta deglandi"
+  nom_fr: "Macreuse à ailes blanches"
+-
+  id: 137
+  famille: "Anatidae"
+  lb_nom: "Oedemia deglandi"
+  nom_fr: "Macreuse à ailes blanches"
+-
+  id: 138
+  famille: "Anatidae"
+  lb_nom: "Anas fusca"
+  nom_fr: "Macreuse brune"
+-
+  id: 139
+  famille: "Anatidae"
+  lb_nom: "Melanitta fusca"
+  nom_fr: "Macreuse brune"
+-
+  id: 140
+  famille: "Anatidae"
+  lb_nom: "Oidemia fusca"
+  nom_fr: 5
+-
+  id: 141
+  famille: "Anatidae"
+  lb_nom: "Anas nigra"
+  nom_fr: "Macreuse noire"
+-
+  id: 142
+  famille: "Anatidae"
+  lb_nom: "Melanitta nigra"
+  nom_fr: "Macreuse noire"
+-
+  id: 143
+  famille: "Anatidae"
+  lb_nom: "Oidemia nigra"
+  nom_fr: 5
+-
+  id: 144
+  famille: "Anatidae"
+  lb_nom: "Anas perspicillata"
+  nom_fr: "Macreuse à front blanc"
+-
+  id: 145
+  famille: "Anatidae"
+  lb_nom: "Melanitta perspicillata"
+  nom_fr: "Macreuse à front blanc"
+-
+  id: 146
+  famille: "Anatidae"
+  lb_nom: "Mergellus albellus"
+  nom_fr: "Harle piette"
+-
+  id: 147
+  famille: "Anatidae"
+  lb_nom: "Mergullus albellus"
+  nom_fr: "Harle piette"
+-
+  id: 148
+  famille: "Anatidae"
+  lb_nom: "Mergus albellus"
+  nom_fr: "Harle piette"
+-
+  id: 149
+  famille: "Anatidae"
+  lb_nom: "Mergus merganser"
+  nom_fr: "Harle bièvre"
+-
+  id: 150
+  famille: "Anatidae"
+  lb_nom: "Mergus serrator"
+  nom_fr: "Harle huppé"
+-
+  id: 151
+  famille: "Anatidae"
+  lb_nom: "Anas peposaca"
+  nom_fr: "Nette demi-deuil"
+-
+  id: 152
+  famille: "Anatidae"
+  lb_nom: "Netta peposaca"
+  nom_fr: "Nette demi-deuil"
+-
+  id: 153
+  famille: "Anatidae"
+  lb_nom: "Anas rufina"
+  nom_fr: "Nette rousse"
+-
+  id: 154
+  famille: "Anatidae"
+  lb_nom: "Netta rufina"
+  nom_fr: "Nette rousse"
+-
+  id: 155
+  famille: "Anatidae"
+  lb_nom: "Anas stelleri"
+  nom_fr: "Eider de Steller"
+-
+  id: 156
+  famille: "Anatidae"
+  lb_nom: "Polystica stelleri"
+  nom_fr: "Eider de Steller"
+-
+  id: 157
+  famille: "Anatidae"
+  lb_nom: "Polysticta stelleri"
+  nom_fr: "Eider de Steller"
+-
+  id: 158
+  famille: "Anatidae"
+  lb_nom: "Somateria stelleri"
+  nom_fr: 8
+-
+  id: 159
+  famille: "Anatidae"
+  lb_nom: "Anas formosa"
+  nom_fr: "Sarcelle élégante"
+-
+  id: 160
+  famille: "Anatidae"
+  lb_nom: "Sibirionetta formosa"
+  nom_fr: "Sarcelle élégante"
+-
+  id: 161
+  famille: "Anatidae"
+  lb_nom: "Anas molissima"
+  nom_fr: "Eider à duvet"
+-
+  id: 162
+  famille: "Anatidae"
+  lb_nom: "Somateria mollissima"
+  nom_fr: "Eider à duvet"
+-
+  id: 163
+  famille: "Anatidae"
+  lb_nom: "Anas spectabilis"
+  nom_fr: "Eider à tête grise"
+-
+  id: 164
+  famille: "Anatidae"
+  lb_nom: "Somateria spectabilis"
+  nom_fr: "Eider à tête grise"
+-
+  id: 165
+  famille: "Anatidae"
+  lb_nom: "Anas clypeata"
+  nom_fr: "Canard souchet"
+-
+  id: 166
+  famille: "Anatidae"
+  lb_nom: "Spatula clypeata"
+  nom_fr: "Canard souchet"
+-
+  id: 167
+  famille: "Anatidae"
+  lb_nom: "Anas discors"
+  nom_fr: "Sarcelle à ailes bleues"
+-
+  id: 168
+  famille: "Anatidae"
+  lb_nom: "Spatula discors"
+  nom_fr: "Sarcelle à ailes bleues"
+-
+  id: 169
+  famille: "Anatidae"
+  lb_nom: "Anas querquedula"
+  nom_fr: "Sarcelle d'été"
+-
+  id: 170
+  famille: "Anatidae"
+  lb_nom: "Querquedula creca"
+  nom_fr: 8
+-
+  id: 171
+  famille: "Anatidae"
+  lb_nom: "Spatula querquedula"
+  nom_fr: "Sarcelle d'été"
+-
+  id: 172
+  famille: "Anatidae"
+  lb_nom: "Anas ferruginea"
+  nom_fr: "Tadorne casarca"
+-
+  id: 173
+  famille: "Anatidae"
+  lb_nom: "Casarca ferruginea"
+  nom_fr: "Tadorne casarca"
+-
+  id: 174
+  famille: "Anatidae"
+  lb_nom: "Tadorna ferruginea"
+  nom_fr: "Tadorne casarca"
+-
+  id: 175
+  famille: "Anatidae"
+  lb_nom: "Anas tadorna"
+  nom_fr: "Tadorne de Belon"
+-
+  id: 176
+  famille: "Anatidae"
+  lb_nom: "Tadorna tadorna"
+  nom_fr: "Tadorne de Belon"
+-
+  id: 177
+  famille: "Anatidae"
+  lb_nom: "Anser albifrons"
+  nom_fr: "Oie rieuse"
+-
+  id: 178
+  famille: "Anatidae"
+  lb_nom: "Branta albifrons"
+  nom_fr: "Oie rieuse"
+-
+  id: 179
+  famille: "Anatidae"
+  lb_nom: "Anser albifrons albifrons"
+  nom_fr: ""
+-
+  id: 180
+  famille: "Anatidae"
+  lb_nom: "Anser albifrons flavirostris"
+  nom_fr: ""
+-
+  id: 181
+  famille: "Anatidae"
+  lb_nom: "Anas anser"
+  nom_fr: "Oie cendrée"
+-
+  id: 182
+  famille: "Anatidae"
+  lb_nom: "Anser anser"
+  nom_fr: "Oie cendrée"
+-
+  id: 183
+  famille: "Anatidae"
+  lb_nom: "Anser domesticus"
+  nom_fr: "Oie cendrée"
+-
+  id: 184
+  famille: "Anatidae"
+  lb_nom: "Anser anser anser"
+  nom_fr: ""
+-
+  id: 185
+  famille: "Anatidae"
+  lb_nom: "Anser anser rubrirostris"
+  nom_fr: ""
+-
+  id: 186
+  famille: "Anatidae"
+  lb_nom: "Anser brachyrhynchus"
+  nom_fr: "Oie à bec court"
+-
+  id: 187
+  famille: "Anatidae"
+  lb_nom: "Anas caerulescens"
+  nom_fr: "Oie des neiges"
+-
+  id: 188
+  famille: "Anatidae"
+  lb_nom: "Anser caerulescens"
+  nom_fr: "Oie des neiges"
+-
+  id: 189
+  famille: "Anatidae"
+  lb_nom: "Chen caerulescens"
+  nom_fr: "Oie des neiges"
+-
+  id: 190
+  famille: "Anatidae"
+  lb_nom: "Anas erythropus"
+  nom_fr: "Oie naine"
+-
+  id: 191
+  famille: "Anatidae"
+  lb_nom: "Anser erythropus"
+  nom_fr: "Oie naine"
+-
+  id: 192
+  famille: "Anatidae"
+  lb_nom: "Anser fabalis"
+  nom_fr: "Oie des moissons"
+-
+  id: 193
+  famille: "Anatidae"
+  lb_nom: "Anser fabilis"
+  nom_fr: "Oie des moissons"
+-
+  id: 194
+  famille: "Anatidae"
+  lb_nom: "Anser fabalis fabalis"
+  nom_fr: ""
+-
+  id: 195
+  famille: "Anatidae"
+  lb_nom: "Anser fabalis rossicus"
+  nom_fr: ""
+-
+  id: 196
+  famille: "Anatidae"
+  lb_nom: "Anser indicus"
+  nom_fr: "Oie à tête barrée"
+-
+  id: 197
+  famille: "Anatidae"
+  lb_nom: "Eulabeia indica"
+  nom_fr: 8
+-
+  id: 198
+  famille: "Anatidae"
+  lb_nom: "Anas bernicla"
+  nom_fr: "Bernache cravant"
+-
+  id: 199
+  famille: "Anatidae"
+  lb_nom: "Branta bernicla"
+  nom_fr: "Bernache cravant"
+-
+  id: 200
+  famille: "Anatidae"
+  lb_nom: "Branta bernicla bernicla"
+  nom_fr: ""
+-
+  id: 201
+  famille: "Anatidae"
+  lb_nom: "Branta bernicla hrota"
+  nom_fr: "Bernache à ventre pâle"
+-
+  id: 202
+  famille: "Anatidae"
+  lb_nom: "Branta hrota"
+  nom_fr: "Bernache à ventre pâle"
+-
+  id: 203
+  famille: "Anatidae"
+  lb_nom: "Branta bernicla nigricans"
+  nom_fr: "Bernache du Pacifique"
+-
+  id: 204
+  famille: "Anatidae"
+  lb_nom: "Branta nigricans"
+  nom_fr: "Bernache du Pacifique"
+-
+  id: 205
+  famille: "Anatidae"
+  lb_nom: "Anas canadensis"
+  nom_fr: "Bernache du Canada"
+-
+  id: 206
+  famille: "Anatidae"
+  lb_nom: "Branta canadensis"
+  nom_fr: "Bernache du Canada"
+-
+  id: 207
+  famille: "Anatidae"
+  lb_nom: "Anas leucopsis"
+  nom_fr: "Bernache nonnette"
+-
+  id: 208
+  famille: "Anatidae"
+  lb_nom: "Branta leucopsis"
+  nom_fr: "Bernache nonnette"
+-
+  id: 209
+  famille: "Anatidae"
+  lb_nom: "Anser ruficollis"
+  nom_fr: "Bernache à cou roux"
+-
+  id: 210
+  famille: "Anatidae"
+  lb_nom: "Branta ruficollis"
+  nom_fr: "Bernache à cou roux"
+-
+  id: 211
+  famille: "Anatidae"
+  lb_nom: "Rufibrenta ruficollis"
+  nom_fr: 8
+-
+  id: 212
+  famille: "Anatidae"
+  lb_nom: "Cygnus atratus"
+  nom_fr: "Cygne noir"
+-
+  id: 213
+  famille: "Anatidae"
+  lb_nom: "Anas columbianus"
+  nom_fr: "Cygne de Bewick"
+-
+  id: 214
+  famille: "Anatidae"
+  lb_nom: "Cygnus colombianus"
+  nom_fr: 8
+-
+  id: 215
+  famille: "Anatidae"
+  lb_nom: "Cygnus columbianus columbianus"
+  nom_fr: "Cygne de Bewick"
+-
+  id: 216
+  famille: "Anatidae"
+  lb_nom: "Cygnus columbianus"
+  nom_fr: "Cygne de Bewick"
+-
+  id: 217
+  famille: "Anatidae"
+  lb_nom: "Olor columbianus"
+  nom_fr: 8
+-
+  id: 218
+  famille: "Anatidae"
+  lb_nom: "Cygnus bewickii"
+  nom_fr: "Cygne de Bewick"
+-
+  id: 219
+  famille: "Anatidae"
+  lb_nom: "Cygnus columbianus bewickii"
+  nom_fr: "Cygne de Bewick"
+-
+  id: 220
+  famille: "Anatidae"
+  lb_nom: "Anas cygnus"
+  nom_fr: "Cygne chanteur"
+-
+  id: 221
+  famille: "Anatidae"
+  lb_nom: "Cygnus cygnus"
+  nom_fr: "Cygne chanteur"
+-
+  id: 222
+  famille: "Anatidae"
+  lb_nom: "Olor cygnus"
+  nom_fr: 8
+-
+  id: 223
+  famille: "Anatidae"
+  lb_nom: "Anas olor"
+  nom_fr: "Cygne tuberculé"
+-
+  id: 224
+  famille: "Anatidae"
+  lb_nom: "Cygnus olor"
+  nom_fr: "Cygne tuberculé"
+-
+  id: 225
+  famille: "Anatidae"
+  lb_nom: "Dendrocygna bicolor"
+  nom_fr: "Dendrocygne fauve"
+-
+  id: 226
+  famille: "Anatidae"
+  lb_nom: "Dendrocygna viduata"
+  nom_fr: "Dendrocygne veuf"
+-
+  id: 227
+  famille: "Anatidae"
+  lb_nom: "Anas jamaicensis"
+  nom_fr: "Érismature rousse"
+-
+  id: 228
+  famille: "Anatidae"
+  lb_nom: "Oxyura jamaicensis"
+  nom_fr: "Érismature rousse"
+-
+  id: 229
+  famille: "Anatidae"
+  lb_nom: "Anas leucocephala"
+  nom_fr: "Érismature à tête blanche"
+-
+  id: 230
+  famille: "Anatidae"
+  lb_nom: "Oxyura leucocephala"
+  nom_fr: "Érismature à tête blanche"
+-
+  id: 231
+  famille: "Upupidae"
+  lb_nom: "Upupa epops"
+  nom_fr: "Huppe fasciée"
+-
+  id: 232
+  famille: "Apodidae"
+  lb_nom: "Apus affinis"
+  nom_fr: "Martinet des maisons"
+-
+  id: 233
+  famille: "Apodidae"
+  lb_nom: "Cypselus affinis"
+  nom_fr: "Martinet des maisons"
+-
+  id: 234
+  famille: "Apodidae"
+  lb_nom: "Apus apus"
+  nom_fr: "Martinet noir"
+-
+  id: 235
+  famille: "Apodidae"
+  lb_nom: "Cypselus apus"
+  nom_fr: 3
+-
+  id: 236
+  famille: "Apodidae"
+  lb_nom: "Hirundo apus"
+  nom_fr: "Martinet noir"
+-
+  id: 237
+  famille: "Apodidae"
+  lb_nom: "Apus pallidus"
+  nom_fr: "Martinet pâle"
+-
+  id: 238
+  famille: "Apodidae"
+  lb_nom: "Cypselus pallidus"
+  nom_fr: "Martinet pâle"
+-
+  id: 239
+  famille: "Apodidae"
+  lb_nom: "Chaetura pelagica"
+  nom_fr: "Martinet ramoneur"
+-
+  id: 240
+  famille: "Apodidae"
+  lb_nom: "Apus melba"
+  nom_fr: "Martinet à ventre blanc"
+-
+  id: 241
+  famille: "Apodidae"
+  lb_nom: "Hirundo melba"
+  nom_fr: "Martinet à ventre blanc"
+-
+  id: 242
+  famille: "Apodidae"
+  lb_nom: "Tachymarptis melba"
+  nom_fr: "Martinet à ventre blanc"
+-
+  id: 243
+  famille: "Caprimulgidae"
+  lb_nom: "Caprimulgus europaeus europaeus"
+  nom_fr: "Engoulevent d'Europe"
+-
+  id: 244
+  famille: "Caprimulgidae"
+  lb_nom: "Caprimulgus europaeus"
+  nom_fr: "Engoulevent d'Europe"
+-
+  id: 245
+  famille: "Caprimulgidae"
+  lb_nom: "Caprimulgus europaeus meridionalis"
+  nom_fr: "Engoulevent d'Europe"
+-
+  id: 246
+  famille: "Caprimulgidae"
+  lb_nom: "Caprimulgus ruficollis"
+  nom_fr: "Engoulevent à collier roux"
+-
+  id: 247
+  famille: "Caprimulgidae"
+  lb_nom: "Chordeiles minor"
+  nom_fr: "Engoulevent d'Amérique"
+-
+  id: 248
+  famille: "Alcidae"
+  lb_nom: "Alca torda britannica"
+  nom_fr: "Petit pingouin"
+-
+  id: 249
+  famille: "Alcidae"
+  lb_nom: "Alca torda"
+  nom_fr: "Petit pingouin"
+-
+  id: 250
+  famille: "Alcidae"
+  lb_nom: "Alca alle"
+  nom_fr: "Mergule nain"
+-
+  id: 251
+  famille: "Alcidae"
+  lb_nom: "Alle alle"
+  nom_fr: "Mergule nain"
+-
+  id: 252
+  famille: "Alcidae"
+  lb_nom: "Plautus alle"
+  nom_fr: "Mergule nain"
+-
+  id: 253
+  famille: "Alcidae"
+  lb_nom: "Plotus alle"
+  nom_fr: "Mergule nain"
+-
+  id: 254
+  famille: "Alcidae"
+  lb_nom: "Alca grylle"
+  nom_fr: "Guillemot à miroir"
+-
+  id: 255
+  famille: "Alcidae"
+  lb_nom: "Cepphus grylle"
+  nom_fr: "Guillemot à miroir"
+-
+  id: 256
+  famille: "Alcidae"
+  lb_nom: "Alca arctica"
+  nom_fr: "Macareux moine"
+-
+  id: 257
+  famille: "Alcidae"
+  lb_nom: "Fratercula arctica"
+  nom_fr: "Macareux moine"
+-
+  id: 258
+  famille: "Alcidae"
+  lb_nom: "Alca impennis"
+  nom_fr: "Grand Pingouin"
+-
+  id: 259
+  famille: "Alcidae"
+  lb_nom: "Pinguinus impennis"
+  nom_fr: "Grand Pingouin"
+-
+  id: 260
+  famille: "Alcidae"
+  lb_nom: "Colymbus aalge"
+  nom_fr: "Guillemot de Troïl"
+-
+  id: 261
+  famille: "Alcidae"
+  lb_nom: "Uria aalge aalge"
+  nom_fr: "Guillemot de Troïl"
+-
+  id: 262
+  famille: "Alcidae"
+  lb_nom: "Uria aalge albionis"
+  nom_fr: "Guillemot de Troïl"
+-
+  id: 263
+  famille: "Alcidae"
+  lb_nom: "Uria aalge"
+  nom_fr: "Guillemot de Troïl"
+-
+  id: 264
+  famille: "Alcidae"
+  lb_nom: "Alca lomvia"
+  nom_fr: "Guillemot de Brünnich"
+-
+  id: 265
+  famille: "Alcidae"
+  lb_nom: "Uria lomvia"
+  nom_fr: "Guillemot de Brünnich"
+-
+  id: 266
+  famille: "Burhinidae"
+  lb_nom: "Burhinus oedicnemus"
+  nom_fr: "Oedicnème criard"
+-
+  id: 267
+  famille: "Burhinidae"
+  lb_nom: "Charadrius oedicnemus"
+  nom_fr: "Oedicnème criard"
+-
+  id: 268
+  famille: "Charadriidae"
+  lb_nom: "Charadrius alexandrinus"
+  nom_fr: "Gravelot à collier interrompu"
+-
+  id: 269
+  famille: "Charadriidae"
+  lb_nom: "Charadrius asiaticus"
+  nom_fr: "Gravelot asiatique"
+-
+  id: 270
+  famille: "Charadriidae"
+  lb_nom: "Pluvialis asiaticus"
+  nom_fr: ""
+-
+  id: 271
+  famille: "Charadriidae"
+  lb_nom: "Charadrius dubius curonicus"
+  nom_fr: "Petit Gravelot"
+-
+  id: 272
+  famille: "Charadriidae"
+  lb_nom: "Charadrius dubius"
+  nom_fr: "Petit Gravelot"
+-
+  id: 273
+  famille: "Charadriidae"
+  lb_nom: "Chardrius dubius"
+  nom_fr: 7
+-
+  id: 274
+  famille: "Charadriidae"
+  lb_nom: "Charadrius hiaticula"
+  nom_fr: "Grand Gravelot"
+-
+  id: 275
+  famille: "Charadriidae"
+  lb_nom: "Charadrius leschenaultii"
+  nom_fr: "Gravelot de Leschenault"
+-
+  id: 276
+  famille: "Charadriidae"
+  lb_nom: "Charadrius mongolus"
+  nom_fr: "Gravelot mongol"
+-
+  id: 277
+  famille: "Charadriidae"
+  lb_nom: "Charadrius pecuarius"
+  nom_fr: "Gravelot pâtre"
+-
+  id: 278
+  famille: "Charadriidae"
+  lb_nom: "Charadrius semipalmatus"
+  nom_fr: "Pluvier semipalmé"
+-
+  id: 279
+  famille: "Charadriidae"
+  lb_nom: "Charadrius vociferus"
+  nom_fr: "Gravelot kildir"
+-
+  id: 280
+  famille: "Charadriidae"
+  lb_nom: "Charadrius morinellus"
+  nom_fr: "Pluvier guignard"
+-
+  id: 281
+  famille: "Charadriidae"
+  lb_nom: "Eudromias morinellus"
+  nom_fr: "Pluvier guignard"
+-
+  id: 282
+  famille: "Charadriidae"
+  lb_nom: "Charadrius apricarius"
+  nom_fr: "Pluvier doré"
+-
+  id: 283
+  famille: "Charadriidae"
+  lb_nom: "Pluvialis apricaria"
+  nom_fr: "Pluvier doré"
+-
+  id: 284
+  famille: "Charadriidae"
+  lb_nom: "Pluvialis apricaria altifrons"
+  nom_fr: ""
+-
+  id: 285
+  famille: "Charadriidae"
+  lb_nom: "Charadrius dominicus"
+  nom_fr: "Pluvier bronzé"
+-
+  id: 286
+  famille: "Charadriidae"
+  lb_nom: "Pluvialis dominica"
+  nom_fr: "Pluvier bronzé"
+-
+  id: 287
+  famille: "Charadriidae"
+  lb_nom: "Charadrius fulvus"
+  nom_fr: "Pluvier fauve"
+-
+  id: 288
+  famille: "Charadriidae"
+  lb_nom: "Pluvialis fulva"
+  nom_fr: "Pluvier fauve"
+-
+  id: 289
+  famille: "Charadriidae"
+  lb_nom: "Charadarius squatarola"
+  nom_fr: "Pluvier argenté"
+-
+  id: 290
+  famille: "Charadriidae"
+  lb_nom: "Pluvialis squatarola"
+  nom_fr: "Pluvier argenté"
+-
+  id: 291
+  famille: "Charadriidae"
+  lb_nom: "Squatarola squatarola"
+  nom_fr: "Pluvier argenté"
+-
+  id: 292
+  famille: "Charadriidae"
+  lb_nom: "Tringa squatarola"
+  nom_fr: "Pluvier argenté"
+-
+  id: 293
+  famille: "Charadriidae"
+  lb_nom: "Charadrius gregarius"
+  nom_fr: "Vanneau sociable"
+-
+  id: 294
+  famille: "Charadriidae"
+  lb_nom: "Chettusia gregaria"
+  nom_fr: "Vanneau sociable"
+-
+  id: 295
+  famille: "Charadriidae"
+  lb_nom: "Vanellus gregarius"
+  nom_fr: "Vanneau sociable"
+-
+  id: 296
+  famille: "Charadriidae"
+  lb_nom: "Charadrius leucurus"
+  nom_fr: "Vanneau à queue blanche"
+-
+  id: 297
+  famille: "Charadriidae"
+  lb_nom: "Chettusia leucura"
+  nom_fr: "Vanneau à queue blanche"
+-
+  id: 298
+  famille: "Charadriidae"
+  lb_nom: "Vanellus leucurus"
+  nom_fr: "Vanneau à queue blanche"
+-
+  id: 299
+  famille: "Charadriidae"
+  lb_nom: "Tringa vanellus"
+  nom_fr: "Vanneau huppé"
+-
+  id: 300
+  famille: "Charadriidae"
+  lb_nom: "Vanellus vanellus"
+  nom_fr: "Vanneau huppé"
+-
+  id: 301
+  famille: "Glareolidae"
+  lb_nom: "Chardarius cursor"
+  nom_fr: "Courvite isabelle"
+-
+  id: 302
+  famille: "Glareolidae"
+  lb_nom: "Cursorius cursor"
+  nom_fr: "Courvite isabelle"
+-
+  id: 303
+  famille: "Glareolidae"
+  lb_nom: "Glareola nordmanni"
+  nom_fr: "Glaréole à ailes noires"
+-
+  id: 304
+  famille: "Glareolidae"
+  lb_nom: "Glareola nordmanni"
+  nom_fr: "Glaréole à ailes noires"
+-
+  id: 305
+  famille: "Glareolidae"
+  lb_nom: "Glareola pratincola"
+  nom_fr: "Glaréole à collier"
+-
+  id: 306
+  famille: "Glareolidae"
+  lb_nom: "Hirundo pratincola"
+  nom_fr: "Glaréole à collier"
+-
+  id: 307
+  famille: "Haematopodidae"
+  lb_nom: "Haematopus ostralegus"
+  nom_fr: "Huîtrier pie"
+-
+  id: 308
+  famille: "Haematopodidae"
+  lb_nom: "Haematopus ostralegus occidentalis"
+  nom_fr: "Huîtrier pie"
+-
+  id: 309
+  famille: "Haematopodidae"
+  lb_nom: "Haematopus ostralegus ostralegus"
+  nom_fr: "Huîtrier pie"
+-
+  id: 310
+  famille: "Laridae"
+  lb_nom: "Chroicocephalus genei"
+  nom_fr: "Goéland railleur"
+-
+  id: 311
+  famille: "Laridae"
+  lb_nom: "Larus genei"
+  nom_fr: "Goéland railleur"
+-
+  id: 312
+  famille: "Laridae"
+  lb_nom: "Chroicocephalus philadelphia"
+  nom_fr: "Mouette de Bonaparte"
+-
+  id: 313
+  famille: "Laridae"
+  lb_nom: "Larus philadelphia"
+  nom_fr: "Mouette de Bonaparte"
+-
+  id: 314
+  famille: "Laridae"
+  lb_nom: "Sterna philadelphia"
+  nom_fr: "Mouette de Bonaparte"
+-
+  id: 315
+  famille: "Laridae"
+  lb_nom: "Chroicocephalus ridibundus"
+  nom_fr: "Mouette rieuse"
+-
+  id: 316
+  famille: "Laridae"
+  lb_nom: "Larus ridibundus"
+  nom_fr: "Mouette rieuse"
+-
+  id: 317
+  famille: "Laridae"
+  lb_nom: "Hydrocoloeus minutus"
+  nom_fr: "Mouette pygmée"
+-
+  id: 318
+  famille: "Laridae"
+  lb_nom: "Larus minutus"
+  nom_fr: "Mouette pygmée"
+-
+  id: 319
+  famille: "Laridae"
+  lb_nom: "Ichthyaetus audouinii"
+  nom_fr: "Goéland d'Audouin"
+-
+  id: 320
+  famille: "Laridae"
+  lb_nom: "Larus audouinii"
+  nom_fr: "Goéland d'Audouin"
+-
+  id: 321
+  famille: "Laridae"
+  lb_nom: "Ichthyaetus ichthyaetus"
+  nom_fr: "Goéland ichthyaète"
+-
+  id: 322
+  famille: "Laridae"
+  lb_nom: "Larus ichthyaetus"
+  nom_fr: "Goéland ichthyaète"
+-
+  id: 323
+  famille: "Laridae"
+  lb_nom: "Ichthyaetus melanocephalus"
+  nom_fr: "Mouette mélanocéphale"
+-
+  id: 324
+  famille: "Laridae"
+  lb_nom: "Larus melanocephalus"
+  nom_fr: "Mouette mélanocéphale"
+-
+  id: 325
+  famille: "Laridae"
+  lb_nom: "Larus argentatus"
+  nom_fr: "Goéland argenté"
+-
+  id: 326
+  famille: "Laridae"
+  lb_nom: "Larus argentatus cachinnans"
+  nom_fr: "Goéland pontique"
+-
+  id: 327
+  famille: "Laridae"
+  lb_nom: "Larus cachinnans cachinnans"
+  nom_fr: "Goéland pontique"
+-
+  id: 328
+  famille: "Laridae"
+  lb_nom: "Larus cachinnans"
+  nom_fr: "Goéland pontique"
+-
+  id: 329
+  famille: "Laridae"
+  lb_nom: "Larus canus canus"
+  nom_fr: "Goéland cendré"
+-
+  id: 330
+  famille: "Laridae"
+  lb_nom: "Larus canus heinei"
+  nom_fr: "Goéland cendré"
+-
+  id: 331
+  famille: "Laridae"
+  lb_nom: "Larus canus"
+  nom_fr: "Goéland cendré"
+-
+  id: 332
+  famille: "Laridae"
+  lb_nom: "Larus delawarensis"
+  nom_fr: "Goéland à bec cerclé"
+-
+  id: 333
+  famille: "Laridae"
+  lb_nom: "Larus dominicanus"
+  nom_fr: "Goéland dominicain"
+-
+  id: 334
+  famille: "Laridae"
+  lb_nom: "Larus fuscus"
+  nom_fr: "Goéland brun"
+-
+  id: 335
+  famille: "Laridae"
+  lb_nom: "Larus fuscus fuscus"
+  nom_fr: "Goéland de la Baltique"
+-
+  id: 336
+  famille: "Laridae"
+  lb_nom: "Larus fuscus graellsii"
+  nom_fr: "Goéland brun"
+-
+  id: 337
+  famille: "Laridae"
+  lb_nom: "Larus fuscus intermedius"
+  nom_fr: ""
+-
+  id: 338
+  famille: "Laridae"
+  lb_nom: "Larus glaucoides"
+  nom_fr: "Goéland à ailes blanches"
+-
+  id: 339
+  famille: "Laridae"
+  lb_nom: "Larus hyperboreus"
+  nom_fr: "Goéland bourgmestre"
+-
+  id: 340
+  famille: "Laridae"
+  lb_nom: "Larus marinus"
+  nom_fr: "Goéland marin"
+-
+  id: 341
+  famille: "Laridae"
+  lb_nom: "Larus argentatus michaelis"
+  nom_fr: 5
+-
+  id: 342
+  famille: "Laridae"
+  lb_nom: "Larus cachinnans michahellis"
+  nom_fr: "Goéland leucophée"
+-
+  id: 343
+  famille: "Laridae"
+  lb_nom: "Larus michaellis"
+  nom_fr: 5
+-
+  id: 344
+  famille: "Laridae"
+  lb_nom: "Larus michahellis"
+  nom_fr: "Goéland leucophée"
+-
+  id: 345
+  famille: "Laridae"
+  lb_nom: "Larus argentatus smithsonianus"
+  nom_fr: "Goéland hudsonien"
+-
+  id: 346
+  famille: "Laridae"
+  lb_nom: "Larus smithsonianus"
+  nom_fr: "Goéland hudsonien"
+-
+  id: 347
+  famille: "Laridae"
+  lb_nom: "Larus atricilla"
+  nom_fr: "Mouette atricille"
+-
+  id: 348
+  famille: "Laridae"
+  lb_nom: "Leucophaeus atricilla"
+  nom_fr: "Mouette atricille"
+-
+  id: 349
+  famille: "Laridae"
+  lb_nom: "Larus pipixcan"
+  nom_fr: "Mouette de Franklin"
+-
+  id: 350
+  famille: "Laridae"
+  lb_nom: "Leucophaeus pipixcan"
+  nom_fr: "Mouette de Franklin"
+-
+  id: 351
+  famille: "Laridae"
+  lb_nom: "Larus eburneus"
+  nom_fr: "Mouette ivoire"
+-
+  id: 352
+  famille: "Laridae"
+  lb_nom: "Pagophila eburnea"
+  nom_fr: "Mouette ivoire"
+-
+  id: 353
+  famille: "Laridae"
+  lb_nom: "Larus rosea"
+  nom_fr: "Mouette de Ross"
+-
+  id: 354
+  famille: "Laridae"
+  lb_nom: "Larus roseus"
+  nom_fr: "Mouette de Ross"
+-
+  id: 355
+  famille: "Laridae"
+  lb_nom: "Larus rossii"
+  nom_fr: "Mouette de Ross"
+-
+  id: 356
+  famille: "Laridae"
+  lb_nom: "Rhodostethia rosea"
+  nom_fr: "Mouette de Ross"
+-
+  id: 357
+  famille: "Laridae"
+  lb_nom: "Larus tridactyla"
+  nom_fr: "Mouette tridactyle"
+-
+  id: 358
+  famille: "Laridae"
+  lb_nom: "Larus tridactylus"
+  nom_fr: "Mouette tridactyle"
+-
+  id: 359
+  famille: "Laridae"
+  lb_nom: "Rissa tridactyla"
+  nom_fr: "Mouette tridactyle"
+-
+  id: 360
+  famille: "Laridae"
+  lb_nom: "Larus sabini"
+  nom_fr: "Mouette de Sabine"
+-
+  id: 361
+  famille: "Laridae"
+  lb_nom: "Larus (Xema) sabini"
+  nom_fr: "Mouette de Sabine"
+-
+  id: 362
+  famille: "Laridae"
+  lb_nom: "Xema sabini"
+  nom_fr: "Mouette de Sabine"
+-
+  id: 363
+  famille: "Laridae"
+  lb_nom: "Xema sabinii"
+  nom_fr: "Mouette de Sabine"
+-
+  id: 364
+  famille: "Laridae"
+  lb_nom: "Chlidonias hybrida"
+  nom_fr: "Guifette moustac"
+-
+  id: 365
+  famille: "Laridae"
+  lb_nom: "Chlidonias hybridus"
+  nom_fr: "Guifette moustac"
+-
+  id: 366
+  famille: "Laridae"
+  lb_nom: "Hydrochelidon leucopareia"
+  nom_fr: 5
+-
+  id: 367
+  famille: "Laridae"
+  lb_nom: "Sterna hybrida"
+  nom_fr: "Guifette moustac"
+-
+  id: 368
+  famille: "Laridae"
+  lb_nom: "Chlidonias leucopterus"
+  nom_fr: "Guifette leucoptère"
+-
+  id: 369
+  famille: "Laridae"
+  lb_nom: "Sterna leucoptera"
+  nom_fr: "Guifette leucoptère"
+-
+  id: 370
+  famille: "Laridae"
+  lb_nom: "Chlidonias niger"
+  nom_fr: "Guifette noire"
+-
+  id: 371
+  famille: "Laridae"
+  lb_nom: "Sterna nigra"
+  nom_fr: "Guifette noire"
+-
+  id: 372
+  famille: "Laridae"
+  lb_nom: "Gelochelidon nilotica"
+  nom_fr: "Sterne hansel"
+-
+  id: 373
+  famille: "Laridae"
+  lb_nom: "Sterna nilotica"
+  nom_fr: "Sterne hansel"
+-
+  id: 374
+  famille: "Laridae"
+  lb_nom: "Hydroprogne caspia"
+  nom_fr: "Sterne caspienne"
+-
+  id: 375
+  famille: "Laridae"
+  lb_nom: "Hydroprogne tschegrava"
+  nom_fr: "Sterne caspienne"
+-
+  id: 376
+  famille: "Laridae"
+  lb_nom: "Sterna caspia"
+  nom_fr: "Sterne caspienne"
+-
+  id: 377
+  famille: "Laridae"
+  lb_nom: "Sterna tschegrava"
+  nom_fr: "Sterne caspienne"
+-
+  id: 378
+  famille: "Laridae"
+  lb_nom: "Onychoprion anaethetus"
+  nom_fr: "Sterne bridée"
+-
+  id: 379
+  famille: "Laridae"
+  lb_nom: "Sterna anaethetus"
+  nom_fr: "Sterne bridée"
+-
+  id: 380
+  famille: "Laridae"
+  lb_nom: "Onychoprion fuscatus"
+  nom_fr: "Sterne fuligineuse"
+-
+  id: 381
+  famille: "Laridae"
+  lb_nom: "Sterna fuscata"
+  nom_fr: "Sterne fuligineuse"
+-
+  id: 382
+  famille: "Laridae"
+  lb_nom: "Sterna dougallii"
+  nom_fr: "Sterne de Dougall"
+-
+  id: 383
+  famille: "Laridae"
+  lb_nom: "Sterna forsteri"
+  nom_fr: "Sterne de Forster"
+-
+  id: 384
+  famille: "Laridae"
+  lb_nom: "Sterna hirundo"
+  nom_fr: "Sterne pierregarin"
+-
+  id: 385
+  famille: "Laridae"
+  lb_nom: "Sterna macrura"
+  nom_fr: 5
+-
+  id: 386
+  famille: "Laridae"
+  lb_nom: "Sterna paradisaea"
+  nom_fr: "Sterne arctique"
+-
+  id: 387
+  famille: "Laridae"
+  lb_nom: "Sterna albifrons"
+  nom_fr: "Sterne naine"
+-
+  id: 388
+  famille: "Laridae"
+  lb_nom: "Sternula albifrons"
+  nom_fr: "Sterne naine"
+-
+  id: 389
+  famille: "Laridae"
+  lb_nom: "Sterna bengalensis"
+  nom_fr: "Sterne voyageuse"
+-
+  id: 390
+  famille: "Laridae"
+  lb_nom: "Thalasseus bengalensis"
+  nom_fr: "Sterne voyageuse"
+-
+  id: 391
+  famille: "Laridae"
+  lb_nom: "Sterna elegans"
+  nom_fr: "Sterne élégante"
+-
+  id: 392
+  famille: "Laridae"
+  lb_nom: "Thalasseus elegans"
+  nom_fr: "Sterne élégante"
+-
+  id: 393
+  famille: "Laridae"
+  lb_nom: "Sterna maxima"
+  nom_fr: "Sterne royale"
+-
+  id: 394
+  famille: "Laridae"
+  lb_nom: "Thalasseus maximus"
+  nom_fr: "Sterne royale"
+-
+  id: 395
+  famille: "Laridae"
+  lb_nom: "Sterna sandvicensis"
+  nom_fr: "Sterne caugek "
+-
+  id: 396
+  famille: "Laridae"
+  lb_nom: "Thalasseus sandvicensis"
+  nom_fr: "Sterne caugek "
+-
+  id: 397
+  famille: "Laridae"
+  lb_nom: "Thalasseus sandvicensis sandvicensis"
+  nom_fr: "Sterne caugek"
+-
+  id: 398
+  famille: "Pluvianidae"
+  lb_nom: "Pluvianus aegyptius"
+  nom_fr: "Pluvian fluviatile"
+-
+  id: 399
+  famille: "Recurvirostridae"
+  lb_nom: "Charadrius himantopus"
+  nom_fr: "Echasse blanche"
+-
+  id: 400
+  famille: "Recurvirostridae"
+  lb_nom: "Himantopus himantopus"
+  nom_fr: "Echasse blanche"
+-
+  id: 401
+  famille: "Recurvirostridae"
+  lb_nom: "Himantopus himantopus himantopus"
+  nom_fr: ""
+-
+  id: 402
+  famille: "Recurvirostridae"
+  lb_nom: "Recurvirostra avosetta"
+  nom_fr: "Avocette élégante"
+-
+  id: 403
+  famille: "Scolopacidae"
+  lb_nom: "Actites hypoleucos"
+  nom_fr: "Chevalier guignette"
+-
+  id: 404
+  famille: "Scolopacidae"
+  lb_nom: "Actitis hypoleucos"
+  nom_fr: "Chevalier guignette"
+-
+  id: 405
+  famille: "Scolopacidae"
+  lb_nom: "Tringa hypoleucos"
+  nom_fr: "Chevalier guignette"
+-
+  id: 406
+  famille: "Scolopacidae"
+  lb_nom: "Actites macularia"
+  nom_fr: "Chevalier grivelé"
+-
+  id: 407
+  famille: "Scolopacidae"
+  lb_nom: "Actitis macularia"
+  nom_fr: "Chevalier grivelé"
+-
+  id: 408
+  famille: "Scolopacidae"
+  lb_nom: "Actitis macularius"
+  nom_fr: "Chevalier grivelé"
+-
+  id: 409
+  famille: "Scolopacidae"
+  lb_nom: "Tringa macularia"
+  nom_fr: "Chevalier grivelé"
+-
+  id: 410
+  famille: "Scolopacidae"
+  lb_nom: "Arenaria interpres"
+  nom_fr: "Tournepierre à collier"
+-
+  id: 411
+  famille: "Scolopacidae"
+  lb_nom: "Tringa interpres"
+  nom_fr: "Tournepierre à collier"
+-
+  id: 412
+  famille: "Scolopacidae"
+  lb_nom: "Baratramia longicauda"
+  nom_fr: "Bartramie des champs"
+-
+  id: 413
+  famille: "Scolopacidae"
+  lb_nom: "Bartramia longicauda"
+  nom_fr: "Bartramie des champs"
+-
+  id: 414
+  famille: "Scolopacidae"
+  lb_nom: "Tringa longicauda"
+  nom_fr: "Bartramie des champs"
+-
+  id: 415
+  famille: "Scolopacidae"
+  lb_nom: "Calidris acuminata"
+  nom_fr: "Bécasseau à queue pointue"
+-
+  id: 416
+  famille: "Scolopacidae"
+  lb_nom: "Erolia acuminata"
+  nom_fr: "Bécasseau à queue pointue"
+-
+  id: 417
+  famille: "Scolopacidae"
+  lb_nom: "Heteropygia acuminata"
+  nom_fr: 7
+-
+  id: 418
+  famille: "Scolopacidae"
+  lb_nom: "Totanus acuminatus"
+  nom_fr: "Bécasseau à queue pointue"
+-
+  id: 419
+  famille: "Scolopacidae"
+  lb_nom: "Calidris alba"
+  nom_fr: "Bécasseau sanderling"
+-
+  id: 420
+  famille: "Scolopacidae"
+  lb_nom: "Crocethia alba"
+  nom_fr: "Bécasseau sanderling"
+-
+  id: 421
+  famille: "Scolopacidae"
+  lb_nom: "Tringa alba"
+  nom_fr: "Bécasseau sanderling"
+-
+  id: 422
+  famille: "Scolopacidae"
+  lb_nom: "Calidris alpina"
+  nom_fr: "Bécasseau variable"
+-
+  id: 423
+  famille: "Scolopacidae"
+  lb_nom: "Erolia alpina"
+  nom_fr: "Bécasseau variable"
+-
+  id: 424
+  famille: "Scolopacidae"
+  lb_nom: "Pelidna alpina"
+  nom_fr: 5
+-
+  id: 425
+  famille: "Scolopacidae"
+  lb_nom: "Tringa alpina"
+  nom_fr: "Bécasseau variable"
+-
+  id: 426
+  famille: "Scolopacidae"
+  lb_nom: "Calidris alpina alpina"
+  nom_fr: ""
+-
+  id: 427
+  famille: "Scolopacidae"
+  lb_nom: "Calidris alpina arctica"
+  nom_fr: ""
+-
+  id: 428
+  famille: "Scolopacidae"
+  lb_nom: "Calidris alpina schinzii"
+  nom_fr: ""
+-
+  id: 429
+  famille: "Scolopacidae"
+  lb_nom: "Actodromas bairdii"
+  nom_fr: "Bécasseau de Baird"
+-
+  id: 430
+  famille: "Scolopacidae"
+  lb_nom: "Calidris bairdii"
+  nom_fr: "Bécasseau de Baird"
+-
+  id: 431
+  famille: "Scolopacidae"
+  lb_nom: "Erolia bairdii"
+  nom_fr: "Bécasseau de Baird"
+-
+  id: 432
+  famille: "Scolopacidae"
+  lb_nom: "Calidris canutus"
+  nom_fr: "Bécasseau maubèche"
+-
+  id: 433
+  famille: "Scolopacidae"
+  lb_nom: "Tringa canutus"
+  nom_fr: "Bécasseau maubèche"
+-
+  id: 434
+  famille: "Scolopacidae"
+  lb_nom: "Calidris canutus canutus"
+  nom_fr: "Bécasseau maubèche"
+-
+  id: 435
+  famille: "Scolopacidae"
+  lb_nom: "Calidris canutus islandica"
+  nom_fr: ""
+-
+  id: 436
+  famille: "Scolopacidae"
+  lb_nom: "Calidris falcinellus"
+  nom_fr: "Bécasseau falcinelle"
+-
+  id: 437
+  famille: "Scolopacidae"
+  lb_nom: "Limicola falcinellus"
+  nom_fr: "Bécasseau falcinelle"
+-
+  id: 438
+  famille: "Scolopacidae"
+  lb_nom: "Scolpax falcinellus"
+  nom_fr: "Bécasseau falcinelle"
+-
+  id: 439
+  famille: "Scolopacidae"
+  lb_nom: "Calidris ferruginea"
+  nom_fr: "Bécasseau cocorli"
+-
+  id: 440
+  famille: "Scolopacidae"
+  lb_nom: "Calidris testacea"
+  nom_fr: 5
+-
+  id: 441
+  famille: "Scolopacidae"
+  lb_nom: "Erolia ferruginea"
+  nom_fr: "Bécasseau cocorli"
+-
+  id: 442
+  famille: "Scolopacidae"
+  lb_nom: "Tringa ferrugineus"
+  nom_fr: "Bécasseau cocorli"
+-
+  id: 443
+  famille: "Scolopacidae"
+  lb_nom: "Calidris fuscicollis"
+  nom_fr: "Bécasseau de Bonaparte"
+-
+  id: 444
+  famille: "Scolopacidae"
+  lb_nom: "Calidris fusicollis"
+  nom_fr: "Bécasseau de Bonaparte"
+-
+  id: 445
+  famille: "Scolopacidae"
+  lb_nom: "Erolia fuscicollis"
+  nom_fr: "Bécasseau de Bonaparte"
+-
+  id: 446
+  famille: "Scolopacidae"
+  lb_nom: "Tringa fuscicollis"
+  nom_fr: "Bécasseau de Bonaparte"
+-
+  id: 447
+  famille: "Scolopacidae"
+  lb_nom: "Calidris himantopus"
+  nom_fr: "Bécasseau à échasses"
+-
+  id: 448
+  famille: "Scolopacidae"
+  lb_nom: "Micropalama himantopus"
+  nom_fr: "Bécasseau à échasses"
+-
+  id: 449
+  famille: "Scolopacidae"
+  lb_nom: "Tringa himantopus"
+  nom_fr: "Bécasseau à échasses"
+-
+  id: 450
+  famille: "Scolopacidae"
+  lb_nom: "Calidris maritima"
+  nom_fr: "Bécasseau violet"
+-
+  id: 451
+  famille: "Scolopacidae"
+  lb_nom: "Erolia maritima"
+  nom_fr: "Bécasseau violet"
+-
+  id: 452
+  famille: "Scolopacidae"
+  lb_nom: "Pelidna maritima"
+  nom_fr: 5
+-
+  id: 453
+  famille: "Scolopacidae"
+  lb_nom: "Tringa maritima"
+  nom_fr: "Bécasseau violet"
+-
+  id: 454
+  famille: "Scolopacidae"
+  lb_nom: "Calidris mauri"
+  nom_fr: "Bécasseau d'Alaska"
+-
+  id: 455
+  famille: "Scolopacidae"
+  lb_nom: "Ereunetes mauri"
+  nom_fr: "Bécasseau d'Alaska"
+-
+  id: 456
+  famille: "Scolopacidae"
+  lb_nom: "Calidris melanotos"
+  nom_fr: "Bécasseau tacheté"
+-
+  id: 457
+  famille: "Scolopacidae"
+  lb_nom: "Erolia melanotos"
+  nom_fr: "Bécasseau tacheté"
+-
+  id: 458
+  famille: "Scolopacidae"
+  lb_nom: "Heteropygia melanotos"
+  nom_fr: "Bécasseau tacheté"
+-
+  id: 459
+  famille: "Scolopacidae"
+  lb_nom: "Tringa melanotos"
+  nom_fr: "Bécasseau tacheté"
+-
+  id: 460
+  famille: "Scolopacidae"
+  lb_nom: "Calidris minuta"
+  nom_fr: "Bécasseau minute"
+-
+  id: 461
+  famille: "Scolopacidae"
+  lb_nom: "Erolia minuta"
+  nom_fr: 7
+-
+  id: 462
+  famille: "Scolopacidae"
+  lb_nom: "Tringa minuta"
+  nom_fr: "Bécasseau minute"
+-
+  id: 463
+  famille: "Scolopacidae"
+  lb_nom: "Calidris minutilla"
+  nom_fr: "Bécasseau minuscule"
+-
+  id: 464
+  famille: "Scolopacidae"
+  lb_nom: "Erolia minutilla"
+  nom_fr: "Bécasseau minuscule"
+-
+  id: 465
+  famille: "Scolopacidae"
+  lb_nom: "Tringa minutilla"
+  nom_fr: "Bécasseau minuscule"
+-
+  id: 466
+  famille: "Scolopacidae"
+  lb_nom: "Calidris pugnax"
+  nom_fr: "Chevalier combattant"
+-
+  id: 467
+  famille: "Scolopacidae"
+  lb_nom: "Philomachus pugnax"
+  nom_fr: "Chevalier combattant"
+-
+  id: 468
+  famille: "Scolopacidae"
+  lb_nom: "Tringa pugnax"
+  nom_fr: "Chevalier combattant"
+-
+  id: 469
+  famille: "Scolopacidae"
+  lb_nom: "Calidris pusilla"
+  nom_fr: "Bécasseau semipalmé"
+-
+  id: 470
+  famille: "Scolopacidae"
+  lb_nom: "Ereunetes pusillus"
+  nom_fr: "Bécasseau semipalmé"
+-
+  id: 471
+  famille: "Scolopacidae"
+  lb_nom: "Tringa pusilla"
+  nom_fr: "Bécasseau semipalmé"
+-
+  id: 472
+  famille: "Scolopacidae"
+  lb_nom: "Calidris ruficollis"
+  nom_fr: "Bécasseau à cou roux"
+-
+  id: 473
+  famille: "Scolopacidae"
+  lb_nom: "Calidris subruficollis"
+  nom_fr: "Bécasseau rousset"
+-
+  id: 474
+  famille: "Scolopacidae"
+  lb_nom: "Tringa subruficollis"
+  nom_fr: "Bécasseau rousset"
+-
+  id: 475
+  famille: "Scolopacidae"
+  lb_nom: "Tryngites subruficollis"
+  nom_fr: "Bécasseau rousset"
+-
+  id: 476
+  famille: "Scolopacidae"
+  lb_nom: "Calidris temminckii"
+  nom_fr: "Bécasseau de Temminck"
+-
+  id: 477
+  famille: "Scolopacidae"
+  lb_nom: "Erolia temminckii"
+  nom_fr: "Bécasseau de Temminck"
+-
+  id: 478
+  famille: "Scolopacidae"
+  lb_nom: "Tringa temminckii"
+  nom_fr: "Bécasseau de Temminck"
+-
+  id: 479
+  famille: "Scolopacidae"
+  lb_nom: "Gallinago delicata"
+  nom_fr: "Bécassine de Wilson"
+-
+  id: 480
+  famille: "Scolopacidae"
+  lb_nom: "Gallinago gallinago delicata"
+  nom_fr: "Bécassine de Wilson"
+-
+  id: 481
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax delicata"
+  nom_fr: "Bécassine de Wilson"
+-
+  id: 482
+  famille: "Scolopacidae"
+  lb_nom: "Capella galinago"
+  nom_fr: 8
+-
+  id: 483
+  famille: "Scolopacidae"
+  lb_nom: "Gallinago gallinago faeroeensi"
+  nom_fr: "Bécassine des marais"
+-
+  id: 484
+  famille: "Scolopacidae"
+  lb_nom: "Gallinago gallinago gallinago"
+  nom_fr: "Bécassine des marais"
+-
+  id: 485
+  famille: "Scolopacidae"
+  lb_nom: "Gallinago gallinago"
+  nom_fr: "Bécassine des marais"
+-
+  id: 486
+  famille: "Scolopacidae"
+  lb_nom: "Gallino gallino"
+  nom_fr: 8
+-
+  id: 487
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax gallinago"
+  nom_fr: "Bécassine des marais"
+-
+  id: 488
+  famille: "Scolopacidae"
+  lb_nom: "Capella media"
+  nom_fr: "Bécassine double"
+-
+  id: 489
+  famille: "Scolopacidae"
+  lb_nom: "Gallinago media"
+  nom_fr: "Bécassine double"
+-
+  id: 490
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax media"
+  nom_fr: "Bécassine double"
+-
+  id: 491
+  famille: "Scolopacidae"
+  lb_nom: "Limnodromus griseus"
+  nom_fr: "Limnodrome à bec court"
+-
+  id: 492
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax grisea"
+  nom_fr: "Limnodrome à bec court"
+-
+  id: 493
+  famille: "Scolopacidae"
+  lb_nom: "Limnodromus scolopaceus"
+  nom_fr: "Limnodrome à long bec"
+-
+  id: 494
+  famille: "Scolopacidae"
+  lb_nom: "Limosa scolopacea"
+  nom_fr: "Limnodrome à long bec"
+-
+  id: 495
+  famille: "Scolopacidae"
+  lb_nom: "Limosa laponica"
+  nom_fr: "Barge rousse"
+-
+  id: 496
+  famille: "Scolopacidae"
+  lb_nom: "Limosa lapponica"
+  nom_fr: "Barge rousse"
+-
+  id: 497
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax lapponica"
+  nom_fr: "Barge rousse"
+-
+  id: 498
+  famille: "Scolopacidae"
+  lb_nom: "Limosa limosa"
+  nom_fr: "Barge à queue noire"
+-
+  id: 499
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax limosa"
+  nom_fr: "Barge à queue noire"
+-
+  id: 500
+  famille: "Scolopacidae"
+  lb_nom: "Limosa limosa islandica"
+  nom_fr: ""
+-
+  id: 501
+  famille: "Scolopacidae"
+  lb_nom: "Limosa limosa limosa"
+  nom_fr: ""
+-
+  id: 502
+  famille: "Scolopacidae"
+  lb_nom: "Galinago minima"
+  nom_fr: 7
+-
+  id: 503
+  famille: "Scolopacidae"
+  lb_nom: "Lymnocryptes minimus"
+  nom_fr: "Bécassine sourde"
+-
+  id: 504
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax minima"
+  nom_fr: "Bécassine sourde"
+-
+  id: 505
+  famille: "Scolopacidae"
+  lb_nom: "Numenius arquata"
+  nom_fr: "Courlis cendré"
+-
+  id: 506
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax arcuata"
+  nom_fr: "Courlis cendré"
+-
+  id: 507
+  famille: "Scolopacidae"
+  lb_nom: "Tringa arquata"
+  nom_fr: "Courlis cendré"
+-
+  id: 508
+  famille: "Scolopacidae"
+  lb_nom: "Numenius phaeopus"
+  nom_fr: "Courlis corlieu"
+-
+  id: 509
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax phaeopus"
+  nom_fr: "Courlis corlieu"
+-
+  id: 510
+  famille: "Scolopacidae"
+  lb_nom: "Numenius tenuirostris"
+  nom_fr: "Courlis à bec grêle"
+-
+  id: 511
+  famille: "Scolopacidae"
+  lb_nom: "Phalaropus fulicaria"
+  nom_fr: "Phalarope à bec large"
+-
+  id: 512
+  famille: "Scolopacidae"
+  lb_nom: "Phalaropus fulicarius"
+  nom_fr: "Phalarope à bec large"
+-
+  id: 513
+  famille: "Scolopacidae"
+  lb_nom: "Tringa fulicaria"
+  nom_fr: "Phalarope à bec large"
+-
+  id: 514
+  famille: "Scolopacidae"
+  lb_nom: "Lobipes lobatus"
+  nom_fr: "Phalarope à bec étroit"
+-
+  id: 515
+  famille: "Scolopacidae"
+  lb_nom: "Phalaropus lobatus"
+  nom_fr: "Phalarope à bec étroit"
+-
+  id: 516
+  famille: "Scolopacidae"
+  lb_nom: "Tringa lobata"
+  nom_fr: "Phalarope à bec étroit"
+-
+  id: 517
+  famille: "Scolopacidae"
+  lb_nom: "Tringa lobata"
+  nom_fr: "Phalarope à bec étroit"
+-
+  id: 518
+  famille: "Scolopacidae"
+  lb_nom: "Tringa tobata"
+  nom_fr: "Phalarope à bec étroit"
+-
+  id: 519
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax minor"
+  nom_fr: "Bécasse d'Amérique"
+-
+  id: 520
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax rusticola"
+  nom_fr: "Bécasse des bois"
+-
+  id: 521
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax scolopax"
+  nom_fr: 3
+-
+  id: 522
+  famille: "Scolopacidae"
+  lb_nom: "Phalaropus tricolor"
+  nom_fr: "Phalarope de Wilson"
+-
+  id: 523
+  famille: "Scolopacidae"
+  lb_nom: "Steganopus tricolor"
+  nom_fr: "Phalarope de Wilson"
+-
+  id: 524
+  famille: "Scolopacidae"
+  lb_nom: "Tringa erythropus"
+  nom_fr: "Chevalier arlequin"
+-
+  id: 525
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax flavipes"
+  nom_fr: "Petit Chevalier à pattes jaunes"
+-
+  id: 526
+  famille: "Scolopacidae"
+  lb_nom: "Totanus flavipes"
+  nom_fr: "Petit Chevalier à pattes jaunes"
+-
+  id: 527
+  famille: "Scolopacidae"
+  lb_nom: "Tringa flavipes"
+  nom_fr: "Petit Chevalier à pattes jaunes"
+-
+  id: 528
+  famille: "Scolopacidae"
+  lb_nom: "Tringa glareola"
+  nom_fr: "Chevalier sylvain"
+-
+  id: 529
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax melanoleuca"
+  nom_fr: "Grand Chevalier à pattes jaunes"
+-
+  id: 530
+  famille: "Scolopacidae"
+  lb_nom: "Totanus melanoleucus"
+  nom_fr: "Grand Chevalier à pattes jaunes"
+-
+  id: 531
+  famille: "Scolopacidae"
+  lb_nom: "Tringa melanoleuca"
+  nom_fr: "Grand Chevalier à pattes jaunes"
+-
+  id: 532
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax nebularia"
+  nom_fr: "Chevalier aboyeur"
+-
+  id: 533
+  famille: "Scolopacidae"
+  lb_nom: "Tringa nebularia"
+  nom_fr: "Chevalier aboyeur"
+-
+  id: 534
+  famille: "Scolopacidae"
+  lb_nom: "Tringa ochropus"
+  nom_fr: "Chevalier culblanc"
+-
+  id: 535
+  famille: "Scolopacidae"
+  lb_nom: "Catoptrophorus semipalmatus"
+  nom_fr: "Chevalier semipalmé"
+-
+  id: 536
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax semipalmata"
+  nom_fr: "Chevalier semipalmé"
+-
+  id: 537
+  famille: "Scolopacidae"
+  lb_nom: "Tringa semipalmata"
+  nom_fr: "Chevalier semipalmé"
+-
+  id: 538
+  famille: "Scolopacidae"
+  lb_nom: "Tringa solitaria"
+  nom_fr: "Chevalier solitaire"
+-
+  id: 539
+  famille: "Scolopacidae"
+  lb_nom: "Totanus stagnatilis"
+  nom_fr: "Chevalier stagnatile"
+-
+  id: 540
+  famille: "Scolopacidae"
+  lb_nom: "Tringa stagnatilis"
+  nom_fr: "Chevalier stagnatile"
+-
+  id: 541
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax totanus"
+  nom_fr: "Chevalier gambette"
+-
+  id: 542
+  famille: "Scolopacidae"
+  lb_nom: "Tringa totanus"
+  nom_fr: "Chevalier gambette"
+-
+  id: 543
+  famille: "Scolopacidae"
+  lb_nom: "Tringa totanus robusta"
+  nom_fr: ""
+-
+  id: 544
+  famille: "Scolopacidae"
+  lb_nom: "Tringa totanus totanus"
+  nom_fr: ""
+-
+  id: 545
+  famille: "Scolopacidae"
+  lb_nom: "Scolopax cinerea"
+  nom_fr: "Bargette du Térek"
+-
+  id: 546
+  famille: "Scolopacidae"
+  lb_nom: "Terekia cinerea"
+  nom_fr: ""
+-
+  id: 547
+  famille: "Scolopacidae"
+  lb_nom: "Tringa cinerea"
+  nom_fr: "Bargette du Térek"
+-
+  id: 548
+  famille: "Scolopacidae"
+  lb_nom: "Tringa cinerea"
+  nom_fr: "Bargette du Térek"
+-
+  id: 549
+  famille: "Scolopacidae"
+  lb_nom: "Tringa terek"
+  nom_fr: ""
+-
+  id: 550
+  famille: "Scolopacidae"
+  lb_nom: "Xenus cinereus"
+  nom_fr: "Bargette du Térek"
+-
+  id: 551
+  famille: "Stercorariidae"
+  lb_nom: "Stercorarius longicaudus"
+  nom_fr: "Labbe à longue queue"
+-
+  id: 552
+  famille: "Stercorariidae"
+  lb_nom: "Larus parasiticus"
+  nom_fr: "Labbe parasite"
+-
+  id: 553
+  famille: "Stercorariidae"
+  lb_nom: "Stercorarius parasiticus"
+  nom_fr: "Labbe parasite"
+-
+  id: 554
+  famille: "Stercorariidae"
+  lb_nom: "Lestris pomarinus"
+  nom_fr: "Labbe pomarin"
+-
+  id: 555
+  famille: "Stercorariidae"
+  lb_nom: "Stercorarius pomarinus"
+  nom_fr: "Labbe pomarin"
+-
+  id: 556
+  famille: "Stercorariidae"
+  lb_nom: "Catharacta skua"
+  nom_fr: "Grand Labbe"
+-
+  id: 557
+  famille: "Stercorariidae"
+  lb_nom: "Stercorarius skua"
+  nom_fr: "Grand Labbe"
+-
+  id: 558
+  famille: "Columbidae"
+  lb_nom: "Columba livia"
+  nom_fr: "Pigeon biset"
+-
+  id: 559
+  famille: "Columbidae"
+  lb_nom: "Columba livia lazaretensis"
+  nom_fr: ""
+-
+  id: 560
+  famille: "Columbidae"
+  lb_nom: "Columba oenas"
+  nom_fr: "Pigeon colombin"
+-
+  id: 561
+  famille: "Columbidae"
+  lb_nom: "Columba palumbus"
+  nom_fr: "Pigeon ramier"
+-
+  id: 562
+  famille: "Columbidae"
+  lb_nom: "Columba decaocto"
+  nom_fr: "Tourterelle turque"
+-
+  id: 563
+  famille: "Columbidae"
+  lb_nom: "Streptopelia decaocto"
+  nom_fr: "Tourterelle turque"
+-
+  id: 564
+  famille: "Columbidae"
+  lb_nom: "Columba orientalis"
+  nom_fr: "Tourterelle orientale"
+-
+  id: 565
+  famille: "Columbidae"
+  lb_nom: "Streptopelia orientalis"
+  nom_fr: "Tourterelle orientale"
+-
+  id: 566
+  famille: "Columbidae"
+  lb_nom: "Columba roseogrisea"
+  nom_fr: "Tourterelle rieuse"
+-
+  id: 567
+  famille: "Columbidae"
+  lb_nom: "Streptopelia roseogrisea"
+  nom_fr: "Tourterelle rieuse"
+-
+  id: 568
+  famille: "Columbidae"
+  lb_nom: "Columba senegalensis"
+  nom_fr: "Tourterelle maillée"
+-
+  id: 569
+  famille: "Columbidae"
+  lb_nom: "Stigmatopelia senegalensis"
+  nom_fr: "Tourterelle maillée"
+-
+  id: 570
+  famille: "Columbidae"
+  lb_nom: "Streptopelia senegalensis"
+  nom_fr: "Tourterelle maillée"
+-
+  id: 571
+  famille: "Columbidae"
+  lb_nom: "Columba turtur"
+  nom_fr: "Tourterelle des bois"
+-
+  id: 572
+  famille: "Columbidae"
+  lb_nom: "Streptopelia turtur"
+  nom_fr: "Tourterelle des bois"
+-
+  id: 573
+  famille: "Alcedinidae"
+  lb_nom: "Alcedo atthis corsicana"
+  nom_fr: "Martin-pêcheur d'Europe"
+-
+  id: 574
+  famille: "Alcedinidae"
+  lb_nom: "Alcedo atthis ispida"
+  nom_fr: "Martin-pêcheur d'Europe"
+-
+  id: 575
+  famille: "Alcedinidae"
+  lb_nom: "Alcedo atthis"
+  nom_fr: "Martin-pêcheur d'Europe"
+-
+  id: 576
+  famille: "Alcedinidae"
+  lb_nom: "Alcedo ispida"
+  nom_fr: "Martin-pêcheur d'Europe"
+-
+  id: 577
+  famille: "Alcedinidae"
+  lb_nom: "Gracula atthis"
+  nom_fr: "Martin-pêcheur d'Europe"
+-
+  id: 578
+  famille: "Coraciidae"
+  lb_nom: "Coracias garrulus"
+  nom_fr: "Rollier d'Europe"
+-
+  id: 579
+  famille: "Meropidae"
+  lb_nom: "Merops apiaster"
+  nom_fr: "Guêpier d'Europe"
+-
+  id: 580
+  famille: "Meropidae"
+  lb_nom: "Merops persicus"
+  nom_fr: "Guêpier de Perse"
+-
+  id: 581
+  famille: "Cuculidae"
+  lb_nom: "Clamator glandarius"
+  nom_fr: "Coucou geai"
+-
+  id: 582
+  famille: "Cuculidae"
+  lb_nom: "Cuculus glandarius"
+  nom_fr: "Coucou geai"
+-
+  id: 583
+  famille: "Cuculidae"
+  lb_nom: "Coccyzus erythrophtalmus"
+  nom_fr: "Coulicou à bec noir"
+-
+  id: 584
+  famille: "Cuculidae"
+  lb_nom: "Coccyzus erythropthalmus"
+  nom_fr: "Coulicou à bec noir"
+-
+  id: 585
+  famille: "Cuculidae"
+  lb_nom: "Cuculus erythrophtalma"
+  nom_fr: "Coulicou à bec noir"
+-
+  id: 586
+  famille: "Cuculidae"
+  lb_nom: "Cuculus canorus canorus"
+  nom_fr: "Coucou gris"
+-
+  id: 587
+  famille: "Cuculidae"
+  lb_nom: "Cuculus canorus kleinschmidti"
+  nom_fr: "Coucou gris"
+-
+  id: 588
+  famille: "Cuculidae"
+  lb_nom: "Cuculus canorus"
+  nom_fr: "Coucou gris"
+-
+  id: 589
+  famille: "Falconidae"
+  lb_nom: "Falco biarmicus feldeggi"
+  nom_fr: "Faucon lanier"
+-
+  id: 590
+  famille: "Falconidae"
+  lb_nom: "Falco biarmicus"
+  nom_fr: "Faucon lanier"
+-
+  id: 591
+  famille: "Falconidae"
+  lb_nom: "Falco cherrug"
+  nom_fr: "Faucon sacre"
+-
+  id: 592
+  famille: "Falconidae"
+  lb_nom: "Falco columbarius aesalon"
+  nom_fr: "Faucon émerillon"
+-
+  id: 593
+  famille: "Falconidae"
+  lb_nom: "Falco columbarius"
+  nom_fr: "Faucon émerillon"
+-
+  id: 594
+  famille: "Falconidae"
+  lb_nom: "Falco eleonorae"
+  nom_fr: "Faucon d'Éléonore"
+-
+  id: 595
+  famille: "Falconidae"
+  lb_nom: "Cerchneis naumanni"
+  nom_fr: 7
+-
+  id: 596
+  famille: "Falconidae"
+  lb_nom: "Falco naumanni"
+  nom_fr: "Faucon crécerellette"
+-
+  id: 597
+  famille: "Falconidae"
+  lb_nom: "Falco peregrinus brookei"
+  nom_fr: "Faucon pèlerin"
+-
+  id: 598
+  famille: "Falconidae"
+  lb_nom: "Falco peregrinus"
+  nom_fr: "Faucon pèlerin"
+-
+  id: 599
+  famille: "Falconidae"
+  lb_nom: "Falco peregrinus calidus"
+  nom_fr: ""
+-
+  id: 600
+  famille: "Falconidae"
+  lb_nom: "Falco pelegrinoides"
+  nom_fr: "Faucon de Barbarie"
+-
+  id: 601
+  famille: "Falconidae"
+  lb_nom: "Falco peregrinus pelegrinoides"
+  nom_fr: "Faucon de Barbarie"
+-
+  id: 602
+  famille: "Falconidae"
+  lb_nom: "Falco peregrinus peregrinus"
+  nom_fr: ""
+-
+  id: 603
+  famille: "Falconidae"
+  lb_nom: "Falco gyrfalco"
+  nom_fr: "Faucon gerfaut"
+-
+  id: 604
+  famille: "Falconidae"
+  lb_nom: "Falco rusticolus candicans"
+  nom_fr: "Faucon gerfaut"
+-
+  id: 605
+  famille: "Falconidae"
+  lb_nom: "Falco rusticolus islandus"
+  nom_fr: "Faucon gerfaut"
+-
+  id: 606
+  famille: "Falconidae"
+  lb_nom: "Falco rusticolus"
+  nom_fr: "Faucon gerfaut"
+-
+  id: 607
+  famille: "Falconidae"
+  lb_nom: "Falco rusticolus rusticolus"
+  nom_fr: "Faucon gerfaut"
+-
+  id: 608
+  famille: "Falconidae"
+  lb_nom: "Falco subbuteo"
+  nom_fr: "Faucon hobereau"
+-
+  id: 609
+  famille: "Falconidae"
+  lb_nom: "Cerchneis tinnunculus"
+  nom_fr: 3
+-
+  id: 610
+  famille: "Falconidae"
+  lb_nom: "Falco tinnunculus"
+  nom_fr: "Faucon crécerelle"
+-
+  id: 611
+  famille: "Falconidae"
+  lb_nom: "Falco vespertinus"
+  nom_fr: "Faucon kobez"
+-
+  id: 612
+  famille: "Numididae"
+  lb_nom: "Numida meleagris"
+  nom_fr: "Pintade de Numidie"
+-
+  id: 613
+  famille: "Numididae"
+  lb_nom: "Phasianus meleagris"
+  nom_fr: "Pintade de Numidie"
+-
+  id: 614
+  famille: "Odontophoridae"
+  lb_nom: "Callipepla californica"
+  nom_fr: "Colin de Californie"
+-
+  id: 615
+  famille: "Odontophoridae"
+  lb_nom: "Colinus virginianus"
+  nom_fr: "Colin de Virginie"
+-
+  id: 616
+  famille: "Odontophoridae"
+  lb_nom: "Tetrao virginianus"
+  nom_fr: "Colin de Virginie"
+-
+  id: 617
+  famille: "Phasianidae"
+  lb_nom: "Alectoris barbara"
+  nom_fr: "Perdrix gambra"
+-
+  id: 618
+  famille: "Phasianidae"
+  lb_nom: "Perdix barbara"
+  nom_fr: "Perdrix gambra"
+-
+  id: 619
+  famille: "Phasianidae"
+  lb_nom: "Alectoris chukar"
+  nom_fr: "Perdrix chukar"
+-
+  id: 620
+  famille: "Phasianidae"
+  lb_nom: "Perdix chukar"
+  nom_fr: "Perdrix chukar"
+-
+  id: 621
+  famille: "Phasianidae"
+  lb_nom: "Alectoris graeca"
+  nom_fr: "Perdrix bartavelle"
+-
+  id: 622
+  famille: "Phasianidae"
+  lb_nom: "Alectoris graeca saxatilis"
+  nom_fr: "Perdrix bartavelle"
+-
+  id: 623
+  famille: "Phasianidae"
+  lb_nom: "Perdix graeca"
+  nom_fr: "Perdrix bartavelle"
+-
+  id: 624
+  famille: "Phasianidae"
+  lb_nom: "Alectoris graeca mediterranea"
+  nom_fr: ""
+-
+  id: 625
+  famille: "Phasianidae"
+  lb_nom: "Alectoris rufa"
+  nom_fr: "Perdrix rouge"
+-
+  id: 626
+  famille: "Phasianidae"
+  lb_nom: "Caccabis rufa"
+  nom_fr: "Perdrix rouge"
+-
+  id: 627
+  famille: "Phasianidae"
+  lb_nom: "Tetrao rufus"
+  nom_fr: "Perdrix rouge"
+-
+  id: 628
+  famille: "Phasianidae"
+  lb_nom: "Bonasa bonasia"
+  nom_fr: "Gélinotte des bois"
+-
+  id: 629
+  famille: "Phasianidae"
+  lb_nom: "Bonasia bonasia"
+  nom_fr: "Gélinotte des bois"
+-
+  id: 630
+  famille: "Phasianidae"
+  lb_nom: "Tetrao bonasia"
+  nom_fr: "Gélinotte des bois"
+-
+  id: 631
+  famille: "Phasianidae"
+  lb_nom: "Tetrastes bonasia"
+  nom_fr: "Gélinotte des bois"
+-
+  id: 632
+  famille: "Phasianidae"
+  lb_nom: "Chrysolophus pictus"
+  nom_fr: "Faisan doré"
+-
+  id: 633
+  famille: "Phasianidae"
+  lb_nom: "Phasianus pictus"
+  nom_fr: "Faisan doré"
+-
+  id: 634
+  famille: "Phasianidae"
+  lb_nom: "Coturnix coturnix"
+  nom_fr: "Caille des blés"
+-
+  id: 635
+  famille: "Phasianidae"
+  lb_nom: "Tetrao coturnix"
+  nom_fr: "Caille des blés"
+-
+  id: 636
+  famille: "Phasianidae"
+  lb_nom: "Francolinus francolinus"
+  nom_fr: "Francolin noir"
+-
+  id: 637
+  famille: "Phasianidae"
+  lb_nom: "Tetrao francolinus"
+  nom_fr: "Francolin noir"
+-
+  id: 638
+  famille: "Phasianidae"
+  lb_nom: "Gallus gallus domesticus"
+  nom_fr: "Coq bankiva"
+-
+  id: 639
+  famille: "Phasianidae"
+  lb_nom: "Gallus gallus"
+  nom_fr: "Coq bankiva"
+-
+  id: 640
+  famille: "Phasianidae"
+  lb_nom: "Phasianus gallus"
+  nom_fr: "Coq bankiva"
+-
+  id: 641
+  famille: "Phasianidae"
+  lb_nom: "Lagopus lagopus"
+  nom_fr: "Lagopède des saules"
+-
+  id: 642
+  famille: "Phasianidae"
+  lb_nom: "Lagopus scoticus"
+  nom_fr: "Lagopède des saules"
+-
+  id: 643
+  famille: "Phasianidae"
+  lb_nom: "Tetrao lagopus"
+  nom_fr: "Lagopède des saules"
+-
+  id: 644
+  famille: "Phasianidae"
+  lb_nom: "Lagopus albus"
+  nom_fr: ""
+-
+  id: 645
+  famille: "Phasianidae"
+  lb_nom: "Lagopus lagopus albus"
+  nom_fr: ""
+-
+  id: 646
+  famille: "Phasianidae"
+  lb_nom: "Lagopus muta"
+  nom_fr: "Lagopède alpin"
+-
+  id: 647
+  famille: "Phasianidae"
+  lb_nom: "Lagopus mutus"
+  nom_fr: "Lagopède alpin"
+-
+  id: 648
+  famille: "Phasianidae"
+  lb_nom: "Tetrao mutus"
+  nom_fr: "Lagopède alpin"
+-
+  id: 649
+  famille: "Phasianidae"
+  lb_nom: "Lagopus muta helvetica"
+  nom_fr: "Lagopède des Alpes"
+-
+  id: 650
+  famille: "Phasianidae"
+  lb_nom: "Tetrao helveticus"
+  nom_fr: "Lagopède des Alpes"
+-
+  id: 651
+  famille: "Phasianidae"
+  lb_nom: "Lagopus muta pyrenaica"
+  nom_fr: "Lagopède des Pyrénées"
+-
+  id: 652
+  famille: "Phasianidae"
+  lb_nom: "Lagopus mutus pyrenaicus"
+  nom_fr: "Lagopède des Pyrénées"
+-
+  id: 653
+  famille: "Phasianidae"
+  lb_nom: "Lyrurus tetrix"
+  nom_fr: "Tétras lyre"
+-
+  id: 654
+  famille: "Phasianidae"
+  lb_nom: "Tetrao tetrix"
+  nom_fr: "Tétras lyre"
+-
+  id: 655
+  famille: "Phasianidae"
+  lb_nom: "Tetrao tetrix tetrix"
+  nom_fr: "Tétras lyre"
+-
+  id: 656
+  famille: "Phasianidae"
+  lb_nom: "Meleagris gallopavo"
+  nom_fr: "Dindon sauvage"
+-
+  id: 657
+  famille: "Phasianidae"
+  lb_nom: "Pavo cristatus"
+  nom_fr: "Paon"
+-
+  id: 658
+  famille: "Phasianidae"
+  lb_nom: "Perdix palaeoperdix"
+  nom_fr: ""
+-
+  id: 659
+  famille: "Phasianidae"
+  lb_nom: "Perdix perdix"
+  nom_fr: "Perdrix grise"
+-
+  id: 660
+  famille: "Phasianidae"
+  lb_nom: "Tetrao perdix"
+  nom_fr: "Perdrix grise"
+-
+  id: 661
+  famille: "Phasianidae"
+  lb_nom: "Perdix perdix hispaniensis"
+  nom_fr: ""
+-
+  id: 662
+  famille: "Phasianidae"
+  lb_nom: "Perdix perdix armoricana"
+  nom_fr: ""
+-
+  id: 663
+  famille: "Phasianidae"
+  lb_nom: "Perdix perdix italica"
+  nom_fr: ""
+-
+  id: 664
+  famille: "Phasianidae"
+  lb_nom: "Perdix perdix perdix"
+  nom_fr: ""
+-
+  id: 665
+  famille: "Phasianidae"
+  lb_nom: "Phasianus colchicus"
+  nom_fr: "Faisan de Colchide"
+-
+  id: 666
+  famille: "Phasianidae"
+  lb_nom: "Syrmaticus reevesii"
+  nom_fr: "Faisan vénéré"
+-
+  id: 667
+  famille: "Phasianidae"
+  lb_nom: "Tetrao urogallus"
+  nom_fr: "Grand Tétras"
+-
+  id: 668
+  famille: "Phasianidae"
+  lb_nom: "Tetrao urogallus aquitanicus"
+  nom_fr: ""
+-
+  id: 669
+  famille: "Phasianidae"
+  lb_nom: "Tetrao urogallus crassirostris"
+  nom_fr: ""
+-
+  id: 670
+  famille: "Gaviidae"
+  lb_nom: "Colymbus adamsii"
+  nom_fr: "Plongeon à bec blanc"
+-
+  id: 671
+  famille: "Gaviidae"
+  lb_nom: "Gavia adamsii"
+  nom_fr: "Plongeon à bec blanc"
+-
+  id: 672
+  famille: "Gaviidae"
+  lb_nom: "Colymbus arcticus"
+  nom_fr: "Plongeon arctique"
+-
+  id: 673
+  famille: "Gaviidae"
+  lb_nom: "Gavia arctica"
+  nom_fr: "Plongeon arctique"
+-
+  id: 674
+  famille: "Gaviidae"
+  lb_nom: "Colymbus immer"
+  nom_fr: "Plongeon imbrin"
+-
+  id: 675
+  famille: "Gaviidae"
+  lb_nom: "Gavia immer"
+  nom_fr: "Plongeon imbrin"
+-
+  id: 676
+  famille: "Gaviidae"
+  lb_nom: "Colymbus stellatus"
+  nom_fr: "Plongeon catmarin"
+-
+  id: 677
+  famille: "Gaviidae"
+  lb_nom: "Gavia septentrionalis"
+  nom_fr: 5
+-
+  id: 678
+  famille: "Gaviidae"
+  lb_nom: "Gavia stellata"
+  nom_fr: "Plongeon catmarin"
+-
+  id: 679
+  famille: "Gruidae"
+  lb_nom: "Anthropoides virgo"
+  nom_fr: "Grue demoiselle"
+-
+  id: 680
+  famille: "Gruidae"
+  lb_nom: "Ardea virgo"
+  nom_fr: "Grue demoiselle"
+-
+  id: 681
+  famille: "Gruidae"
+  lb_nom: "Grus virgo"
+  nom_fr: "Grue demoiselle"
+-
+  id: 682
+  famille: "Gruidae"
+  lb_nom: "Antigone canadensis"
+  nom_fr: "Grue du Canada"
+-
+  id: 683
+  famille: "Gruidae"
+  lb_nom: "Ardea canadensis"
+  nom_fr: "Grue du Canada"
+-
+  id: 684
+  famille: "Gruidae"
+  lb_nom: "Grus canadensis"
+  nom_fr: "Grue du Canada"
+-
+  id: 685
+  famille: "Gruidae"
+  lb_nom: "Ardea grus"
+  nom_fr: "Grue cendrée"
+-
+  id: 686
+  famille: "Gruidae"
+  lb_nom: "Grus grus"
+  nom_fr: "Grue cendrée"
+-
+  id: 687
+  famille: "Gruidae"
+  lb_nom: "Megalornis grus"
+  nom_fr: 7
+-
+  id: 688
+  famille: "Gruidae"
+  lb_nom: "Grus primigenia"
+  nom_fr: ""
+-
+  id: 689
+  famille: "Rallidae"
+  lb_nom: "Crex crex"
+  nom_fr: "Râle des genêts"
+-
+  id: 690
+  famille: "Rallidae"
+  lb_nom: "Rallus crex"
+  nom_fr: "Râle des genêts"
+-
+  id: 691
+  famille: "Rallidae"
+  lb_nom: "Fulica atra"
+  nom_fr: "Foulque macroule"
+-
+  id: 692
+  famille: "Rallidae"
+  lb_nom: "Fulicula atra"
+  nom_fr: 8
+-
+  id: 693
+  famille: "Rallidae"
+  lb_nom: "Fulica cristata"
+  nom_fr: "Foulque à crête"
+-
+  id: 694
+  famille: "Rallidae"
+  lb_nom: "Fulica chloropus"
+  nom_fr: "Poule-d'eau"
+-
+  id: 695
+  famille: "Rallidae"
+  lb_nom: "Gallinula chloropus"
+  nom_fr: "Poule-d'eau"
+-
+  id: 696
+  famille: "Rallidae"
+  lb_nom: "Gallinula ochropus"
+  nom_fr: "Poule-d'eau"
+-
+  id: 697
+  famille: "Rallidae"
+  lb_nom: "Porphyrio alleni"
+  nom_fr: "Talève d'Allen"
+-
+  id: 698
+  famille: "Rallidae"
+  lb_nom: "Porphyrula alleni"
+  nom_fr: ""
+-
+  id: 699
+  famille: "Rallidae"
+  lb_nom: "Porphyrula alleni"
+  nom_fr: "Talève d'Allen"
+-
+  id: 700
+  famille: "Rallidae"
+  lb_nom: "Fulica porphyrio"
+  nom_fr: "Poule sultane"
+-
+  id: 701
+  famille: "Rallidae"
+  lb_nom: "Porphyrio porphyrio"
+  nom_fr: "Poule sultane"
+-
+  id: 702
+  famille: "Rallidae"
+  lb_nom: "Porzana carolina"
+  nom_fr: "Marouette de Caroline"
+-
+  id: 703
+  famille: "Rallidae"
+  lb_nom: "Rallus carolinus"
+  nom_fr: "Marouette de Caroline"
+-
+  id: 704
+  famille: "Rallidae"
+  lb_nom: "Porzana porzana"
+  nom_fr: "Marouette ponctuée"
+-
+  id: 705
+  famille: "Rallidae"
+  lb_nom: "Rallus porzana"
+  nom_fr: "Marouette ponctuée"
+-
+  id: 706
+  famille: "Rallidae"
+  lb_nom: "Rallus aquaticus"
+  nom_fr: "Râle d'eau"
+-
+  id: 707
+  famille: "Rallidae"
+  lb_nom: "Porzana parva"
+  nom_fr: "Marouette poussin"
+-
+  id: 708
+  famille: "Rallidae"
+  lb_nom: "Rallus parvus"
+  nom_fr: "Marouette poussin"
+-
+  id: 709
+  famille: "Rallidae"
+  lb_nom: "Zapornia parva"
+  nom_fr: "Marouette poussin"
+-
+  id: 710
+  famille: "Rallidae"
+  lb_nom: "Porzana pusilla intermedia"
+  nom_fr: "Marouette de Baillon"
+-
+  id: 711
+  famille: "Rallidae"
+  lb_nom: "Porzana pusilla"
+  nom_fr: "Marouette de Baillon"
+-
+  id: 712
+  famille: "Rallidae"
+  lb_nom: "Rallus pusillus"
+  nom_fr: "Marouette de Baillon"
+-
+  id: 713
+  famille: "Rallidae"
+  lb_nom: "Zapornia pusilla"
+  nom_fr: "Marouette de Baillon"
+-
+  id: 714
+  famille: "Otididae"
+  lb_nom: "Chlamydotis macqueenii"
+  nom_fr: "Outarde de Macqueen"
+-
+  id: 715
+  famille: "Otididae"
+  lb_nom: "Chlamydotis undulata macqueenii"
+  nom_fr: "Outarde de Macqueen"
+-
+  id: 716
+  famille: "Otididae"
+  lb_nom: "Otis tarda"
+  nom_fr: "Grande Outarde"
+-
+  id: 717
+  famille: "Otididae"
+  lb_nom: "Otis tetrax"
+  nom_fr: "Outarde canepetière"
+-
+  id: 718
+  famille: "Otididae"
+  lb_nom: "Tetrax tetrax"
+  nom_fr: "Outarde canepetière"
+-
+  id: 719
+  famille: "Otididae"
+  lb_nom: "Tetrax tetrax orientalis"
+  nom_fr: "Outarde canepetière"
+-
+  id: 720
+  famille: "Otididae"
+  lb_nom: "Tetrax tetrax tetrax"
+  nom_fr: "Outarde canepetière"
+-
+  id: 721
+  famille: "Acrocephalidae"
+  lb_nom: "Acrocephalus agricola"
+  nom_fr: "Rousserolle isabelle"
+-
+  id: 722
+  famille: "Acrocephalidae"
+  lb_nom: "Acrocephalus arundinaceus"
+  nom_fr: "Rousserolle turdoïde"
+-
+  id: 723
+  famille: "Acrocephalidae"
+  lb_nom: "Acrocephalus turdoides"
+  nom_fr: 7
+-
+  id: 724
+  famille: "Acrocephalidae"
+  lb_nom: "Turdus arundinaceus"
+  nom_fr: "Rousserolle turdoïde"
+-
+  id: 725
+  famille: "Acrocephalidae"
+  lb_nom: "Acrocephalus dumetorum"
+  nom_fr: "Rousserolle des buissons"
+-
+  id: 726
+  famille: "Acrocephalidae"
+  lb_nom: "Acrocephalus melanopogon"
+  nom_fr: "Lusciniole à moustaches"
+-
+  id: 727
+  famille: "Acrocephalidae"
+  lb_nom: "Lusciniola melanopogon"
+  nom_fr: 7
+-
+  id: 728
+  famille: "Acrocephalidae"
+  lb_nom: "Sylvia melanopogon"
+  nom_fr: "Lusciniole à moustaches"
+-
+  id: 729
+  famille: "Acrocephalidae"
+  lb_nom: "Acrocephalus paludicola"
+  nom_fr: "Phragmite aquatique"
+-
+  id: 730
+  famille: "Acrocephalidae"
+  lb_nom: "Sylvia palaudicola"
+  nom_fr: "Phragmite aquatique"
+-
+  id: 731
+  famille: "Acrocephalidae"
+  lb_nom: "Acrocephalus palustris"
+  nom_fr: "Rousserolle verderolle"
+-
+  id: 732
+  famille: "Acrocephalidae"
+  lb_nom: "Sylvia palustris"
+  nom_fr: "Rousserolle verderolle"
+-
+  id: 733
+  famille: "Acrocephalidae"
+  lb_nom: "Acrocephalus schoenobaenus"
+  nom_fr: "Phragmite des joncs"
+-
+  id: 734
+  famille: "Acrocephalidae"
+  lb_nom: "Motacilla schoenobaenus"
+  nom_fr: "Phragmite des joncs"
+-
+  id: 735
+  famille: "Acrocephalidae"
+  lb_nom: "Acrocephalus scirpaceus"
+  nom_fr: "Rousserolle effarvatte"
+-
+  id: 736
+  famille: "Acrocephalidae"
+  lb_nom: "Acrocephalus scirpeus"
+  nom_fr: 3
+-
+  id: 737
+  famille: "Acrocephalidae"
+  lb_nom: "Turdus scirpaceus"
+  nom_fr: "Rousserolle effarvatte"
+-
+  id: 738
+  famille: "Acrocephalidae"
+  lb_nom: "Hippolais icterina"
+  nom_fr: "Hypolaïs ictérine"
+-
+  id: 739
+  famille: "Acrocephalidae"
+  lb_nom: "Sylvia icterina"
+  nom_fr: "Hypolaïs ictérine"
+-
+  id: 740
+  famille: "Acrocephalidae"
+  lb_nom: "Hippolais polyglotta"
+  nom_fr: "Hypolaïs polyglotte"
+-
+  id: 741
+  famille: "Acrocephalidae"
+  lb_nom: "Sylvia polyglotta"
+  nom_fr: "Hypolaïs polyglotte"
+-
+  id: 742
+  famille: "Acrocephalidae"
+  lb_nom: "Hippolais caligata"
+  nom_fr: "Hypolaïs bottée"
+-
+  id: 743
+  famille: "Acrocephalidae"
+  lb_nom: "Iduna caligata"
+  nom_fr: "Hypolaïs bottée"
+-
+  id: 744
+  famille: "Acrocephalidae"
+  lb_nom: "Sylvia caligata"
+  nom_fr: "Hypolaïs bottée"
+-
+  id: 745
+  famille: "Acrocephalidae"
+  lb_nom: "Hippolais opaca"
+  nom_fr: "Hypolaïs obscure"
+-
+  id: 746
+  famille: "Acrocephalidae"
+  lb_nom: "Iduna opaca"
+  nom_fr: "Hypolaïs obscure"
+-
+  id: 747
+  famille: "Acrocephalidae"
+  lb_nom: "Curruca palida"
+  nom_fr: "Hypolaïs pâle"
+-
+  id: 748
+  famille: "Acrocephalidae"
+  lb_nom: "Hippolais pallida"
+  nom_fr: "Hypolaïs pâle"
+-
+  id: 749
+  famille: "Acrocephalidae"
+  lb_nom: "Iduna pallida"
+  nom_fr: "Hypolaïs pâle"
+-
+  id: 750
+  famille: "Acrocephalidae"
+  lb_nom: "Hippolais rama"
+  nom_fr: "Hypolaïs rama"
+-
+  id: 751
+  famille: "Acrocephalidae"
+  lb_nom: "Iduna rama"
+  nom_fr: "Hypolaïs rama"
+-
+  id: 752
+  famille: "Acrocephalidae"
+  lb_nom: "Sylvia rama"
+  nom_fr: "Hypolaïs rama"
+-
+  id: 753
+  famille: "Aegithalidae"
+  lb_nom: "Aegithalos caudatus aremoricus"
+  nom_fr: "Mésange à longue queue"
+-
+  id: 754
+  famille: "Aegithalidae"
+  lb_nom: "Aegithalos caudatus caudatus"
+  nom_fr: "Mésange à longue queue"
+-
+  id: 755
+  famille: "Aegithalidae"
+  lb_nom: "Aegithalos caudatus europaeus"
+  nom_fr: "Mésange à longue queue"
+-
+  id: 756
+  famille: "Aegithalidae"
+  lb_nom: "Aegithalos caudatus italiae"
+  nom_fr: "Mésange à longue queue"
+-
+  id: 757
+  famille: "Aegithalidae"
+  lb_nom: "Aegithalos caudatus"
+  nom_fr: "Mésange à longue queue"
+-
+  id: 758
+  famille: "Aegithalidae"
+  lb_nom: "Aegithalos caudatus taiti"
+  nom_fr: "Mésange à longue queue"
+-
+  id: 759
+  famille: "Aegithalidae"
+  lb_nom: "Aegithalos caudatus tyrrhenius"
+  nom_fr: "Mésange à longue queue"
+-
+  id: 760
+  famille: "Alaudidae"
+  lb_nom: "Alauda arvensis arvensis"
+  nom_fr: "Alouette des champs"
+-
+  id: 761
+  famille: "Alaudidae"
+  lb_nom: "Alauda arvensis cantarella"
+  nom_fr: "Alouette des champs"
+-
+  id: 762
+  famille: "Alaudidae"
+  lb_nom: "Alauda arvensis"
+  nom_fr: "Alouette des champs"
+-
+  id: 763
+  famille: "Alaudidae"
+  lb_nom: "Alaudala rufescens"
+  nom_fr: "Alouette pispolette"
+-
+  id: 764
+  famille: "Alaudidae"
+  lb_nom: "Calandrella pispoletta"
+  nom_fr: 3
+-
+  id: 765
+  famille: "Alaudidae"
+  lb_nom: "Calandrella rufescens"
+  nom_fr: "Alouette pispolette"
+-
+  id: 766
+  famille: "Alaudidae"
+  lb_nom: "Calandrella rufscens"
+  nom_fr: "Alouette pispolette"
+-
+  id: 767
+  famille: "Alaudidae"
+  lb_nom: "Ammomanes cinctura"
+  nom_fr: ""
+-
+  id: 768
+  famille: "Alaudidae"
+  lb_nom: "Melanocorypha cinctura"
+  nom_fr: ""
+-
+  id: 769
+  famille: "Alaudidae"
+  lb_nom: "Calandrella brachydactyla"
+  nom_fr: "Alouette calandrelle"
+-
+  id: 770
+  famille: "Alaudidae"
+  lb_nom: "Calandrella cinerea"
+  nom_fr: "Alouette calandrelle"
+-
+  id: 771
+  famille: "Alaudidae"
+  lb_nom: "Alauda duponti"
+  nom_fr: "Sirli de Dupont"
+-
+  id: 772
+  famille: "Alaudidae"
+  lb_nom: "Chersophilus duponti"
+  nom_fr: "Sirli de Dupont"
+-
+  id: 773
+  famille: "Alaudidae"
+  lb_nom: "Alauda alpestris"
+  nom_fr: "Alouette haussecol"
+-
+  id: 774
+  famille: "Alaudidae"
+  lb_nom: "Chionophilos alpestris"
+  nom_fr: 3
+-
+  id: 775
+  famille: "Alaudidae"
+  lb_nom: "Eremophila alpestris alpestris"
+  nom_fr: "Alouette haussecol"
+-
+  id: 776
+  famille: "Alaudidae"
+  lb_nom: "Eremophila alpestris flana"
+  nom_fr: "Alouette haussecol"
+-
+  id: 777
+  famille: "Alaudidae"
+  lb_nom: "Eremophila alpestris flava"
+  nom_fr: "Alouette haussecol"
+-
+  id: 778
+  famille: "Alaudidae"
+  lb_nom: "Eremophila alpestris"
+  nom_fr: "Alouette haussecol"
+-
+  id: 779
+  famille: "Alaudidae"
+  lb_nom: "Alauda cristata"
+  nom_fr: "Cochevis huppé"
+-
+  id: 780
+  famille: "Alaudidae"
+  lb_nom: "Galerida cristata cristata"
+  nom_fr: "Cochevis huppé"
+-
+  id: 781
+  famille: "Alaudidae"
+  lb_nom: "Galerida cristata"
+  nom_fr: "Cochevis huppé"
+-
+  id: 782
+  famille: "Alaudidae"
+  lb_nom: "Galerida cristata plumata"
+  nom_fr: "Cochevis huppé"
+-
+  id: 783
+  famille: "Alaudidae"
+  lb_nom: "Alauda thaklae"
+  nom_fr: 7
+-
+  id: 784
+  famille: "Alaudidae"
+  lb_nom: "Galerida theclae"
+  nom_fr: "Cochevis de Thékla"
+-
+  id: 785
+  famille: "Alaudidae"
+  lb_nom: "Galerida theklae"
+  nom_fr: "Cochevis de Thékla"
+-
+  id: 786
+  famille: "Alaudidae"
+  lb_nom: "Alauda arborea"
+  nom_fr: "Alouette lulu"
+-
+  id: 787
+  famille: "Alaudidae"
+  lb_nom: "Lullula arborea arborea"
+  nom_fr: "Alouette lulu"
+-
+  id: 788
+  famille: "Alaudidae"
+  lb_nom: "Lullula arborea"
+  nom_fr: "Alouette lulu"
+-
+  id: 789
+  famille: "Alaudidae"
+  lb_nom: "Lullula arborea pallida"
+  nom_fr: "Alouette lulu"
+-
+  id: 790
+  famille: "Alaudidae"
+  lb_nom: "Alauda bimaculata"
+  nom_fr: "Alouette monticole"
+-
+  id: 791
+  famille: "Alaudidae"
+  lb_nom: "Melanocorypha bimaculata"
+  nom_fr: "Alouette monticole"
+-
+  id: 792
+  famille: "Alaudidae"
+  lb_nom: "Melanocorypha calandra"
+  nom_fr: "Alouette calandre"
+-
+  id: 793
+  famille: "Bombycillidae"
+  lb_nom: "Bombycilla garrulus"
+  nom_fr: "Jaseur boréal"
+-
+  id: 794
+  famille: "Bombycillidae"
+  lb_nom: "Lanius garrulus"
+  nom_fr: "Jaseur boréal"
+-
+  id: 795
+  famille: "Calcariidae"
+  lb_nom: "Calcarius lapponicus"
+  nom_fr: "Bruant lapon"
+-
+  id: 796
+  famille: "Calcariidae"
+  lb_nom: "Plectrophenax nivalis"
+  nom_fr: "Bruant des neiges"
+-
+  id: 797
+  famille: "Calcariidae"
+  lb_nom: "Plectrophenax nivalis nivalis"
+  nom_fr: "Bruant des neiges"
+-
+  id: 798
+  famille: "Calcariidae"
+  lb_nom: "Plectrophenax nivalis subnivalis"
+  nom_fr: "Bruant des neiges"
+-
+  id: 799
+  famille: "Cardinalidae"
+  lb_nom: "Pheucticus ludovicianus"
+  nom_fr: "Cardinal à poitrine rose"
+-
+  id: 800
+  famille: "Cardinalidae"
+  lb_nom: "Piranga olivacea"
+  nom_fr: "Tangara écarlate"
+-
+  id: 801
+  famille: "Cardinalidae"
+  lb_nom: "Tanagra olivacea"
+  nom_fr: "Tangara écarlate"
+-
+  id: 802
+  famille: "Certhiidae"
+  lb_nom: "Certhia brachydactyla bureaui"
+  nom_fr: "Grimpereau des jardins"
+-
+  id: 803
+  famille: "Certhiidae"
+  lb_nom: "Certhia brachydactyla"
+  nom_fr: "Grimpereau des jardins"
+-
+  id: 804
+  famille: "Certhiidae"
+  lb_nom: "Certhia brachydactyla megarhyncha"
+  nom_fr: "Grimpereau des jardins"
+-
+  id: 805
+  famille: "Certhiidae"
+  lb_nom: "Certhia brachydactyla parisi"
+  nom_fr: "Grimpereau des jardins"
+-
+  id: 806
+  famille: "Certhiidae"
+  lb_nom: "Certhia familiaris corsa"
+  nom_fr: "Grimpereau des bois"
+-
+  id: 807
+  famille: "Certhiidae"
+  lb_nom: "Certhia familiaris costa"
+  nom_fr: "Grimpereau des bois"
+-
+  id: 808
+  famille: "Certhiidae"
+  lb_nom: "Certhia familiaris gerbei"
+  nom_fr: "Grimpereau des bois"
+-
+  id: 809
+  famille: "Certhiidae"
+  lb_nom: "Certhia familiaris"
+  nom_fr: "Grimpereau des bois"
+-
+  id: 810
+  famille: "Certhiidae"
+  lb_nom: "Certhia familiaris pyrenaica"
+  nom_fr: "Grimpereau des bois"
+-
+  id: 811
+  famille: "Certhiidae"
+  lb_nom: "Certhia familiaris rhenana"
+  nom_fr: "Grimpereau des bois"
+-
+  id: 812
+  famille: "Cinclidae"
+  lb_nom: "Cinclus cinclus cinclus"
+  nom_fr: "Cincle plongeur"
+-
+  id: 813
+  famille: "Cinclidae"
+  lb_nom: "Cinclus cinclus"
+  nom_fr: "Cincle plongeur"
+-
+  id: 814
+  famille: "Cinclidae"
+  lb_nom: "Cinclus cinclus meridionalis"
+  nom_fr: "Cincle plongeur"
+-
+  id: 815
+  famille: "Cinclidae"
+  lb_nom: "Cinclus cinclus pyrenaicus"
+  nom_fr: "Cincle plongeur"
+-
+  id: 816
+  famille: "Cinclidae"
+  lb_nom: "Cinclus cinclus sapsworthi"
+  nom_fr: "Cincle plongeur"
+-
+  id: 817
+  famille: "Cinclidae"
+  lb_nom: "Sturnus cinclus"
+  nom_fr: "Cincle plongeur"
+-
+  id: 818
+  famille: "Cisticolidae"
+  lb_nom: "Cisticola juncidis cisticola"
+  nom_fr: "Cisticole des joncs"
+-
+  id: 819
+  famille: "Cisticolidae"
+  lb_nom: "Cisticola juncidis juncidis"
+  nom_fr: "Cisticole des joncs"
+-
+  id: 820
+  famille: "Cisticolidae"
+  lb_nom: "Cisticola juncidis"
+  nom_fr: "Cisticole des joncs"
+-
+  id: 821
+  famille: "Cisticolidae"
+  lb_nom: "Sylvia juncidis"
+  nom_fr: "Cisticole des joncs"
+-
+  id: 822
+  famille: "Corvidae"
+  lb_nom: "Corvus antecorax"
+  nom_fr: ""
+-
+  id: 823
+  famille: "Corvidae"
+  lb_nom: "Corvus corax corax"
+  nom_fr: "Grand corbeau"
+-
+  id: 824
+  famille: "Corvidae"
+  lb_nom: "Corvus corax hispanus"
+  nom_fr: "Grand corbeau"
+-
+  id: 825
+  famille: "Corvidae"
+  lb_nom: "Corvus corax"
+  nom_fr: "Grand corbeau"
+-
+  id: 826
+  famille: "Corvidae"
+  lb_nom: "Corvus corone"
+  nom_fr: "Corneille noire"
+-
+  id: 827
+  famille: "Corvidae"
+  lb_nom: "Corvus cornix"
+  nom_fr: "Corneille mantelée"
+-
+  id: 828
+  famille: "Corvidae"
+  lb_nom: "Corvus corone cornix"
+  nom_fr: "Corneille mantelée"
+-
+  id: 829
+  famille: "Corvidae"
+  lb_nom: "Corvus corone corone"
+  nom_fr: ""
+-
+  id: 830
+  famille: "Corvidae"
+  lb_nom: "Corvus cornix sharpii"
+  nom_fr: "Corneille mantelée (de Corse)"
+-
+  id: 831
+  famille: "Corvidae"
+  lb_nom: "Corvus corone sardonius"
+  nom_fr: "Corneille mantelée (de Corse)"
+-
+  id: 832
+  famille: "Corvidae"
+  lb_nom: "Corvus corone sharpii"
+  nom_fr: "Corneille mantelée (de Corse)"
+-
+  id: 833
+  famille: "Corvidae"
+  lb_nom: "Corvus dauuricus"
+  nom_fr: "Choucas de Daourie"
+-
+  id: 834
+  famille: "Corvidae"
+  lb_nom: "Corvus frugilegus"
+  nom_fr: "Corbeau freux"
+-
+  id: 835
+  famille: "Corvidae"
+  lb_nom: "Coelus monedula"
+  nom_fr: "Choucas des tours"
+-
+  id: 836
+  famille: "Corvidae"
+  lb_nom: "Coloeus monedula"
+  nom_fr: "Choucas des tours"
+-
+  id: 837
+  famille: "Corvidae"
+  lb_nom: "Corvus monedula"
+  nom_fr: "Choucas des tours"
+-
+  id: 838
+  famille: "Corvidae"
+  lb_nom: "Corvus monedula monedula"
+  nom_fr: "Choucas des tours"
+-
+  id: 839
+  famille: "Corvidae"
+  lb_nom: "Corvus monedula soemmeringii"
+  nom_fr: "Choucas des tours oriental"
+-
+  id: 840
+  famille: "Corvidae"
+  lb_nom: "Corvus monedula spermologus"
+  nom_fr: ""
+-
+  id: 841
+  famille: "Corvidae"
+  lb_nom: "Corvus monedula turrium"
+  nom_fr: ""
+-
+  id: 842
+  famille: "Corvidae"
+  lb_nom: "Corvus pliocaenus"
+  nom_fr: ""
+-
+  id: 843
+  famille: "Corvidae"
+  lb_nom: "Cyanopica cyanea"
+  nom_fr: 3
+-
+  id: 844
+  famille: "Corvidae"
+  lb_nom: "Cyanopica cyanus"
+  nom_fr: "Pie bleue"
+-
+  id: 845
+  famille: "Corvidae"
+  lb_nom: "Corvus glandarius"
+  nom_fr: "Geai des chênes"
+-
+  id: 846
+  famille: "Corvidae"
+  lb_nom: "Garrulus glandarius corsicanus"
+  nom_fr: "Geai des chênes"
+-
+  id: 847
+  famille: "Corvidae"
+  lb_nom: "Garrulus glandarius glandarius"
+  nom_fr: "Geai des chênes"
+-
+  id: 848
+  famille: "Corvidae"
+  lb_nom: "Garrulus glandarius"
+  nom_fr: "Geai des chênes"
+-
+  id: 849
+  famille: "Corvidae"
+  lb_nom: "Garrulus glandarius rufitergum"
+  nom_fr: "Geai des chênes"
+-
+  id: 850
+  famille: "Corvidae"
+  lb_nom: "Corvus caryocatactes"
+  nom_fr: "Cassenoix moucheté"
+-
+  id: 851
+  famille: "Corvidae"
+  lb_nom: "Nucifraga caryocatactes"
+  nom_fr: "Cassenoix moucheté"
+-
+  id: 852
+  famille: "Corvidae"
+  lb_nom: "Nucifraga caryocatactes caryocatactes"
+  nom_fr: ""
+-
+  id: 853
+  famille: "Corvidae"
+  lb_nom: "Nucifraga caryocatactes macrorhynchus"
+  nom_fr: ""
+-
+  id: 854
+  famille: "Corvidae"
+  lb_nom: "Corvus pica"
+  nom_fr: "Pie bavarde"
+-
+  id: 855
+  famille: "Corvidae"
+  lb_nom: "Pica pica galliae"
+  nom_fr: "Pie bavarde"
+-
+  id: 856
+  famille: "Corvidae"
+  lb_nom: "Pica pica"
+  nom_fr: "Pie bavarde"
+-
+  id: 857
+  famille: "Corvidae"
+  lb_nom: "Pica pica melanotos"
+  nom_fr: "Pie bavarde"
+-
+  id: 858
+  famille: "Corvidae"
+  lb_nom: "Pica pica pica"
+  nom_fr: "Pie bavarde"
+-
+  id: 859
+  famille: "Corvidae"
+  lb_nom: "Coracia gracula"
+  nom_fr: 7
+-
+  id: 860
+  famille: "Corvidae"
+  lb_nom: "Pyrrhocorax graculus"
+  nom_fr: "Chocard à bec jaune"
+-
+  id: 861
+  famille: "Corvidae"
+  lb_nom: "Coracia pyrrhocorax"
+  nom_fr: "Crave à bec rouge"
+-
+  id: 862
+  famille: "Corvidae"
+  lb_nom: "Pyrrhocorax pyrrhocorax erythroramphus"
+  nom_fr: "Crave à bec rouge"
+-
+  id: 863
+  famille: "Corvidae"
+  lb_nom: "Pyrrhocorax pyrrhocorax"
+  nom_fr: "Crave à bec rouge"
+-
+  id: 864
+  famille: "Corvidae"
+  lb_nom: "Pyrrhocorax pyrrhocorax pyrrhocorax"
+  nom_fr: "Crave à bec rouge"
+-
+  id: 865
+  famille: "Corvidae"
+  lb_nom: "Upupa pyrrhocorax"
+  nom_fr: "Crave à bec rouge"
+-
+  id: 866
+  famille: "Emberizidae"
+  lb_nom: "Emberiza aureola"
+  nom_fr: "Bruant auréole"
+-
+  id: 867
+  famille: "Emberizidae"
+  lb_nom: "Emberiza bruniceps"
+  nom_fr: "Bruant à tête rousse"
+-
+  id: 868
+  famille: "Emberizidae"
+  lb_nom: "Emberiza caesia"
+  nom_fr: "Bruant cendrillard"
+-
+  id: 869
+  famille: "Emberizidae"
+  lb_nom: "Emberiza calandra calandra"
+  nom_fr: "Bruant proyer"
+-
+  id: 870
+  famille: "Emberizidae"
+  lb_nom: "Emberiza calandra"
+  nom_fr: "Bruant proyer"
+-
+  id: 871
+  famille: "Emberizidae"
+  lb_nom: "Emberiza calandra parroti"
+  nom_fr: "Bruant proyer"
+-
+  id: 872
+  famille: "Emberizidae"
+  lb_nom: "Miliaria calandra"
+  nom_fr: "Bruant proyer"
+-
+  id: 873
+  famille: "Emberizidae"
+  lb_nom: "Emberiza chrysophrys"
+  nom_fr: "Bruant à sourcils jaunes"
+-
+  id: 874
+  famille: "Emberizidae"
+  lb_nom: "Emberiza cia"
+  nom_fr: "Bruant fou"
+-
+  id: 875
+  famille: "Emberizidae"
+  lb_nom: "Emberiza cirlus cirlus"
+  nom_fr: "Bruant zizi"
+-
+  id: 876
+  famille: "Emberizidae"
+  lb_nom: "Emberiza cirlus"
+  nom_fr: "Bruant zizi"
+-
+  id: 877
+  famille: "Emberizidae"
+  lb_nom: "Emberiza cirlus nigrostriata"
+  nom_fr: "Bruant zizi"
+-
+  id: 878
+  famille: "Emberizidae"
+  lb_nom: "Emberiza citrinella"
+  nom_fr: "Bruant jaune"
+-
+  id: 879
+  famille: "Emberizidae"
+  lb_nom: "Emberiza hortulana"
+  nom_fr: "Bruant ortolan"
+-
+  id: 880
+  famille: "Emberizidae"
+  lb_nom: "Emberiza leucocephala"
+  nom_fr: "Bruant à calotte blanche"
+-
+  id: 881
+  famille: "Emberizidae"
+  lb_nom: "Emberiza leucocephalos"
+  nom_fr: "Bruant à calotte blanche"
+-
+  id: 882
+  famille: "Emberizidae"
+  lb_nom: "Emberiza melanocephala"
+  nom_fr: "Bruant mélanocéphale"
+-
+  id: 883
+  famille: "Emberizidae"
+  lb_nom: "Euspiza melanocephala"
+  nom_fr: 7
+-
+  id: 884
+  famille: "Emberizidae"
+  lb_nom: "Emberiza pusilla"
+  nom_fr: "Bruant nain"
+-
+  id: 885
+  famille: "Emberizidae"
+  lb_nom: "Emberiza rustica"
+  nom_fr: "Bruant rustique"
+-
+  id: 886
+  famille: "Emberizidae"
+  lb_nom: "Emberiza rutila"
+  nom_fr: "Bruant roux"
+-
+  id: 887
+  famille: "Emberizidae"
+  lb_nom: "Schoeniclus rutilus"
+  nom_fr: "Bruant roux"
+-
+  id: 888
+  famille: "Emberizidae"
+  lb_nom: "Emberiza schoeniclus"
+  nom_fr: "Bruant des roseaux"
+-
+  id: 889
+  famille: "Emberizidae"
+  lb_nom: "Emberiza schoeniclus turonensis"
+  nom_fr: "Bruant des roseaux"
+-
+  id: 890
+  famille: "Emberizidae"
+  lb_nom: "Emberiza schoeniclus schoeniclus"
+  nom_fr: ""
+-
+  id: 891
+  famille: "Emberizidae"
+  lb_nom: "Emberiza schoeniclus witherbyi"
+  nom_fr: ""
+-
+  id: 892
+  famille: "Emberizidae"
+  lb_nom: "Emberiza spodocephala"
+  nom_fr: "Bruant masqué"
+-
+  id: 893
+  famille: "Emberizidae"
+  lb_nom: "Schoeniclus spodocephala"
+  nom_fr: "Bruant masqué"
+-
+  id: 894
+  famille: "Estrildidae"
+  lb_nom: "Amandava amandava"
+  nom_fr: "Bengali des Indes"
+-
+  id: 895
+  famille: "Estrildidae"
+  lb_nom: "Estrilda astrild"
+  nom_fr: "Astrild bec de corail"
+-
+  id: 896
+  famille: "Estrildidae"
+  lb_nom: "Loxia astrild"
+  nom_fr: "Astrild bec de corail"
+-
+  id: 897
+  famille: "Estrildidae"
+  lb_nom: "Estrilda melpoda"
+  nom_fr: "Astrild à joues orange"
+-
+  id: 898
+  famille: "Estrildidae"
+  lb_nom: "Euodice malabarica"
+  nom_fr: "Capucin bec-de-plomb"
+-
+  id: 899
+  famille: "Estrildidae"
+  lb_nom: "Lonchura malabarica"
+  nom_fr: "Capucin bec-de-plomb"
+-
+  id: 900
+  famille: "Estrildidae"
+  lb_nom: "Lonchura maja"
+  nom_fr: "Capucin à tête blanche"
+-
+  id: 901
+  famille: "Fringillidae"
+  lb_nom: "Acanthis flammea"
+  nom_fr: "Sizerin flammé"
+-
+  id: 902
+  famille: "Fringillidae"
+  lb_nom: "Carduelis flammea"
+  nom_fr: "Sizerin flammé"
+-
+  id: 903
+  famille: "Fringillidae"
+  lb_nom: "Fringilla flammea"
+  nom_fr: "Sizerin flammé"
+-
+  id: 904
+  famille: "Fringillidae"
+  lb_nom: "Acanthis flammea cabaret"
+  nom_fr: "Sizerin cabaret"
+-
+  id: 905
+  famille: "Fringillidae"
+  lb_nom: "Carduelis flammea cabaret"
+  nom_fr: "Sizerin cabaret"
+-
+  id: 906
+  famille: "Fringillidae"
+  lb_nom: "Fringilla cabaret"
+  nom_fr: "Sizerin cabaret"
+-
+  id: 907
+  famille: "Fringillidae"
+  lb_nom: "Acanthis flammea flammea"
+  nom_fr: "Sizerin boréal"
+-
+  id: 908
+  famille: "Fringillidae"
+  lb_nom: "Carduelis flammea flammea"
+  nom_fr: "Sizerin boréal"
+-
+  id: 909
+  famille: "Fringillidae"
+  lb_nom: "Acanthis hornemanni"
+  nom_fr: "Sizerin blanchâtre"
+-
+  id: 910
+  famille: "Fringillidae"
+  lb_nom: "Carduelis hornemanni"
+  nom_fr: "Sizerin blanchâtre"
+-
+  id: 911
+  famille: "Fringillidae"
+  lb_nom: "Carduelis hornemannii"
+  nom_fr: "Sizerin blanchâtre"
+-
+  id: 912
+  famille: "Fringillidae"
+  lb_nom: "Bucanetes githagineus"
+  nom_fr: "Roselin githagine"
+-
+  id: 913
+  famille: "Fringillidae"
+  lb_nom: "Rhodopechys githaginea"
+  nom_fr: "Roselin githagine"
+-
+  id: 914
+  famille: "Fringillidae"
+  lb_nom: "Acanthis cannabina"
+  nom_fr: "Linotte mélodieuse"
+-
+  id: 915
+  famille: "Fringillidae"
+  lb_nom: "Carduelis cannabina"
+  nom_fr: "Linotte mélodieuse"
+-
+  id: 916
+  famille: "Fringillidae"
+  lb_nom: "Carduelis carduelis"
+  nom_fr: "Chardonneret élégant"
+-
+  id: 917
+  famille: "Fringillidae"
+  lb_nom: "Carduelis chloris"
+  nom_fr: "Verdier d'Europe"
+-
+  id: 918
+  famille: "Fringillidae"
+  lb_nom: "Chloris chloris"
+  nom_fr: "Verdier d'Europe"
+-
+  id: 919
+  famille: "Fringillidae"
+  lb_nom: "Carduelis citrinella"
+  nom_fr: "Venturon montagnard"
+-
+  id: 920
+  famille: "Fringillidae"
+  lb_nom: "Serinus citrinella"
+  nom_fr: "Venturon montagnard"
+-
+  id: 921
+  famille: "Fringillidae"
+  lb_nom: "Carduelis citrinella corsicana"
+  nom_fr: "Venturon corse"
+-
+  id: 922
+  famille: "Fringillidae"
+  lb_nom: "Carduelis corsicana"
+  nom_fr: "Venturon corse"
+-
+  id: 923
+  famille: "Fringillidae"
+  lb_nom: "Serinus citrinella corsicana"
+  nom_fr: "Venturon corse"
+-
+  id: 924
+  famille: "Fringillidae"
+  lb_nom: "Serinus corsicana"
+  nom_fr: 3
+-
+  id: 925
+  famille: "Fringillidae"
+  lb_nom: "Serinus corsicanus"
+  nom_fr: "Venturon corse"
+-
+  id: 926
+  famille: "Fringillidae"
+  lb_nom: "Carduelis flavirostris"
+  nom_fr: "Linotte à bec jaune"
+-
+  id: 927
+  famille: "Fringillidae"
+  lb_nom: "Carduelis spinus"
+  nom_fr: "Tarin des aulnes"
+-
+  id: 928
+  famille: "Fringillidae"
+  lb_nom: "Carpodacus erythrinus"
+  nom_fr: "Roselin cramoisi"
+-
+  id: 929
+  famille: "Fringillidae"
+  lb_nom: "Coccothraustes coccothraustes coccothraustes"
+  nom_fr: "Grosbec casse-noyaux"
+-
+  id: 930
+  famille: "Fringillidae"
+  lb_nom: "Coccothraustes coccothraustes insularis"
+  nom_fr: "Grosbec casse-noyaux"
+-
+  id: 931
+  famille: "Fringillidae"
+  lb_nom: "Coccothraustes coccothraustes"
+  nom_fr: "Grosbec casse-noyaux"
+-
+  id: 932
+  famille: "Fringillidae"
+  lb_nom: "Fringilla coelebs coelebs"
+  nom_fr: "Pinson des arbres"
+-
+  id: 933
+  famille: "Fringillidae"
+  lb_nom: "Fringilla coelebs"
+  nom_fr: "Pinson des arbres"
+-
+  id: 934
+  famille: "Fringillidae"
+  lb_nom: "Fringilla coelebs tyrrhenica"
+  nom_fr: "Pinson des arbres"
+-
+  id: 935
+  famille: "Fringillidae"
+  lb_nom: "Fringilla montifringilla"
+  nom_fr: "Pinson du nord"
+-
+  id: 936
+  famille: "Fringillidae"
+  lb_nom: "Loxia curvirostra corsicana"
+  nom_fr: "Bec-croisé des sapins"
+-
+  id: 937
+  famille: "Fringillidae"
+  lb_nom: "Loxia curvirostra curvirostra"
+  nom_fr: "Bec-croisé des sapins"
+-
+  id: 938
+  famille: "Fringillidae"
+  lb_nom: "Loxia curvirostra"
+  nom_fr: "Bec-croisé des sapins"
+-
+  id: 939
+  famille: "Fringillidae"
+  lb_nom: "Loxia leucoptera bifasciata"
+  nom_fr: "Bec-croisé bifascié"
+-
+  id: 940
+  famille: "Fringillidae"
+  lb_nom: "Loxia leucoptera"
+  nom_fr: "Bec-croisé bifascié"
+-
+  id: 941
+  famille: "Fringillidae"
+  lb_nom: "Loxia pytyopsittacus"
+  nom_fr: "Bec-croisé perroquet"
+-
+  id: 942
+  famille: "Fringillidae"
+  lb_nom: "Pinicola enucleator"
+  nom_fr: "Durbec des sapins"
+-
+  id: 943
+  famille: "Fringillidae"
+  lb_nom: "Loxia pyrrhula"
+  nom_fr: "Bouvreuil pivoine"
+-
+  id: 944
+  famille: "Fringillidae"
+  lb_nom: "Pyrrhula pyrrhula coccinea"
+  nom_fr: "Bouvreuil pivoine"
+-
+  id: 945
+  famille: "Fringillidae"
+  lb_nom: "Pyrrhula pyrrhula"
+  nom_fr: "Bouvreuil pivoine"
+-
+  id: 946
+  famille: "Fringillidae"
+  lb_nom: "Pyrrhula pyrrhula europaea"
+  nom_fr: ""
+-
+  id: 947
+  famille: "Fringillidae"
+  lb_nom: "Pyrrhula pyrrhula pyrrhula"
+  nom_fr: ""
+-
+  id: 948
+  famille: "Fringillidae"
+  lb_nom: "Carduelis serinus"
+  nom_fr: 7
+-
+  id: 949
+  famille: "Fringillidae"
+  lb_nom: "Serinus serinus"
+  nom_fr: "Serin cini"
+-
+  id: 950
+  famille: "Hirundinidae"
+  lb_nom: "Cecropis daurica"
+  nom_fr: "Hirondelle rousseline"
+-
+  id: 951
+  famille: "Hirundinidae"
+  lb_nom: "Hirundo daurica"
+  nom_fr: "Hirondelle rousseline"
+-
+  id: 952
+  famille: "Hirundinidae"
+  lb_nom: "Delichon urbica"
+  nom_fr: "Hirondelle de fenêtre"
+-
+  id: 953
+  famille: "Hirundinidae"
+  lb_nom: "Delichon urbicum"
+  nom_fr: "Hirondelle de fenêtre"
+-
+  id: 954
+  famille: "Hirundinidae"
+  lb_nom: "Hirundo urbica"
+  nom_fr: "Hirondelle de fenêtre"
+-
+  id: 955
+  famille: "Hirundinidae"
+  lb_nom: "Chelidon rustica"
+  nom_fr: "Hirondelle rustique"
+-
+  id: 956
+  famille: "Hirundinidae"
+  lb_nom: "Hirundo rustica"
+  nom_fr: "Hirondelle rustique"
+-
+  id: 957
+  famille: "Hirundinidae"
+  lb_nom: "Hirundo pyrrhonota"
+  nom_fr: "Hirondelle à front blanc"
+-
+  id: 958
+  famille: "Hirundinidae"
+  lb_nom: "Petrochelidon pyrrhonota"
+  nom_fr: "Hirondelle à front blanc"
+-
+  id: 959
+  famille: "Hirundinidae"
+  lb_nom: "Hirundo rupestris"
+  nom_fr: "Hirondelle de rochers"
+-
+  id: 960
+  famille: "Hirundinidae"
+  lb_nom: "Ptyonoprogne rupestris"
+  nom_fr: "Hirondelle de rochers"
+-
+  id: 961
+  famille: "Hirundinidae"
+  lb_nom: "Riparia paludicola"
+  nom_fr: ""
+-
+  id: 962
+  famille: "Hirundinidae"
+  lb_nom: "Hirundo riparia"
+  nom_fr: "Hirondelle de rivage"
+-
+  id: 963
+  famille: "Hirundinidae"
+  lb_nom: "Riparia riparia"
+  nom_fr: "Hirondelle de rivage"
+-
+  id: 964
+  famille: "Icteridae"
+  lb_nom: "Dolichonyx oryzivorus"
+  nom_fr: "Goglu des prés"
+-
+  id: 965
+  famille: "Icteridae"
+  lb_nom: "Molothrus ater"
+  nom_fr: "Vacher à tête brune"
+-
+  id: 966
+  famille: "Laniidae"
+  lb_nom: "Lanius collurio collurio"
+  nom_fr: "Pie-grièche écorcheur"
+-
+  id: 967
+  famille: "Laniidae"
+  lb_nom: "Lanius collurio"
+  nom_fr: "Pie-grièche écorcheur"
+-
+  id: 968
+  famille: "Laniidae"
+  lb_nom: "Lanius cristatus"
+  nom_fr: "Pie-grièche brune"
+-
+  id: 969
+  famille: "Laniidae"
+  lb_nom: "Lamira excubitor"
+  nom_fr: 7
+-
+  id: 970
+  famille: "Laniidae"
+  lb_nom: "Lanius excubitor excubitor"
+  nom_fr: "Pie-grièche grise"
+-
+  id: 971
+  famille: "Laniidae"
+  lb_nom: "Lanius excubitor galliae"
+  nom_fr: "Pie-grièche grise"
+-
+  id: 972
+  famille: "Laniidae"
+  lb_nom: "Lanius excubitor homereyi"
+  nom_fr: "Pie-grièche grise"
+-
+  id: 973
+  famille: "Laniidae"
+  lb_nom: "Lanius excubitor"
+  nom_fr: "Pie-grièche grise"
+-
+  id: 974
+  famille: "Laniidae"
+  lb_nom: "Lanius collurio isabellinus"
+  nom_fr: ""
+-
+  id: 975
+  famille: "Laniidae"
+  lb_nom: "Lanius isabellinus"
+  nom_fr: ""
+-
+  id: 976
+  famille: "Laniidae"
+  lb_nom: "Lanius excubitor meridionalis"
+  nom_fr: "Pie-grièche méridionale"
+-
+  id: 977
+  famille: "Laniidae"
+  lb_nom: "Lanius meridionalis"
+  nom_fr: "Pie-grièche méridionale"
+-
+  id: 978
+  famille: "Laniidae"
+  lb_nom: "Lanius minor"
+  nom_fr: "Pie-grièche à poitrine rose"
+-
+  id: 979
+  famille: "Laniidae"
+  lb_nom: "Lanius nubicus"
+  nom_fr: "Pie-grièche masquée"
+-
+  id: 980
+  famille: "Laniidae"
+  lb_nom: "Lanius phoenicuroides"
+  nom_fr: "Pie-grièche du Turkestan"
+-
+  id: 981
+  famille: "Laniidae"
+  lb_nom: "Lanius senator"
+  nom_fr: "Pie-grièche à tête rousse"
+-
+  id: 982
+  famille: "Laniidae"
+  lb_nom: "Lanius senator badius"
+  nom_fr: ""
+-
+  id: 983
+  famille: "Laniidae"
+  lb_nom: "Lanius senator senator"
+  nom_fr: ""
+-
+  id: 984
+  famille: "Leiothrichidae"
+  lb_nom: "Leiothrix lutea"
+  nom_fr: "Léiothrix jaune"
+-
+  id: 985
+  famille: "Locustellidae"
+  lb_nom: "Locustella certhiola"
+  nom_fr: "Locustelle de Pallas"
+-
+  id: 986
+  famille: "Locustellidae"
+  lb_nom: "Motacilla certhiola"
+  nom_fr: "Locustelle de Pallas"
+-
+  id: 987
+  famille: "Locustellidae"
+  lb_nom: "Acrocephalus fascioleatus"
+  nom_fr: "Locustelle fasciée"
+-
+  id: 988
+  famille: "Locustellidae"
+  lb_nom: "Locustella fasciolata"
+  nom_fr: "Locustelle fasciée"
+-
+  id: 989
+  famille: "Locustellidae"
+  lb_nom: "Locustella fluviatilis"
+  nom_fr: "Locustelle fluviatile"
+-
+  id: 990
+  famille: "Locustellidae"
+  lb_nom: "Sylvia fluviatilis"
+  nom_fr: "Locustelle fluviatile"
+-
+  id: 991
+  famille: "Locustellidae"
+  lb_nom: "Locustella lancelota"
+  nom_fr: "Locustelle lancéolée"
+-
+  id: 992
+  famille: "Locustellidae"
+  lb_nom: "Locustella lanceolata"
+  nom_fr: "Locustelle lancéolée"
+-
+  id: 993
+  famille: "Locustellidae"
+  lb_nom: "Sylvia lancolata"
+  nom_fr: "Locustelle lancéolée"
+-
+  id: 994
+  famille: "Locustellidae"
+  lb_nom: "Locustella luscinioides"
+  nom_fr: "Locustelle luscinioïde"
+-
+  id: 995
+  famille: "Locustellidae"
+  lb_nom: "Sylvia luscinioides"
+  nom_fr: "Locustelle luscinioïde"
+-
+  id: 996
+  famille: "Locustellidae"
+  lb_nom: "Locustella naevia"
+  nom_fr: "Locustelle tachetée"
+-
+  id: 997
+  famille: "Locustellidae"
+  lb_nom: "Motacilla naevia"
+  nom_fr: "Locustelle tachetée"
+-
+  id: 998
+  famille: "Motacillidae"
+  lb_nom: "Alauda campestris"
+  nom_fr: "Pipit rousseline"
+-
+  id: 999
+  famille: "Motacillidae"
+  lb_nom: "Anthus campestris"
+  nom_fr: "Pipit rousseline"
+-
+  id: 1000
+  famille: "Motacillidae"
+  lb_nom: "Anthus cervinus"
+  nom_fr: "Pipit à gorge rousse"
+-
+  id: 1001
+  famille: "Motacillidae"
+  lb_nom: "Anthus rufogularis"
+  nom_fr: 7
+-
+  id: 1002
+  famille: "Motacillidae"
+  lb_nom: "Motacilla cervina"
+  nom_fr: "Pipit à gorge rousse"
+-
+  id: 1003
+  famille: "Motacillidae"
+  lb_nom: "Anthus godlewskii"
+  nom_fr: "Pipit de Godlewski"
+-
+  id: 1004
+  famille: "Motacillidae"
+  lb_nom: "Anthus gustavi"
+  nom_fr: "Pipit de la Petchora"
+-
+  id: 1005
+  famille: "Motacillidae"
+  lb_nom: "Anthus hodgsoni"
+  nom_fr: "Pipit à dos olive"
+-
+  id: 1006
+  famille: "Motacillidae"
+  lb_nom: "Anthus petrosus"
+  nom_fr: "Pipit maritime"
+-
+  id: 1007
+  famille: "Motacillidae"
+  lb_nom: "Anthus petrosus littoralis"
+  nom_fr: ""
+-
+  id: 1008
+  famille: "Motacillidae"
+  lb_nom: "Anthus petrosus petrosus"
+  nom_fr: ""
+-
+  id: 1009
+  famille: "Motacillidae"
+  lb_nom: "Anthus spinoletta petrosus"
+  nom_fr: ""
+-
+  id: 1010
+  famille: "Motacillidae"
+  lb_nom: "Alauda pratensis"
+  nom_fr: "Pipit farlouse"
+-
+  id: 1011
+  famille: "Motacillidae"
+  lb_nom: "Anthus pratensis"
+  nom_fr: "Pipit farlouse"
+-
+  id: 1012
+  famille: "Motacillidae"
+  lb_nom: "Alauda novaeseelandiae"
+  nom_fr: "Pipit de Richard"
+-
+  id: 1013
+  famille: "Motacillidae"
+  lb_nom: "Anthus novaeseelandiae"
+  nom_fr: "Pipit de Richard"
+-
+  id: 1014
+  famille: "Motacillidae"
+  lb_nom: "Anthus richardi"
+  nom_fr: "Pipit de Richard"
+-
+  id: 1015
+  famille: "Motacillidae"
+  lb_nom: "Anthus rubescens"
+  nom_fr: "Pipit farlousane"
+-
+  id: 1016
+  famille: "Motacillidae"
+  lb_nom: "Alauda spinoletta"
+  nom_fr: "Pipit spioncelle"
+-
+  id: 1017
+  famille: "Motacillidae"
+  lb_nom: "Anthus spinoletta"
+  nom_fr: "Pipit spioncelle"
+-
+  id: 1018
+  famille: "Motacillidae"
+  lb_nom: "Anthus spinoletta spinoletta"
+  nom_fr: "Pipit spioncelle"
+-
+  id: 1019
+  famille: "Motacillidae"
+  lb_nom: "Alauda trivialis"
+  nom_fr: "Pipit des arbres"
+-
+  id: 1020
+  famille: "Motacillidae"
+  lb_nom: "Anthus trivialis"
+  nom_fr: "Pipit des arbres"
+-
+  id: 1021
+  famille: "Motacillidae"
+  lb_nom: "Motacilla alba"
+  nom_fr: "Bergeronnette grise"
+-
+  id: 1022
+  famille: "Motacillidae"
+  lb_nom: "Motacilla yarelli"
+  nom_fr: 7
+-
+  id: 1023
+  famille: "Motacillidae"
+  lb_nom: "Motacilla alba alba"
+  nom_fr: "Bergeronnette grise"
+-
+  id: 1024
+  famille: "Motacillidae"
+  lb_nom: "Motacilla alba subpersonata"
+  nom_fr: ""
+-
+  id: 1025
+  famille: "Motacillidae"
+  lb_nom: "Motacilla alba yarrellii"
+  nom_fr: "Bergeronnette de Yarrell"
+-
+  id: 1026
+  famille: "Motacillidae"
+  lb_nom: "Motacilla caspica"
+  nom_fr: 7
+-
+  id: 1027
+  famille: "Motacillidae"
+  lb_nom: "Motacilla caspica grisea"
+  nom_fr: 7
+-
+  id: 1028
+  famille: "Motacillidae"
+  lb_nom: "Motacilla cinerea cinerea"
+  nom_fr: "Bergeronnette des ruisseaux"
+-
+  id: 1029
+  famille: "Motacillidae"
+  lb_nom: "Motacilla cinerea"
+  nom_fr: "Bergeronnette des ruisseaux"
+-
+  id: 1030
+  famille: "Motacillidae"
+  lb_nom: "Budytes citreolus"
+  nom_fr: 7
+-
+  id: 1031
+  famille: "Motacillidae"
+  lb_nom: "Motacilla citreola"
+  nom_fr: "Bergeronnette citrine"
+-
+  id: 1032
+  famille: "Motacillidae"
+  lb_nom: "Motacilla flava feldegg"
+  nom_fr: ""
+-
+  id: 1033
+  famille: "Motacillidae"
+  lb_nom: "Budytes flavus"
+  nom_fr: "Bergeronnette printanière"
+-
+  id: 1034
+  famille: "Motacillidae"
+  lb_nom: "Motacilla flava"
+  nom_fr: "Bergeronnette printanière"
+-
+  id: 1035
+  famille: "Motacillidae"
+  lb_nom: "Motacilla flava rayi"
+  nom_fr: "Bergeronnette printanière"
+-
+  id: 1036
+  famille: "Motacillidae"
+  lb_nom: "Motacilla flavissima"
+  nom_fr: 7
+-
+  id: 1037
+  famille: "Motacillidae"
+  lb_nom: "Motacilla flava beema"
+  nom_fr: ""
+-
+  id: 1038
+  famille: "Motacillidae"
+  lb_nom: "Motacilla flava cinereocapilla"
+  nom_fr: ""
+-
+  id: 1039
+  famille: "Motacillidae"
+  lb_nom: "Motacilla flava flava"
+  nom_fr: ""
+-
+  id: 1040
+  famille: "Motacillidae"
+  lb_nom: "Motacilla flava flavissima"
+  nom_fr: ""
+-
+  id: 1041
+  famille: "Motacillidae"
+  lb_nom: "Motacilla flava iberiae"
+  nom_fr: ""
+-
+  id: 1042
+  famille: "Motacillidae"
+  lb_nom: "Motacilla flava thunbergi"
+  nom_fr: ""
+-
+  id: 1043
+  famille: "Muscicapidae"
+  lb_nom: "Agrobates galactotes"
+  nom_fr: 7
+-
+  id: 1044
+  famille: "Muscicapidae"
+  lb_nom: "Cercotrichas galactotes"
+  nom_fr: "Agrobate roux"
+-
+  id: 1045
+  famille: "Muscicapidae"
+  lb_nom: "Erythropygia galactotes"
+  nom_fr: "Agrobate roux"
+-
+  id: 1046
+  famille: "Muscicapidae"
+  lb_nom: "Sylvia galactotes"
+  nom_fr: "Agrobate roux"
+-
+  id: 1047
+  famille: "Muscicapidae"
+  lb_nom: "Erithacus rubecula armoricanus"
+  nom_fr: "Rougegorge familier"
+-
+  id: 1048
+  famille: "Muscicapidae"
+  lb_nom: "Erithacus rubecula"
+  nom_fr: "Rougegorge familier"
+-
+  id: 1049
+  famille: "Muscicapidae"
+  lb_nom: "Erithacus rubecula melophilus"
+  nom_fr: "Rougegorge familier"
+-
+  id: 1050
+  famille: "Muscicapidae"
+  lb_nom: "Erithacus rubecula rubecula"
+  nom_fr: "Rougegorge familier"
+-
+  id: 1051
+  famille: "Muscicapidae"
+  lb_nom: "Erithacus rubecula sardus"
+  nom_fr: "Rougegorge familier"
+-
+  id: 1052
+  famille: "Muscicapidae"
+  lb_nom: "Erithacus rubecula witherbyi"
+  nom_fr: "Rougegorge familier"
+-
+  id: 1053
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla rubecula"
+  nom_fr: "Rougegorge familier"
+-
+  id: 1054
+  famille: "Muscicapidae"
+  lb_nom: "Ficedula albicollis"
+  nom_fr: "Gobemouche à collier"
+-
+  id: 1055
+  famille: "Muscicapidae"
+  lb_nom: "Muscicapa albicollis"
+  nom_fr: "Gobemouche à collier"
+-
+  id: 1056
+  famille: "Muscicapidae"
+  lb_nom: "Ficedula hypoleuca"
+  nom_fr: "Gobemouche noir"
+-
+  id: 1057
+  famille: "Muscicapidae"
+  lb_nom: "Muscicapa hypoleuca"
+  nom_fr: 7
+-
+  id: 1058
+  famille: "Muscicapidae"
+  lb_nom: "Ficedula parva"
+  nom_fr: "Gobemouche nain"
+-
+  id: 1059
+  famille: "Muscicapidae"
+  lb_nom: "Muscicapa parva"
+  nom_fr: "Gobemouche nain"
+-
+  id: 1060
+  famille: "Muscicapidae"
+  lb_nom: "Ficedula semitorquata"
+  nom_fr: "Gobemouche à semi collier"
+-
+  id: 1061
+  famille: "Muscicapidae"
+  lb_nom: "Erithacus luscinia"
+  nom_fr: "Rossignol progné"
+-
+  id: 1062
+  famille: "Muscicapidae"
+  lb_nom: "Luscinia luscinia"
+  nom_fr: "Rossignol progné"
+-
+  id: 1063
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla luscinia"
+  nom_fr: "Rossignol progné"
+-
+  id: 1064
+  famille: "Muscicapidae"
+  lb_nom: "Erithacus megarhynchos"
+  nom_fr: 7
+-
+  id: 1065
+  famille: "Muscicapidae"
+  lb_nom: "Luscinia megarhynchos"
+  nom_fr: "Rossignol philomèle"
+-
+  id: 1066
+  famille: "Muscicapidae"
+  lb_nom: "Luscinia megarhynchos corsa"
+  nom_fr: "Rossignol philomèle"
+-
+  id: 1067
+  famille: "Muscicapidae"
+  lb_nom: "Luscinia megarhynchos megarhynchos"
+  nom_fr: "Rossignol philomèle"
+-
+  id: 1068
+  famille: "Muscicapidae"
+  lb_nom: "Luscinia svecica"
+  nom_fr: "Gorgebleue à miroir"
+-
+  id: 1069
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla svecica"
+  nom_fr: "Gorgebleue à miroir"
+-
+  id: 1070
+  famille: "Muscicapidae"
+  lb_nom: "Luscinia svecica cyanecula"
+  nom_fr: ""
+-
+  id: 1071
+  famille: "Muscicapidae"
+  lb_nom: "Luscinia svecica namnetum"
+  nom_fr: ""
+-
+  id: 1072
+  famille: "Muscicapidae"
+  lb_nom: "Luscinia svecica svecica"
+  nom_fr: ""
+-
+  id: 1073
+  famille: "Muscicapidae"
+  lb_nom: "Monticola saxatilis"
+  nom_fr: "Monticole de roche"
+-
+  id: 1074
+  famille: "Muscicapidae"
+  lb_nom: "Turdus saxatilis"
+  nom_fr: "Monticole de roche"
+-
+  id: 1075
+  famille: "Muscicapidae"
+  lb_nom: "Monticola solitarius"
+  nom_fr: "Monticole bleu"
+-
+  id: 1076
+  famille: "Muscicapidae"
+  lb_nom: "Turdus solitarius"
+  nom_fr: "Monticole bleu"
+-
+  id: 1077
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla striata"
+  nom_fr: "Gobemouche gris"
+-
+  id: 1078
+  famille: "Muscicapidae"
+  lb_nom: "Muscicapa striata"
+  nom_fr: "Gobemouche gris"
+-
+  id: 1079
+  famille: "Muscicapidae"
+  lb_nom: "Muscicapa striata striata"
+  nom_fr: "Gobemouche gris"
+-
+  id: 1080
+  famille: "Muscicapidae"
+  lb_nom: "Muscicapa striata tyrrhenica"
+  nom_fr: "Gobemouche méditerranéen"
+-
+  id: 1081
+  famille: "Muscicapidae"
+  lb_nom: "Muscicapa tyrrhenica"
+  nom_fr: "Gobemouche méditerranéen"
+-
+  id: 1082
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe deserti"
+  nom_fr: "Traquet du désert"
+-
+  id: 1083
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe desertii"
+  nom_fr: "Traquet du désert"
+-
+  id: 1084
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola deserti"
+  nom_fr: "Traquet du désert"
+-
+  id: 1085
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla hispanica"
+  nom_fr: "Traquet oreillard"
+-
+  id: 1086
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe hispanica"
+  nom_fr: "Traquet oreillard"
+-
+  id: 1087
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe isabellina"
+  nom_fr: "Traquet isabelle"
+-
+  id: 1088
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe leucopyga"
+  nom_fr: "Traquet à tête blanche"
+-
+  id: 1089
+  famille: "Muscicapidae"
+  lb_nom: "Vitiflora leucopyga"
+  nom_fr: "Traquet à tête blanche"
+-
+  id: 1090
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe leucura"
+  nom_fr: "Traquet rieur"
+-
+  id: 1091
+  famille: "Muscicapidae"
+  lb_nom: "Turdus leucurus"
+  nom_fr: "Traquet rieur"
+-
+  id: 1092
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla oeanthe"
+  nom_fr: "Traquet motteux"
+-
+  id: 1093
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe oenanthe"
+  nom_fr: "Traquet motteux"
+-
+  id: 1094
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe oenanthe schiöleri"
+  nom_fr: "Traquet motteux"
+-
+  id: 1095
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe oenanthe leucorhoa"
+  nom_fr: ""
+-
+  id: 1096
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe oenanthe oenanthe"
+  nom_fr: ""
+-
+  id: 1097
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla pleschanka"
+  nom_fr: "Traquet pie"
+-
+  id: 1098
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe leucomela"
+  nom_fr: 7
+-
+  id: 1099
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe pleschanka"
+  nom_fr: "Traquet pie"
+-
+  id: 1100
+  famille: "Muscicapidae"
+  lb_nom: "Oenanthe xanthoprymna"
+  nom_fr: "Traquet kurde"
+-
+  id: 1101
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola xanthoprymna"
+  nom_fr: "Traquet kurde"
+-
+  id: 1102
+  famille: "Muscicapidae"
+  lb_nom: "Erythacus moussieri"
+  nom_fr: "Rougequeue de Moussier"
+-
+  id: 1103
+  famille: "Muscicapidae"
+  lb_nom: "Phoenicurus moussieri"
+  nom_fr: "Rougequeue de Moussier"
+-
+  id: 1104
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla ochruros"
+  nom_fr: "Rougequeue noir"
+-
+  id: 1105
+  famille: "Muscicapidae"
+  lb_nom: "Phoenicurus ochruros gibraltariensis"
+  nom_fr: "Rougequeue noir"
+-
+  id: 1106
+  famille: "Muscicapidae"
+  lb_nom: "Phoenicurus ochruros ochruros"
+  nom_fr: "Rougequeue noir"
+-
+  id: 1107
+  famille: "Muscicapidae"
+  lb_nom: "Phoenicurus ochruros"
+  nom_fr: "Rougequeue noir"
+-
+  id: 1108
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla phoenicurus"
+  nom_fr: "Rougequeue à front blanc"
+-
+  id: 1109
+  famille: "Muscicapidae"
+  lb_nom: "Phoenicurus phoenicurus"
+  nom_fr: "Rougequeue à front blanc"
+-
+  id: 1110
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola maura"
+  nom_fr: "Tarier oriental"
+-
+  id: 1111
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola maurus"
+  nom_fr: "Tarier oriental"
+-
+  id: 1112
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola torquata maura"
+  nom_fr: "Tarier oriental"
+-
+  id: 1113
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola torquatus maurus"
+  nom_fr: "Tarier oriental"
+-
+  id: 1114
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla rubetra"
+  nom_fr: "Traquet tarier"
+-
+  id: 1115
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola rubetra"
+  nom_fr: "Traquet tarier"
+-
+  id: 1116
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla rubicola"
+  nom_fr: "Tarier pâtre"
+-
+  id: 1117
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola rubicola"
+  nom_fr: "Tarier pâtre"
+-
+  id: 1118
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola torquata"
+  nom_fr: "Tarier pâtre"
+-
+  id: 1119
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola torquata rubicola"
+  nom_fr: "Tarier pâtre"
+-
+  id: 1120
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola torquatus"
+  nom_fr: 3
+-
+  id: 1121
+  famille: "Muscicapidae"
+  lb_nom: "Saxicola torquatus rubicola"
+  nom_fr: "Tarier pâtre"
+-
+  id: 1122
+  famille: "Muscicapidae"
+  lb_nom: "Erithacus cyanurus"
+  nom_fr: ""
+-
+  id: 1123
+  famille: "Muscicapidae"
+  lb_nom: "Motacilla cyanurus"
+  nom_fr: "Robin à flancs roux"
+-
+  id: 1124
+  famille: "Muscicapidae"
+  lb_nom: "Tarsiger cyanurus"
+  nom_fr: "Robin à flancs roux"
+-
+  id: 1125
+  famille: "Oriolidae"
+  lb_nom: "Coracias oriolus"
+  nom_fr: "Loriot d'Europe"
+-
+  id: 1126
+  famille: "Oriolidae"
+  lb_nom: "Oriolus oriolus"
+  nom_fr: "Loriot d'Europe"
+-
+  id: 1127
+  famille: "Panuridae"
+  lb_nom: "Panurus biarmicus"
+  nom_fr: "Panure à moustaches"
+-
+  id: 1128
+  famille: "Paridae"
+  lb_nom: "Cyanistes caeruleus"
+  nom_fr: "Mésange bleue"
+-
+  id: 1129
+  famille: "Paridae"
+  lb_nom: "Parus caeruleus caeruleus"
+  nom_fr: "Mésange bleue"
+-
+  id: 1130
+  famille: "Paridae"
+  lb_nom: "Parus caeruleus"
+  nom_fr: "Mésange bleue"
+-
+  id: 1131
+  famille: "Paridae"
+  lb_nom: "Parus caeruleus touraudericus"
+  nom_fr: "Mésange bleue"
+-
+  id: 1132
+  famille: "Paridae"
+  lb_nom: "Cyanistes cyanus"
+  nom_fr: "Mésange azurée"
+-
+  id: 1133
+  famille: "Paridae"
+  lb_nom: "Parus cyanus"
+  nom_fr: "Mésange azurée"
+-
+  id: 1134
+  famille: "Paridae"
+  lb_nom: "Lophophanes cristatus"
+  nom_fr: "Mésange huppée"
+-
+  id: 1135
+  famille: "Paridae"
+  lb_nom: "Parus cristatus abadiei"
+  nom_fr: "Mésange huppée"
+-
+  id: 1136
+  famille: "Paridae"
+  lb_nom: "Parus cristatus brunnescens"
+  nom_fr: "Mésange huppée"
+-
+  id: 1137
+  famille: "Paridae"
+  lb_nom: "Parus cristatus cristatus"
+  nom_fr: "Mésange huppée"
+-
+  id: 1138
+  famille: "Paridae"
+  lb_nom: "Parus cristatus heimi"
+  nom_fr: "Mésange huppée"
+-
+  id: 1139
+  famille: "Paridae"
+  lb_nom: "Parus cristatus"
+  nom_fr: "Mésange huppée"
+-
+  id: 1140
+  famille: "Paridae"
+  lb_nom: "Parus major corsus"
+  nom_fr: "Mésange charbonnière"
+-
+  id: 1141
+  famille: "Paridae"
+  lb_nom: "Parus major"
+  nom_fr: "Mésange charbonnière"
+-
+  id: 1142
+  famille: "Paridae"
+  lb_nom: "Parus major major"
+  nom_fr: "Mésange charbonnière"
+-
+  id: 1143
+  famille: "Paridae"
+  lb_nom: "Parus ater abietum"
+  nom_fr: "Mésange noire"
+-
+  id: 1144
+  famille: "Paridae"
+  lb_nom: "Parus ater ater"
+  nom_fr: "Mésange noire"
+-
+  id: 1145
+  famille: "Paridae"
+  lb_nom: "Parus ater"
+  nom_fr: "Mésange noire"
+-
+  id: 1146
+  famille: "Paridae"
+  lb_nom: "Parus ater sardus"
+  nom_fr: "Mésange noire"
+-
+  id: 1147
+  famille: "Paridae"
+  lb_nom: "Periparus ater"
+  nom_fr: "Mésange noire"
+-
+  id: 1148
+  famille: "Paridae"
+  lb_nom: "Parus montanus"
+  nom_fr: "Mésange boréale"
+-
+  id: 1149
+  famille: "Paridae"
+  lb_nom: "Poecile montanus"
+  nom_fr: "Mésange boréale"
+-
+  id: 1150
+  famille: "Paridae"
+  lb_nom: "Parus montanus montanus"
+  nom_fr: "Mésange alpestre"
+-
+  id: 1151
+  famille: "Paridae"
+  lb_nom: "Poecile montanus montanus"
+  nom_fr: "Mésange alpestre"
+-
+  id: 1152
+  famille: "Paridae"
+  lb_nom: "Parus montanus rhenanus"
+  nom_fr: ""
+-
+  id: 1153
+  famille: "Paridae"
+  lb_nom: "Parus rhenanus"
+  nom_fr: ""
+-
+  id: 1154
+  famille: "Paridae"
+  lb_nom: "Poecile montanus rhenanus"
+  nom_fr: ""
+-
+  id: 1155
+  famille: "Paridae"
+  lb_nom: "Parus palustris darti"
+  nom_fr: "Mésange nonnette"
+-
+  id: 1156
+  famille: "Paridae"
+  lb_nom: "Parus palustris"
+  nom_fr: "Mésange nonnette"
+-
+  id: 1157
+  famille: "Paridae"
+  lb_nom: "Parus palustris longirostris"
+  nom_fr: "Mésange nonnette"
+-
+  id: 1158
+  famille: "Paridae"
+  lb_nom: "Poecile palustris"
+  nom_fr: "Mésange nonnette"
+-
+  id: 1159
+  famille: "Parulidae"
+  lb_nom: "Motacilla noveboracensis"
+  nom_fr: "Paruline des ruisseaux"
+-
+  id: 1160
+  famille: "Parulidae"
+  lb_nom: "Parkesia noveboracensis"
+  nom_fr: "Paruline des ruisseaux"
+-
+  id: 1161
+  famille: "Parulidae"
+  lb_nom: "Seiurus noveboracensis"
+  nom_fr: "Paruline des ruisseaux"
+-
+  id: 1162
+  famille: "Parulidae"
+  lb_nom: "Parula americana"
+  nom_fr: "Paruline à collier"
+-
+  id: 1163
+  famille: "Parulidae"
+  lb_nom: "Parus americanus"
+  nom_fr: "Paruline à collier"
+-
+  id: 1164
+  famille: "Parulidae"
+  lb_nom: "Setophaga americana"
+  nom_fr: "Paruline à collier"
+-
+  id: 1165
+  famille: "Parulidae"
+  lb_nom: "Dendroica pensylvanica"
+  nom_fr: "Paruline à flancs marron"
+-
+  id: 1166
+  famille: "Parulidae"
+  lb_nom: "Setophaga pensylvanica"
+  nom_fr: "Paruline à flancs marron"
+-
+  id: 1167
+  famille: "Parulidae"
+  lb_nom: "Dendroica petechia"
+  nom_fr: "Paruline jaune"
+-
+  id: 1168
+  famille: "Parulidae"
+  lb_nom: "Motacilla petechia"
+  nom_fr: "Paruline jaune"
+-
+  id: 1169
+  famille: "Parulidae"
+  lb_nom: "Setophaga petechia"
+  nom_fr: "Paruline jaune"
+-
+  id: 1170
+  famille: "Parulidae"
+  lb_nom: "Motacilla ruticilla"
+  nom_fr: "Paruline flamboyante"
+-
+  id: 1171
+  famille: "Parulidae"
+  lb_nom: "Setophaga ruticilla"
+  nom_fr: "Paruline flamboyante"
+-
+  id: 1172
+  famille: "Parulidae"
+  lb_nom: "Dendroica striata"
+  nom_fr: "Paruline rayée"
+-
+  id: 1173
+  famille: "Parulidae"
+  lb_nom: "Muscicapa striata"
+  nom_fr: "Paruline rayée"
+-
+  id: 1174
+  famille: "Parulidae"
+  lb_nom: "Setophaga striata"
+  nom_fr: "Paruline rayée"
+-
+  id: 1175
+  famille: "Passerellidae"
+  lb_nom: "Zonotrichia albicollis"
+  nom_fr: "Bruant à gorge blanche"
+-
+  id: 1176
+  famille: "Passerellidae"
+  lb_nom: "Zonotrichia leucophrys"
+  nom_fr: "Bruant à couronne blanche"
+-
+  id: 1177
+  famille: "Passeridae"
+  lb_nom: "Montifringilla nivalis"
+  nom_fr: "Niverolle alpine"
+-
+  id: 1178
+  famille: "Passeridae"
+  lb_nom: "Fringilla domestica"
+  nom_fr: "Moineau domestique"
+-
+  id: 1179
+  famille: "Passeridae"
+  lb_nom: "Passer domesticus"
+  nom_fr: "Moineau domestique"
+-
+  id: 1180
+  famille: "Passeridae"
+  lb_nom: "Passer domesticus domesticus"
+  nom_fr: ""
+-
+  id: 1181
+  famille: "Passeridae"
+  lb_nom: "Passer hispaniolensis"
+  nom_fr: "Moineau espagnol"
+-
+  id: 1182
+  famille: "Passeridae"
+  lb_nom: "Passer domesticus italiae"
+  nom_fr: "Moineau cisalpin"
+-
+  id: 1183
+  famille: "Passeridae"
+  lb_nom: "Passer italiae"
+  nom_fr: "Moineau cisalpin"
+-
+  id: 1184
+  famille: "Passeridae"
+  lb_nom: "Passer montanus hispaniae"
+  nom_fr: "Moineau friquet"
+-
+  id: 1185
+  famille: "Passeridae"
+  lb_nom: "Passer montanus"
+  nom_fr: "Moineau friquet"
+-
+  id: 1186
+  famille: "Passeridae"
+  lb_nom: "Passer montanus montanus"
+  nom_fr: "Moineau friquet"
+-
+  id: 1187
+  famille: "Passeridae"
+  lb_nom: "Passer petronia"
+  nom_fr: "Moineau soulcie"
+-
+  id: 1188
+  famille: "Passeridae"
+  lb_nom: "Petronia petronia hellmayri"
+  nom_fr: "Moineau soulcie"
+-
+  id: 1189
+  famille: "Passeridae"
+  lb_nom: "Petronia petronia"
+  nom_fr: "Moineau soulcie"
+-
+  id: 1190
+  famille: "Passeridae"
+  lb_nom: "Petronia petronia petronia"
+  nom_fr: "Moineau soulcie"
+-
+  id: 1191
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus bonelli"
+  nom_fr: "Pouillot de Bonelli"
+-
+  id: 1192
+  famille: "Phylloscopidae"
+  lb_nom: "Sylvia bonelli"
+  nom_fr: "Pouillot de Bonelli"
+-
+  id: 1193
+  famille: "Phylloscopidae"
+  lb_nom: "Phyllopneuste borealis"
+  nom_fr: "Pouillot boréal"
+-
+  id: 1194
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus borealis"
+  nom_fr: "Pouillot boréal"
+-
+  id: 1195
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus collybita"
+  nom_fr: "Pouillot véloce"
+-
+  id: 1196
+  famille: "Phylloscopidae"
+  lb_nom: "Sylvia collybita"
+  nom_fr: "Pouillot véloce"
+-
+  id: 1197
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus collybita abietinus"
+  nom_fr: ""
+-
+  id: 1198
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus collybita collyba"
+  nom_fr: ""
+-
+  id: 1199
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus collybita tristis"
+  nom_fr: "Pouillot de Sibérie"
+-
+  id: 1200
+  famille: "Phylloscopidae"
+  lb_nom: "Phillopneuste fuscata"
+  nom_fr: "Pouillot brun"
+-
+  id: 1201
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus fuscatus"
+  nom_fr: "Pouillot brun"
+-
+  id: 1202
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus humei"
+  nom_fr: "Pouillot de Hume"
+-
+  id: 1203
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus collybita brehmii"
+  nom_fr: "Pouillot ibérique"
+-
+  id: 1204
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus ibericus"
+  nom_fr: "Pouillot ibérique"
+-
+  id: 1205
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus inornatus"
+  nom_fr: "Pouillot à grands sourcils"
+-
+  id: 1206
+  famille: "Phylloscopidae"
+  lb_nom: "Regulus inornatus"
+  nom_fr: "Pouillot à grands sourcils"
+-
+  id: 1207
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus nitidus"
+  nom_fr: "Pouillot du Caucase"
+-
+  id: 1208
+  famille: "Phylloscopidae"
+  lb_nom: "Seicercus nitidus"
+  nom_fr: "Pouillot du Caucase"
+-
+  id: 1209
+  famille: "Phylloscopidae"
+  lb_nom: "Phyllopneuste orientalis"
+  nom_fr: "Pouillot oriental"
+-
+  id: 1210
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus orientalis"
+  nom_fr: "Pouillot oriental"
+-
+  id: 1211
+  famille: "Phylloscopidae"
+  lb_nom: "Rhadina orientalis"
+  nom_fr: "Pouillot oriental"
+-
+  id: 1212
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus plumbeitarsus"
+  nom_fr: "Pouillot à pattes sombres"
+-
+  id: 1213
+  famille: "Phylloscopidae"
+  lb_nom: "Seicercus plumbeitarsus"
+  nom_fr: "Pouillot à pattes sombres"
+-
+  id: 1214
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus proregulus"
+  nom_fr: "Pouillot de Pallas"
+-
+  id: 1215
+  famille: "Phylloscopidae"
+  lb_nom: "Herbivocula schwarzi"
+  nom_fr: 7
+-
+  id: 1216
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus schwarzi"
+  nom_fr: "Pouillot de Schwarz"
+-
+  id: 1217
+  famille: "Phylloscopidae"
+  lb_nom: "Sylvia schwarzi"
+  nom_fr: "Pouillot de Schwarz"
+-
+  id: 1218
+  famille: "Phylloscopidae"
+  lb_nom: "Motacilla sibilatrix"
+  nom_fr: "Pouillot siffleur"
+-
+  id: 1219
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus sibilatrix"
+  nom_fr: "Pouillot siffleur"
+-
+  id: 1220
+  famille: "Phylloscopidae"
+  lb_nom: "Acanthiza trochiloides"
+  nom_fr: "Pouillot verdâtre"
+-
+  id: 1221
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus trochiloides"
+  nom_fr: "Pouillot verdâtre"
+-
+  id: 1222
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus trochiloides trochiloides"
+  nom_fr: "Pouillot verdâtre"
+-
+  id: 1223
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus trochiloides viridianus"
+  nom_fr: "Pouillot verdâtre"
+-
+  id: 1224
+  famille: "Phylloscopidae"
+  lb_nom: "Motacilla trochilus"
+  nom_fr: "Pouillot fitis"
+-
+  id: 1225
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus trochilus fitis"
+  nom_fr: "Pouillot fitis"
+-
+  id: 1226
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus trochilus"
+  nom_fr: "Pouillot fitis"
+-
+  id: 1227
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus trochilus acredula"
+  nom_fr: ""
+-
+  id: 1228
+  famille: "Phylloscopidae"
+  lb_nom: "Phylloscopus trochilus trochilus"
+  nom_fr: ""
+-
+  id: 1229
+  famille: "Ploceidae"
+  lb_nom: "Ploceus cucullatus"
+  nom_fr: "Tisserin gendarme"
+-
+  id: 1230
+  famille: "Prunellidae"
+  lb_nom: "Accentor atrogularis"
+  nom_fr: "Accenteur à gorge noire"
+-
+  id: 1231
+  famille: "Prunellidae"
+  lb_nom: "Prunella atrogularis"
+  nom_fr: "Accenteur à gorge noire"
+-
+  id: 1232
+  famille: "Prunellidae"
+  lb_nom: "Laiscopus collaris"
+  nom_fr: 7
+-
+  id: 1233
+  famille: "Prunellidae"
+  lb_nom: "Prunella collaris"
+  nom_fr: "Accenteur alpin"
+-
+  id: 1234
+  famille: "Prunellidae"
+  lb_nom: "Sturnus collaris"
+  nom_fr: "Accenteur alpin"
+-
+  id: 1235
+  famille: "Prunellidae"
+  lb_nom: "Motacilla modularis"
+  nom_fr: "Accenteur mouchet"
+-
+  id: 1236
+  famille: "Prunellidae"
+  lb_nom: "Prunella modularis"
+  nom_fr: "Accenteur mouchet"
+-
+  id: 1237
+  famille: "Prunellidae"
+  lb_nom: "Prunella modularis mabbotti"
+  nom_fr: "Accenteur mouchet"
+-
+  id: 1238
+  famille: "Prunellidae"
+  lb_nom: "Prunella modularis modularis"
+  nom_fr: "Accenteur mouchet"
+-
+  id: 1239
+  famille: "Prunellidae"
+  lb_nom: "Prunella modularis occidentalis"
+  nom_fr: "Accenteur mouchet"
+-
+  id: 1240
+  famille: "Regulidae"
+  lb_nom: "Regulus ignicapilla"
+  nom_fr: "Roitelet à triple bandeau"
+-
+  id: 1241
+  famille: "Regulidae"
+  lb_nom: "Regulus ignicapillus"
+  nom_fr: "Roitelet à triple bandeau"
+-
+  id: 1242
+  famille: "Regulidae"
+  lb_nom: "Sylvia ignicapilla"
+  nom_fr: "Roitelet à triple bandeau"
+-
+  id: 1243
+  famille: "Regulidae"
+  lb_nom: "Motacilla proregulus"
+  nom_fr: "Roitelet huppé"
+-
+  id: 1244
+  famille: "Regulidae"
+  lb_nom: "Motacilla regulus"
+  nom_fr: "Roitelet huppé"
+-
+  id: 1245
+  famille: "Regulidae"
+  lb_nom: "Regulus regulus interni"
+  nom_fr: "Roitelet huppé"
+-
+  id: 1246
+  famille: "Regulidae"
+  lb_nom: "Regulus regulus"
+  nom_fr: "Roitelet huppé"
+-
+  id: 1247
+  famille: "Regulidae"
+  lb_nom: "Regulus regulus regulus"
+  nom_fr: "Roitelet huppé"
+-
+  id: 1248
+  famille: "Remizidae"
+  lb_nom: "Parus pendulinus"
+  nom_fr: "Eurasian Penduline Tit"
+-
+  id: 1249
+  famille: "Remizidae"
+  lb_nom: "Remiz pendulinus"
+  nom_fr: "Rémiz penduline"
+-
+  id: 1250
+  famille: "Scotocercidae"
+  lb_nom: "Cettia cetti"
+  nom_fr: "Bouscarle de Cetti"
+-
+  id: 1251
+  famille: "Scotocercidae"
+  lb_nom: "Sylvia cetti"
+  nom_fr: "Bouscarle de Cetti"
+-
+  id: 1252
+  famille: "Sittidae"
+  lb_nom: "Sitta europaea hassica"
+  nom_fr: "Sittelle torchepot"
+-
+  id: 1253
+  famille: "Sittidae"
+  lb_nom: "Sitta europaea"
+  nom_fr: "Sittelle torchepot"
+-
+  id: 1254
+  famille: "Sittidae"
+  lb_nom: "Sitta whiteheadi"
+  nom_fr: "Sittelle corse"
+-
+  id: 1255
+  famille: "Sittidae"
+  lb_nom: "Tichodroma muraria"
+  nom_fr: "Tichodrome échelette"
+-
+  id: 1256
+  famille: "Sturnidae"
+  lb_nom: "Acridotheres tristis"
+  nom_fr: "Merle des Moluques"
+-
+  id: 1257
+  famille: "Sturnidae"
+  lb_nom: "Acridotheres tristis"
+  nom_fr: "Merle des Moluques"
+-
+  id: 1258
+  famille: "Sturnidae"
+  lb_nom: "Pastor roseus"
+  nom_fr: "Martin roselin"
+-
+  id: 1259
+  famille: "Sturnidae"
+  lb_nom: "Sturnus roseus"
+  nom_fr: "Martin roselin"
+-
+  id: 1260
+  famille: "Sturnidae"
+  lb_nom: "Turdus roseus"
+  nom_fr: "Martin roselin"
+-
+  id: 1261
+  famille: "Sturnidae"
+  lb_nom: "Sturnus unicolor"
+  nom_fr: "Étourneau unicolore"
+-
+  id: 1262
+  famille: "Sturnidae"
+  lb_nom: "Sturnus vulgaris"
+  nom_fr: "Étourneau sansonnet"
+-
+  id: 1263
+  famille: "Sylviidae"
+  lb_nom: "Motacilla atricapilla"
+  nom_fr: "Fauvette à tête noire"
+-
+  id: 1264
+  famille: "Sylviidae"
+  lb_nom: "Sylvia atricapilla"
+  nom_fr: "Fauvette à tête noire"
+-
+  id: 1265
+  famille: "Sylviidae"
+  lb_nom: "Motacilla borin"
+  nom_fr: "Fauvette des jardins"
+-
+  id: 1266
+  famille: "Sylviidae"
+  lb_nom: "Sylvia borin"
+  nom_fr: "Fauvette des jardins"
+-
+  id: 1267
+  famille: "Sylviidae"
+  lb_nom: "Curruca cantillans"
+  nom_fr: "Fauvette passerinette"
+-
+  id: 1268
+  famille: "Sylviidae"
+  lb_nom: "Curruca inornata"
+  nom_fr: "Fauvette passerinette"
+-
+  id: 1269
+  famille: "Sylviidae"
+  lb_nom: "Motacilla cantillans"
+  nom_fr: "Fauvette passerinette"
+-
+  id: 1270
+  famille: "Sylviidae"
+  lb_nom: "Sylvia cantillans cantillans"
+  nom_fr: "Fauvette passerinette"
+-
+  id: 1271
+  famille: "Sylviidae"
+  lb_nom: "Sylvia cantillans"
+  nom_fr: "Fauvette passerinette"
+-
+  id: 1272
+  famille: "Sylviidae"
+  lb_nom: "Sylvia inornata"
+  nom_fr: "Fauvette passerinette"
+-
+  id: 1273
+  famille: "Sylviidae"
+  lb_nom: "Curruca albistriata"
+  nom_fr: ""
+-
+  id: 1274
+  famille: "Sylviidae"
+  lb_nom: "Sylvia cantillans albistriata"
+  nom_fr: ""
+-
+  id: 1275
+  famille: "Sylviidae"
+  lb_nom: "Sylvia cantillans iberiae"
+  nom_fr: ""
+-
+  id: 1276
+  famille: "Sylviidae"
+  lb_nom: "Sylvia communis"
+  nom_fr: "Fauvette grisette"
+-
+  id: 1277
+  famille: "Sylviidae"
+  lb_nom: "Sylvia conspicillata"
+  nom_fr: "Fauvette à lunettes"
+-
+  id: 1278
+  famille: "Sylviidae"
+  lb_nom: "Motacilla curruca"
+  nom_fr: "Fauvette babillarde"
+-
+  id: 1279
+  famille: "Sylviidae"
+  lb_nom: "Sylvia curruca blythi"
+  nom_fr: "Fauvette babillarde"
+-
+  id: 1280
+  famille: "Sylviidae"
+  lb_nom: "Sylvia curruca curruca"
+  nom_fr: "Fauvette babillarde"
+-
+  id: 1281
+  famille: "Sylviidae"
+  lb_nom: "Sylvia curruca"
+  nom_fr: "Fauvette babillarde"
+-
+  id: 1282
+  famille: "Sylviidae"
+  lb_nom: "Sylvia deserticola"
+  nom_fr: "Fauvette de l'Atlas"
+-
+  id: 1283
+  famille: "Sylviidae"
+  lb_nom: "Sylvia deserti"
+  nom_fr: "Fauvette du désert"
+-
+  id: 1284
+  famille: "Sylviidae"
+  lb_nom: "Motacilla hortensis"
+  nom_fr: "Fauvette orphée"
+-
+  id: 1285
+  famille: "Sylviidae"
+  lb_nom: "Sylvia hortensis"
+  nom_fr: "Fauvette orphée"
+-
+  id: 1286
+  famille: "Sylviidae"
+  lb_nom: "Montacilla melanocephala"
+  nom_fr: "Fauvette mélanocéphale"
+-
+  id: 1287
+  famille: "Sylviidae"
+  lb_nom: "Sylvia melanocephala"
+  nom_fr: "Fauvette mélanocéphale"
+-
+  id: 1288
+  famille: "Sylviidae"
+  lb_nom: "Curruca nana"
+  nom_fr: "Fauvette naine"
+-
+  id: 1289
+  famille: "Sylviidae"
+  lb_nom: "Sylvia nana"
+  nom_fr: "Fauvette naine"
+-
+  id: 1290
+  famille: "Sylviidae"
+  lb_nom: "Motacilla nisoria"
+  nom_fr: "Fauvette épervière"
+-
+  id: 1291
+  famille: "Sylviidae"
+  lb_nom: "Sylvia nisoria"
+  nom_fr: "Fauvette épervière"
+-
+  id: 1292
+  famille: "Sylviidae"
+  lb_nom: "Sylvia rueppeli"
+  nom_fr: "Fauvette masqué"
+-
+  id: 1293
+  famille: "Sylviidae"
+  lb_nom: "Sylvia rueppelli"
+  nom_fr: "Fauvette masqué"
+-
+  id: 1294
+  famille: "Sylviidae"
+  lb_nom: "Sylvia sarda"
+  nom_fr: "Fauvette sarde"
+-
+  id: 1295
+  famille: "Sylviidae"
+  lb_nom: "Curruca subalpina"
+  nom_fr: "Fauvette de Moltoni"
+-
+  id: 1296
+  famille: "Sylviidae"
+  lb_nom: "Sylvia cantillans moltonii"
+  nom_fr: "Fauvette de Moltoni"
+-
+  id: 1297
+  famille: "Sylviidae"
+  lb_nom: "Sylvia cantillans subalpina"
+  nom_fr: "Fauvette de Moltoni"
+-
+  id: 1298
+  famille: "Sylviidae"
+  lb_nom: "Sylvia moltonii"
+  nom_fr: "Fauvette de Moltoni"
+-
+  id: 1299
+  famille: "Sylviidae"
+  lb_nom: "Sylvia subalpina"
+  nom_fr: "Fauvette de Moltoni"
+-
+  id: 1300
+  famille: "Sylviidae"
+  lb_nom: "Sylvia undata"
+  nom_fr: "Fauvette pitchou"
+-
+  id: 1301
+  famille: "Sylviidae"
+  lb_nom: "Sylvia dartfordiensis"
+  nom_fr: "Fauvette pitchou (aremorica)"
+-
+  id: 1302
+  famille: "Sylviidae"
+  lb_nom: "Sylvia undata aremorica"
+  nom_fr: "Fauvette pitchou (aremorica)"
+-
+  id: 1303
+  famille: "Sylviidae"
+  lb_nom: "Sylvia undata dartfordiensis"
+  nom_fr: "Fauvette pitchou (aremorica)"
+-
+  id: 1304
+  famille: "Sylviidae"
+  lb_nom: "Motacilla undata"
+  nom_fr: "Fauvette pitchou (corse)"
+-
+  id: 1305
+  famille: "Sylviidae"
+  lb_nom: "Sylvia undata corsa"
+  nom_fr: "Fauvette pitchou (corse)"
+-
+  id: 1306
+  famille: "Sylviidae"
+  lb_nom: "Sylvia undata undata"
+  nom_fr: "Fauvette pitchou (corse)"
+-
+  id: 1307
+  famille: "Troglodytidae"
+  lb_nom: "Troglodytes troglodytes koenigi"
+  nom_fr: "Troglodyte mignon"
+-
+  id: 1308
+  famille: "Troglodytidae"
+  lb_nom: "Troglodytes troglodytes"
+  nom_fr: "Troglodyte mignon"
+-
+  id: 1309
+  famille: "Troglodytidae"
+  lb_nom: "Troglodytes troglodytes troglodytes"
+  nom_fr: "Troglodyte mignon"
+-
+  id: 1310
+  famille: "Turdidae"
+  lb_nom: "Catharus minimus"
+  nom_fr: "Grive à joues grises"
+-
+  id: 1311
+  famille: "Turdidae"
+  lb_nom: "Hylocichla aliciae"
+  nom_fr: 3
+-
+  id: 1312
+  famille: "Turdidae"
+  lb_nom: "Hylocichla minima"
+  nom_fr: 3
+-
+  id: 1313
+  famille: "Turdidae"
+  lb_nom: "Turdus minimus"
+  nom_fr: "Grive à joues grises"
+-
+  id: 1314
+  famille: "Turdidae"
+  lb_nom: "Catharus ustulatus"
+  nom_fr: "Grivette à dos olive"
+-
+  id: 1315
+  famille: "Turdidae"
+  lb_nom: "Hylocichla ustulata"
+  nom_fr: "Swainson's Thrush"
+-
+  id: 1316
+  famille: "Turdidae"
+  lb_nom: "Musticapa narcissina"
+  nom_fr: "Swainson's Thrush"
+-
+  id: 1317
+  famille: "Turdidae"
+  lb_nom: "Geokichla sibirica"
+  nom_fr: "Grive de Sibérie"
+-
+  id: 1318
+  famille: "Turdidae"
+  lb_nom: "Ixoreus sibiricus"
+  nom_fr: 3
+-
+  id: 1319
+  famille: "Turdidae"
+  lb_nom: "Turdus sibiricus"
+  nom_fr: "Grive de Sibérie"
+-
+  id: 1320
+  famille: "Turdidae"
+  lb_nom: "Zoothera sibirica"
+  nom_fr: "Grive de Sibérie"
+-
+  id: 1321
+  famille: "Turdidae"
+  lb_nom: "Turdus atrogularis"
+  nom_fr: "Grive à gorge noire"
+-
+  id: 1322
+  famille: "Turdidae"
+  lb_nom: "Turdus ruficollis atrogularis"
+  nom_fr: "Grive à gorge noire"
+-
+  id: 1323
+  famille: "Turdidae"
+  lb_nom: "Turdus eunomus"
+  nom_fr: "Grive à ailes rousses"
+-
+  id: 1324
+  famille: "Turdidae"
+  lb_nom: "Turdus naumanni eunomus"
+  nom_fr: "Grive à ailes rousses"
+-
+  id: 1325
+  famille: "Turdidae"
+  lb_nom: "Turdus iliacus coburni"
+  nom_fr: "Grive mauvis"
+-
+  id: 1326
+  famille: "Turdidae"
+  lb_nom: "Turdus iliacus iliacus"
+  nom_fr: "Grive mauvis"
+-
+  id: 1327
+  famille: "Turdidae"
+  lb_nom: "Turdus iliacus"
+  nom_fr: "Grive mauvis"
+-
+  id: 1328
+  famille: "Turdidae"
+  lb_nom: "Turdus musicus"
+  nom_fr: "Grive mauvis"
+-
+  id: 1329
+  famille: "Turdidae"
+  lb_nom: "Turdus merula"
+  nom_fr: "Merle noir"
+-
+  id: 1330
+  famille: "Turdidae"
+  lb_nom: "Turdus naumanni naumanni"
+  nom_fr: "Grive à ailes rousses"
+-
+  id: 1331
+  famille: "Turdidae"
+  lb_nom: "Turdus naumanni"
+  nom_fr: "Grive à ailes rousses"
+-
+  id: 1332
+  famille: "Turdidae"
+  lb_nom: "Turdus obscurus"
+  nom_fr: "Grive obscure"
+-
+  id: 1333
+  famille: "Turdidae"
+  lb_nom: "Turdus ericetorum"
+  nom_fr: 3
+-
+  id: 1334
+  famille: "Turdidae"
+  lb_nom: "Turdus philomelos"
+  nom_fr: "Grive musicienne"
+-
+  id: 1335
+  famille: "Turdidae"
+  lb_nom: "Turdus philomelos clarkei"
+  nom_fr: "Grive musicienne"
+-
+  id: 1336
+  famille: "Turdidae"
+  lb_nom: "Turdus philomelos philomelos"
+  nom_fr: "Grive musicienne"
+-
+  id: 1337
+  famille: "Turdidae"
+  lb_nom: "Turdus pilaris"
+  nom_fr: "Grive litorne"
+-
+  id: 1338
+  famille: "Turdidae"
+  lb_nom: "Turdus ruficollis"
+  nom_fr: "Grive à gorge rousse"
+-
+  id: 1339
+  famille: "Turdidae"
+  lb_nom: "Turdus torquatus amicorum"
+  nom_fr: "Merle à plastron"
+-
+  id: 1340
+  famille: "Turdidae"
+  lb_nom: "Turdus torquatus"
+  nom_fr: "Merle à plastron"
+-
+  id: 1341
+  famille: "Turdidae"
+  lb_nom: "Turdus torquatus alpestris"
+  nom_fr: ""
+-
+  id: 1342
+  famille: "Turdidae"
+  lb_nom: "Turdus torquatus torquatus"
+  nom_fr: ""
+-
+  id: 1343
+  famille: "Turdidae"
+  lb_nom: "Turdus viscivorus deichleri"
+  nom_fr: "Grive draine"
+-
+  id: 1344
+  famille: "Turdidae"
+  lb_nom: "Turdus viscivorus"
+  nom_fr: "Grive draine"
+-
+  id: 1345
+  famille: "Turdidae"
+  lb_nom: "Turdus viscivorus reiseri"
+  nom_fr: "Grive draine"
+-
+  id: 1346
+  famille: "Turdidae"
+  lb_nom: "Turdus viscivorus viscivorus"
+  nom_fr: "Grive draine"
+-
+  id: 1347
+  famille: "Turdidae"
+  lb_nom: "Oreocincla dauma"
+  nom_fr: 3
+-
+  id: 1348
+  famille: "Turdidae"
+  lb_nom: "Turdus dauma"
+  nom_fr: "Grive dorée"
+-
+  id: 1349
+  famille: "Turdidae"
+  lb_nom: "Zoothera aurea"
+  nom_fr: "Grive dorée"
+-
+  id: 1350
+  famille: "Turdidae"
+  lb_nom: "Zoothera dauma"
+  nom_fr: "Grive dorée"
+-
+  id: 1351
+  famille: "Vireonidae"
+  lb_nom: "Muscicapa olivacea"
+  nom_fr: "Viréo aux yeux rouges"
+-
+  id: 1352
+  famille: "Vireonidae"
+  lb_nom: "Vireo olivaceus"
+  nom_fr: "Viréo aux yeux rouges"
+-
+  id: 1353
+  famille: "Ardeidae"
+  lb_nom: "Ardea alba"
+  nom_fr: "Grande Aigrette"
+-
+  id: 1354
+  famille: "Ardeidae"
+  lb_nom: "Casmerodius albus"
+  nom_fr: "Grande Aigrette"
+-
+  id: 1355
+  famille: "Ardeidae"
+  lb_nom: "Egretta alba"
+  nom_fr: "Grande Aigrette"
+-
+  id: 1356
+  famille: "Ardeidae"
+  lb_nom: "Ardea alba alba"
+  nom_fr: ""
+-
+  id: 1357
+  famille: "Ardeidae"
+  lb_nom: "Ardea cinerea"
+  nom_fr: "Héron cendré"
+-
+  id: 1358
+  famille: "Ardeidae"
+  lb_nom: "Ardea herodias"
+  nom_fr: "Grand Héron"
+-
+  id: 1359
+  famille: "Ardeidae"
+  lb_nom: "Ardea melanocephala"
+  nom_fr: "Héron mélanocéphale"
+-
+  id: 1360
+  famille: "Ardeidae"
+  lb_nom: "Ardea purpurea"
+  nom_fr: "Héron pourpré"
+-
+  id: 1361
+  famille: "Ardeidae"
+  lb_nom: "Ardeola ralloides"
+  nom_fr: "Héron crabier"
+-
+  id: 1362
+  famille: "Ardeidae"
+  lb_nom: "Ardea stellaris"
+  nom_fr: "Butor étoilé"
+-
+  id: 1363
+  famille: "Ardeidae"
+  lb_nom: "Botaurus stellaris"
+  nom_fr: "Butor étoilé"
+-
+  id: 1364
+  famille: "Ardeidae"
+  lb_nom: "Ardea ibis"
+  nom_fr: "Héron garde-boeufs"
+-
+  id: 1365
+  famille: "Ardeidae"
+  lb_nom: "Ardeola ibis"
+  nom_fr: "Héron garde-boeufs"
+-
+  id: 1366
+  famille: "Ardeidae"
+  lb_nom: "Bubulcus ibis"
+  nom_fr: "Héron garde-boeufs"
+-
+  id: 1367
+  famille: "Ardeidae"
+  lb_nom: "Egretta ibis"
+  nom_fr: "Héron garde-boeufs"
+-
+  id: 1368
+  famille: "Ardeidae"
+  lb_nom: "Bubulcus ibis ibis"
+  nom_fr: "Héron garde-b?ufs"
+-
+  id: 1369
+  famille: "Ardeidae"
+  lb_nom: "Ardea virescens"
+  nom_fr: "Héron vert"
+-
+  id: 1370
+  famille: "Ardeidae"
+  lb_nom: "Butorides virescens"
+  nom_fr: "Héron vert"
+-
+  id: 1371
+  famille: "Ardeidae"
+  lb_nom: "Ardea garzetta"
+  nom_fr: "Aigrette garzette"
+-
+  id: 1372
+  famille: "Ardeidae"
+  lb_nom: "Egretta garzetta"
+  nom_fr: "Aigrette garzette"
+-
+  id: 1373
+  famille: "Ardeidae"
+  lb_nom: "Ardea gularis"
+  nom_fr: "Aigrette des récifs"
+-
+  id: 1374
+  famille: "Ardeidae"
+  lb_nom: "Egretta gularis"
+  nom_fr: "Aigrette des récifs"
+-
+  id: 1375
+  famille: "Ardeidae"
+  lb_nom: "Ardea minuta"
+  nom_fr: "Butor blongios"
+-
+  id: 1376
+  famille: "Ardeidae"
+  lb_nom: "Ixobrychus minutus"
+  nom_fr: "Butor blongios"
+-
+  id: 1377
+  famille: "Ardeidae"
+  lb_nom: "Ardea nycticorax"
+  nom_fr: "Héron bihoreau"
+-
+  id: 1378
+  famille: "Ardeidae"
+  lb_nom: "Nycticorax nycticorax"
+  nom_fr: "Héron bihoreau"
+-
+  id: 1379
+  famille: "Ciconiidae"
+  lb_nom: "Ardea ciconia"
+  nom_fr: "Cigogne blanche"
+-
+  id: 1380
+  famille: "Ciconiidae"
+  lb_nom: "Ciconia ciconia"
+  nom_fr: "Cigogne blanche"
+-
+  id: 1381
+  famille: "Ciconiidae"
+  lb_nom: "Ardea nigra"
+  nom_fr: "Cigogne noire"
+-
+  id: 1382
+  famille: "Ciconiidae"
+  lb_nom: "Ciconia nigra"
+  nom_fr: "Cigogne noire"
+-
+  id: 1383
+  famille: "Fregatidae"
+  lb_nom: "Fregata magnificens"
+  nom_fr: "Frégate superbe"
+-
+  id: 1384
+  famille: "Fregatidae"
+  lb_nom: "Fregata minor magnificens"
+  nom_fr: "Frégate superbe"
+-
+  id: 1385
+  famille: "Pelecanidae"
+  lb_nom: "Pelecanus crispus"
+  nom_fr: "Pélican frisé"
+-
+  id: 1386
+  famille: "Pelecanidae"
+  lb_nom: "Pelecanus onocrotalus"
+  nom_fr: "Pélican blanc"
+-
+  id: 1387
+  famille: "Pelecanidae"
+  lb_nom: "Pelecanus rufescens"
+  nom_fr: "Pélican gris"
+-
+  id: 1388
+  famille: "Phalacrocoracidae"
+  lb_nom: "Pelecanus aristotelis"
+  nom_fr: "Cormoran huppé"
+-
+  id: 1389
+  famille: "Phalacrocoracidae"
+  lb_nom: "Pelecanus subtus fuscus"
+  nom_fr: "Cormoran huppé"
+-
+  id: 1390
+  famille: "Phalacrocoracidae"
+  lb_nom: "Phalacrocorax aristotelis"
+  nom_fr: "Cormoran huppé"
+-
+  id: 1391
+  famille: "Phalacrocoracidae"
+  lb_nom: "Phalacrocorax aristotelis aristotelis"
+  nom_fr: "Cormoran huppé"
+-
+  id: 1392
+  famille: "Phalacrocoracidae"
+  lb_nom: "Phalacrocorax aristotelis desmarestii"
+  nom_fr: "Cormoran huppé de Méditerranée"
+-
+  id: 1393
+  famille: "Phalacrocoracidae"
+  lb_nom: "Phalacrocorax auritus"
+  nom_fr: "Cormoran à aigrettes"
+-
+  id: 1394
+  famille: "Phalacrocoracidae"
+  lb_nom: "Pelecanus carbo"
+  nom_fr: "Grand Cormoran"
+-
+  id: 1395
+  famille: "Phalacrocoracidae"
+  lb_nom: "Phalacrocorax carbo"
+  nom_fr: "Grand Cormoran"
+-
+  id: 1396
+  famille: "Phalacrocoracidae"
+  lb_nom: "Phalacrocorax carbo lucidus"
+  nom_fr: "Grand Cormoran"
+-
+  id: 1397
+  famille: "Phalacrocoracidae"
+  lb_nom: "Phalacrocorax carbo sinensis"
+  nom_fr: "Grand Cormoran"
+-
+  id: 1398
+  famille: "Phalacrocoracidae"
+  lb_nom: "Phalacrocorax carbo carbo"
+  nom_fr: "Grand Cormoran"
+-
+  id: 1399
+  famille: "Phalacrocoracidae"
+  lb_nom: "Phalacrocorax carbo sinensis"
+  nom_fr: ""
+-
+  id: 1400
+  famille: "Phalacrocoracidae"
+  lb_nom: "Pelecanus pygmeus"
+  nom_fr: "Cormoran pygmée"
+-
+  id: 1401
+  famille: "Phalacrocoracidae"
+  lb_nom: "Phalacrocorax pygmaeus"
+  nom_fr: "Cormoran pygmée"
+-
+  id: 1402
+  famille: "Sulidae"
+  lb_nom: "Morus bassanus"
+  nom_fr: "Fou de Bassan"
+-
+  id: 1403
+  famille: "Sulidae"
+  lb_nom: "Pelecanus bassanus"
+  nom_fr: "Fou de Bassan"
+-
+  id: 1404
+  famille: "Sulidae"
+  lb_nom: "Sula bassana"
+  nom_fr: "Fou de Bassan"
+-
+  id: 1405
+  famille: "Sulidae"
+  lb_nom: "Sula dactylatra"
+  nom_fr: "Fou masqué"
+-
+  id: 1406
+  famille: "Sulidae"
+  lb_nom: "Pelecanus sula"
+  nom_fr: "Fou à pieds rouges"
+-
+  id: 1407
+  famille: "Sulidae"
+  lb_nom: "Sula sula"
+  nom_fr: "Fou à pieds rouges"
+-
+  id: 1408
+  famille: "Threskiornithidae"
+  lb_nom: "Platalea leucorodia"
+  nom_fr: "Spatule blanche"
+-
+  id: 1409
+  famille: "Threskiornithidae"
+  lb_nom: "Plegadis falcinellus"
+  nom_fr: "Ibis falcinelle"
+-
+  id: 1410
+  famille: "Threskiornithidae"
+  lb_nom: "Tantalus falcinellus"
+  nom_fr: "Ibis falcinelle"
+-
+  id: 1411
+  famille: "Threskiornithidae"
+  lb_nom: "Threskiornis aethiopicus"
+  nom_fr: "Ibis sacré"
+-
+  id: 1412
+  famille: "Phoenicopteridae"
+  lb_nom: "Phoeniconaias minor"
+  nom_fr: "Flamant nain"
+-
+  id: 1413
+  famille: "Phoenicopteridae"
+  lb_nom: "Phoenicopterus minor"
+  nom_fr: "Flamant nain"
+-
+  id: 1414
+  famille: "Phoenicopteridae"
+  lb_nom: "Phoenicopterus minor"
+  nom_fr: "Flamant nain"
+-
+  id: 1415
+  famille: "Phoenicopteridae"
+  lb_nom: "Phoenicopterus chilensis"
+  nom_fr: "Flamant du Chili"
+-
+  id: 1416
+  famille: "Phoenicopteridae"
+  lb_nom: "Phoenicopterus roseus"
+  nom_fr: "Flamant rose"
+-
+  id: 1417
+  famille: "Phoenicopteridae"
+  lb_nom: "Phoenicopterus ruber"
+  nom_fr: "Flamant rose"
+-
+  id: 1418
+  famille: "Phoenicopteridae"
+  lb_nom: "Phoenicopterus ruber roseus"
+  nom_fr: "Flamant rose"
+-
+  id: 1419
+  famille: "Phoenicopteridae"
+  lb_nom: "Phoenicopterus ruber"
+  nom_fr: "Flamant des Caraïbes"
+-
+  id: 1420
+  famille: "Phoenicopteridae"
+  lb_nom: "Phoenicopterus ruber ruber"
+  nom_fr: "Flamant des Caraïbes"
+-
+  id: 1421
+  famille: "Podicipedidae"
+  lb_nom: "Colymbus auritus"
+  nom_fr: "Grèbe esclavon"
+-
+  id: 1422
+  famille: "Podicipedidae"
+  lb_nom: "Podiceps auritus"
+  nom_fr: "Grèbe esclavon"
+-
+  id: 1423
+  famille: "Podicipedidae"
+  lb_nom: "Podicipes auritus"
+  nom_fr: "Grèbe esclavon"
+-
+  id: 1424
+  famille: "Podicipedidae"
+  lb_nom: "Colymbus cristatus"
+  nom_fr: "Grèbe huppé"
+-
+  id: 1425
+  famille: "Podicipedidae"
+  lb_nom: "Podiceps cristatus"
+  nom_fr: "Grèbe huppé"
+-
+  id: 1426
+  famille: "Podicipedidae"
+  lb_nom: "Podicipes cristatus"
+  nom_fr: "Grèbe huppé"
+-
+  id: 1427
+  famille: "Podicipedidae"
+  lb_nom: "Colymbus grisegena"
+  nom_fr: "Grèbe jougris"
+-
+  id: 1428
+  famille: "Podicipedidae"
+  lb_nom: "Podiceps grisegena"
+  nom_fr: "Grèbe jougris"
+-
+  id: 1429
+  famille: "Podicipedidae"
+  lb_nom: "Podicipes grisegena"
+  nom_fr: "Grèbe jougris"
+-
+  id: 1430
+  famille: "Podicipedidae"
+  lb_nom: "Podiceps nigricollis"
+  nom_fr: "Grèbe à cou noir"
+-
+  id: 1431
+  famille: "Podicipedidae"
+  lb_nom: "Podicipes nigricollis"
+  nom_fr: "Grèbe à cou noir"
+-
+  id: 1432
+  famille: "Podicipedidae"
+  lb_nom: "Colymbus podiceps"
+  nom_fr: "Grèbe à bec bigarré"
+-
+  id: 1433
+  famille: "Podicipedidae"
+  lb_nom: "Podilymbus podiceps"
+  nom_fr: "Grèbe à bec bigarré"
+-
+  id: 1434
+  famille: "Podicipedidae"
+  lb_nom: "Colymbus ruficollis"
+  nom_fr: "Grèbe castagneux"
+-
+  id: 1435
+  famille: "Podicipedidae"
+  lb_nom: "Podiceps ruficollis"
+  nom_fr: 8
+-
+  id: 1436
+  famille: "Podicipedidae"
+  lb_nom: "Tachybaptus ruficollis"
+  nom_fr: "Grèbe castagneux"
+-
+  id: 1437
+  famille: "Picidae"
+  lb_nom: "Dendrocopos leucotos"
+  nom_fr: "Pic à dos blanc"
+-
+  id: 1438
+  famille: "Picidae"
+  lb_nom: "Dendrocopos leucotos leucotos"
+  nom_fr: "Pic à dos blanc"
+-
+  id: 1439
+  famille: "Picidae"
+  lb_nom: "Dendrocopos leucotos lilfordi"
+  nom_fr: "Pic à dos blanc"
+-
+  id: 1440
+  famille: "Picidae"
+  lb_nom: "Picus lecotos"
+  nom_fr: "Pic à dos blanc"
+-
+  id: 1441
+  famille: "Picidae"
+  lb_nom: "Dendrocopos major"
+  nom_fr: "Pic épeiche"
+-
+  id: 1442
+  famille: "Picidae"
+  lb_nom: "Dendrocopos major major"
+  nom_fr: "Pic épeiche"
+-
+  id: 1443
+  famille: "Picidae"
+  lb_nom: "Dendrocopos major pinetorum"
+  nom_fr: "Pic épeiche"
+-
+  id: 1444
+  famille: "Picidae"
+  lb_nom: "Dryocopus major"
+  nom_fr: 7
+-
+  id: 1445
+  famille: "Picidae"
+  lb_nom: "Picoides major"
+  nom_fr: "Pic épeiche"
+-
+  id: 1446
+  famille: "Picidae"
+  lb_nom: "Picus major"
+  nom_fr: "Pic épeiche"
+-
+  id: 1447
+  famille: "Picidae"
+  lb_nom: "Dendrocopos medius"
+  nom_fr: "Pic mar"
+-
+  id: 1448
+  famille: "Picidae"
+  lb_nom: "Picoides medius"
+  nom_fr: "Pic mar"
+-
+  id: 1449
+  famille: "Picidae"
+  lb_nom: "Picus medius"
+  nom_fr: "Pic mar"
+-
+  id: 1450
+  famille: "Picidae"
+  lb_nom: "Dendrocopos minor buturlini"
+  nom_fr: "Pic épeichette"
+-
+  id: 1451
+  famille: "Picidae"
+  lb_nom: "Dendrocopos minor hortorum"
+  nom_fr: "Pic épeichette"
+-
+  id: 1452
+  famille: "Picidae"
+  lb_nom: "Dendrocopos minor"
+  nom_fr: "Pic épeichette"
+-
+  id: 1453
+  famille: "Picidae"
+  lb_nom: "Dendrocopos minor minor"
+  nom_fr: "Pic épeichette"
+-
+  id: 1454
+  famille: "Picidae"
+  lb_nom: "Picoides minor"
+  nom_fr: "Pic épeichette"
+-
+  id: 1455
+  famille: "Picidae"
+  lb_nom: "Picus minor"
+  nom_fr: "Pic épeichette"
+-
+  id: 1456
+  famille: "Picidae"
+  lb_nom: "Dryocopus martius"
+  nom_fr: "Pic noir"
+-
+  id: 1457
+  famille: "Picidae"
+  lb_nom: "Picus martius"
+  nom_fr: "Pic noir"
+-
+  id: 1458
+  famille: "Picidae"
+  lb_nom: "Jynx torquilla"
+  nom_fr: "Torcol fourmilier"
+-
+  id: 1459
+  famille: "Picidae"
+  lb_nom: "Jynx torquilla torquilla"
+  nom_fr: "Torcol fourmilier"
+-
+  id: 1460
+  famille: "Picidae"
+  lb_nom: "Jynx torquilla tschusii"
+  nom_fr: "Torcol fourmilier"
+-
+  id: 1461
+  famille: "Picidae"
+  lb_nom: "Picoides tridactylus"
+  nom_fr: "Pic tridactyle"
+-
+  id: 1462
+  famille: "Picidae"
+  lb_nom: "Picus tridactylus"
+  nom_fr: "Pic tridactyle"
+-
+  id: 1463
+  famille: "Picidae"
+  lb_nom: "Picus canus"
+  nom_fr: "Pic cendré"
+-
+  id: 1464
+  famille: "Picidae"
+  lb_nom: "Picus viridis"
+  nom_fr: "Pic vert"
+-
+  id: 1465
+  famille: "Picidae"
+  lb_nom: "Picus viridis sharpei"
+  nom_fr: ""
+-
+  id: 1466
+  famille: "Picidae"
+  lb_nom: "Picus viridis viridis"
+  nom_fr: ""
+-
+  id: 1467
+  famille: "Diomedeidae"
+  lb_nom: "Diomedea melanophris"
+  nom_fr: "Albatros à sourcils noirs"
+-
+  id: 1468
+  famille: "Diomedeidae"
+  lb_nom: "Diomedea melanophrys"
+  nom_fr: "Albatros à sourcils noirs"
+-
+  id: 1469
+  famille: "Diomedeidae"
+  lb_nom: "Thalassarche melanophris"
+  nom_fr: "Albatros à sourcils noirs"
+-
+  id: 1470
+  famille: "Diomedeidae"
+  lb_nom: "Thalassarche melanophrys"
+  nom_fr: "Albatros à sourcils noirs"
+-
+  id: 1471
+  famille: "Hydrobatidae"
+  lb_nom: "Hydrobates castro"
+  nom_fr: "Pétrel de Castro"
+-
+  id: 1472
+  famille: "Hydrobatidae"
+  lb_nom: "Oceanodroma castro"
+  nom_fr: "Pétrel de Castro"
+-
+  id: 1473
+  famille: "Hydrobatidae"
+  lb_nom: "Thalassidroma castro"
+  nom_fr: "Pétrel de Castro"
+-
+  id: 1474
+  famille: "Hydrobatidae"
+  lb_nom: "Hydrobates leucorhous"
+  nom_fr: "Pétrel cul-blanc"
+-
+  id: 1475
+  famille: "Hydrobatidae"
+  lb_nom: "Oceanodroma leucorhoa"
+  nom_fr: "Pétrel cul-blanc"
+-
+  id: 1476
+  famille: "Hydrobatidae"
+  lb_nom: "Procellaria leucorhoa"
+  nom_fr: "Pétrel cul-blanc"
+-
+  id: 1477
+  famille: "Hydrobatidae"
+  lb_nom: "Hydrobates monorhis"
+  nom_fr: "Pétrel de Swinhoe"
+-
+  id: 1478
+  famille: "Hydrobatidae"
+  lb_nom: "Oceanodroma monorhii"
+  nom_fr: "Pétrel de Swinhoe"
+-
+  id: 1479
+  famille: "Hydrobatidae"
+  lb_nom: "Oceanodroma monorhis"
+  nom_fr: "Pétrel de Swinhoe"
+-
+  id: 1480
+  famille: "Hydrobatidae"
+  lb_nom: "Thalassidroma monorhis"
+  nom_fr: "Pétrel de Swinhoe"
+-
+  id: 1481
+  famille: "Hydrobatidae"
+  lb_nom: "Hydrobates pelagicus"
+  nom_fr: "Pétrel tempête"
+-
+  id: 1482
+  famille: "Hydrobatidae"
+  lb_nom: "Procellaria pelagica"
+  nom_fr: "Pétrel tempête"
+-
+  id: 1483
+  famille: "Hydrobatidae"
+  lb_nom: "Hydrobates pelagicus melitensis"
+  nom_fr: ""
+-
+  id: 1484
+  famille: "Hydrobatidae"
+  lb_nom: "Hydrobates pelagicus pelagicus"
+  nom_fr: ""
+-
+  id: 1485
+  famille: "Oceanitidae"
+  lb_nom: "Oceanites oceanicus"
+  nom_fr: "Pétrel de Wilson"
+-
+  id: 1486
+  famille: "Oceanitidae"
+  lb_nom: "Procellaria oceanica"
+  nom_fr: "Pétrel de Wilson"
+-
+  id: 1487
+  famille: "Procellariidae"
+  lb_nom: "Ardenna gravis"
+  nom_fr: "Puffin majeur"
+-
+  id: 1488
+  famille: "Procellariidae"
+  lb_nom: "Procellaria gravis"
+  nom_fr: "Puffin majeur"
+-
+  id: 1489
+  famille: "Procellariidae"
+  lb_nom: "Puffinus gravis"
+  nom_fr: "Puffin majeur"
+-
+  id: 1490
+  famille: "Procellariidae"
+  lb_nom: "Ardenna grisea"
+  nom_fr: "Puffin fuligineux"
+-
+  id: 1491
+  famille: "Procellariidae"
+  lb_nom: "Procellaria grisea"
+  nom_fr: "Puffin fuligineux"
+-
+  id: 1492
+  famille: "Procellariidae"
+  lb_nom: "Puffinus griseus"
+  nom_fr: "Puffin fuligineux"
+-
+  id: 1493
+  famille: "Procellariidae"
+  lb_nom: "Bulweria bulwerii"
+  nom_fr: "Pétrel de Bulwer"
+-
+  id: 1494
+  famille: "Procellariidae"
+  lb_nom: "Procellaria bulwerii"
+  nom_fr: "Pétrel de Bulwer"
+-
+  id: 1495
+  famille: "Procellariidae"
+  lb_nom: "Calonectris borealis"
+  nom_fr: "Puffin cendré"
+-
+  id: 1496
+  famille: "Procellariidae"
+  lb_nom: "Puffinus borealis"
+  nom_fr: "Puffin cendré"
+-
+  id: 1497
+  famille: "Procellariidae"
+  lb_nom: "Calonectris diomedea borealis"
+  nom_fr: "Puffin de Scopoli"
+-
+  id: 1498
+  famille: "Procellariidae"
+  lb_nom: "Calonectris diomedea diomedea"
+  nom_fr: "Puffin de Scopoli"
+-
+  id: 1499
+  famille: "Procellariidae"
+  lb_nom: "Calonectris diomedea"
+  nom_fr: "Puffin de Scopoli"
+-
+  id: 1500
+  famille: "Procellariidae"
+  lb_nom: "Procellaria diomedea"
+  nom_fr: "Puffin de Scopoli"
+-
+  id: 1501
+  famille: "Procellariidae"
+  lb_nom: "Puffinus diomedea"
+  nom_fr: "Puffin de Scopoli"
+-
+  id: 1502
+  famille: "Procellariidae"
+  lb_nom: "Puffinus kuhli"
+  nom_fr: "Puffin de Scopoli"
+-
+  id: 1503
+  famille: "Procellariidae"
+  lb_nom: "Fulmarus glacialis"
+  nom_fr: "Pétrel fulmar"
+-
+  id: 1504
+  famille: "Procellariidae"
+  lb_nom: "Procellaria glacialis"
+  nom_fr: "Pétrel fulmar"
+-
+  id: 1505
+  famille: "Procellariidae"
+  lb_nom: "Pterodroma feae"
+  nom_fr: "Pétrel gongon"
+-
+  id: 1506
+  famille: "Procellariidae"
+  lb_nom: "Pterodroma feae"
+  nom_fr: "Pétrel gongon"
+-
+  id: 1507
+  famille: "Procellariidae"
+  lb_nom: "Puffinus lherminieri"
+  nom_fr: "Puffin d'Audubon"
+-
+  id: 1508
+  famille: "Procellariidae"
+  lb_nom: "Procellaria baroli"
+  nom_fr: "Puffin de Macaronésie"
+-
+  id: 1509
+  famille: "Procellariidae"
+  lb_nom: "Puffinus assimilis baroli"
+  nom_fr: "Puffin de Macaronésie"
+-
+  id: 1510
+  famille: "Procellariidae"
+  lb_nom: "Puffinus baroli"
+  nom_fr: "Puffin de Macaronésie"
+-
+  id: 1511
+  famille: "Procellariidae"
+  lb_nom: "Puffinus lherminieri baroli"
+  nom_fr: "Puffin de Macaronésie"
+-
+  id: 1512
+  famille: "Procellariidae"
+  lb_nom: "Puffinus mauretanicus"
+  nom_fr: "Puffin des Baléares"
+-
+  id: 1513
+  famille: "Procellariidae"
+  lb_nom: "Puffinus puffinus mauretanicus"
+  nom_fr: "Puffin des Baléares"
+-
+  id: 1514
+  famille: "Procellariidae"
+  lb_nom: "Puffinus puffinus mauretanicus"
+  nom_fr: "Puffin des Baléares"
+-
+  id: 1515
+  famille: "Procellariidae"
+  lb_nom: "Puffinus yelkouan mauretanicus"
+  nom_fr: "Puffin des Baléares"
+-
+  id: 1516
+  famille: "Procellariidae"
+  lb_nom: "Procellaria puffinus"
+  nom_fr: "Puffin des Anglais"
+-
+  id: 1517
+  famille: "Procellariidae"
+  lb_nom: "Puffinus puffinus"
+  nom_fr: "Puffin des Anglais"
+-
+  id: 1518
+  famille: "Procellariidae"
+  lb_nom: "Puffinus puffinus puffinus"
+  nom_fr: "Puffin des Anglais"
+-
+  id: 1519
+  famille: "Procellariidae"
+  lb_nom: "Puffinus puffinus yelkouan"
+  nom_fr: "Puffin yelkouan"
+-
+  id: 1520
+  famille: "Procellariidae"
+  lb_nom: "Puffinus yelkouan"
+  nom_fr: "Puffin yelkouan"
+-
+  id: 1521
+  famille: "Procellariidae"
+  lb_nom: "Puffinus yelkouan yelkouan"
+  nom_fr: "Puffin yelkouan"
+-
+  id: 1522
+  famille: "Cacatuidae"
+  lb_nom: "Nymphicus hollandicus"
+  nom_fr: "Calopsitte élégante"
+-
+  id: 1523
+  famille: "Psittacidae"
+  lb_nom: "Myiopsitta monacha"
+  nom_fr: "Conure veuve"
+-
+  id: 1524
+  famille: "Psittacidae"
+  lb_nom: "Myiopsitta monachus"
+  nom_fr: "Conure veuve"
+-
+  id: 1525
+  famille: "Psittaculidae"
+  lb_nom: "Agapornis fischeri"
+  nom_fr: "Inséparable de Fischer"
+-
+  id: 1526
+  famille: "Psittaculidae"
+  lb_nom: "Agapornis personatus"
+  nom_fr: "Inséparable masqué"
+-
+  id: 1527
+  famille: "Psittaculidae"
+  lb_nom: "Melopsittacus undulatus"
+  nom_fr: "Perruche ondulée"
+-
+  id: 1528
+  famille: "Psittaculidae"
+  lb_nom: "Paleornis torquatus"
+  nom_fr: 3
+-
+  id: 1529
+  famille: "Psittaculidae"
+  lb_nom: "Psittacula krameri"
+  nom_fr: "Perruche à collier"
+-
+  id: 1530
+  famille: "Psittaculidae"
+  lb_nom: "Psittacus krameri"
+  nom_fr: "Perruche à collier"
+-
+  id: 1531
+  famille: "Pteroclidae"
+  lb_nom: "Pterocles alchata"
+  nom_fr: "Ganga cata"
+-
+  id: 1532
+  famille: "Pteroclidae"
+  lb_nom: "Tetrao alchata"
+  nom_fr: "Ganga cata"
+-
+  id: 1533
+  famille: "Pteroclidae"
+  lb_nom: "Syrrhaptes paradoxus"
+  nom_fr: "Syrrhapte paradoxal"
+-
+  id: 1534
+  famille: "Strigidae"
+  lb_nom: "Aegolius funereus"
+  nom_fr: "Nyctale de Tengmalm"
+-
+  id: 1535
+  famille: "Strigidae"
+  lb_nom: "Strix funerea"
+  nom_fr: "Nyctale de Tengmalm"
+-
+  id: 1536
+  famille: "Strigidae"
+  lb_nom: "Asio accipitrinus"
+  nom_fr: "Hibou des marais"
+-
+  id: 1537
+  famille: "Strigidae"
+  lb_nom: "Asio flammeus"
+  nom_fr: "Hibou des marais"
+-
+  id: 1538
+  famille: "Strigidae"
+  lb_nom: "Strix flammeus"
+  nom_fr: "Hibou des marais"
+-
+  id: 1539
+  famille: "Strigidae"
+  lb_nom: "Asio otus"
+  nom_fr: "Hibou moyen-duc"
+-
+  id: 1540
+  famille: "Strigidae"
+  lb_nom: "Strix otus"
+  nom_fr: "Hibou moyen-duc"
+-
+  id: 1541
+  famille: "Strigidae"
+  lb_nom: "Athene noctua"
+  nom_fr: "Chouette chevêche"
+-
+  id: 1542
+  famille: "Strigidae"
+  lb_nom: "Athene noctua vidalii"
+  nom_fr: "Chouette chevêche"
+-
+  id: 1543
+  famille: "Strigidae"
+  lb_nom: "Strix noctua"
+  nom_fr: "Chouette chevêche"
+-
+  id: 1544
+  famille: "Strigidae"
+  lb_nom: "Athene noctua lunellensis"
+  nom_fr: ""
+-
+  id: 1545
+  famille: "Strigidae"
+  lb_nom: "Bubo bubo bubo"
+  nom_fr: "Grand-duc d'Europe"
+-
+  id: 1546
+  famille: "Strigidae"
+  lb_nom: "Bubo bubo hispaus"
+  nom_fr: "Grand-duc d'Europe"
+-
+  id: 1547
+  famille: "Strigidae"
+  lb_nom: "Bubo bubo"
+  nom_fr: "Grand-duc d'Europe"
+-
+  id: 1548
+  famille: "Strigidae"
+  lb_nom: "Bubo maximus"
+  nom_fr: 7
+-
+  id: 1549
+  famille: "Strigidae"
+  lb_nom: "Strix bubo"
+  nom_fr: "Grand-duc d'Europe"
+-
+  id: 1550
+  famille: "Strigidae"
+  lb_nom: "Bubo scandiaca"
+  nom_fr: "Harfang des neiges"
+-
+  id: 1551
+  famille: "Strigidae"
+  lb_nom: "Bubo scandiacus"
+  nom_fr: "Harfang des neiges"
+-
+  id: 1552
+  famille: "Strigidae"
+  lb_nom: "Nyctea nivea"
+  nom_fr: 3
+-
+  id: 1553
+  famille: "Strigidae"
+  lb_nom: "Nyctea nyctea"
+  nom_fr: "Harfang des neiges"
+-
+  id: 1554
+  famille: "Strigidae"
+  lb_nom: "Nyctea scandiaca"
+  nom_fr: "Harfang des neiges"
+-
+  id: 1555
+  famille: "Strigidae"
+  lb_nom: "Strix nyctea"
+  nom_fr: "Harfang des neiges"
+-
+  id: 1556
+  famille: "Strigidae"
+  lb_nom: "Strix scandiaca"
+  nom_fr: "Harfang des neiges"
+-
+  id: 1557
+  famille: "Strigidae"
+  lb_nom: "Glaucidium passerinum"
+  nom_fr: "Chouette chevêchette"
+-
+  id: 1558
+  famille: "Strigidae"
+  lb_nom: "Strix passerina"
+  nom_fr: "Chouette chevêchette"
+-
+  id: 1559
+  famille: "Strigidae"
+  lb_nom: "Otus scops"
+  nom_fr: "Hibou petit-duc"
+-
+  id: 1560
+  famille: "Strigidae"
+  lb_nom: "Strix scops"
+  nom_fr: "Hibou petit-duc"
+-
+  id: 1561
+  famille: "Strigidae"
+  lb_nom: "Strix aluco"
+  nom_fr: "Chouette hulotte"
+-
+  id: 1562
+  famille: "Strigidae"
+  lb_nom: "Strix ulula"
+  nom_fr: "Chouette épervière"
+-
+  id: 1563
+  famille: "Strigidae"
+  lb_nom: "Surnia ulula"
+  nom_fr: "Chouette épervière"
+-
+  id: 1564
+  famille: "Tytonidae"
+  lb_nom: "Strix alba"
+  nom_fr: "Chouette effraie"
+-
+  id: 1565
+  famille: "Tytonidae"
+  lb_nom: "Tyto alba alba"
+  nom_fr: "Chouette effraie"
+-
+  id: 1566
+  famille: "Tytonidae"
+  lb_nom: "Tyto alba ernesti"
+  nom_fr: "Chouette effraie"
+-
+  id: 1567
+  famille: "Tytonidae"
+  lb_nom: "Tyto alba"
+  nom_fr: "Chouette effraie"
+...
