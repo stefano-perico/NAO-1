@@ -2,7 +2,9 @@
 
 namespace App\Entity;
 
+use App\Validator\Species;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ObservationRepository")
@@ -33,7 +35,6 @@ class Observation
      */
     private $image;
 
-
     /**
      * @ORM\Column(type="date")
      */
@@ -63,6 +64,7 @@ class Observation
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Taxref")
      * @ORM\JoinColumn(nullable=false)
+     * @Species()
      */
     private $species;
 
@@ -197,13 +199,13 @@ class Observation
         return $this;
     }
 
-//    /**
-//     * @ORM\PrePersist()
-//     */
-//    public function setCountSpecies()
-//    {
-//        $species = $this->getSpecies();
-//        $species->count();
-//    }
+    /**
+     * @ORM\PrePersist()
+     */
+    public function setCountSpecies()
+    {
+        $species = $this->getSpecies();
+        $species->count();
+    }
 
 }

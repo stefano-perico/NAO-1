@@ -50,6 +50,7 @@
                             <h2 class="mb-4 text-sm-center text-lg-left">Observation</h2>
 
                             <div class="form-group">
+                                {{ form_errors(observationForm.species) }}
                                 {{ form_label(observationForm.species, 'Espèce', {'label_attr':{'class':'grey-text'}}) }}
                                 {{ form_widget(observationForm.species, {'attr':{'class':'form-control'}}) }}
                             </div>
