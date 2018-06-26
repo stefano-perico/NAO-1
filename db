@@ -1,0 +1,4 @@
+c doctrine:database:drop --force &&
+c doctrine:database:create &&
+c doctrine:schema:update --force &&
+c doctrine:fixtures:load

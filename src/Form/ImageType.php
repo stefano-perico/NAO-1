@@ -19,19 +19,6 @@ class ImageType extends AbstractType
             ->add('imageFile', FileType::class,[
                 'label' => false
             ])
-            ->add('alt', TextType::class,[
-                'required' => false,
-                'label'    => false
-            ])
-            ->add('section', ChoiceType::class,[
-                'choices' => [
-                    'indéfini'      => 'indefini',
-                    'article'       => 'article',
-                    'évènement'     => 'evenement',
-                    'observation'   => 'observation'
-                ],
-                'required' => false
-            ])
         ;
     }
 

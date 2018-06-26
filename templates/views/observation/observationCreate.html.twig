@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
           integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
           crossorigin=""/>
-
     <style>
         #mapid{
             min-height: 550px;
@@ -85,9 +84,9 @@
 
                             <div class="input-group">
                                 <div class="custom-file">
-                                    {{ form_label(observationForm.image, 'Image d\'un oiseau',
+                                    {{ form_label(observationForm.image.imageFile, 'Image d\'un oiseau',
                                         {'label_attr':{'class':'custom-file-label'}}) }}
-                                    {{ form_widget(observationForm.image, {'attr':{'class':'ustom-file-input'}}) }}
+                                    {{ form_widget(observationForm.image.imageFile, {'attr':{'class':'ustom-file-input'}}) }}
                                 </div>
                             </div>
 

@@ -1,0 +1,41 @@
+%YAML 1.1
+---
+# nao.taxref
+-
+  id: 1
+  role: admin
+  firstName: david
+  lastName: gastaldello
+  email: davidgastaldello@test.com
+  password: test
+  registrationDate: 2018-06-20
+  summary: Je me présente
+  articles: null
+  event: null
+  image: null
+
+-
+  id: 2
+  role: author
+  firstName: Stefano
+  lastName: Perico
+  email: stefanoperico@test.com
+  password: test
+  registrationDate: 2018-06-20
+  summary: Je me présente
+  articles: null
+  event: null
+  image: nul
+
+-
+  id: 3
+  role: visitor
+  firstName: Bruno
+  lastName: Peltier
+  email: bp@test.com
+  password: test
+  registrationDate: 2018-06-20
+  summary: Le temps des catédrales
+  articles: null
+  event: null
+  image: nul

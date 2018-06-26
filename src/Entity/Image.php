@@ -48,16 +48,6 @@ class Image
      */
     private $updatedAt;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $alt;
-
-    /**
-     * @ORM\Column(type="string", length=50)
-     */
-    private $section;
-
     public function __construct()
     {
         $this->image = new EmbeddedFile();
@@ -96,52 +86,9 @@ class Image
         return $this->id;
     }
 
-    public function getAlt(): ?string
-    {
-        return $this->alt;
-    }
-
-    public function setAlt(?string $alt):self
-    {
-        $this->alt = $alt;
-        return $this;
-    }
-
     public function getUpdatedAt()
     {
         return $this->updatedAt;
-    }
-
-    public function getSection()
-    {
-        return $this->section;
-    }
-
-    public function setSection(string $section):self
-    {
-        $this->section = $section;
-        return $this;
-    }
-
-    /**
-     * @ORM\PreFlush()
-     * @ORM\PreUpdate()
-     */
-    public function originalNamePreFlush()
-    {
-        null === $this->alt || empty($this->alt) ?
-            $this->alt = $this->image->getOriginalName() :
-            null;
-    }
-
-    /**
-     * @ORM\PreFlush()
-     */
-    public function sectionPreFlush()
-    {
-        null === $this->section || empty($this->section) ?
-            $this->section = 'visitor' :
-            null;
     }
 
 }

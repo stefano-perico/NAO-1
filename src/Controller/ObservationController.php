@@ -84,25 +84,4 @@ class ObservationController extends Controller
         ]));
     }
 
-    /**
-     * @Route("/test", name="test")
-     */
-    public function test(Request $request, EntityManagerInterface $em)
-    {
-        $observation = new Observation();
-        $observationForm = $this->createForm(ObservationType::class, $observation);
-        $observationForm->handleRequest($request);
-
-        if ($observationForm->isSubmitted() && $observationForm->isValid()) {
-            $author = $em->getRepository(User::class)->find(1);//FIXME: à modifier
-
-            $observation->setAuthor($author);
-
-            $em->persist($observation);
-            $em->flush();
-        }
-        return new Response($this->renderView('new.html.twig',[
-            'observationForm' => $observationForm->createView()
-        ]));
-    }
 }
