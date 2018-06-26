@@ -1,7 +1,10 @@
 $(document).ready(function(){
-
+    var $latitude = $("#observation_position_latitude");
+    var $longitude= $("#observation_position_longitude");
+    var $autocompleteSpecies = $("#observation_species");
+    var $messagePopup = "Votre latitude et votre longitude a été renseigné automatiquement. Votre position est: "  ;
     // initialisation de la map + position de la map
-    var mymap = L.map('mapid').setView([47, 1.6], 6);
+    var mymap = L.map('mapid').setView([48.857342405041436, 2.3520934581756596], 6);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 8,
@@ -9,33 +12,19 @@ $(document).ready(function(){
         accessToken: 'pk.eyJ1IjoiZnJvc3RlIiwiYSI6ImNqaDd3OHdtbzAwbm0ycXFsbmFtOTJidTIifQ.C6l9gAch8EEE5fxzCIF35g'
     }).addTo(mymap);
 
-    var marker;
+    var $marker;
     // fonction click sur la map pour donner la position du clic et remplit lat et long dans form
-    function onMapClick(e) {
-        if (typeof (marker)==='undefined') {
-            marker = new L.marker(e.latlng);
-            marker.addTo(mymap)
-                .bindPopup("Votre latitude et votre longitude a été renseigné en fonction de l'endroit ou vous venez de cliquer (" + e.latlng + ")").openPopup();
+    function setMapMarker(e) {
+        if (typeof ($marker)==='undefined') {
+            $marker = new L.marker(e.latlng);
+            $marker.addTo(mymap)
+                .bindPopup($messagePopup + e.latlng).openPopup();
         }else {
-            marker.setLatLng(e.latlng)
-                .bindPopup("Votre latitude et votre longitude a été renseigné en fonction de l'endroit ou vous venez de cliquer (" + e.latlng + ")").openPopup();
+            $marker.setLatLng(e.latlng)
+                .bindPopup($messagePopup + e.latlng).openPopup();
         }
-        $("#lat").val(e.latlng.lat); // a remplacer par l'id du champ latitude
-        $("#long").val(e.latlng.lng); // a remplacer par l'id du champ longitude
-    }
-
-    // si localisation OK donne lat et long avec marker et remplit lat et long dans form
-    function onLactionFound(e){
-        if (typeof (marker)==='undefined') {
-            marker = new L.marker(e.latlng);
-            marker.addTo(mymap)
-                .bindPopup("Votre latitude et votre longitude a été renseigné en fonction de votre emplacement GPS (" + e.latlng + ")").openPopup();
-        }else {
-            marker.setLatLng(e.latlng)
-                .bindPopup("Votre latitude et votre longitude a été renseigné en fonction de votre emplacement GPS (" + e.latlng + ")").openPopup();
-        }
-        $("#observation_position_latitude").val(e.latlng.lat); // a remplacer par l'id du champ latitude
-        $("#observation_position_longitude").val(e.latlng.lng); // a remplacer par l'id du champ longitude
+        $latitude.val(e.latlng.lat);
+        $longitude.val(e.latlng.lng);
     }
 
     // Message d'erreur de l'ocalisation
@@ -48,16 +37,17 @@ $(document).ready(function(){
         mymap.locate({setView: true, maxZoom: 16});
     });
 
-    mymap.on('click', onMapClick);
-    mymap.on('locationfound', onLactionFound);
+    mymap.on('click', setMapMarker);
+    mymap.on('locationfound', setMapMarker);
     mymap.on('locationerror', onLocationError);
-});
 
-$(document).ready(function() {
-    $("#observation_species")
+
+    // autocomplete jquery ui
+    $autocompleteSpecies
         .val("")
         .autocomplete({
             source: "{{ path('species_autocomplete') }}",
-            minLength: 2,
+            minLength: 2
         });
+
 });
