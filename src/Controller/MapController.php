@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: stefano
- * Date: 24/06/18
- * Time: 09:52
- */
 
 namespace App\Controller;
 
@@ -18,20 +12,20 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Class MapController
  * @package App\Controller
- * @Route("/map")
+ * @Route("/carte")
  */
 class MapController extends Controller
 {
     /**
-     * @Route("/obs", name="obs")
+     * @Route(name="observation")
      */
-    public function obs(TaxrefRepository $repository){
+    public function observation(TaxrefRepository $repository){
         $obs = $repository->findObs();
         return $this->render('views/map/obs.html.twig', ['obs' => $obs]);
     }
 
     /**
-     * @Route("/find/{slug}", name="find")
+     * @Route("/{slug}", name="find")
      */
     public function find(EntityManagerInterface $em, $slug)
     {
@@ -40,7 +34,9 @@ class MapController extends Controller
             'species' => $slug
         ]);
 
-        return $this->render('views/map/find.html.twig', ['obs' => $obs]);
+        return $this->render('views/map/find.html.twig', [
+            'obs' => $obs
+        ]);
     }
 
 }
