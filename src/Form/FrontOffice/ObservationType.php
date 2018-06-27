@@ -44,8 +44,9 @@ class ObservationType extends AbstractType
                     dump($entityToString);
                 },
                 function ($stringToEntity){
-                    dump($stringToEntity);
-                    return $this->taxrefRepository->findOneBy(['lb_nom'=>$stringToEntity]);
+                    $match = [];
+                    preg_match('/[^()]+/',$stringToEntity,$match);
+                    return $this->taxrefRepository->findOneBy(['nom_fr'=>trim($match[0])]);
                 }
             ))
         ;

@@ -4,7 +4,7 @@ $(document).ready(function(){
     var $autocompleteSpecies = $("#observation_species");
     var $messagePopup = "Votre latitude et votre longitude a été renseigné automatiquement. Votre position est: "  ;
     // initialisation de la map + position de la map
-    var mymap = L.map('mapid').setView([48.857342405041436, 2.3520934581756596], 6);
+    var mymap = L.map('mapid').setView([47, 2], 6);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 8,

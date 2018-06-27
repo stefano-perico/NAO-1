@@ -51,8 +51,10 @@
 
                             <div class="form-group">
                                 {{ form_errors(observationForm.species) }}
-                                {{ form_label(observationForm.species, 'Espèce', {'label_attr':{'class':'grey-text'}}) }}
-                                {{ form_widget(observationForm.species, {'attr':{'class':'form-control','urlAutocomplete':path('species_autocomplete')}}) }}
+                                <div class="ui-widget">
+                                    {{ form_label(observationForm.species, 'Espèce', {'label_attr':{'class':'grey-text'}}) }}
+                                    {{ form_widget(observationForm.species, {'attr':{'class':'form-control ui-autocomplete-input','urlAutocomplete':path('species_autocomplete')}}) }}
+                                </div>
                             </div>
 
                             <div class="form-group">
