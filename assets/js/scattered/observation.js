@@ -41,12 +41,11 @@ $(document).ready(function(){
     mymap.on('locationfound', setMapMarker);
     mymap.on('locationerror', onLocationError);
 
-
     // autocomplete jquery ui
     $autocompleteSpecies
         .val("")
         .autocomplete({
-            source: "{{ path('species_autocomplete') }}",
+            source: document.getElementById('observation_species').getAttribute('urlAutocomplete'),
             minLength: 2
         });
 
