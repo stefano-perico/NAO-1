@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Comments;
-use App\Form\CommentType;
+use App\Form\FrontOffice\CommentType;
 use App\Repository\ArticleRepository;
 use App\Repository\UserRepository;
 use App\Services\CommentsService;

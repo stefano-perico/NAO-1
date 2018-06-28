@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Form;
+namespace App\Form\FrontOffice;
 
 use App\Entity\Comments;
 use App\Repository\ArticleRepository;

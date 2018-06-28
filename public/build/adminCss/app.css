@@ -1,2 +1,24 @@
-body {
-  background-color: whitesmoke; }
+* {
+  font-family: 'Open Sans', sans-serif;
+  color: #444; }
+
+.admin {
+  background-color: #FFF; }
+  .admin h1, .admin h2, .admin h3, .admin h4, .admin h5, .admin h6 {
+    font-family: 'Roboto', sans-serif; }
+  .admin .navbar {
+    background-color: #444 !important; }
+  .admin .container {
+    padding: 10px;
+    border-radius: 5px; }
+    .admin .container table {
+      text-align: center; }
+      .admin .container table tr:hover {
+        background-color: #EEE; }
+  .admin .btn:hover {
+    color: #FFF; }
+    .admin .btn:hover i {
+      color: #FFF;
+      transition-duration: 300ms; }
+  .admin .btn-outline-success i {
+    color: green; }

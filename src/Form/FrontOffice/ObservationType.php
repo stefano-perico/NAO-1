@@ -5,7 +5,6 @@ namespace App\Form\FrontOffice;
 use App\Entity\Observation;
 use App\Entity\Taxref;
 use App\Form\ImageType;
-use App\Form\PositionGeoType;
 use App\Repository\ImageRepository;
 use App\Repository\TaxrefRepository;
 use Symfony\Component\Form\AbstractType;

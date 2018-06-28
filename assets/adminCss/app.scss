@@ -1,3 +1,39 @@
-body{
-  background-color: whitesmoke;
+*{
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+}
+
+.admin{
+  background-color: #FFF;
+
+  h1, h2, h3, h4, h5, h6{
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .navbar{
+    background-color: #444!important;
+  }
+
+  .container{
+    padding: 10px;
+    border-radius: 5px;
+    table{
+      text-align: center;
+      tr:hover{
+        background-color: #EEE;
+      }
+    }
+  }
+  
+  .btn:hover{
+    color: #FFF;
+    i{
+      color: #FFF;
+      transition-duration: 300ms;
+    }
+  }
+
+  .btn-outline-success i{
+    color: green;
+  }
 }

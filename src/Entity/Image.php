@@ -48,6 +48,11 @@ class Image
      */
     private $updatedAt;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $alt;
+
     public function __construct()
     {
         $this->image = new EmbeddedFile();
@@ -90,5 +95,28 @@ class Image
     {
         return $this->updatedAt;
     }
+
+    public function getAlt()
+    {
+        return $this->alt;
+    }
+
+    public function setAlt($alt)
+    {
+        $this->alt = $alt;
+        return $this;
+    }
+
+    /**
+     * @ORM\PreFlush()
+     */
+    public function PreFlushAlt()
+    {
+        dump($this->imageFile);
+        $this->alt === null ?
+            $this->alt = 'undifined':
+            null;
+    }
+
 
 }

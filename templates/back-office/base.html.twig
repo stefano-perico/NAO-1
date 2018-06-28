@@ -3,61 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <script defer src="{{ asset('/build/js/scattered/turbolinks-min.js') }}" data-turbolinks-eval="false"></script>
-        <script defer src="{{ asset('/build/js/compact/compact-min.js') }}" data-turbolinks-eval="false"></script>
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('/build/css/app.css') }}">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
             <link rel="stylesheet" href="{{ asset('/build/adminCss/app.css') }}">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         {% endblock %}
     </head>
-    <body>
+    <body class="admin">
         <header>
-
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                <a class="navbar-brand" href="{{ path('article_index') }}">Admin</a>
-                <a class="navbar-brand" href="{{ path('home') }}">Site</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarColor02">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ path('article_index') }}">Articles</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ path('category_index') }}">Catégories</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ path('user_index') }}">Utilisateurs</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ path('event_index') }}">Evènements</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ path('comments_index') }}">Commentaires</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ path('image_index') }}">Images</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ path('observation_index') }}">Observations</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{{ path('position_index') }}">Positions</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
-
+            {% include('back-office/default/nav.html.twig') %}
         </header>
-        <div class="container">
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        <div class="container mt-5 custom-container">
+            {% block body %}{% endblock %}
         </div>
+
+        {% block javascripts %}
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        {% endblock %}
     </body>
 </html>
