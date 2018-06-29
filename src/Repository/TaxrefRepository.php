@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Taxref;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -25,13 +26,12 @@ class TaxrefRepository extends ServiceEntityRepository
             ->andWhere('taxref.obsCount > :val')
             ->setParameter('val', 0)
             ->orderBy('taxref.id', 'ASC')
-            ->setMaxResults(10)
             ->getQuery()
             ->getResult()
             ;
     }
 
-    public function findSpecies($term)
+    public function findSpecies(?string $term)
     {
         return $this->createQueryBuilder('t')
             ->where('t.nom_fr LIKE :name')
@@ -40,6 +40,25 @@ class TaxrefRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    /**
+     * @param null|string $term
+     */
+    public function getSpeciesObsWithSearchQueryBuilder(?string $term): QueryBuilder
+    {
+        $qb = $this->createQueryBuilder('t')
+            ->andWhere('t.obsCount > :val')
+            ->setParameter('val', 0);
+
+            if ($term) {
+                $qb
+                    ->andWhere('t.obsCount > :val')
+                    ->andWhere('t.nom_fr LIKE :term OR t.lb_nom LIKE :term OR t.famille LIKE :term')
+                    ->setParameters(['val' => 0, 'term' => '%' . $term . '%'])
+                ;
+            }
+
+        return $qb;
+    }
 
 //    /**
 //     * @return Taxref[] Returns an array of Taxref objects
