@@ -1,6 +1,29 @@
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {{ form_start(form) }}
+<div class="row">
+    <div class="card-body col-8 form-group encart">
+        {{ form_row(form.summary, {'label':'Sommaire'}) }}
+
+    </div>
+
+    <div class="card-body col-3 offset-1 form-group encart">
+        {{ form_row(form.title, {'label':'Titre de l\'article'}) }}
+        {{ form_row(form.slug, {'label':'Slug de l\'article'}) }}
+        {{ form_row(form.author, {'label':'Auteur de l\'article'}) }}
+        {{ form_row(form.date, {'label':'Date de création'}) }}
+        {{ form_row(form.categories, {'label':'Catégorie'}) }}
+    </div>
+
+    <div class="card-body col-12 form-group encart">
+        {{ form_row(form.content, {'label':'Contenu de l\'article'}) }}
+    </div>
+</div>
+
+
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+
+    <div class="text-right">
+        <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+    </div>
 {{ form_end(form) }}

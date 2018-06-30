@@ -29,7 +29,7 @@
                     {% endif %}
                     <div class="card-body">
                         <h2 class="card-title">{{ article.title }}</h2>
-                        <p class="card-text text-justify">{{ article.summary }}</p>
+                        <p class="card-text text-justify">{{ article.summary|raw }}</p>
                         <div class="text-right">
                             <a href="{{ path('blogArticle' ,{slug : article.Slug}) }}">
                                 <img src="{{ asset('imgSite/buttons/Symbole 3 – 6.png') }}" alt="" height="50px;">

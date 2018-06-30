@@ -24,7 +24,7 @@
             <tr>
                 <td>{{ observation.id }}</td>
                 <td>{{ observation.description }}</td>
-                <td>{{ observation.species }}</td>
+                <td>{{ observation.species.nomFr }}</td>
                 <td>{{ observation.date ? observation.date|date('Y-m-d') : '' }}</td>
                 <td>{{ observation.updatedAt ? observation.updatedAt|date('Y-m-d') : '' }}</td>
                 {% if observation.position.id is defined %}
