@@ -9,93 +9,78 @@
     <style>
         #mapid{
             height: 100%;
-            min-height: 300px;
+            min-height: 595px;
         }
     </style>
 {% endblock %}
 {% block body %}
-    <aside class="col-lg-12">
-        <p class="grey-text">Cliquez sur la map pour avoir votre <strong>longitude</strong> et votre <strong>latitude</strong>.</p>
+    <section class="container-fluid">
         <div id="mapid" class="map-container z-depth-1-half"></div>
-    </aside >
-    <table class="table">
+    </section>
 
-        <!--Table head-->
-        <thead>
-        <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>message</th>
-            <th>$latitude</th>
-            <th>$longitude</th>
-            <th>$species</th>
-            <th>speciesTest</th>
-        </tr>
-        </thead>
-        <!--Table head-->
-        <!--Table body-->
-        <tbody>
-        <!--Table-->
-        {% for ob in obs %}
+    <section class="container-fluid">
+        <h5></h5>
+        <table class="table table-hover text-center">
+
+            <!--Table head-->
+            <thead>
             <tr>
-
+                <th>Famille</th>
+                <th>Taxon</th>
+                <th>Nom</th>
+                <th>date</th>
+                <th>auteur</th>
+                <th>description</th>
             </tr>
-        {% endfor %}
-        </tbody>
-        <!--Table body-->
+            </thead>
+            <!--Table head-->
+            <!--Table body-->
+            <tbody>
+            <!--Table-->
+            {% for ob in obs %}
+                <tr>
+                    <td>{{ ob.species.famille }}</td>
+                    <td>{{ ob.species.lbNom }}</td>
+                    <td>{{ ob.species.nomFr }}</td>
+                    <td>{{ ob.date | date("d/m/Y") }}</td>
+                    <td>{{ ob.author.firstName | escape}}</td>
+                    <td>{{ ob.description | escape}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            <!--Table body-->
+            <!--Table-->
+        </table>
+    </section>
 
-    </table>
-    <!--Table-->
+
 {% endblock %}
 {% block script %}
     {{ parent() }}
-
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
-            integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
-            crossorigin="">
-    </script>
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- JQuery-ui -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
-    <!-- Leaflet JS var -->
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
     <script>
         $(document).ready(function() {
             // initialisation de la map + position de la map
-            var mymap = L.map('mapid').setView([46.7248003746672, 2.615478336811066], 6);
+            var $mymap = L.map('mapid').setView([46.72, 2.61], 5);
             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                maxZoom: 8,
+                maxZoom: 6,
                 id: 'mapbox.streets',
                 accessToken: 'pk.eyJ1IjoiZnJvc3RlIiwiYSI6ImNqaDd3OHdtbzAwbm0ycXFsbmFtOTJidTIifQ.C6l9gAch8EEE5fxzCIF35g'
-            }).addTo(mymap);
+            }).addTo($mymap);
 
-            // Custom icon
-            var napIcon = L.icon({
-                iconUrl: '{{ asset('img/element_logo_NAO.png') }}',
-                iconSize: [108, 103], // size of the icon
-
-                popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
-            });
-
-            // data observation
-            var myItems =
+            var $myItems =
                 [
                     {% for ob in obs %}
-                        [
-                            // TODO ajouter les coordonnées des obs
-                        ]
+                        ["{{  ob.description }}", {{ ob.position.latitude }}, {{ ob.position.longitude }}],
                     {% endfor %}
                 ];
 
-            // afficher data observation sur map
-            for (var i = 0; i < myItems.length; i++) {
-                marker = new L.marker([myItems[i][1], myItems[i][2]], {icon: napIcon})
-                    .bindPopup(myItems[i][0])
-                    .addTo(mymap)
+            for (var $i = 0; $i < $myItems.length; $i++) {
+                $marker = new L.marker([$myItems[$i][1], $myItems[$i][2]])
+                    .bindPopup($myItems[$i][0])
+                    .addTo($mymap)
             }
-
         });
     </script>
 {% endblock %}

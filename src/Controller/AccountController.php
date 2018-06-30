@@ -71,6 +71,8 @@ class AccountController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
+
+            return $this->redirectToRoute('myAccount');
         }
 
         return new Response($this->renderView('views/connexion.html.twig',[

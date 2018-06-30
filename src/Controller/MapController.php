@@ -6,7 +6,9 @@ namespace App\Controller;
 use App\Entity\Observation;
 use App\Repository\TaxrefRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -17,21 +19,30 @@ use Symfony\Component\Routing\Annotation\Route;
 class MapController extends Controller
 {
     /**
-     * @Route(name="observation")
+     * @Route("/index", name="observation")
      */
-    public function observation(TaxrefRepository $repository){
-        $obs = $repository->findObs();
-        return $this->render('views/map/obs.html.twig', ['obs' => $obs]);
+    public function observation(TaxrefRepository $repository, Request $request, PaginatorInterface $paginator){
+
+        $q = $request->query->get('q');
+        $queryBuilder = $repository->getSpeciesObsWithSearchQueryBuilder($q);
+
+        $pagination = $paginator->paginate(
+            $queryBuilder, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+
+        return $this->render('views/map/index.html.twig', ['pagination' => $pagination]);
     }
 
     /**
-     * @Route("/{slug}", name="find")
+     * @Route("/{id}", name="find")
      */
-    public function find(EntityManagerInterface $em, $slug)
+    public function find(EntityManagerInterface $em, $id)
     {
         $repository = $em->getRepository(Observation::class);
         $obs = $repository->findBy([
-            'species' => $slug
+            'species' => $id
         ]);
 
         return $this->render('views/map/find.html.twig', [

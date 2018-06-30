@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+{% block style %}
+    {{ parent() }}
+
+    <style>
+        #s-search-species {
+            background-color: #F4D03F;
+            border-radius: 8px;
+        }
+    </style>
+{% endblock %}
+
+
+{% block body %}
+    <div class="card text-white border-0 mb-5">
+        <img class="card-img cover-custom" src="{{ asset('imgSite/pages/carte_interactive.png') }}" alt="Bouteille à la mers">
+        <div class="card-img-overlay d-flex justify-content-center">
+            <div class="col-md-10 text-left">
+                <h1 class="font-weight-bold text-white mb-lg-5">CARTE INTERACTIVE</h1>
+                <h2 style="color: blue;">Rechercher un oiseau</h2>
+            </div>
+        </div>
+    </div>
+
+    <section class="container">
+        <aside id="s-search-species" class="row my-4 text-center" >
+            <div class="col-md-6 mt-3">
+                <p>Vous recherchez un oiseau ?</p>
+            </div>
+            <div class="col-md-6 mt-3">
+                <p>Tapez le nom dans la barre de recherche</p>
+                <form>
+                    <div class="input-group my-3">
+                        <input type="text"
+                               name="q"
+                               class="form-control"
+                               placeholder="Rechercher une espèce, une famille, ou un taxon"
+                               value="{{ app.request.query.get('q') }}"
+                        >
+                        <div class="input-group-append">
+                            <button type="submit"
+                                    class="btn btn-primary">
+                                <span style="color: white"><i class="fa fa-search"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </aside>
+    </section>
+
+    <section class="container-fluid">
+        <table class="table table-hover text-center">
+            <!--Table head-->
+            <thead>
+                <tr>
+                    <th>Nombre d'observation</th>
+                    <th>Famille</th>
+                    <th>Taxon</th>
+                    <th>Nom</th>
+                    <th>voir</th>
+                </tr>
+            </thead>
+            <!--Table head--
+            <!--Table body-->
+            <tbody>
+            <!--Table-->
+            {% for ob in pagination %}
+                <tr>
+                    <td>{{ ob.obsCount }}</td>
+                    <td>{{ ob.famille }}</td>
+                    <td>{{ ob.lbNom }}</td>
+                    <td>{{ ob.nomFr }}</td>
+                    <td><a href="{{ path('find', {'id': ob.id}) }}"><i class="fa fa-eye fa-2x"></i> </a></td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4" class="text-center">Désoler, il n'y a aucune observations pour "{{ app.request.query.get('q') | escape }}"</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            <!--Table body-->
+        </table>
+        <!--Table-->
+        <div class="text-align-center">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </section>
+
+
+
+{% endblock %}
+
+
+
