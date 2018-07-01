@@ -34,6 +34,7 @@ class ArticleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+
             ->add('title')
             ->add('summary', TextareaType::class,[
                 'block_name' => 'test',
@@ -48,6 +49,7 @@ class ArticleType extends AbstractType
                 'widget' => 'single_text'
             ])
             ->add('slug')
+
             ->add('author', ChoiceType::class,[
                 'choices'    => $this->userRepository->nameAndId()
             ])

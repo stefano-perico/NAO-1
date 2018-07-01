@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Event;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
+use Doctrine\ORM\QueryBuilder;
 
 /**
  * @method Event|null find($id, $lockMode = null, $lockVersion = null)
@@ -17,6 +18,25 @@ class EventRepository extends ServiceEntityRepository
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Event::class);
+    }
+
+    /**
+     * @param null|string $term
+     */
+    public function getEventWithSearchQueryBuilder(?string $term): QueryBuilder
+    {
+        $qb = $this->createQueryBuilder('e');
+
+        if ($term) {
+            $qb
+                ->andWhere('e.title LIKE :term')
+                ->setParameter('term','%' . $term . '%')
+            ;
+        }
+
+        return $qb
+            ->orderBy('e.publishedAt', 'DESC')
+            ;
     }
 
 }

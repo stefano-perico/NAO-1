@@ -41,17 +41,6 @@
                     {{ form_widget(formCreateAccount.email, {'attr':{'class':'form-control mt-2', 'placeholder':'Votre email'}}) }}
                     {{ form_errors(formCreateAccount.password) }}
                     {{ form_widget(formCreateAccount.password, {'attr':{'class':'form-control mt-2', 'placeholder':'Votre password'}}) }}
-                    {{ form_errors(formCreateAccount.summary) }}
-                    {{ form_widget(formCreateAccount.summary, {'attr':{'class':'form-control mt-2', 'placeholder':'Un bref sommaire'}}) }}
-                    <div class="input-group mt-2">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                            {{ form_widget(formCreateAccount.image.imageFile, {'attr':{'class':'custom-file-input mt-2'}}) }}
-                            <label class="custom-file-label" for="user_image_imageFile">Choisissez une image</label>
-                        </div>
-                    </div>
                     {{ form_rest(formCreateAccount) }}
                 </div>
                 <button class="btn btn-lg btn-success btn-block col-12  col-md-4 offset-md-8 mt-2" type="submit">Créer un compte !</button>

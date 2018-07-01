@@ -18,7 +18,7 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8">
 
-            {% for event in events %}
+            {% for event in pagination %}
                 <!-- Blog Post -->
                 <div class="card mb-4 mt-4">
                     {% if event.image.image is defined %}
@@ -45,58 +45,60 @@
 
             <!-- Pagination -->
             <ul class="pagination justify-content-center mb-4">
-                <li class="page-item">
-                    <a class="page-link" href="#">&larr; Précédent</a>
-                </li>
-                <li class="page-item disabled">
-                    <a class="page-link" href="#">Suivant &rarr;</a>
-                </li>
+                {{ knp_pagination_render(pagination) }}
             </ul>
 
         </div>
 
         <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
+        <aside class="col-md-4">
 
             <!-- Search Widget -->
             <div class="card my-4">
                 <h5 class="card-header">Rechercher</h5>
                 <div class="card-body">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Nom de l'événement..">
-                        <span class="input-group-btn">
-                  <button class="btn btn-secondary search" type="button"><img src="{{ asset('imgSite/ic_search.png') }}" alt="" height="30px"></button>
-                </span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Categories Widget -->
-            <div class="card my-4 articles-decouvrir">
-                <h5 class="card-header">D'autres événements à découvrir</h5>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-12">
-                            <ul class="list-unstyled mb-0">
-                                {% for event in events %}
-                                    <li>
-                                        <a href="{{ path('evenement', {'slug': event.Slug}) }}">{{ event.title }}</a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
+                    <form>
+                        <div class="input-group my-3">
+                            <input type="text"
+                                   name="q"
+                                   class="form-control"
+                                   placeholder="Rechercher un article"
+                                   value="{{ app.request.query.get('q') }}"
+                                   id="observation_species"
+                            >
+                            <div class="input-group-append">
+                                <button type="submit"
+                                        class="btn btn-primary">
+                                    <span style="color: white"><i class="fa fa-search"></i></span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 
-            <!-- Side Widget -->
-            <div class="card my-4 border-0 text-center mt-5">
-                <p class="font-weight-bold">un peu de blabla</p>
-                <p class="text-muted mt-2">Un peu de texte et blabla et blabla et bla et encore blabla</p>
-                <a href="#"><img class="align-self-center" src="{{ asset('imgSite/buttons/news.png') }}" alt="NewsLetter" width="200px"></a>
+            <div class="card my-4">
+                <h5 class="card-header">Newsletter</h5>
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">Vous voulez vous inscrire à notre newletter ?</p>
+                    <form>
+                        {{ form_start(newsForm) }}
+                        <div class="input-group my-3">
+                            {{ form_errors(newsForm.mail) }}
+                            {{ form_widget(newsForm.mail, {'attr':{'class':'form-control', 'placeholder':'Votre mail'}}) }}
+                            <div class="input-group-append">
+                                <button type="submit"
+                                        class="btn btn-primary">
+                                    <span style="color: white"><i class="far fa-envelope"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                        {{ form_end(newsForm) }}
+                    </form>
+                </div>
             </div>
 
-        </div>
+        </aside>
 
     </div>
     <!-- /.row -->
