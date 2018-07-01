@@ -36,6 +36,7 @@
                                class="form-control"
                                placeholder="Rechercher une espèce, une famille, ou un taxon"
                                value="{{ app.request.query.get('q') }}"
+                               id="observation_species"
                         >
                         <div class="input-group-append">
                             <button type="submit"
@@ -86,10 +87,8 @@
             {{ knp_pagination_render(pagination) }}
         </div>
     </section>
-
-
-
 {% endblock %}
+
 
 
 

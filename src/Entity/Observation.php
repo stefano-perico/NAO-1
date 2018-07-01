@@ -32,6 +32,7 @@ class Observation
 
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\Image", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=true)
      */
     private $image;
 

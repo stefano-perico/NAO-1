@@ -11,6 +11,8 @@ use App\Repository\UserRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -34,12 +36,12 @@ class ArticleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('summary')
-            ->add('content')
+            ->add('title', TextType::class)
+            ->add('summary', TextType::class)
+            ->add('content', TextType::class)
             ->add('published')
-            ->add('date')
-            ->add('slug')
+            ->add('date', DateType::class)
+            ->add('slug', TextType::class)
             ->add('author', ChoiceType::class,[
                 'choices'    => $this->userRepository->nameAndId()
             ])

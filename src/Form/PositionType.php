@@ -26,8 +26,8 @@ class PositionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('longitude')
-            ->add('latitude')
+            ->add('longitude', NumberType::class)
+            ->add('latitude',NumberType::class)
             ->add('address', TextType::class)
         ;
         $builder

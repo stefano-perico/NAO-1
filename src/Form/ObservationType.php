@@ -10,6 +10,7 @@ use App\Repository\UserRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -28,7 +29,7 @@ class ObservationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('description')
+            ->add('description', TextType::class)
             ->add('species', EntityType::class,
                 [
                     'class'     =>  Taxref::class,
@@ -39,7 +40,8 @@ class ObservationType extends AbstractType
                 'choices'    => $this->userRepository->nameAndId()
             ])
             ->add('image', ChoiceType::class,[
-                'choices'   => $this->imageRepository->nameAndId()
+                'choices'   => $this->imageRepository->nameAndId(),
+                'required' => false,
             ])
             ->add('verifiedBy', ChoiceType::class,[
                 'choices'    => $this->userRepository->nameAndId()
