@@ -23,7 +23,7 @@ class ImageRepository extends ServiceEntityRepository
     {
         $imagesInArray = [];
         foreach ($this->findAll() as $image) {
-            $imagesInArray[$image->getAlt()] = $image;
+            $imagesInArray[$image->getImage()->getOriginalName()] = $image;
         }
         return $imagesInArray;
     }

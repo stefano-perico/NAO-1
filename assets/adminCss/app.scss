@@ -1,10 +1,15 @@
 *{
   font-family: 'Open Sans', sans-serif;
-  color: #444;
+  color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: #fff;
 }
 
 .admin{
-  background-color: #FFF;
+
+  background-color: #444;
 
   h1, h2, h3, h4, h5, h6{
     font-family: 'Roboto', sans-serif;
@@ -20,11 +25,32 @@
     table{
       text-align: center;
       tr:hover{
-        background-color: #EEE;
+        background-color: #333;
+      }
+      .action{
+        width: 100px;
+      }
+      .summary{
+        max-height: 75px;
+        overflow: hidden;
       }
     }
   }
-  
+
+  .encart{
+    color: #000;
+    //background-color: white;
+    //box-shadow: 2px 2px 7px #333;
+    transition-duration: 300ms;
+    border-radius: 5px;
+
+    &:hover{
+      opacity: 1;
+      box-shadow: 4px 4px 14px #000;
+      transition-duration: 300ms;
+    }
+  }
+
   .btn:hover{
     color: #FFF;
     i{
@@ -36,4 +62,9 @@
   .btn-outline-success i{
     color: green;
   }
+}
+
+.form-control{
+  background-color: #444;
+  color: white;
 }

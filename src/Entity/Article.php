@@ -22,6 +22,7 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(max="255", maxMessage="la longueur maximale autorisée est de 255 caractères")
      */
     private $title;
 
@@ -54,6 +55,7 @@ class Article
 
     /**
      * @ORM\Column(type="date")
+     * @Assert\Date(message="Date invalide")
      */
     private $date;
 
@@ -64,6 +66,7 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(max="255", maxMessage="la longueur maximale autorisée est de 255 caractères")
      */
     private $slug;
 
@@ -74,7 +77,7 @@ class Article
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Image")
-     * @ORM\JoinColumn(name="image_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="image_id", referencedColumnName="id", onDelete="SET NULL")
      */
     private $image;
 

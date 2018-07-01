@@ -16,7 +16,6 @@
                 <th>Image.mimeType</th>
                 <th>Image.size</th>
                 <th>Image.dimensions</th>
-                <th>image.section</th>
                 <th>Image</th>
                 <th>actions</th>
             </tr>
@@ -32,7 +31,6 @@
                 <td>{{ image.image.mimeType }}</td>
                 <td>{{ image.image.size }}</td>
                 <td>{{ image.image.dimensions.0 }}/{{ image.image.dimensions.1 }}</td>
-                <td>{{ image.section }}</td>
                 <td>
                     <img src="{{ asset('img/'~image.image.name) }}" alt="" width="100%">
                 </td>

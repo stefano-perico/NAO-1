@@ -32,7 +32,8 @@ class Observation
 
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\Image", cascade={"persist"})
-     * @ORM\JoinColumn(nullable=true)
+
+     * @ORM\JoinColumn(nullable=true, name="image_id", referencedColumnName="id", onDelete="SET NULL")
      */
     private $image;
 
