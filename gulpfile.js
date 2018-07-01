@@ -28,6 +28,17 @@ gulp.task('sassAdmin', function () {
         .pipe(gulp.dest('./public/build/adminCss'));
 });
 
+gulp.task('sassTiny', function () {
+    return gulp.src('./assets/adminCss/tiny.scss')
+        .pipe(sass().on('error', sass.logError))
+        // .pipe(cleanCSS({compatibility: 'edge'}))
+        // .pipe(uglifycss({
+        //     "maxLineLen": 80,
+        //     "uglyComments": true
+        // }))
+        .pipe(gulp.dest('./public/build/adminCss'));
+});
+
 gulp.task('scriptsCompact', function() {
     return gulp.src('./assets/js/compact/**/*')
         .pipe(plumber())
@@ -44,7 +55,7 @@ gulp.task('scriptsScattered', function() {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./assets/**/*', ['sass', 'sassAdmin'
+    gulp.watch('./assets/**/*', ['sass', 'sassAdmin', 'sassTiny'
         // ,'scriptsCompact','scriptsScattered'
     ]);
 });
