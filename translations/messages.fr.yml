@@ -1,0 +1,81 @@
+########## HOME ##############
+#haut de page
+home_h1_titre: BIENVENUE
+home_h1_sous_titre: L'ORNITHOLOGIE POUR TOUS
+home_btn_1: Rejoignez-nous
+
+#presentation
+home_h2_presentation: Qui sommes-nous?
+home_subtitle_presentation: L'association "nos amis les oiseaux"
+home_text_presentation: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi deleniti doloremque ducimus eaque est, ex, hic id modi nobis obcaecati omnis pariatur praesentium quae quaerat quasi quibusdam velit voluptatum!</span><span>Amet at consectetur cumque cupiditate dolore earum expedita explicabo, fuga impedit ipsam maxime, minima minus, natus nesciunt non nostrum nulla odit possimus quia sapiente similique sint temporibus totam ut voluptatibus.</span><span>Aspernatur atque culpa cupiditate doloremque et ipsam minima, minus, nam officiis quisquam quos similique sunt voluptates? Ab accusamus consequatur dicta eos ex exercitationem expedita fuga ipsam iste qui sequi, velit!</span><span>Aliquid, aperiam, aut blanditiis distinctio, eaque est eum fugit illo itaque laudantium porro saepe sint suscipit tempora veritatis? Aperiam cum eos excepturi inventore molestias mollitia saepe. Dolorum facere pariatur temporibus.</span><span>Beatae exercitationem labore libero nam similique vel! Adipisci amet asperiores, aut corporis cupiditate, doloribus ea fugiat hic illo in laboriosam magni omnis, qui soluta voluptatem. Dolorem in quis rem rerum. Accusamus aperiam fugit incidunt ipsam nostrum possimus reprehenderit veniam voluptates? Aliquam architecto blanditiis deserunt eum, fugiat fugit illo magnam necessitatibus neque nulla qui quis quos rem repudiandae sint temporibus unde?
+
+#observation
+home_h2_observation: Nos dernières observations
+
+########## EVENTS ##############
+#haut de page
+event_h1_titre: Evénements...
+event_h2_sous_titre: Près de chez vous
+
+
+########## BLOG ##############
+#haut de page
+blog_h1_titre: Parlons-en...
+blog_h2_sous_titre: Un éspace pour échanger
+
+########## OBSERVATION ##############
+#haut de page
+observation_h1_titre: Vos observations
+observation_h2_sous_titre: Pour ajouter une observation
+observation_text: Vous devez vous connecter
+
+########## OBSERVATION CREATE ##############
+#haut de page
+observation_create_h1_titre: CREER UNE NOUVELLE OBSERVATION
+observation_create_h2_sous_titre: Nous vous attendions
+
+#map
+observation_create_text: Cliquez sur la map pour avoir votre longitude et votre latitude.
+
+#form
+observation_create_h2_form: Observation
+observation_create_btn_GPS_form: Appuyer pour être localisé par GPS
+
+########## MAP INTERACTIVE ##############
+#haut de page
+mapinter_h1_titre: CARTE INTERACTIVE
+mapinter_h2_sous_titre: Rechercher un oiseau
+
+#search
+mapinter_h3_search: Vous recherchez un oiseau ?
+mapinter_text_1_search: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatum?
+mapinter_text_2_search: Tapez le nom dans la barre de recherche
+mapinter_placeholder_search: Rechercher une espèce, une famille, ou un taxon
+mapinter_placeholder_not_found: Désoler, il n'y a aucune observations pour
+
+#table
+mapinter_title_1: Nombre d'observation
+mapinter_title_2: Famille
+mapinter_title_3: Taxon
+mapinter_title_4: Nom
+mapinter_title_5: voir
+
+########## CONNEXION ##############
+connection_h1: Créez votre compte
+connection_btn_creat: Créer un compte !
+
+user_h5: Card title
+user_text: Some quick example text to build on the card title and make up the bulk of the card's content.
+
+########## NEWSLETTER ##############
+h2_newsletter: Newsletter
+subtitle_newsletter: Vous voulez vous inscrire à notre newletter ?
+
+########## BUTTON ##############
+btn_search: Rechercher
+placeholder_search_article: Rechercher un article
+placeholder_search_event: Rechercher un événement
+
+btn_close: Fermer
+
+btn_submit: Envoyer

@@ -20,17 +20,27 @@ class ArticleRepository extends ServiceEntityRepository
         parent::__construct($registry, Article::class);
     }
 
+    public function findArticle(?string $term)
+    {
+        return $this->createQueryBuilder('a')
+            ->andWhere('a.title LIKE :term')
+            ->setParameter('term', '%'.$term.'%')
+            ->getQuery()
+            ->getResult();
+    }
+
     /**
      * @param null|string $term
      * @return QueryBuilder
      */
     public function getArticleWithSearchQueryBuilder(?string $term): QueryBuilder
     {
-        $qb = $this->createQueryBuilder('a');
+        $qb = $this->createQueryBuilder('a')
+            ->innerJoin('a.author', 'author');
 
         if ($term) {
             $qb
-                ->andWhere('a.title LIKE :term')
+                ->andWhere('author.lastName LIKE :term OR a.title LIKE :term')
                 ->setParameter('term','%' . $term . '%')
             ;
         }

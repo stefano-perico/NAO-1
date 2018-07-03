@@ -22,7 +22,7 @@
             {% for ob in obs %}
                 <div class="col-md-6 my-4">
                     <div class="card">
-                        {% if ob.image.image.name %}
+                        {% if ob.image.image.name is defined %}
                             <img class="card-img-top" src="{{ asset('img/'~observation.image.image.name) }}" alt="{{ ob.image.alt }}">
                         {% else %}
                             <img class="card-img-top" src="{{ asset('imgSite/default_bird.png') }}" alt="image-oiseau-picto">

@@ -23,8 +23,8 @@
             <div class="col-md-10">
                 <div class="row" style="height: 100%">
                     <div class="col-12 text-center mt-2 align-self-center text-custom-shadow">
-                        <h1 class="text-white" style="font-size: 2em">CREER UNE NOUVELLE OBSERVATION</h1>
-                        <h2 class="text-white">Nous vous attendions</h2>
+                        <h1 class="text-white" style="font-size: 2em">{{ 'observation_create_h1_titre' | trans }}</h1>
+                        <h2 class="text-white">{{ 'observation_create_h2_sous_titre' | trans }}</h2>
                         <div class="d-flex justify-content-around">
                             <div class="d-flex justify-content-around" style="width: 500px; margin-top: 70px">
                                 <img src="{{ asset('imgSite/pages/observation/3_etapes.svg') }}" alt="" height="60px">
@@ -44,12 +44,12 @@
 
                         <aside class="col-lg-6">
                             <div id="weathermap" class="map-container z-depth-1-half"></div>
-                            <p class="text-muted">Cliquez sur la map pour avoir votre <strong>longitude</strong> et votre <strong>latitude</strong>.</p>
+                            <p class="text-muted">{{ 'observation_create_text' | trans }}</p>
                         </aside >
 
                         <aside class="col-lg-6 mt-5 mt-lg-0">
                             {{ form_start(observationForm) }}
-                            <h2 class="mb-4 text-sm-center text-lg-left">Observation</h2>
+                            <h2 class="mb-4 text-sm-center text-lg-left">{{ 'observation_create_h2_form' | trans }}</h2>
 
                             <div class="form-group">
                                 {{ form_errors(observationForm.species) }}
@@ -82,7 +82,7 @@
 
                                 <div class="form-group col-12">
                                     <a class="btn btn-outline-info col-12" id="localisation" >
-                                        Appuyer pour être localisé par GPS<i class="fa fa-map-marker ml-2"></i>
+                                        {{ 'observation_create_btn_GPS_form' | trans }}<i class="fa fa-map-marker ml-2"></i>
                                     </a>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
                             <hr>
 
                             <div class="form-group text-right">
-                                <button class="col-6 btn btn-success" type="submit">Envoyer<i class="fa fa-paper-plane-o ml-2"></i></button>
+                                <button class="col-6 btn btn-success" type="submit">{{ 'btn_submit' | trans }}<i class="fa fa-paper-plane-o ml-2"></i></button>
                             </div>
 
                             {{ form_end(observationForm) }}

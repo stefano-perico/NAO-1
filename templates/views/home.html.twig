@@ -9,10 +9,10 @@
                     <div class="col-12"></div>
                     <div class="col-12 text-center mt-2  text-custom-shadow">
                         <img src="{{ asset('imgSite/nos actions.png') }}" alt="" height="100px">
-                        <h1 class="text-white mt-2" style="font-size: 2em;">BIENVENUE <br>L'ORNITHOLOGIE POUR TOUS</h1>
+                        <h1 class="text-white mt-2" style="font-size: 2em;">{{ 'home_h1_titre' | trans }}<br>{{ 'home_h1_sous_titre' | trans }}</h1>
                     </div>
                     <div class="col-12 text-center">
-                        <a href="{{ path('createAccount') }}" class="btn btn-primary">Rejoignez-nous</a>
+                        <a href="{{ path('createAccount') }}" class="btn btn-primary">{{ 'home_btn_1' | trans }}</a>
                     </div>
                 </div>
             </div>
@@ -21,19 +21,19 @@
 
     <section class="container">
         <div class="row">
-            <div class="col-12 col-lg-6">
-                <h2 class="text-center">Qui sommes-nous?</h2>
-                <p class="text-center font-weight-bold">L'association "nos amis les oiseaux"</p>
-                <p class="text-justify"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi deleniti doloremque ducimus eaque est, ex, hic id modi nobis obcaecati omnis pariatur praesentium quae quaerat quasi quibusdam velit voluptatum!</span><span>Amet at consectetur cumque cupiditate dolore earum expedita explicabo, fuga impedit ipsam maxime, minima minus, natus nesciunt non nostrum nulla odit possimus quia sapiente similique sint temporibus totam ut voluptatibus.</span><span>Aspernatur atque culpa cupiditate doloremque et ipsam minima, minus, nam officiis quisquam quos similique sunt voluptates? Ab accusamus consequatur dicta eos ex exercitationem expedita fuga ipsam iste qui sequi, velit!</span><span>Aliquid, aperiam, aut blanditiis distinctio, eaque est eum fugit illo itaque laudantium porro saepe sint suscipit tempora veritatis? Aperiam cum eos excepturi inventore molestias mollitia saepe. Dolorum facere pariatur temporibus.</span><span>Beatae exercitationem labore libero nam similique vel! Adipisci amet asperiores, aut corporis cupiditate, doloribus ea fugiat hic illo in laboriosam magni omnis, qui soluta voluptatem. Dolorem in quis rem rerum.</span><span>Accusamus aperiam fugit incidunt ipsam nostrum possimus reprehenderit veniam voluptates? Aliquam architecto blanditiis deserunt eum, fugiat fugit illo magnam necessitatibus neque nulla qui quis quos rem repudiandae sint temporibus unde?</span>    </p>
-            </div>
+            <article id='presentation' class="col-12 col-lg-6">
+                <h2 class="text-center">{{ 'home_h2_presentation' | trans }}</h2>
+                <p class="text-center font-weight-bold">{{ 'home_subtitle_presentation' | trans }}</p>
+                <p class="text-justify">{{ 'home_text_presentation' | trans }}</p>
+            </article>
 
-            <div class="col-12 col-lg-6">
-                <h2 class="text-center">Nos dernières observations</h2>
+            <article id="observation" class="col-12 col-lg-6">
+                <h2 class="text-center">{{ 'home_h2_observation' | trans }}</h2>
                 <div class="row">
                     {% for observation in observations %}
                         <div class="col-12 col-md-6">
                             <div class="card text-white border-0 mb-5">
-                                {% if observation.image.image.name %}
+                                {% if observation.image.image.name is defined %}
                                     <img class="card-img observation-image-custom" src="{{ asset('img/'~observation.image.image.name) }}" alt="" width="100%" height="100%">
                                     {% else %}
                                         <img class="card-img observation-image-custom" src="{{ asset('imgSite/default_bird.png') }}" alt="" width="100%" height="100%">
@@ -75,13 +75,13 @@
                         </div>
                     {% endfor %}
                 </div>
-            </div>
+            </article>
         </div>
 
-        <aside>
-            <h2 class="text-center">Newsletter</h2>
+        <aside id="newsletter">
+            <h2 class="text-center">{{ 'h2_newsletter' | trans }}</h2>
             <hr>
-            <p class="text-center font-weight-bold">Vous voulez vous inscrire à notre newletter ?</p>
+            <p class="text-center font-weight-bold">{{ 'subtitle_newsletter' | trans}}</p>
                 {{ form_start(newsForm) }}
                 <div class="input-group my-3">
                     {{ form_errors(newsForm.mail) }}
@@ -96,8 +96,4 @@
                 {{ form_end(newsForm) }}
         </aside>
     </section>
-    
-
-    
-
 {% endblock %}

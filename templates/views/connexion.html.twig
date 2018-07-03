@@ -29,7 +29,7 @@
         <div class="container" style="margin-top: 250px">
             {{ form_start(formCreateAccount) }}
                 <img class="mb-4" src="http://icons.iconarchive.com/icons/graphicloads/flat-finance/256/person-icon.png" alt="" width="72" height="72">
-                <h1 class="h3 mb-3 font-weight-normal">Créez votre compte</h1>
+                <h1 class="h3 mb-3 font-weight-normal">{{ 'connection_h1' | trans }}</h1>
                 <div class="form-group row">
                     {{ form_errors(formCreateAccount.firstName) }}
                     {{ form_widget(formCreateAccount.firstName, {'attr':{'class':'form-control col-12 col-md-6 mt-2', 'placeholder':'Votre prénom'}}) }}
@@ -41,7 +41,7 @@
                     {{ form_widget(formCreateAccount.password, {'attr':{'class':'form-control mt-2', 'placeholder':'Votre password'}}) }}
                     {{ form_rest(formCreateAccount) }}
                 </div>
-                <button class="btn btn-lg btn-success btn-block col-12  col-md-4 offset-md-8 mt-2" type="submit">Créer un compte !</button>
+                <button class="btn btn-lg btn-success btn-block col-12  col-md-4 offset-md-8 mt-2" type="submit">{{ 'connection_btn_creat' | trans}}</button>
             {{ form_end(formCreateAccount) }}
         </div>
     {% endif %}
@@ -58,9 +58,8 @@
                     <img class="card-img-top" src="{{ asset('img/'~ user.image.image.name) }}" alt="Card image cap">
                 {% endif %}
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">{{ 'user_h5' | trans}}</h5>
+                    <p class="card-text">{{ 'user_text' | trans }}</p>
                 </div>
             </div>
         </div>

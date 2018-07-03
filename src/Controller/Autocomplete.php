@@ -11,6 +11,8 @@ namespace App\Controller;
 
 
 
+use App\Repository\ArticleRepository;
+use App\Repository\EventRepository;
 use App\Repository\TaxrefRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -22,9 +24,9 @@ class Autocomplete extends Controller
     /**
      * @param Request $request
      * @return JsonResponse
-     * @Route("/autocomplete", name="species_autocomplete")
+     * @Route("/autocomplete_species", name="species_autocomplete")
      */
-    public function autocompleteAction(Request$request, TaxrefRepository $repository)
+    public function autocompleteSpeciesAction(Request $request, TaxrefRepository $repository)
     {
         $species = [];
         $term = trim(strip_tags($request->get('term')));
@@ -38,6 +40,52 @@ class Autocomplete extends Controller
 
         $response = new JsonResponse();
         $response->setData($species);
+
+        return $response;
+    }
+
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     * @Route("/autocomplete_article", name="article_autocomplete")
+     */
+    public function autocompleteArticleAction(Request $request, ArticleRepository $repository)
+    {
+        $articles = [];
+        $term = trim(strip_tags($request->get('term')));
+
+        $entities = $repository->findArticle($term);
+
+        foreach ($entities as $entity)
+        {
+            $articles[] = $entity->gettitle();
+        }
+
+        $response = new JsonResponse();
+        $response->setData($articles);
+
+        return $response;
+    }
+
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     * @Route("/autocomplete_event", name="event_autocomplete")
+     */
+    public function autocompleteEventAction(Request $request, EventRepository $repository)
+    {
+        $events = [];
+        $term = trim(strip_tags($request->get('term')));
+
+        $entities = $repository->findEvent($term);
+
+        foreach ($entities as $entity)
+        {
+            $events[] = $entity->getTitle();
+        }
+
+        $response = new JsonResponse();
+        $response->setData($events);
 
         return $response;
     }

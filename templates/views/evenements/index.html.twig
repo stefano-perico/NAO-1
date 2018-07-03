@@ -5,8 +5,8 @@
     <img class="card-img cover-custom" src="{{ asset('imgSite/pages/page-evenements_nao.jpg') }}" alt="Bouteille à la mers">
     <div class="card-img-overlay d-flex justify-content-center">
         <div class="col-md-10 text-left align-self-end">
-            <h1 class="font-weight-bold text-white mb-lg-5">Evénements..</h1>
-            <h2>Près de chez vous</h2>
+            <h1 class="font-weight-bold text-white mb-lg-5">{{ 'event_h1_titre' | trans }}</h1>
+            <h2>{{ 'event_h2_sous_titre' | trans }}</h2>
         </div>
     </div>
 </div>
@@ -55,16 +55,16 @@
 
             <!-- Search Widget -->
             <div class="card my-4">
-                <h5 class="card-header">Rechercher</h5>
+                <h5 class="card-header">{{ 'btn_search' | trans }}</h5>
                 <div class="card-body">
                     <form>
                         <div class="input-group my-3">
                             <input type="text"
                                    name="q"
                                    class="form-control"
-                                   placeholder="Rechercher un article"
+                                   placeholder="{{ 'placeholder_search_event' | trans }}"
                                    value="{{ app.request.query.get('q') }}"
-                                   id="observation_species"
+                                   id="js-autocomplete-event"
                             >
                             <div class="input-group-append">
                                 <button type="submit"
@@ -78,9 +78,9 @@
             </div>
 
             <div class="card my-4">
-                <h5 class="card-header">Newsletter</h5>
+                <h5 class="card-header">{{ 'h2_newsletter' | trans }}</h5>
                 <div class="card-body">
-                    <p class="text-center font-weight-bold">Vous voulez vous inscrire à notre newletter ?</p>
+                    <p class="text-center font-weight-bold">{{ 'subtitle_newsletter' | trans }}</p>
                     <form>
                         {{ form_start(newsForm) }}
                         <div class="input-group my-3">
@@ -105,4 +105,18 @@
 
 </div>
 <!-- /.container -->
+{% endblock %}
+
+{% block script %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // autocomplete jquery ui
+            $('#js-autocomplete-event')
+                .autocomplete({
+                    source: document.getElementById('js-autocomplete-event').getAttribute({{ path('event_autocomplete') }}),
+                    minLength: 2
+                });
+        });
+    </script>
 {% endblock %}
