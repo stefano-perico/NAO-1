@@ -15,42 +15,28 @@
 {% endblock %}
 {% block body %}
     <section class="container-fluid">
-        <div id="mapid" class="map-container z-depth-1-half"></div>
-    </section>
 
-    <section class="container-fluid">
-        <h5></h5>
-        <table class="table table-hover text-center">
+        <aside id="mapid" class="map-container z-depth-1-half my-4"></aside>
 
-            <!--Table head-->
-            <thead>
-            <tr>
-                <th>Famille</th>
-                <th>Taxon</th>
-                <th>Nom</th>
-                <th>date</th>
-                <th>auteur</th>
-                <th>description</th>
-            </tr>
-            </thead>
-            <!--Table head-->
-            <!--Table body-->
-            <tbody>
-            <!--Table-->
+        <article class="row ustify-content-md-center">
             {% for ob in obs %}
-                <tr>
-                    <td>{{ ob.species.famille }}</td>
-                    <td>{{ ob.species.lbNom }}</td>
-                    <td>{{ ob.species.nomFr }}</td>
-                    <td>{{ ob.date | date("d/m/Y") }}</td>
-                    <td>{{ ob.author.firstName | escape}}</td>
-                    <td>{{ ob.description | escape}}</td>
-                </tr>
+                <div class="col-md-6 my-4">
+                    <div class="card">
+                        {% if ob.image.image.name %}
+                            <img class="card-img-top" src="{{ asset('img/'~observation.image.image.name) }}" alt="{{ ob.image.alt }}">
+                        {% else %}
+                            <img class="card-img-top" src="{{ asset('imgSite/default_bird.png') }}" alt="image-oiseau-picto">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ ob.species.nomFr }} ({{ ob.species.lbNom }})</h5>
+                            <hr>
+                            <p class="card-text">{{ ob.description | escape}}</p>
+                            <p class="card-text">de : {{ ob.author.lastName | upper | escape }} {{ ob.author.firstName | capitalize | escape}} le {{ ob.date | date("d/m/Y") }}</p>
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
-            </tbody>
-            <!--Table body-->
-            <!--Table-->
-        </table>
+        </article>
     </section>
 
 
