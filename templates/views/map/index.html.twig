@@ -4,7 +4,7 @@
 
     <style>
         #s-search-species {
-            background-color: #F4D03F;
+            background-color: #ffc107;
             border-radius: 8px;
         }
     </style>
@@ -13,11 +13,11 @@
 
 {% block body %}
     <div class="card text-white border-0 mb-5">
-        <img class="card-img cover-custom" src="{{ asset('imgSite/pages/carte_interactive.png') }}" alt="Bouteille à la mers">
+        <img class="card-img cover-custom" src="{{ asset('imgSite/pages/page_carte_nao_2.jpg') }}" alt="Bouteille à la mers">
         <div class="card-img-overlay d-flex justify-content-center">
-            <div class="col-md-10 text-left">
-                <h1 class="font-weight-bold text-white mb-lg-5">CARTE INTERACTIVE</h1>
-                <h2 style="color: blue;">Rechercher un oiseau</h2>
+            <div class="col-md-10 text-left text-custom-shadow">
+                <h1 class="font-weight-bold text-white mb-lg-5">{{ 'mapinter_h1_titre' | trans }}</h1>
+                <h2>{{ 'mapinter_h2_sous_titre' | trans }}</h2>
             </div>
         </div>
     </div>
@@ -25,16 +25,17 @@
     <section class="container">
         <aside id="s-search-species" class="row my-4 text-center" >
             <div class="col-md-6 mt-3">
-                <p>Vous recherchez un oiseau ?</p>
+                <h3>{{ 'mapinter_h3_search' | trans }}</h3>
+                <p>{{ 'mapinter_text_1_search' | trans }}</p>
             </div>
             <div class="col-md-6 mt-3">
-                <p>Tapez le nom dans la barre de recherche</p>
+                <p>{{ 'mapinter_text_2_search' | trans }}</p>
                 <form>
                     <div class="input-group my-3">
                         <input type="text"
                                name="q"
                                class="form-control"
-                               placeholder="Rechercher une espèce, une famille, ou un taxon"
+                               placeholder="{{ 'mapinter_placeholder_search' | trans }}"
                                value="{{ app.request.query.get('q') }}"
                                id="observation_species"
                         >
@@ -55,11 +56,11 @@
             <!--Table head-->
             <thead>
                 <tr>
-                    <th>Nombre d'observation</th>
-                    <th>Famille</th>
-                    <th>Taxon</th>
-                    <th>Nom</th>
-                    <th>voir</th>
+                    <th>{{ 'mapinter_title_1' | trans}}</th>
+                    <th>{{ 'mapinter_title_2' | trans}}</th>
+                    <th>{{ 'mapinter_title_3' | trans}}</th>
+                    <th>{{ 'mapinter_title_4' | trans}}</th>
+                    <th>{{ 'mapinter_title_5' | trans}}</th>
                 </tr>
             </thead>
             <!--Table head--
@@ -76,7 +77,7 @@
                 </tr>
             {% else %}
                 <tr>
-                    <td colspan="4" class="text-center">Désoler, il n'y a aucune observations pour "{{ app.request.query.get('q') | escape }}"</td>
+                    <td colspan="4" class="text-center">{{ 'mapinter_placeholder_not_found' | trans }} "{{ app.request.query.get('q') | escape }}"</td>
                 </tr>
             {% endfor %}
             </tbody>

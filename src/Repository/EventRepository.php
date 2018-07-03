@@ -20,6 +20,15 @@ class EventRepository extends ServiceEntityRepository
         parent::__construct($registry, Event::class);
     }
 
+    public function findEvent(?string $term)
+    {
+        return $this->createQueryBuilder('e')
+            ->andWhere('e.title LIKE :term')
+            ->setParameter('term', '%'.$term.'%')
+            ->getQuery()
+            ->getResult();
+    }
+
     /**
      * @param null|string $term
      */

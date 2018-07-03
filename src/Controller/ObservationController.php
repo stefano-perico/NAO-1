@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Newsletter;
 use App\Entity\Observation;
 use App\Entity\User;
 use App\Form\FrontOffice\ObservationType;
+use App\Form\NewsletterType;
 use App\Repository\ObservationRepository;
 use App\Repository\UserRepository;
 use App\Services\FlashesService;
@@ -28,6 +30,16 @@ class ObservationController extends Controller
      */
     public function observationIndex(ObservationRepository $observationRepository, Request $request, UserService $userService, FlashesService $flashesService)
     {
+        $newsletter =  new Newsletter();
+        $newsletterForm =   $this->createForm(NewsletterType::class, $newsletter);
+        $newsletterForm->handleRequest($request);
+
+        if ($newsletterForm->isSubmitted() && $newsletterForm->isValid()){
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($newsletter);
+            $em->flush();
+        }
+
         if (!$userService->isAuthorized($request, __FUNCTION__)){
             $flashesService->setFlashes($userService->getFlash());
             return $this->redirectToRoute('home');
@@ -35,6 +47,7 @@ class ObservationController extends Controller
 
         return $this->render('views/observation/observationInfo.html.twig',[
             'observations' => $observationRepository->findBy([],['date'=>'desc']),
+            'newsForm'      => $newsletterForm->createView(),
             'elementPage'  => Yaml::parseFile($this->getParameter('kernel.project_dir').'/translations/test.yaml'),
             'flashs'       => $flashesService->getFlashes($request)
         ]);
