@@ -1,8 +1,11 @@
 {% extends 'back-office/base.html.twig' %}
 
-{% block title %}New Category{% endblock %}
+{% block title %}Créer une nouvelle catégorie{% endblock %}
 
 {% block body %}
-    <h1>Create new Category</h1>
+    <a class="btn-outline-dark" href="{{ path('category_index') }}">
+        <i class="far fa-arrow-alt-circle-left"></i> Cétégories
+    </a>
+    <h1 class="text-center">Créer une nouvelle catégorie</h1>
     {{ include('back-office/category/_form.html.twig') }}
 {% endblock %}

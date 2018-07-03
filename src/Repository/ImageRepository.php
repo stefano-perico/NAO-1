@@ -28,4 +28,24 @@ class ImageRepository extends ServiceEntityRepository
         return $imagesInArray;
     }
 
+    /**
+     * @param null|string $term
+     * @return \Doctrine\ORM\QueryBuilder
+     */
+    public function getImageWithSearchQueryBuilder(?string $term): \Doctrine\ORM\QueryBuilder
+    {
+        $qb = $this->createQueryBuilder('a');
+
+        if ($term) {
+            $qb
+                ->andWhere('a.title LIKE :term')
+                ->setParameter('term','%' . $term . '%')
+            ;
+        }
+
+        return $qb
+            ->orderBy('a.id', 'DESC')
+            ;
+    }
+
 }

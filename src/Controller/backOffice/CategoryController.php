@@ -7,6 +7,7 @@ use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
 use App\Services\FlashesService;
 use App\Services\UserService;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -36,14 +37,25 @@ class CategoryController extends Controller
     /**
      * @Route("/", name="category_index", methods="GET")
      */
-    public function category_index(CategoryRepository $categoryRepository, Request $request): Response
+    public function category_index(CategoryRepository $categoryRepository, Request $request, PaginatorInterface $paginator): Response
     {
+        $q = $request->query->get('q');
+        $queryBuilder = $categoryRepository->getCategoryWithSearchQueryBuilder($q);
+
+        $pagination = $paginator->paginate(
+            $queryBuilder, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+
         if (!$this->userService->isAuthorized($request, __FUNCTION__)){
             $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('home');
         };
 
-        return $this->render('back-office/category/index.html.twig', ['categories' => $categoryRepository->findAll()]);
+        return $this->render('back-office/category/index.html.twig', [
+            'pagination' => $pagination
+        ]);
     }
 
     /**

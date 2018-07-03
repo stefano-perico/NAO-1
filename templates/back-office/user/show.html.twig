@@ -3,7 +3,11 @@
 {% block title %}Utilisateur{% endblock %}
 
 {% block body %}
-    <h1>Utilisateur</h1>
+    <a class="btn-outline-dark" href="{{ path('user_index') }}">
+        <i class="far fa-arrow-alt-circle-left"></i> Utilisateurs
+    </a>
+
+    <h1 class="text-center">Utilisateur</h1>
 
     <table class="table">
         <tbody>

@@ -28,4 +28,24 @@ class CategoryRepository extends ServiceEntityRepository
         return $categoriesInArray;
     }
 
+    /**
+     * @param null|string $term
+     * @return \Doctrine\ORM\QueryBuilder
+     */
+    public function getCategoryWithSearchQueryBuilder(?string $term): \Doctrine\ORM\QueryBuilder
+    {
+        $qb = $this->createQueryBuilder('a');
+
+        if ($term) {
+            $qb
+                ->andWhere('a.title LIKE :term')
+                ->setParameter('term','%' . $term . '%')
+            ;
+        }
+
+        return $qb
+            ->orderBy('a.id', 'DESC')
+            ;
+    }
+
 }

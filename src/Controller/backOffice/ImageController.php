@@ -3,8 +3,9 @@
 namespace App\Controller\backOffice;
 
 use App\Entity\Image;
-use App\Form\ImageType;
+use App\Form\BackOffice\ImageType;
 use App\Repository\ImageRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,9 +19,20 @@ class ImageController extends Controller
     /**
      * @Route("/", name="image_index", methods="GET")
      */
-    public function index(ImageRepository $imageRepository): Response
+    public function index(ImageRepository $imageRepository, PaginatorInterface $paginator, Request $request): Response
     {
-        return $this->render('back-office/image/index.html.twig', ['images' => $imageRepository->findAll()]);
+        $q = $request->query->get('q');
+        $queryBuilder = $imageRepository->getImageWithSearchQueryBuilder($q);
+
+        $pagination = $paginator->paginate(
+            $queryBuilder, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+
+        return $this->render('back-office/image/index.html.twig', [
+            'pagination' => $pagination
+        ]);
     }
 
     /**

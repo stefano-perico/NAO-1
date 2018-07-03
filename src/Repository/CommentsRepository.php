@@ -19,4 +19,24 @@ class CommentsRepository extends ServiceEntityRepository
         parent::__construct($registry, Comments::class);
     }
 
+    /**
+     * @param null|string $term
+     * @return \Doctrine\ORM\QueryBuilder
+     */
+    public function getCommentWithSearchQueryBuilder(?string $term): \Doctrine\ORM\QueryBuilder
+    {
+        $qb = $this->createQueryBuilder('a');
+
+        if ($term) {
+            $qb
+                ->andWhere('a.title LIKE :term')
+                ->setParameter('term','%' . $term . '%')
+            ;
+        }
+
+        return $qb
+            ->orderBy('a.id', 'ASC')
+            ;
+    }
+
 }

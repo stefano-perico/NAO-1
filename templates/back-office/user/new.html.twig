@@ -3,6 +3,9 @@
 {% block title %}Nouvel utilisateurs{% endblock %}
 
 {% block body %}
-    <h1>Nouvel utilisateurs</h1>
+    <a class="btn-outline-dark" href="{{ path('user_index') }}">
+        <i class="far fa-arrow-alt-circle-left"></i> Utilisateurs
+    </a>
+    <h1 class="text-center">Nouvel utilisateurs</h1>
     {{ include('back-office/user/_form.html.twig') }}
 {% endblock %}

@@ -5,6 +5,7 @@ namespace App\Controller\backOffice;
 use App\Entity\User;
 use App\Form\BackOffice\UserType;
 use App\Repository\UserRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,9 +19,20 @@ class UserController extends Controller
     /**
      * @Route("/", name="user_index", methods="GET")
      */
-    public function index(UserRepository $userRepository): Response
+    public function index(UserRepository $userRepository, PaginatorInterface $paginator, Request $request): Response
     {
-        return $this->render('back-office/user/index.html.twig', ['users' => $userRepository->findAll()]);
+        $q = $request->query->get('q');
+        $queryBuilder = $userRepository->getUserWithSearchQueryBuilder($q);
+
+        $pagination = $paginator->paginate(
+            $queryBuilder, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+
+        return $this->render('back-office/user/index.html.twig', [
+            'pagination' => $pagination
+        ]);
     }
 
     /**

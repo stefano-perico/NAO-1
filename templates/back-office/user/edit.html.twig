@@ -3,6 +3,9 @@
 {% block title %}Edition de l'utilisateur{% endblock %}
 
 {% block body %}
+    <a class="btn-outline-dark" href="{{ path('user_index') }}">
+        <i class="far fa-arrow-alt-circle-left"></i> Utilisateurs
+    </a>
     <h1 class="text-center">Edition de l'utilisateur</h1>
     {{ include('back-office/user/_form.html.twig', {'button_label': 'Modifier'}) }}
     {{ include('back-office/user/_delete_form.html.twig') }}

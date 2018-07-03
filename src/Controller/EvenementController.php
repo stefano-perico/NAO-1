@@ -48,7 +48,6 @@ class EvenementController extends Controller
             $em->flush();
         }
 
-
         if (!$userService->isAuthorized($request, __FUNCTION__)){
             $flashesService->setFlashes($userService->getFlash());
             return $this->redirectToRoute('home');

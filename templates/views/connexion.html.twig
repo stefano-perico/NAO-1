@@ -35,8 +35,6 @@
                     {{ form_widget(formCreateAccount.firstName, {'attr':{'class':'form-control col-12 col-md-6 mt-2', 'placeholder':'Votre prénom'}}) }}
                     {{ form_errors(formCreateAccount.lastName) }}
                     {{ form_widget(formCreateAccount.lastName, {'attr':{'class':'form-control col-12 col-md-6 mt-2', 'placeholder':'Votre nom'}}) }}
-
-
                     {{ form_errors(formCreateAccount.email) }}
                     {{ form_widget(formCreateAccount.email, {'attr':{'class':'form-control mt-2', 'placeholder':'Votre email'}}) }}
                     {{ form_errors(formCreateAccount.password) }}
@@ -48,7 +46,6 @@
         </div>
     {% endif %}
 
-    {#{{ dump(app.request.session.get('user')) }}#}
     {% if user is defined %}
         <div class="col-12 text-right mt-2">
             <a href="{{ path('disconnect') }}">

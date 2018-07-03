@@ -1,51 +1,33 @@
 {% extends 'back-office/base.html.twig' %}
 
-{% block title %}Image index{% endblock %}
+{% block title %}Images{% endblock %}
 
 {% block body %}
-    <h1>Image index</h1>
+    <h1 class="text-center">Images</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>UpdatedAt</th>
-                <th>Image.name</th>
-                <th>Image.alt</th>
-                <th>Image.originalName</th>
-                <th>Image.mimeType</th>
-                <th>Image.size</th>
-                <th>Image.dimensions</th>
-                <th>Image</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for image in images %}
-            <tr>
-                <td>{{ image.id }}</td>
-                <td>{{ image.updatedAt ? image.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ image.image.name }}</td>
-                <td>{{ image.alt }}</td>
-                <td>{{ image.image.originalName }}</td>
-                <td>{{ image.image.mimeType }}</td>
-                <td>{{ image.image.size }}</td>
-                <td>{{ image.image.dimensions.0 }}/{{ image.image.dimensions.1 }}</td>
-                <td>
-                    <img src="{{ asset('img/'~image.image.name) }}" alt="" width="100%">
-                </td>
-                <td>
-                    <a href="{{ path('image_show', {'id': image.id}) }}">show</a>
-                    <a href="{{ path('image_edit', {'id': image.id}) }}">edit</a>
-                </td>
-            </tr>
+    <div class="row">
+        {% for image in pagination %}
+            <div class="card-body col-3">
+                <a href="{{ path('image_show', {'id': image.id}) }}">
+                    <img class="cover-custom" src="{{ asset('img/'~image.image.name) }}" alt="" width="100%">
+                </a>
+            </div>
         {% else %}
             <tr>
                 <td colspan="8">no records found</td>
             </tr>
         {% endfor %}
-        </tbody>
-    </table>
+    </div>
 
-    <a href="{{ path('image_new') }}">Create new</a>
+    <div class="col-12 text-right">
+        <a class="btn btn-success" href="{{ path('image_new') }}">
+            Nouveau <i class="fas fa-plus"></i>
+        </a>
+    </div>
+
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+        {{ knp_pagination_render(pagination) }}
+    </ul>
+
 {% endblock %}

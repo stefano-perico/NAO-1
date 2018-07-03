@@ -3,6 +3,9 @@
 {% block title %}Créer un nouvel article{% endblock %}
 
 {% block body %}
-    <h1>Créer un nouvel article</h1>
+    <a class="btn-outline-dark" href="{{ path('article_index') }}">
+        <i class="far fa-arrow-alt-circle-left"></i> Articles
+    </a>
+    <h1 class="text-center">Créer un nouvel article</h1>
     {{ include('back-office/article/_form.html.twig') }}
 {% endblock %}
