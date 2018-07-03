@@ -1,18 +1,16 @@
 {% extends 'back-office/base.html.twig' %}
 
-{% block title %}User index{% endblock %}
+{% block title %}Utilisateurs{% endblock %}
 
 {% block body %}
-    <h1>User index</h1>
+    <h1>Utilisateurs</h1>
 
-    <table class="table">
+    <table class="table table-responsive-lg">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>FirstName</th>
                 <th>LastName</th>
                 <th>Email</th>
-                <th>Password</th>
                 <th>RegistrationDate</th>
                 <th>Summary</th>
                 <th>actions</th>
@@ -21,16 +19,20 @@
         <tbody>
         {% for user in users %}
             <tr>
-                <td>{{ user.id }}</td>
                 <td>{{ user.firstName }}</td>
                 <td>{{ user.lastName }}</td>
                 <td>{{ user.email }}</td>
-                <td>{{ user.password }}</td>
                 <td>{{ user.registrationDate ? user.registrationDate|date('Y-m-d') : '' }}</td>
                 <td>{{ user.summary }}</td>
-                <td>
-                    <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
-                    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+                <td class="text-right pr-3">
+                    <div class="action">
+                        <a class="btn btn-info" href="{{ path('user_show', {'id': user.id}) }}">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        <a class="btn btn-primary" href="{{ path('user_edit', {'id': user.id}) }}">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
                 </td>
             </tr>
         {% else %}
@@ -41,5 +43,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('user_new') }}">Create new</a>
+    <div class="col-12 text-right">
+        <a class="btn btn-success" href="{{ path('user_new') }}">
+            Nouveau <i class="fas fa-plus"></i>
+        </a>
+    </div>
 {% endblock %}

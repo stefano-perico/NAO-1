@@ -5,6 +5,8 @@ namespace App\Controller\backOffice;
 use App\Entity\Article;
 use App\Form\ArticleType;
 use App\Repository\ArticleRepository;
+use App\Services\FlashesService;
+use App\Services\UserService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,20 +17,50 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class ArticleController extends Controller
 {
+
+    /**
+     * @var UserService
+     */
+    private $userService;
+    /**
+     * @var FlashesService
+     */
+    private $flashesService;
+
+    public function __construct(UserService $userService, FlashesService $flashesService)
+    {
+        $this->userService = $userService;
+        $this->flashesService = $flashesService;
+    }
+
     /**
      * @Route(name="article_index", methods="GET")
      */
-    public function index(ArticleRepository $articleRepository): Response
+    public function article_index(ArticleRepository $articleRepository, Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         return $this->render('back-office/article/index.html.twig', ['articles' => $articleRepository->findAll()]);
     }
 
     /**
      * @Route("/article/new", name="article_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function article_new(Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $article = new Article();
+//        $article
+//            ->setContent('Votre contenu ici')
+//            ->setSummary('Votre contenu ici')
+//        ;
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
 
@@ -49,16 +81,26 @@ class ArticleController extends Controller
     /**
      * @Route("/article/{id}", name="article_show", methods="GET")
      */
-    public function show(Article $article): Response
+    public function article_show(Article $article, Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         return $this->render('back-office/article/show.html.twig', ['article' => $article]);
     }
 
     /**
      * @Route("/article/{id}/edit", name="article_edit", methods="GET|POST")
      */
-    public function edit(Request $request, Article $article): Response
+    public function article_edit(Request $request, Article $article): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
 
@@ -79,6 +121,11 @@ class ArticleController extends Controller
      */
     public function delete(Request $request, Article $article): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         if ($this->isCsrfTokenValid('delete'.$article->getId(), $request->request->get('_token'))) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($article);

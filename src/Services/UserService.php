@@ -29,7 +29,7 @@ class UserService
             if ($k === $function && in_array('visitor', $v)){
                 return true;
             } elseif ($request->getSession()->get('user') !== null){
-                if ($k === $function && in_array($request->getSession()->get('user')['role'], $v)){
+                if ($k === $function && in_array($request->getSession()->get('user')->getRole(), $v)){
                     return true;
                 }
             }

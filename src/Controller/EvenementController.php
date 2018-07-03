@@ -55,9 +55,9 @@ class EvenementController extends Controller
         };
 
         return $this->render('views/evenements/index.html.twig', [
-            'pagination' => $pagination,
-            'newsForm'     => $newsletterForm->createView(),
-            'flashs'   => $flashesService->getFlashes($request)
+            'pagination'    => $pagination,
+            'newsForm'      => $newsletterForm->createView(),
+            'flashs'        => $flashesService->getFlashes($request)
         ]);
     }
 
@@ -70,8 +70,6 @@ class EvenementController extends Controller
             $flashesService->setFlashes($userService->getFlash());
             return $this->redirectToRoute('home');
         };
-
-        dump($eventRepository->find(2)->getLocation());
 
         return $this->render('views/evenements/evenement.html.twig', [
             'event'                 => $eventRepository->findOneBy(['slug'=>$slug]),

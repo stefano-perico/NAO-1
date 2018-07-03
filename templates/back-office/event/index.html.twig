@@ -1,46 +1,38 @@
 {% extends 'back-office/base.html.twig' %}
 
-{% block title %}Event index{% endblock %}
+{% block title %}Evenements{% endblock %}
 
 {% block body %}
-    <h1>Event index</h1>
+    <h1>Evenements</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Title</th>
                 <th>Auteur</th>
                 <th>Date</th>
-                <th>PublishedAt</th>
-                <th>UpdatedAt</th>
-                <th>Content</th>
                 <th>Localisation</th>
                 <th>Slug</th>
                 <th>actions</th>
-                <th>Image</th>
             </tr>
         </thead>
         <tbody>
         {% for event in events %}
             <tr>
-                <td>{{ event.id }}</td>
                 <td>{{ event.title }}</td>
                 <td>{{ event.author.firstName }} {{ event.author.lastName }}</td>
                 <td>{{ event.date ? event.date|date('Y-m-d') : '' }}</td>
-                <td>{{ event.PublishedAt ? event.PublishedAt|date('Y-m-d') : '' }}</td>
-                <td>{{ event.UpdatedAt ? event.UpdatedAt|date('Y-m-d') : '' }}</td>
-                <td>{{ event.content }}</td>
-                <td>{{ event.location.villeNom }}</td>
+                <td>{{ event.location.villeNom ?? 'null'}}</td>
                 <td>{{ event.Slug }}</td>
-                <td>
-                    {% if event.image.image is defined %}
-                    <img src="{{ asset('img/'~event.image.image.name) }}" width="100%">
-                    {% endif %}
-                </td>
-                <td>
-                    <a href="{{ path('event_show', {'id': event.id}) }}">show</a>
-                    <a href="{{ path('event_edit', {'id': event.id}) }}">edit</a>
+                <td class="action pr-3">
+                    <div class="action text-right">
+                        <a class="btn btn-info" href="{{ path('evenement', {'slug': event.Slug}) }}">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        <a class="btn btn-primary" href="{{ path('event_edit', {'id': event.id}) }}">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
                 </td>
             </tr>
         {% else %}
@@ -51,5 +43,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('event_new') }}">Create new</a>
+    <div class="col-12 text-right">
+        <a class="btn btn-success" href="{{ path('event_new') }}">
+            Nouveau <i class="fas fa-plus"></i>
+        </a>
+    </div>
 {% endblock %}

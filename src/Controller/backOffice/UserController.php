@@ -3,7 +3,7 @@
 namespace App\Controller\backOffice;
 
 use App\Entity\User;
-use App\Form\UserType;
+use App\Form\BackOffice\UserType;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;

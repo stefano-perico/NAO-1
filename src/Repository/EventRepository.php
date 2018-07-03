@@ -35,7 +35,7 @@ class EventRepository extends ServiceEntityRepository
         }
 
         return $qb
-            ->orderBy('e.publishedAt', 'DESC')
+            ->orderBy('e.date', 'DESC')
             ;
     }
 

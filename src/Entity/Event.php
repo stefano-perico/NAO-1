@@ -29,9 +29,9 @@ class Event
     private $date;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="boolean")
      */
-    private $publishedAt;
+    private $published = false;
 
     /**
      * @ORM\Column(type="date", nullable=true)
@@ -46,12 +46,12 @@ class Event
     /**
      * @ORM\Column(type="text")
      */
-    private $content;
+    private $content = ' ';
 
     /**
      * @ORM\Column(type="text")
      */
-    private $summary;
+    private $summary = ' ';
 
     /**
      * @ORM\Column(type="string", length=100)
@@ -118,15 +118,14 @@ class Event
         return $this;
     }
 
-    public function getPublishedAt(): ?\DateTimeInterface
+    public function getPublished()
     {
-        return $this->publishedAt;
+        return $this->published;
     }
 
-    public function setPublishedAt(\DateTimeInterface $publishedAt): self
+    public function setPublished($published)
     {
-        $this->publishedAt = $publishedAt;
-
+        $this->published = $published;
         return $this;
     }
 
@@ -197,16 +196,6 @@ class Event
     {
         $this->location = $location;
         return $this;
-    }
-
-    /**
-     * @ORM\PreFlush()
-     */
-    public function publishedAt()
-    {
-        $this->getPublishedAt() === null || empty($this->publishedAt) ?
-            $this->setPublishedAt(new \DateTime()):
-            null;
     }
 
     /**

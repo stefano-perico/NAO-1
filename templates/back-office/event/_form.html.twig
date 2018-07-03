@@ -1,6 +1,27 @@
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+<div class="row">
+    <div class="card-body col-8 form-group encart">
+        {{ form_row(form.summary, {'label':'Sommaire'}) }}
+    </div>
+
+    <div class="card-body col-4 form-group encart">
+        {{ form_row(form.title, {'label':'Titre de l\'événement'}) }}
+        {{ form_row(form.slug, {'label':'Slug de l\'événement'}) }}
+        {{ form_row(form.author, {'label':'Auteur de l\'événement'}) }}
+        {{ form_row(form.date, {'label':'Date de l\'évenement'}) }}
+        {{ form_row(form.location, {'label':'Localisation'}) }}
+        {{ form_row(form.image, {'label':'Image'}) }}
+        {{ form_row(form.published, {'label':'Publié ?'}) }}
+    </div>
+
+    <div class="card-body col-12 form-group encart">
+        {{ form_row(form.content, {'label':'Contenu de l\'événement'}) }}
+    </div>
+</div>
+
+<div class="text-right">
+    <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+</div>
 {{ form_end(form) }}

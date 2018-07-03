@@ -22,6 +22,7 @@ class ArticleRepository extends ServiceEntityRepository
 
     /**
      * @param null|string $term
+     * @return QueryBuilder
      */
     public function getArticleWithSearchQueryBuilder(?string $term): QueryBuilder
     {

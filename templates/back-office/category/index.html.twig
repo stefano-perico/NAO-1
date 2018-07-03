@@ -1,14 +1,13 @@
 {% extends 'back-office/base.html.twig' %}
 
-{% block title %}Category index{% endblock %}
+{% block title %}Catégories{% endblock %}
 
 {% block body %}
-    <h1>Category index</h1>
+    <h1 class="text-center">Categories</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
                 <th>actions</th>
             </tr>
@@ -16,11 +15,13 @@
         <tbody>
         {% for category in categories %}
             <tr>
-                <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
-                <td>
-                    <a href="{{ path('category_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('category_edit', {'id': category.id}) }}">edit</a>
+                <td class="pr-3 action">
+                    <div class="action text-right">
+                        <a class="btn btn-primary" href="{{ path('category_edit', {'id': category.id}) }}">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +32,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('category_new') }}">Create new</a>
+    <div class="col-12 text-right">
+        <a class="btn btn-success" href="{{ path('category_new') }}">
+            Nouveau <i class="fas fa-plus"></i>
+        </a>
+    </div>
 {% endblock %}

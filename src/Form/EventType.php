@@ -11,6 +11,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -37,8 +38,18 @@ class EventType extends AbstractType
     {
         $builder
             ->add('title', TextType::class)
-            ->add('date', DateType::class)
-            ->add('content', TextType::class)
+            ->add('date', DateType::class,[
+                'widget' => 'single_text'
+            ])
+            ->add('published')
+            ->add('content', TextareaType::class,[
+                'attr'      => ['class'=>'Tiny', 'rows' => 10],
+                'required'  => false
+            ])
+            ->add('summary', TextareaType::class,[
+                'attr'      => ['class'=>'Tiny', 'rows' => 10],
+                'required'  => false
+            ])
             ->add('slug', TextType::class,[
                 'required' => false
             ])
@@ -64,7 +75,6 @@ class EventType extends AbstractType
                 }
             ))
         ;
-
         $builder
             ->get('location')
             ->addModelTransformer(new CallbackTransformer(

@@ -1,6 +1,13 @@
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+<div class="row">
+    <div class="card-body col-12 form-group encart">
+        {{ form_row(form.name, {'label':'test'}) }}
+    </div>
+</div>
+
+<div class="text-right">
+    <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+</div>
 {{ form_end(form) }}

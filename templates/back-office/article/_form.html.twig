@@ -2,25 +2,24 @@
 
 {{ form_start(form) }}
 <div class="row">
-    <div class="card-body col-8 form-group encart">
-        {{ form_row(form.summary, {'label':'Sommaire'}) }}
+    <div class="card-body col-8 form-group encart" novalidate=true>
+        {{ form_row(form.summary, {'label':'Sommaire', 'attr':{'novalidate':'true'}}) }}
     </div>
 
-    <div class="card-body col-3 offset-1 form-group encart">
+    <div class="card-body col-4 form-group encart">
         {{ form_row(form.title, {'label':'Titre de l\'article'}) }}
         {{ form_row(form.slug, {'label':'Slug de l\'article'}) }}
         {{ form_row(form.author, {'label':'Auteur de l\'article'}) }}
         {{ form_row(form.date, {'label':'Date de création'}) }}
         {{ form_row(form.categories, {'label':'Catégorie'}) }}
+        {{ form_row(form.image, {'label':'Image'}) }}
+        {{ form_row(form.published, {'label':'Publié ?'}) }}
     </div>
 
     <div class="card-body col-12 form-group encart">
         {{ form_row(form.content, {'label':'Contenu de l\'article'}) }}
     </div>
 </div>
-
-
-    {{ form_widget(form) }}
 
     <div class="text-right">
         <button class="btn btn-primary">{{ button_label|default('Save') }}</button>

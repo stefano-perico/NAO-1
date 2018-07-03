@@ -27,7 +27,7 @@
                 <td>{{ article.categories.name ?? 'null' }}</td>
                 <td class="text-right pr-3">
                     <div class="action">
-                        <a class="btn btn-info" href="{{ path('article_show', {'id': article.id}) }}">
+                        <a class="btn btn-info" href="{{ path('blogArticle', {'slug': article.Slug}) }}">
                             <i class="far fa-eye"></i>
                         </a>
                         <a class="btn btn-primary" href="{{ path('article_edit', {'id': article.id}) }}">

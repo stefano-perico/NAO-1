@@ -37,12 +37,12 @@ class ArticleType extends AbstractType
 
             ->add('title')
             ->add('summary', TextareaType::class,[
-                'block_name' => 'test',
-                'attr' => ['class'=>'Tiny', 'rows' => 10]
+//                'block_name' => 'test',
+                'attr' => ['class'=>'Tiny', 'rows' => 10, 'novalidate'=>true]
             ])
             ->add('content', TextareaType::class,[
-                'block_name' => 'test',
-                'attr' => ['class'=>'Tiny', 'rows' => 10]
+//                'block_name' => 'test',
+                'attr' => ['class'=>'Tiny', 'rows' => 10, 'novalidate'=>true]
             ])
             ->add('published')
             ->add('date', DateType::class,[
@@ -59,8 +59,6 @@ class ArticleType extends AbstractType
             ->add('image', ChoiceType::class,[
                 'choices'   => $this->imageRepository->nameAndId()
             ])
-        ;
-        $builder
             ->get('image')
             ->addModelTransformer(new CallbackTransformer(
                 function ($imageAsString){

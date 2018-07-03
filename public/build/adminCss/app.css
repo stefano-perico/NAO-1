@@ -1,44 +1,41 @@
 * {
-  font-family: 'Open Sans', sans-serif;
-  color: #FFFFFF; }
+  font-family: 'Open Sans', sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #fff; }
+  color: #111; }
 
-.admin {
-  background-color: #444; }
-  .admin h1, .admin h2, .admin h3, .admin h4, .admin h5, .admin h6 {
-    font-family: 'Roboto', sans-serif; }
-  .admin .navbar {
-    background-color: #444 !important; }
-  .admin .container {
-    padding: 10px;
-    border-radius: 5px; }
-    .admin .container table {
-      text-align: center; }
-      .admin .container table tr:hover {
-        background-color: #333; }
-      .admin .container table .action {
-        width: 100px; }
-      .admin .container table .summary {
-        max-height: 75px;
-        overflow: hidden; }
-  .admin .encart {
-    color: #000;
-    transition-duration: 300ms;
-    border-radius: 5px; }
-    .admin .encart:hover {
-      opacity: 1;
-      box-shadow: 5px 5px 20px #222;
-      transition-duration: 300ms; }
-  .admin .btn:hover {
-    color: #FFF; }
-    .admin .btn:hover i {
-      color: #FFF;
-      transition-duration: 300ms; }
-  .admin .btn-outline-success i {
-    color: green; }
+.admin h1, .admin h2, .admin h3, .admin h4, .admin h5, .admin h6 {
+  font-family: 'Roboto', sans-serif; }
 
-.form-control {
-  background-color: #444;
-  color: white; }
+.admin .navbar {
+  background-color: #444 !important; }
+
+.admin .container {
+  padding: 10px;
+  border-radius: 5px; }
+  .admin .container table {
+    text-align: center; }
+    .admin .container table tr:hover {
+      background-color: #eee; }
+    .admin .container table .action {
+      width: 100px; }
+    .admin .container table .summary {
+      max-height: 75px;
+      overflow: hidden; }
+
+.admin .encart {
+  transition-duration: 300ms;
+  border-radius: 5px; }
+  .admin .encart:hover {
+    opacity: 1;
+    box-shadow: 5px 5px 20px #222;
+    transition-duration: 300ms; }
+
+.admin .btn:hover {
+  color: #FFF; }
+  .admin .btn:hover i {
+    color: #FFF;
+    transition-duration: 300ms; }
+
+.admin .btn-outline-success i {
+  color: green; }

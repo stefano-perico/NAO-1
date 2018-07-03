@@ -19,6 +19,7 @@ class Newsletter
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
      */
     private $mail;
 

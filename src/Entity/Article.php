@@ -29,12 +29,12 @@ class Article
     /**
      * @ORM\Column(type="text")
      */
-    private $summary;
+    private $summary = ' ';
 
     /**
      * @ORM\Column(type="text")
      */
-    private $content;
+    private $content = ' ';
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="articles")
