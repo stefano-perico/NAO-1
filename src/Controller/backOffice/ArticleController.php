@@ -7,6 +7,7 @@ use App\Form\ArticleType;
 use App\Repository\ArticleRepository;
 use App\Services\FlashesService;
 use App\Services\UserService;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -36,14 +37,25 @@ class ArticleController extends Controller
     /**
      * @Route(name="article_index", methods="GET")
      */
-    public function article_index(ArticleRepository $articleRepository, Request $request): Response
+    public function article_index(ArticleRepository $articleRepository, Request $request, PaginatorInterface $paginator): Response
     {
+        $q = $request->query->get('q');
+        $queryBuilder = $articleRepository->getArticleWithSearchQueryBuilder($q);
+
+        $pagination = $paginator->paginate(
+            $queryBuilder, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+
         if (!$this->userService->isAuthorized($request, __FUNCTION__)){
             $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('home');
         };
 
-        return $this->render('back-office/article/index.html.twig', ['articles' => $articleRepository->findAll()]);
+        return $this->render('back-office/article/index.html.twig', [
+            'pagination'    => $pagination
+        ]);
     }
 
     /**

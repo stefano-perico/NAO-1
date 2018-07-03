@@ -4,9 +4,9 @@
 
 {% block body %}
 
-    <h1 class="text-center">Article</h1>
+    <h1 class="text-center">Articles</h1>
 
-    <table class="table table-responsive">
+    <table class="table table-responsive-md">
         <thead>
             <tr>
                 <th>Titre</th>
@@ -18,14 +18,14 @@
             </tr>
         </thead>
         <tbody>
-        {% for article in articles %}
+        {% for article in pagination %}
             <tr>
                 <td>{{ article.title ?? 'null'}}</td>
                 <td><p class="text-justify summary">{{ article.summary|striptags }}</p></td>
                 <td>{{ article.published ? 'Yes' : 'No' ?? 'null'}}</td>
                 <td>{{ article.date ? article.date|date('Y-m-d') : '' ?? 'null' }}</td>
                 <td>{{ article.categories.name ?? 'null' }}</td>
-                <td class="text-right pr-3">
+                <td class="text-right pr-3 action">
                     <div class="action">
                         <a class="btn btn-info" href="{{ path('blogArticle', {'slug': article.Slug}) }}">
                             <i class="far fa-eye"></i>
@@ -49,5 +49,9 @@
             Nouveau <i class="fas fa-plus"></i>
         </a>
     </div>
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+        {{ knp_pagination_render(pagination) }}
+    </ul>
 {% endblock %}
 

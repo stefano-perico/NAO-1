@@ -5,6 +5,7 @@ namespace App\Controller\backOffice;
 use App\Entity\Event;
 use App\Form\EventType;
 use App\Repository\EventRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,10 +19,21 @@ class EventController extends Controller
     /**
      * @Route("/", name="event_index", methods="GET")
      */
-    public function index(EventRepository $eventRepository): Response
+    public function index(EventRepository $eventRepository, PaginatorInterface $paginator, Request $request): Response
     {
+        $q = $request->query->get('q');
+        $queryBuilder = $eventRepository->getEventWithSearchQueryBuilder($q);
+
+        $pagination = $paginator->paginate(
+            $queryBuilder, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+
 //        dd($eventRepository->findAll());
-        return $this->render('back-office/event/index.html.twig', ['events' => $eventRepository->findAll()]);
+        return $this->render('back-office/event/index.html.twig', [
+                'pagination' => $pagination
+            ]);
     }
 
     /**

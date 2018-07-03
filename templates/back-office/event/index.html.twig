@@ -3,7 +3,7 @@
 {% block title %}Evenements{% endblock %}
 
 {% block body %}
-    <h1>Evenements</h1>
+    <h1 class="text-center">Evenements</h1>
 
     <table class="table">
         <thead>
@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for event in events %}
+        {% for event in pagination %}
             <tr>
                 <td>{{ event.title }}</td>
                 <td>{{ event.author.firstName }} {{ event.author.lastName }}</td>
@@ -42,6 +42,11 @@
         {% endfor %}
         </tbody>
     </table>
+
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+        {{ knp_pagination_render(pagination) }}
+    </ul>
 
     <div class="col-12 text-right">
         <a class="btn btn-success" href="{{ path('event_new') }}">

@@ -3,7 +3,10 @@
 {% block title %}Ajouter des catégories{% endblock %}
 
 {% block body %}
-    <h1>Ajouter des catégories</h1>
+    <a class="btn-outline-dark" href="{{ path('category_index') }}">
+        <i class="far fa-arrow-alt-circle-left"></i> Catégories
+    </a>
+    <h1 class="text-center">Ajouter des catégories</h1>
     {{ include('back-office/category/_form.html.twig', {'button_label': 'Modifier'}) }}
     {{ include('back-office/category/_delete_form.html.twig') }}
 {% endblock %}

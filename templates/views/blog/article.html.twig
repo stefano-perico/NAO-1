@@ -66,6 +66,8 @@
                 </div>
             </div>
         </div>
+
+        {% form_theme comment 'bootstrap_4_layout.html.twig' %}
         <!-- /.row -->
         <div class="card my-4">
             <h5 class="card-header" >Laisser un commentaire à <span id="commentateur">l'article</span></h5>
@@ -73,6 +75,7 @@
                 {#<div class="input-group">#}
                 {{ form_start(comment) }}
                 <div class="row">
+                    {{ form_errors(comment.content) }}
                    {{ form_widget(comment.content, {'attr':{'class':'form-group col-12'}}) }}
                     <div class="col-12">
                         <input class="btn btn-primary float-right mt-2" type="submit" value="Soumettre">

@@ -13,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for category in categories %}
+        {% for category in pagination %}
             <tr>
                 <td>{{ category.name }}</td>
                 <td class="pr-3 action">
@@ -31,7 +31,10 @@
         {% endfor %}
         </tbody>
     </table>
-
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+        {{ knp_pagination_render(pagination) }}
+    </ul>
     <div class="col-12 text-right">
         <a class="btn btn-success" href="{{ path('category_new') }}">
             Nouveau <i class="fas fa-plus"></i>

@@ -9,6 +9,7 @@ use App\Repository\UserRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -22,34 +23,33 @@ class CommentsType extends AbstractType
 
     public function __construct(ArticleRepository $articleRepository, UserRepository $userRepository, CommentsRepository $commentsRepository)
     {
-        $this->articleRepository = $articleRepository;
-        $this->userRepository = $userRepository;
-        $this->commentsRepository = $commentsRepository;
+        $this->articleRepository    = $articleRepository;
+        $this->userRepository       = $userRepository;
+        $this->commentsRepository   = $commentsRepository;
     }
     
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('content', TextType::class)
-            ->add('article', ChoiceType::class,[
-                'choices'   => $this->articleRepository->findAll()
+            ->add('content', TextareaType::class,[
+                'attr'      => ['rows' => 10]
             ])
-            ->add('parent', ChoiceType::class,[
-                'choices'    => $this->commentsRepository->findAll()
-            ])
+            ->add('article', TextType::class)
             ->add('author', ChoiceType::class,[
                 'choices'    => $this->userRepository->nameAndId()
             ])
+        ;
+        $builder
             ->get('article')
             ->addModelTransformer(new CallbackTransformer(
                 function ($articleAsId){
                     if ($articleAsId !== null){
-                        return $articleAsId->getId();
+                        return $articleAsId->getTitle();
                     }
                     return null;
                 },
                 function ($articleAsEntity){
-                    return $this->articleRepository->findOneBy(['id'=>$articleAsEntity]);
+                    return $this->articleRepository->findOneBy(['title'=>$articleAsEntity]);
                 }
             ))
         ;

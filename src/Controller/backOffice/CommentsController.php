@@ -5,6 +5,7 @@ namespace App\Controller\backOffice;
 use App\Entity\Comments;
 use App\Form\CommentsType;
 use App\Repository\CommentsRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,9 +19,20 @@ class CommentsController extends Controller
     /**
      * @Route("/", name="comments_index", methods="GET")
      */
-    public function index(CommentsRepository $commentsRepository): Response
+    public function index(CommentsRepository $commentsRepository, PaginatorInterface $paginator, Request $request): Response
     {
-        return $this->render('back-office/comments/index.html.twig', ['comments' => $commentsRepository->findAll()]);
+        $q = $request->query->get('q');
+        $queryBuilder = $commentsRepository->getCommentWithSearchQueryBuilder($q);
+
+        $pagination = $paginator->paginate(
+            $queryBuilder, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+
+        return $this->render('back-office/comments/index.html.twig', [
+            'pagination' => $pagination
+        ]);
     }
 
     /**

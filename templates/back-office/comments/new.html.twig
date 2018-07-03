@@ -1,11 +1,9 @@
 {% extends 'back-office/base.html.twig' %}
 
-{% block title %}New Comments{% endblock %}
+{% block title %}Créer un nouveau commentaire{% endblock %}
 
 {% block body %}
-    <h1>Create new Comments</h1>
-
+    <h1>Créer un nouveau commentaire</h1>
     {{ include('back-office/comments/_form.html.twig') }}
-
     <a href="{{ path('comments_index') }}">back to list</a>
 {% endblock %}

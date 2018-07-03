@@ -1,6 +1,18 @@
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="row">
+        <div class="card-body col-8 form-group encart" novalidate=true>
+            {{ form_row(form.content, {'label':'Contenu du commentaire', 'attr':{'novalidate':'true'}}) }}
+        </div>
+
+        <div class="card-body col-4 form-group encart">
+            {{ form_row(form.article, {'label':'Titre de l\'article'}) }}
+            {{ form_row(form.author, {'label':'Auteur du commentaire'}) }}
+        </div>
+    </div>
+
+    <div class="text-right">
+        <button class="btn btn-success">{{ button_label|default('Sauvegarder') }}</button>
+    </div>
 {{ form_end(form) }}
