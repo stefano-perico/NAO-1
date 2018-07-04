@@ -27,9 +27,8 @@ class ObservationRepository extends ServiceEntityRepository
     public function getSpeciesObsWithSearchQueryBuilder(?string $term): QueryBuilder
     {
         $qb = $this->createQueryBuilder('o')
-            ->innerJoin('o.species', 's')
-            ->andWhere('s.obsCount > :val')
-            ->setParameter('val', 0);
+            ->innerJoin('o.species', 's');
+
 
         if ($term) {
             $qb
