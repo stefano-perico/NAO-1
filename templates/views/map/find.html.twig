@@ -39,6 +39,7 @@
                 {% endif %}
             {% endfor %}
         </article>
+
     </section>
 
 
@@ -75,7 +76,7 @@
                 ];
 
             for (var $i = 0; $i < $myItems.length; $i++) {
-                $marker = new L.marker([$myItems[$i][1], $myItems[$i][2]], {icon: napIcon})
+                $marker = new L.marker([$myItems[$i][1], $myItems[$i][2]] {% for ob in obs %}{% if ob.author.role == 'visitor' %}, {icon: napIcon} {% endif %}{% endfor %})
                     .bindPopup($myItems[$i][0])
                     .addTo($mymap)
             }
