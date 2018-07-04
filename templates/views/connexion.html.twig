@@ -58,7 +58,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="card-img">
-                            <img class="cover-custom"
+                            <img class="cover-custom-account"
                                  src="{{ asset('img/'~user.image.image.name ?? null) }}"
                                  alt="{{ user.image.image.alt ?? null }}">
                         </div>
@@ -72,10 +72,13 @@
                             <p>Vous vous êtes inscrit le <strong>{{ user.registrationDate|date('d-m-Y') }}</strong></p>
                         </div>
                     </div>
-                    <div class="col-12">
+                </div>
+            </div>
+                <div class="mt-5">
+                    <div class="card">
                         <div class="card-body">
-                            <h3>sommaire</h3>
-                            <p>{{ user.summary }}</p>
+                            <h3 class="card-text text-center">sommaire</h3>
+                            <p class="card-text">{{ user.summary }}</p>
                         </div>
                     </div>
                 </div>

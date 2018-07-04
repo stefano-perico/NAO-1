@@ -42,6 +42,7 @@ class TaxrefRepository extends ServiceEntityRepository
 
     /**
      * @param null|string $term
+     * @return QueryBuilder
      */
     public function getSpeciesObsWithSearchQueryBuilder(?string $term): QueryBuilder
     {
@@ -60,32 +61,4 @@ class TaxrefRepository extends ServiceEntityRepository
         return $qb;
     }
 
-//    /**
-//     * @return Taxref[] Returns an array of Taxref objects
-//     */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('t')
-            ->andWhere('t.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('t.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Taxref
-    {
-        return $this->createQueryBuilder('t')
-            ->andWhere('t.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }

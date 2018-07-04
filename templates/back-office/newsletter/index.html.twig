@@ -1,0 +1,30 @@
+{% extends 'back-office/base.html.twig' %}
+
+{% block title %}Mails inscrits pour la News Letter{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Mails inscrits pour la News Letter</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Mail</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for newsletter in newsletters %}
+            <tr>
+                <td>{{ newsletter.mail }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="col-12 text-center">
+        <a class="btn btn-dark" href="{{ asset('emailsNewsLetter.txt') }}">Récupérer les mails</a>
+    </div>
+{% endblock %}
