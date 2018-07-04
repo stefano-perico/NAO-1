@@ -29,7 +29,6 @@ class ObservationRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('o')
             ->innerJoin('o.species', 's');
 
-
         if ($term) {
             $qb
                 ->andWhere('s.obsCount > :val')
