@@ -24,7 +24,7 @@
                 <div class="col-md-6 my-4">
                     <div class="card">
                         {% if ob.image.image.name is defined %}
-                            <img class="card-img-top" src="{{ asset('img/'~observation.image.image.name) }}" alt="{{ ob.image.alt }}">
+                            <img class="card-img-top" src="{{ asset('img/'~ob.image.image.name) }}" alt="{{ ob.image.alt }}">
                         {% else %}
                             <img class="card-img-top" src="{{ asset('imgSite/default_bird.png') }}" alt="image-oiseau-picto">
                         {% endif %}
