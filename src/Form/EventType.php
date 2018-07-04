@@ -6,7 +6,6 @@ use App\Entity\Event;
 use App\Repository\ImageRepository;
 use App\Repository\UserRepository;
 use App\Repository\VillesFranceFreeRepository;
-use function Sodium\add;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;

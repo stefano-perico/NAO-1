@@ -10,10 +10,9 @@
         <thead>
             <tr>
                 <th>Titre</th>
-                <th>Résumé</th>
                 <th>Publié</th>
                 <th>Publication</th>
-                <th>Catégoprie</th>
+                <th>Catégorie</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -21,8 +20,7 @@
         {% for article in pagination %}
             <tr>
                 <td>{{ article.title ?? 'null'}}</td>
-                <td><p class="text-justify summary">{{ article.summary|striptags }}</p></td>
-                <td>{{ article.published ? 'Yes' : 'No' ?? 'null'}}</td>
+                <td>{{ article.published ? 'Oui' : 'Non' ?? 'null'}}</td>
                 <td>{{ article.date ? article.date|date('Y-m-d') : '' ?? 'null' }}</td>
                 <td>{{ article.categories.name ?? 'null' }}</td>
                 <td class="text-right pr-3 action">

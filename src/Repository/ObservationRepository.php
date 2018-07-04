@@ -22,6 +22,7 @@ class ObservationRepository extends ServiceEntityRepository
 
     /**
      * @param null|string $term
+     * @return QueryBuilder
      */
     public function getSpeciesObsWithSearchQueryBuilder(?string $term): QueryBuilder
     {
@@ -41,33 +42,4 @@ class ObservationRepository extends ServiceEntityRepository
         return $qb;
     }
 
-
-//    /**
-//     * @return Observation[] Returns an array of Observation objects
-//     */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('o')
-            ->andWhere('o.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('o.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Observation
-    {
-        return $this->createQueryBuilder('o')
-            ->andWhere('o.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }

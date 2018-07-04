@@ -5,6 +5,7 @@ namespace App\Controller\backOffice;
 use App\Entity\Observation;
 use App\Form\ObservationType;
 use App\Repository\ObservationRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,9 +19,20 @@ class ObservationController extends Controller
     /**
      * @Route("/", name="observation_index", methods="GET")
      */
-    public function index(ObservationRepository $observationRepository): Response
+    public function index(ObservationRepository $observationRepository, PaginatorInterface $paginator, Request $request): Response
     {
-        return $this->render('back-office/observation/index.html.twig', ['observations' => $observationRepository->findAll()]);
+        $q = $request->query->get('q');
+        $queryBuilder = $observationRepository->getSpeciesObsWithSearchQueryBuilder($q);
+
+        $pagination = $paginator->paginate(
+            $queryBuilder, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+
+        return $this->render('back-office/observation/index.html.twig', [
+            'pagination' => $pagination
+        ]);
     }
 
     /**

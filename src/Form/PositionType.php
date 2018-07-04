@@ -28,7 +28,9 @@ class PositionType extends AbstractType
         $builder
             ->add('longitude', NumberType::class)
             ->add('latitude',NumberType::class)
-            ->add('address', TextType::class)
+            ->add('address', TextType::class,[
+                'required' => false
+            ])
         ;
         $builder
             ->get('address')

@@ -37,7 +37,7 @@ class HomeController extends Controller
         }
 
         return $this->render('views/home.html.twig',[
-            'observations' => $observationRepository->findBy([],['date'=>'desc']),
+            'observations' => $observationRepository->findBy([],['date'=>'desc'], 6),
             'newsForm'     => $newsletterForm->createView(),
             'flashs'       => $flashesService->getFlashes($request)
         ]);

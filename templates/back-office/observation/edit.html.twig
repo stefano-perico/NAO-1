@@ -1,13 +1,29 @@
 {% extends 'back-office/base.html.twig' %}
 
-{% block title %}Edit Observation{% endblock %}
+{% block title %}Observation{% endblock %}
 
 {% block body %}
-    <h1>Edit Observation</h1>
+    <a class="btn-outline-dark" href="{{ path('observation_index') }}">
+        <i class="far fa-arrow-alt-circle-left"></i> Observations
+    </a>
+    <h1 class="text-center">Observation</h1>
 
     {{ include('back-office/observation/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('observation_index') }}">back to list</a>
-
     {{ include('back-office/observation/_delete_form.html.twig') }}
+
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+    <script>
+        $(document).ready(function(){
+            let $autocompleteSpecies = $("#observation_species");
+            $autocompleteSpecies
+            // .val("")
+                .autocomplete({
+                    source: document.getElementById('observation_species').getAttribute('urlAutocomplete'),
+                    minLength: 2
+                });
+        });
+    </script>
 {% endblock %}

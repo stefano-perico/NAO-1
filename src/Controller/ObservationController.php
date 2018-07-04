@@ -92,12 +92,11 @@ class ObservationController extends Controller
                     ->getFlashBag()
                     ->add('warning', 'Votre observation sera prise en compte sous peu')
                 ;
-//                return $this->redirectToRoute('myAccount');
             }
         }
 
         return new Response($this->renderView('views/observation/observationCreate.html.twig',[
-            'elementPage'       => Yaml::parseFile($this->getParameter('kernel.project_dir').'/translations/test.yaml'),
+            'elementPage'       => Yaml::parseFile($this->getParameter('kernel.project_dir').'/translations/observation.yaml'),
             'observationForm'   => $observationForm->createView(),
             'flashs'            => $flashesService->getFlashes($request)
         ]));

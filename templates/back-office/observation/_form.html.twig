@@ -1,6 +1,34 @@
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {{ form_start(form) }}
+    <div class="row">
+
+        <div class="col-6">
+            <div class="row">
+                <div class="card-body col-12 form-group encart">
+                    {{ form_row(form.description, {'label':'Description', 'attr':{'novalidate':'true', 'rows':5}}) }}
+                </div>
+                {% if form.image.vars.data.image.name is defined %}
+                    <div class="card-img col-12">
+                        <img class="cover-custom-square" src="{{ asset('img/'~form.image.vars.data.image.name ?? 'null') }}" alt="{{ form.image.vars.data.alt ?? 'null'}}">
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="card-body col-6 form-group encart">
+            {{ form_row(form.species, {'label':'Espèce', 'attr':{'urlautocomplete' : "/autocomplete_species"}}) }}
+            {{ form_row(form.date, {'label':'Date de l\'observation'}) }}
+            {{ form_row(form.checked, {'label':'Valider'}) }}
+            {{ form_row(form.author, {'label':'Auteur de l\'observation'}) }}
+            {{ form_row(form.image, {'label':'Image'}) }}
+            {{ form_row(form.verifiedBy, {'label':'Vérifié par'}) }}
+            {{ form_row(form.position, {'label':false}) }}
+        </div>
+    </div>
+
     {{ form_widget(form) }}
-    <button class="btn btn-success">{{ button_label|default('Sauvegarder') }}</button>
+    <div class="text-right">
+        <button class="btn btn-success mb-3">{{ button_label|default('Sauvegarder') }}</button>
+    </div>
 {{ form_end(form) }}

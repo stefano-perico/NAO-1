@@ -1,46 +1,45 @@
 {% extends 'back-office/base.html.twig' %}
 
-{% block title %}Observation index{% endblock %}
+{% block title %}Observations{% endblock %}
 
 {% block body %}
-    <h1>Observation index</h1>
+    <a class="btn-outline-dark" href="{{ path('observation_index') }}">
+        <i class="far fa-arrow-alt-circle-left"></i> Observations
+    </a>
+    <h1 class="text-center">Observations</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Description</th>
                 <th>Species</th>
                 <th>Date</th>
-                <th>UpdatedAt</th>
-                <th>Position.id</th>
                 <th>Checked</th>
                 <th>image</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for observation in observations %}
+        {% for observation in pagination %}
             <tr>
-                <td>{{ observation.id }}</td>
-                <td>{{ observation.description }}</td>
                 <td>{{ observation.species.nomFr }}</td>
                 <td>{{ observation.date ? observation.date|date('Y-m-d') : '' }}</td>
-                <td>{{ observation.updatedAt ? observation.updatedAt|date('Y-m-d') : '' }}</td>
-                {% if observation.position.id is defined %}
-                    <td>{{ observation.position.id }}</td>
-                    {% else %}
-                    <td>null</td>
-                {% endif %}
                 <td>{{ observation.checked ? 'Yes' : 'No' }}</td>
                 <td>
                     {% if observation.image.image is defined %}
-                        <img src="{{ asset('img/'~observation.image.image.name) }}" width="100%">
+                        <img src="{{ asset('img/'~observation.image.image.name) }}" height="50px">
+                        {% else %}
+                            <img src="{{ asset('imgSite/default_bird.png') }}" height="50px">
                     {% endif %}
                 </td>
-                <td>
-                    <a href="{{ path('observation_show', {'id': observation.id}) }}">show</a>
-                    <a href="{{ path('observation_edit', {'id': observation.id}) }}">edit</a>
+                <td class="text-right pr-3 action">
+                    <div class="action">
+                        <a class="btn btn-info" href="{{ path('observation_show', {'id': observation.id }) }}">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        <a class="btn btn-primary" href="{{ path('observation_edit', {'id': observation.id}) }}">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
                 </td>
             </tr>
         {% else %}
@@ -51,5 +50,14 @@
         </tbody>
     </table>
 
-    <a href="{{ path('observation_new') }}">Create new</a>
+    <div class="col-12 text-right">
+        <a class="btn btn-success" href="{{ path('observation_new') }}">
+            Nouveau <i class="fas fa-plus"></i>
+        </a>
+    </div>
+
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+        {{ knp_pagination_render(pagination) }}
+    </ul>
 {% endblock %}
