@@ -6,7 +6,6 @@ namespace App\DataFixtures;
 
 use App\Entity\Image;
 use App\Entity\User;
-use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Symfony\Component\Yaml\Yaml;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -15,7 +14,7 @@ use Doctrine\Common\Persistence\ObjectManager;
  * Class TaxrefFixtures
  * @package App\DataFixtures
  */
-class UserFixtures extends Fixture implements DependentFixtureInterface
+class UserFixtures extends Fixture
 {
 
     public function load(ObjectManager $manager):void
@@ -42,10 +41,4 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
         $manager->flush();
     }
 
-    public function getDependencies()
-    {
-        return [
-            ImageFixtures:class
-        ];
-    }
 }

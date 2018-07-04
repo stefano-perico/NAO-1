@@ -63,7 +63,6 @@ class ObservationType extends AbstractType
                     return null;
                 },
                 function ($speciesAsEntity){
-                    dump($speciesAsEntity);
                     return $this->taxrefRepository->findOneBy(['nom_fr'=>$speciesAsEntity]);
                 }
             ))
