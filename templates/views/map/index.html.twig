@@ -56,6 +56,7 @@
             <!--Table head-->
             <thead>
                 <tr>
+                    <th>{{ 'mapinter_title_1' | trans}}</th>
                     <th>{{ 'mapinter_title_2' | trans}}</th>
                     <th>{{ 'mapinter_title_3' | trans}}</th>
                     <th>{{ 'mapinter_title_4' | trans}}</th>
@@ -67,14 +68,15 @@
             <tbody>
             <!--Table-->
             {% for ob in pagination %}
-                {% if ob.checked %}
+
                 <tr>
-                    <td>{{ ob.species.famille }}</td>
-                    <td>{{ ob.species.lbNom }}</td>
-                    <td>{{ ob.species.nomFr }}</td>
-                    <td><a href="{{ path('find', {'id': ob.species.id}) }}"><i class="fa fa-eye fa-2x"></i> </a></td>
+                    <td>{{ ob.obsCount }}</td>
+                    <td>{{ ob.famille }}</td>
+                    <td>{{ ob.lbNom }}</td>
+                    <td>{{ ob.nomFr }}</td>
+                    <td><a href="{{ path('find', {'id': ob.id}) }}"><i class="fa fa-eye fa-2x"></i> </a></td>
                 </tr>
-                {% endif %}
+
             {% endfor %}
             </tbody>
             <!--Table body-->
