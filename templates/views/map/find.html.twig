@@ -20,6 +20,7 @@
 
         <article class="row ustify-content-md-center">
             {% for ob in obs %}
+                {% if ob.checked %}
                 <div class="col-md-6 my-4">
                     <div class="card">
                         {% if ob.image.image.name is defined %}
@@ -35,6 +36,7 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
             {% endfor %}
         </article>
     </section>
@@ -65,7 +67,9 @@
             var $myItems =
                 [
                     {% for ob in obs %}
-                        ["{{  ob.description }}", {{ ob.position.latitude }}, {{ ob.position.longitude }}],
+                        {% if ob.checked %}
+                            ["{{  ob.description }}", {{ ob.position.latitude }}, {{ ob.position.longitude }}],
+                        {% endif %}
                     {% endfor %}
                 ];
 

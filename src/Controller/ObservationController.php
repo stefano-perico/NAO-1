@@ -38,6 +38,12 @@ class ObservationController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($newsletter);
             $em->flush();
+
+            $request
+                ->getSession()
+                ->getFlashBag()
+                ->add('info', 'Bravo, vous venez de vous abonner à notre Newsletter')
+            ;
         }
 
         if (!$userService->isAuthorized($request, __FUNCTION__)){
@@ -48,7 +54,7 @@ class ObservationController extends Controller
         return $this->render('views/observation/observationInfo.html.twig',[
             'observations' => $observationRepository->findBy([],['date'=>'desc']),
             'newsForm'      => $newsletterForm->createView(),
-            'elementPage'  => Yaml::parseFile($this->getParameter('kernel.project_dir').'/translations/test.yaml'),
+            'elementPage'  => Yaml::parseFile($this->getParameter('kernel.project_dir').'/translations/observation.yaml'),
             'flashs'       => $flashesService->getFlashes($request)
         ]);
     }

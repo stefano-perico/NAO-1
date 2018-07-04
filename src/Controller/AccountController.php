@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Observation;
 use App\Entity\User;
 use App\Form\UserType;
+use App\Repository\ObservationRepository;
 use App\Repository\UserRepository;
 use App\Services\FlashesService;
 use App\Services\UserService;
@@ -99,7 +101,7 @@ class AccountController extends Controller
 
         return new Response($this->renderView('views/connexion.html.twig',[
             'flashs'            => $flashesService->getFlashes($request),
-            'user'         => $userRepository->find($request->getSession()->get('user'))
+            'user'         => $userRepository->find($request->getSession()->get('user')),
         ]));
     }
 

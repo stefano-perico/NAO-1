@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Observation;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -18,6 +19,28 @@ class ObservationRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Observation::class);
     }
+
+    /**
+     * @param null|string $term
+     */
+    public function getSpeciesObsWithSearchQueryBuilder(?string $term): QueryBuilder
+    {
+        $qb = $this->createQueryBuilder('o')
+            ->innerJoin('o.species', 's')
+            ->andWhere('s.obsCount > :val')
+            ->setParameter('val', 0);
+
+        if ($term) {
+            $qb
+                ->andWhere('s.obsCount > :val')
+                ->andWhere('s.nom_fr LIKE :term OR s.lb_nom LIKE :term OR s.famille LIKE :term')
+                ->setParameters(['val' => 0, 'term' => '%' . $term . '%'])
+            ;
+        }
+
+        return $qb;
+    }
+
 
 //    /**
 //     * @return Observation[] Returns an array of Observation objects
