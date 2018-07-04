@@ -6,6 +6,9 @@ namespace App\Controller;
 use App\Entity\Observation;
 use App\Repository\ObservationRepository;
 use App\Repository\TaxrefRepository;
+use App\Repository\UserRepository;
+use App\Services\FlashesService;
+use App\Services\UserService;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -39,15 +42,23 @@ class MapController extends Controller
     /**
      * @Route("/{id}", name="find")
      */
-    public function find(EntityManagerInterface $em, $id)
+    public function find(EntityManagerInterface $em, UserRepository $userRepository, Request $request, $id)
     {
         $repository = $em->getRepository(Observation::class);
         $obs = $repository->findBy([
             'species' => $id
         ]);
 
+        if ($request->getSession()->get('user')){
+            $user = $userRepository->find($request->getSession()->get('user'));
+            $userRole = $user->getRole();
+        }else{
+            $userRole = null;
+        }
+
         return $this->render('views/map/find.html.twig', [
-            'obs' => $obs
+            'obs' => $obs,
+            'user' => $userRole
         ]);
     }
 

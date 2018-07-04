@@ -95,6 +95,7 @@ class ObservationController extends Controller
             }
         }
 
+
         return new Response($this->renderView('views/observation/observationCreate.html.twig',[
             'elementPage'       => Yaml::parseFile($this->getParameter('kernel.project_dir').'/translations/observation.yaml'),
             'observationForm'   => $observationForm->createView(),
