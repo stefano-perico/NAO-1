@@ -4,6 +4,7 @@ namespace App\Controller;
 
 
 use App\Entity\Observation;
+use App\Repository\ObservationRepository;
 use App\Repository\TaxrefRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
@@ -21,7 +22,7 @@ class MapController extends Controller
     /**
      * @Route("/index", name="observation")
      */
-    public function observation(TaxrefRepository $repository, Request $request, PaginatorInterface $paginator){
+    public function observation(ObservationRepository $repository, Request $request, PaginatorInterface $paginator){
 
         $q = $request->query->get('q');
         $queryBuilder = $repository->getSpeciesObsWithSearchQueryBuilder($q);

@@ -19,6 +19,7 @@
         <div class="col-md-8">
 
             {% for article in pagination %}
+                {% if article.published %}
                 <!-- Blog Post -->
                 <div class="card mb-4 mt-4">
                     {% if article.image.image is defined %}
@@ -41,6 +42,7 @@
                         <a href="{{ path('user_show', {'id': article.author.id}) }}">{{ article.author.firstName ~ ' ' ~ article.author.lastName }}</a>
                     </div>
                 </div>
+                {% endif %}
             {% endfor %}
 
             <!-- Pagination -->

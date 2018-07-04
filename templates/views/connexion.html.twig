@@ -53,15 +53,51 @@
             </a>
         </div>
         <div class="container">
-            <div class="card mt-5">
-                {% if user.image.image is defined %}
-                    <img class="card-img-top" src="{{ asset('img/'~ user.image.image.name) }}" alt="Card image cap">
-                {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ 'user_h5' | trans}}</h5>
-                    <p class="card-text">{{ 'user_text' | trans }}</p>
+            <h1 class="text-center my-4">Bienvenue {{ user.firstName | capitalize }}</h1>
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <div class="card mt-5">
+                        {% if user.image.image is defined %}
+                            <img class="card-img-top" src="{{ asset('img/'~ user.image.image.name) }}" alt="Card image cap">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ user.lastName | upper}} {{ user.lastName | capitalize }}</h5>
+                        </div>
+                    </div>
+
+
                 </div>
+                <div class="col-md-8">
+                    <h2 class="text-center">Vos observations</h2>
+                    <table class="table table-hover text-center">
+                        <!--Table head-->
+                        <thead>
+                        <tr>
+                            <th>{{ 'mapinter_title_2' | trans}}</th>
+                            <th>{{ 'mapinter_title_3' | trans}}</th>
+                            <th>{{ 'mapinter_title_4' | trans}}</th>
+                            <th>{{ 'mapinter_title_5' | trans}}</th>
+                        </tr>
+                        </thead>
+                        <!--Table head--
+                        <!--Table body-->
+                        <tbody>
+                        <!--Table-->
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+
+                        </tbody>
+                        <!--Table body-->
+                    </table>
+                    <!--Table-->
+                </div>
+
             </div>
+
         </div>
     {% endif %}
 {% endblock %}

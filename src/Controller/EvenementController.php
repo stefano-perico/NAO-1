@@ -46,6 +46,11 @@ class EvenementController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($newsletter);
             $em->flush();
+
+            $request
+                ->getSession()
+                ->getFlashBag()
+                ->add('info', 'Bravo, vous venez de vous abonner à notre Newsletter');
         }
 
         if (!$userService->isAuthorized($request, __FUNCTION__)){
