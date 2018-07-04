@@ -53,50 +53,94 @@
             </a>
         </div>
         <div class="container">
-            <h1 class="text-center my-4">Bienvenue {{ user.firstName | capitalize }}</h1>
-            <div class="row">
-
-                <div class="col-md-4">
-
-                    <div class="card mt-5">
-                        {% if user.image.image is defined %}
-                            <img class="card-img-top" src="{{ asset('img/'~ user.image.image.name) }}" alt="Card image cap">
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ user.lastName | upper}} {{ user.lastName | capitalize }}</h5>
+            <h2 class="text-center my-4">Bienvenue {{ user.firstName ~ ' ' ~ user.lastName| upper }}</h2>
+            <div class="card">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card-img">
+                            <img class="cover-custom"
+                                 src="{{ asset('img/'~user.image.image.name ?? null) }}"
+                                 alt="{{ user.image.image.alt ?? null }}">
                         </div>
                     </div>
-
-
+                    <div class="col-6">
+                        <div class="card-body">
+                            <h3>Mes informations</h3>
+                            <p>Prénom et nom : <strong>{{ user.firstName~' '~user.lastName}}</strong></p>
+                            <p>Votre role au sein de l'application est <strong>{{ user.role }}</strong></p>
+                            <p>Votre mail : <strong>{{ user.email }}</strong></p>
+                            <p>Vous vous êtes inscrit le <strong>{{ user.registrationDate|date('d-m-Y') }}</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card-body">
+                            <h3>sommaire</h3>
+                            <p>{{ user.summary }}</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-8">
-                    <h2 class="text-center">Vos observations</h2>
-                    <table class="table table-hover text-center">
-                        <!--Table head-->
-                        <thead>
-                        <tr>
-                            <th>{{ 'mapinter_title_2' | trans}}</th>
-                            <th>{{ 'mapinter_title_3' | trans}}</th>
-                            <th>{{ 'mapinter_title_4' | trans}}</th>
-                            <th>{{ 'mapinter_title_5' | trans}}</th>
-                        </tr>
-                        </thead>
-                        <!--Table head--
-                        <!--Table body-->
-                        <tbody>
-                        <!--Table-->
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-
-                        </tbody>
-                        <!--Table body-->
-                    </table>
-                    <!--Table-->
-                </div>
-
             </div>
+
+        {% if user.articles is defined and user.articles is not empty %}
+            <h3 class="text-center my-4">Mes derniers articles</h3>
+            <table class="table table-responsive-md text-center">
+            <thead>
+                <tr>
+                    <th width="25%">Titre</th>
+                    <th width="25%">Publié</th>
+                    <th width="25%">Catégorie</th>
+                    <th width="25%">Article</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for article in user.articles %}
+                {% if loop.index <= 5 %}
+                    <tr>
+                        <td>{{ article.title ?? 'null'}}</td>
+                        <td>{{ article.published ? 'Oui' : 'Non' ?? 'null'}}</td>
+                        <td>{{ article.categories.name ?? 'Non définie'}}</td>
+                        <td><a href="{{ path('blogArticle',{'slug':article.Slug}) }}">{{ article.Slug }}</a></td>
+                    </tr>
+                {% endif %}
+            {% else %}
+                <tr>
+                    <td colspan="9">Vous n'avez pas d'articles à votre actif</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        {% endif %}
+
+
+        {% if user.event is defined and user.event is not empty %}
+            <h3 class="text-center my-4">Mes derniers événements</h3>
+            <table class="table table-responsive-md text-center">
+                <thead>
+                <tr>
+                    <th width="25%">Titre</th>
+                    <th width="25%">Publié</th>
+                    <th width="25%">Sommaire</th>
+                    <th width="25%">Lien</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for event in user.event %}
+                    {% if loop.index <= 5 %}
+                        <tr>
+                            <td>{{ event.title ?? 'null'}}</td>
+                            <td>{{ event.published ? 'Oui' : 'Non' ?? 'null'}}</td>
+                            <td>{{ event.summary|striptags }}</td>
+                            <td><a href="{{ path('evenement',{'slug':event.Slug}) }}">{{ event.Slug }}</a></td>
+                        </tr>
+                    {% endif %}
+                {% else %}
+                    <tr>
+                        <td colspan="9">Vous n'avez pas d'articles à votre actif</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
 
         </div>
     {% endif %}

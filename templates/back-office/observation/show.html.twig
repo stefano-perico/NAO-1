@@ -18,15 +18,11 @@
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ observation.id }}</td>
-            </tr>
-            <tr>
                 <th>Description</th>
                 <td>{{ observation.description }}</td>
             </tr>
             <tr>
-                <th>Species</th>
+                <th>Espèce</th>
                 <td>{{ observation.species.nomFr ~' ('~ observation.species.lbNom ~ ')'}}</td>
             </tr>
             <tr>
@@ -34,7 +30,7 @@
                 <td>{{ observation.date ? observation.date|date('Y-m-d') : '' }}</td>
             </tr>
             <tr>
-                <th>UpdatedAt</th>
+                <th>Date de modification</th>
                 <td>{{ observation.updatedAt ? observation.updatedAt|date('Y-m-d') : '' }}</td>
             </tr>
                 {% if observation.position.address is defined %}

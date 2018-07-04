@@ -11,9 +11,9 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Species</th>
+                <th>Espèces</th>
                 <th>Date</th>
-                <th>Checked</th>
+                <th>Validé</th>
                 <th>image</th>
                 <th>actions</th>
             </tr>
@@ -23,7 +23,7 @@
             <tr>
                 <td>{{ observation.species.nomFr }}</td>
                 <td>{{ observation.date ? observation.date|date('Y-m-d') : '' }}</td>
-                <td>{{ observation.checked ? 'Yes' : 'No' }}</td>
+                <td>{{ observation.checked ? 'Oui' : 'Non' }}</td>
                 <td>
                     {% if observation.image.image is defined %}
                         <img src="{{ asset('img/'~observation.image.image.name) }}" height="50px">

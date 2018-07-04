@@ -6758,6 +6758,12 @@ body {
 .observation-image-custom {
   border-radius: 2px 2px 25px 2px; }
 
+.cover-custom {
+  height: 241px;
+  width: 100%;
+  margin: auto;
+  object-fit: cover; }
+
 .modal-content {
   background: rgba(255, 255, 255, 0.9); }
 
