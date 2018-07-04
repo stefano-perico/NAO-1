@@ -19,32 +19,24 @@ class ContactRepository extends ServiceEntityRepository
         parent::__construct($registry, Contact::class);
     }
 
-//    /**
-//     * @return Contact[] Returns an array of Contact objects
-//     */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @param null|string $term
+     * @return \Doctrine\ORM\QueryBuilder
+     */
+    public function getContactWithSearchQueryBuilder(?string $term): \Doctrine\ORM\QueryBuilder
     {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        $qb = $this->createQueryBuilder('a');
 
-    /*
-    public function findOneBySomeField($value): ?Contact
-    {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        if ($term) {
+            $qb
+                ->andWhere('author.lastName LIKE :term OR a.title LIKE :term')
+                ->setParameter('term','%' . $term . '%')
+            ;
+        }
+
+        return $qb
+            ->orderBy('a.createdAt', 'DESC')
+            ;
     }
-    */
+
 }

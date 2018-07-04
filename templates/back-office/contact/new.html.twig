@@ -1,0 +1,12 @@
+{% extends 'back-office/base.html.twig' %}
+
+{% block title %}Créer un nouveau contact{% endblock %}
+
+{% block body %}
+    <a class="btn-outline-dark" href="{{ path('contact_index') }}">
+        <i class="far fa-arrow-alt-circle-left"></i> Contacts
+    </a>
+    <h1 class="text-center">Créer un nouveau contact</h1>
+
+    {{ include('back-office/contact/_form.html.twig') }}
+{% endblock %}

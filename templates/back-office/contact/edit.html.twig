@@ -1,0 +1,13 @@
+{% extends 'back-office/base.html.twig' %}
+
+{% block title %}Editer un contact{% endblock %}
+
+{% block body %}
+    <a class="btn-outline-dark" href="{{ path('contact_index') }}">
+        <i class="far fa-arrow-alt-circle-left"></i> Contacts
+    </a>
+    <h1 class="text-center">Editer un contact</h1>
+
+    {{ include('back-office/contact/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('back-office/contact/_delete_form.html.twig') }}
+{% endblock %}

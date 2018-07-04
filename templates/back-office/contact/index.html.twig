@@ -1,0 +1,52 @@
+{% extends 'back-office/base.html.twig' %}
+
+{% block title %}Contacts{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Contacts</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Sujet</th>
+                <th>Message</th>
+                <th>Validé</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in pagination %}
+            <tr>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.subject }}</td>
+                <td>{{ contact.message }}</td>
+                <td>{{ contact.checked ? 'Oui' : 'Non' }}</td>
+                <td class="text-right pr-3 action">
+                    <div class="action">
+                        <a class="btn btn-info" href="{{ path('contact_show', {'id': contact.id}) }}">
+                            <i class="far fa-eye"></i>
+                        </a>
+                        <a class="btn btn-primary" href="{{ path('contact_edit', {'id': contact.id}) }}">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+        {{ knp_pagination_render(pagination) }}
+    </ul>
+    <div class="col-12 text-right">
+        <a class="btn btn-success" href="{{ path('contact_new') }}">
+            Nouveau <i class="fas fa-plus"></i>
+        </a>
+    </div>
+{% endblock %}
