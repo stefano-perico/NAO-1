@@ -56,6 +56,9 @@
 {% block script %}
     {{ parent() }}
  <script>
+     function checkVariable() {
+         if (L !== undefined) {
+
         $(document).ready(function() {
             // initialisation de la map + position de la map
             document.getElementById('weathermap').innerHTML = "<div id='mapid' style='width: 100%; height: 100%;'></div>";
@@ -94,7 +97,8 @@
                     .bindPopup($myItems[$i][0])
                     .addTo($mymap)
             }
-
         });
+
+        }}setTimeout(checkVariable, 300);
     </script>
 {% endblock %}
