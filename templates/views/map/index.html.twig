@@ -47,7 +47,7 @@
                                placeholder="{{ 'mapinter_placeholder_search' | trans }}"
                                value="{{ app.request.query.get('q') }}"
                                id="observation_species"
-                               urlAutocomplete="/autocomplete_species"
+                               urlAutocomplete="/autocomplete_species_index"
                         >
                         <div class="input-group-append">
                             <button type="submit"
@@ -77,24 +77,20 @@
             <!--Table body-->
             <tbody>
             <!--Table-->
-            {% for ob in pagination %}
-
+            {% for ob in obs %}
                 <tr>
-                    <td>{{ ob.obsCount }}</td>
+                    <td>{{ ob.count }}</td>
                     <td>{{ ob.famille }}</td>
                     <td>{{ ob.lbNom }}</td>
                     <td>{{ ob.nomFr }}</td>
                     <td><a href="{{ path('find', {'id': ob.id}) }}"><i class="fa fa-eye fa-2x"></i> </a></td>
                 </tr>
-
             {% endfor %}
             </tbody>
             <!--Table body-->
         </table>
         <!--Table-->
-        <ul class="pagination justify-content-center mb-4">
-            {{ knp_pagination_render(pagination) }}
-        </ul>
+
     </section>
 {% endblock %}
 
@@ -104,7 +100,6 @@
         $(document).ready(function(){
             let $autocompleteSpecies = $("#observation_species");
             $autocompleteSpecies
-            // .val("")
                 .autocomplete({
                     source: document.getElementById('observation_species').getAttribute('urlAutocomplete'),
                     minLength: 2

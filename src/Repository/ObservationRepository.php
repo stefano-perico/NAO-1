@@ -37,7 +37,25 @@ class ObservationRepository extends ServiceEntityRepository
             ;
         }
 
-        return $qb;
+        $observations = [];
+        foreach ($qb as $item) {
+            $observations[$item->getSpecies()->getId()][] = $item;
+        }
+
+        $formatedObs = [];
+        foreach ($observations as $item){
+            $species = $this->find($item[0]->getId());
+
+            $formatedObs[] = [
+                'count' => count($item),
+                'famille' => $species->getSpecies()->getFamille(),
+                'lbNom' => $species->getSpecies()->getLbNom(),
+                'nomFr' => $species->getSpecies()->getNomFr(),
+                'id' => $species->getSpecies()->getId()];
+        }
+
+        return $formatedObs;
+
     }
 
     /**
@@ -62,11 +80,11 @@ class ObservationRepository extends ServiceEntityRepository
             $species = $this->find($item[0]->getId());
 
             $formatedObs[] = [
-                count($item),
-                $species->getSpecies()->getFamille(),
-                $species->getSpecies()->getLbNom(),
-                $species->getSpecies()->getNomFr(),
-                $species->getSpecies()->getId()];
+                'count' => count($item),
+                'famille' => $species->getSpecies()->getFamille(),
+                'lbNom' => $species->getSpecies()->getLbNom(),
+                'nomFr' => $species->getSpecies()->getNomFr(),
+                'id' => $species->getSpecies()->getId()];
         }
 
         return $formatedObs;
