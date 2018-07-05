@@ -7,7 +7,7 @@ home:                 [visitor, professional, author, admin]
 
 #ObservationController
 observationIndex:     [visitor, professional, author, admin]
-observationCreate:    [professional, author, admin]
+observationCreate:    [visitor, professional, author, admin]
 
 #MapController
 observation:          [visitor, professional, author, admin]
