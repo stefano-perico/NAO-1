@@ -109,7 +109,7 @@ class Autocomplete extends Controller
         }
 
         $response = new JsonResponse();
-        $response->setData($species);
+        $response->setData(array_unique($species));
 
         return $response;
     }
