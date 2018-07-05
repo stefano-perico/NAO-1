@@ -4,14 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Newsletter;
 use App\Entity\Observation;
-use App\Entity\User;
 use App\Form\FrontOffice\ObservationType;
 use App\Form\NewsletterType;
 use App\Repository\ObservationRepository;
 use App\Repository\UserRepository;
 use App\Services\FlashesService;
 use App\Services\UserService;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

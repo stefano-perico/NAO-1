@@ -40,12 +40,15 @@ class ObservationType extends AbstractType
             ->get('species')
             ->addModelTransformer(new CallbackTransformer(
                 function ($entityToString){
-                    dump($entityToString);
+                    null;
                 },
                 function ($stringToEntity){
-                    $match = [];
-                    preg_match('/[^()]+/',$stringToEntity,$match);
-                    return $this->taxrefRepository->findOneBy(['nom_fr'=>trim($match[0])]);
+                    foreach ($this->taxrefRepository->findAll() as $item){
+                        if ($stringToEntity === $item->getNomFr().' ('.$item->getLbNom().')'){
+                            return $this->taxrefRepository->findOneBy(['id'=>$item->getId()]);
+                        }
+                    }
+                    return null;
                 }
             ))
         ;
