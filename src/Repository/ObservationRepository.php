@@ -36,27 +36,10 @@ class ObservationRepository extends ServiceEntityRepository
                 ->setParameters(['val' => 0, 'term' => '%' . $term . '%'])
             ;
         }
-
-        $observations = [];
-        foreach ($qb as $item) {
-            $observations[$item->getSpecies()->getId()][] = $item;
-        }
-
-        $formatedObs = [];
-        foreach ($observations as $item){
-            $species = $this->find($item[0]->getId());
-
-            $formatedObs[] = [
-                'count' => count($item),
-                'famille' => $species->getSpecies()->getFamille(),
-                'lbNom' => $species->getSpecies()->getLbNom(),
-                'nomFr' => $species->getSpecies()->getNomFr(),
-                'id' => $species->getSpecies()->getId()];
-        }
-        return $formatedObs;
+        return $qb;
     }
 
-    public function test($term)
+    public function getSpeciesWithTerm(?string $term)
     {
         $qb = $this->createQueryBuilder('o')
             ->innerJoin('o.species', 's')
@@ -81,7 +64,6 @@ class ObservationRepository extends ServiceEntityRepository
                 'nomFr' => $species->getSpecies()->getNomFr(),
                 'id' => $species->getSpecies()->getId()];
         }
-
         return $formatedObs;
     }
 

@@ -42,7 +42,7 @@ class MapController extends Controller
      */
     public function observation(EntityManagerInterface $em, Request $request, ObservationRepository $observationRepository)
     {
-        $obs = $em->getRepository('App:Observation')->isValidateOb();
+        $obs = $observationRepository->isValidateOb();
         if (!$this->userService->isAuthorized($request, __FUNCTION__)){
             $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('home');
@@ -50,7 +50,7 @@ class MapController extends Controller
 
         if($request->query->get('q'))
         {
-            $obs = $em->getRepository('App:Observation')->test($request->query->get('q'));
+            $obs = $observationRepository->getSpeciesWithTerm($request->query->get('q'));
         }
 
         return $this->render('views/map/index.html.twig', [
