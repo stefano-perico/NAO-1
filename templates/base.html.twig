@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}NAO !{% endblock %}</title>
+    {% block title %}
+        <title>{% block title %}NAO !{% endblock %}</title>
+    {% endblock %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
     {% block metadescription %}{% endblock %}
