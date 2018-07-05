@@ -6741,6 +6741,9 @@ footer {
 body {
   margin-top: 0; }
 
+.container {
+  margin-bottom: 150px; }
+
 @media screen and (min-width: 200px) and (max-width: 991px) {
   .cover-custom {
     height: 500px;
