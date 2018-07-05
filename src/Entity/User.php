@@ -252,6 +252,7 @@ class User
         $this->role === null ?
             $this->role = 'visitor':
             null;
+        $this->setPassword('test');
     }
 
 }

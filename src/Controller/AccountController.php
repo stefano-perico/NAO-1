@@ -24,12 +24,27 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class AccountController extends Controller
 {
     /**
+     * @var UserService
+     */
+    private $userService;
+    /**
+     * @var FlashesService
+     */
+    private $flashesService;
+
+    public function __construct(UserService $userService, FlashesService $flashesService)
+    {
+        $this->userService = $userService;
+        $this->flashesService = $flashesService;
+    }
+
+    /**
      * @Route("/connexion", name="connexion")
      */
-    public function connexion(Request $request, FlashesService $flashesService, UserService $userService)
+    public function connexion(Request $request)
     {
-        if (!$userService->isAuthorized($request, __FUNCTION__)){
-            $flashesService->setFlashes($userService->getFlash());
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('home');
         };
 
@@ -42,16 +57,16 @@ class AccountController extends Controller
         $formLogin->handleRequest($request);
 
         if ($formLogin->isSubmitted() && $formLogin->isValid()){
-            $user = $userService->connection($formLogin->getViewData());
+            $user = $this->userService->connection($formLogin->getViewData());
             $user !== null ?
                 $request->getSession()->set('user', $user):
                 null;
-            $flashesService->setFlashes($userService->getFlash());
+            $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('myAccount');
         }
 
         return new Response($this->renderView('views/connexion.html.twig',[
-            'flashs'    => $flashesService->getFlashes($request),
+            'flashs'    => $this->flashesService->getFlashes($request),
             'formLogin' => $formLogin->createView()
         ]));
     }
@@ -59,10 +74,10 @@ class AccountController extends Controller
     /**
      * @Route("/creer", name="createAccount")
      */
-    public function createAccount(Request $request, FlashesService $flashesService, UserService $userService)
+    public function createAccount(Request $request)
     {
-        if (!$userService->isAuthorized($request, __FUNCTION__)){
-            $flashesService->setFlashes($userService->getFlash());
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('home');
         };
 
@@ -79,7 +94,7 @@ class AccountController extends Controller
         }
 
         return new Response($this->renderView('views/connexion.html.twig',[
-            'flashs'            => $flashesService->getFlashes($request),
+            'flashs'            => $this->flashesService->getFlashes($request),
             'formCreateAccount' => $formCreateAccount->createView()
         ]));
     }
@@ -87,11 +102,10 @@ class AccountController extends Controller
     /**
      * @Route("/mon_compte", name="myAccount")
      */
-    public function myAccount(Request $request, FlashesService $flashesService, UserService $userService, UserRepository $userRepository)
+    public function myAccount(Request $request, UserRepository $userRepository)
     {
-//        $request->getSession()->clear();
-        if (!$userService->isAuthorized($request, __FUNCTION__)){
-            $flashesService->setFlashes($userService->getFlash());
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('home');
         };
 
@@ -100,8 +114,8 @@ class AccountController extends Controller
         }
 
         return new Response($this->renderView('views/connexion.html.twig',[
-            'flashs'            => $flashesService->getFlashes($request),
-            'user'         => $userRepository->find($request->getSession()->get('user')),
+            'flashs'            => $this->flashesService->getFlashes($request),
+            'user'              => $userRepository->find($request->getSession()->get('user')),
         ]));
     }
 
@@ -110,6 +124,11 @@ class AccountController extends Controller
      */
     public function disconnect(Request $request)
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $user = $request->getSession()->get('user');
         $request
             ->getSession()

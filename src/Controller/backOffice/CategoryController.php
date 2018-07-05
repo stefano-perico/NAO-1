@@ -30,10 +30,10 @@ class CategoryController extends Controller
 
     public function __construct(UserService $userService, FlashesService $flashesService)
     {
-
         $this->userService = $userService;
         $this->flashesService = $flashesService;
     }
+
     /**
      * @Route("/", name="category_index", methods="GET")
      */

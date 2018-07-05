@@ -5,6 +5,8 @@ namespace App\Controller\backOffice;
 use App\Entity\Contact;
 use App\Form\Contact1Type;
 use App\Repository\ContactRepository;
+use App\Services\FlashesService;
+use App\Services\UserService;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,10 +19,30 @@ use Symfony\Component\Routing\Annotation\Route;
 class ContactController extends Controller
 {
     /**
+     * @var UserService
+     */
+    private $userService;
+    /**
+     * @var FlashesService
+     */
+    private $flashesService;
+
+    public function __construct(UserService $userService, FlashesService $flashesService)
+    {
+        $this->userService = $userService;
+        $this->flashesService = $flashesService;
+    }
+
+    /**
      * @Route("/contact", name="contact_index", methods="GET")
      */
     public function contact_index(ContactRepository $contactRepository, PaginatorInterface $paginator, Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $q = $request->query->get('q');
         $queryBuilder = $contactRepository->getContactWithSearchQueryBuilder($q);
 
@@ -40,6 +62,11 @@ class ContactController extends Controller
      */
     public function contact_new(Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $contact = new Contact();
         $form = $this->createForm(Contact1Type::class, $contact);
         $form->handleRequest($request);
@@ -61,16 +88,26 @@ class ContactController extends Controller
     /**
      * @Route("/contact/{id}", name="contact_show", methods="GET")
      */
-    public function contact_show(Contact $contact): Response
+    public function contact_show(Contact $contact, Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         return $this->render('back-office/contact/show.html.twig', ['contact' => $contact]);
     }
 
     /**
      * @Route("/contact/{id}/edit", name="contact_edit", methods="GET|POST")
      */
-    public function edit(Request $request, Contact $contact): Response
+    public function contact_edit(Request $request, Contact $contact): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $form = $this->createForm(Contact1Type::class, $contact);
         $form->handleRequest($request);
 

@@ -25,10 +25,30 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class EvenementController extends Controller
 {
     /**
+     * @var UserService
+     */
+    private $userService;
+    /**
+     * @var FlashesService
+     */
+    private $flashesService;
+
+    public function __construct(UserService $userService, FlashesService $flashesService)
+    {
+        $this->userService = $userService;
+        $this->flashesService = $flashesService;
+    }
+
+    /**
      * @Route("/index", name="evenementIndex")
      */
-    public function evenementIndex(EventRepository $repository, Request $request, FlashesService $flashesService, UserService $userService, PaginatorInterface $paginator)
+    public function evenementIndex(EventRepository $repository, Request $request, PaginatorInterface $paginator)
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $q = $request->query->get('q');
         $queryBuilder = $repository->getEventWithSearchQueryBuilder($q);
 
@@ -53,32 +73,27 @@ class EvenementController extends Controller
                 ->add('info', 'Bravo, vous venez de vous abonner à notre Newsletter');
         }
 
-        if (!$userService->isAuthorized($request, __FUNCTION__)){
-            $flashesService->setFlashes($userService->getFlash());
-            return $this->redirectToRoute('home');
-        };
-
         return $this->render('views/evenements/index.html.twig', [
             'pagination'    => $pagination,
             'newsForm'      => $newsletterForm->createView(),
-            'flashs'        => $flashesService->getFlashes($request)
+            'flashs'        => $this->flashesService->getFlashes($request)
         ]);
     }
 
     /**
      * @Route("/evenement/{slug}", name="evenement")
      */
-    public function evenement(Request $request, FlashesService $flashesService, EventRepository $eventRepository, UserRepository $userRepository, $slug, UserService $userService)
+    public function evenement(Request $request, EventRepository $eventRepository, $slug)
     {
-        if (!$userService->isAuthorized($request, __FUNCTION__)){
-            $flashesService->setFlashes($userService->getFlash());
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('home');
         };
 
         return $this->render('views/evenements/evenement.html.twig', [
             'event'                 => $eventRepository->findOneBy(['slug'=>$slug]),
             'eventToDiscover'       => $eventRepository->findBy([],['date'=>'desc'],10,0),
-            'flashs'                => $flashesService->getFlashes($request)
+            'flashs'                => $this->flashesService->getFlashes($request)
         ]);
     }
 }

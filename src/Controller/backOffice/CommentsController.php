@@ -5,6 +5,8 @@ namespace App\Controller\backOffice;
 use App\Entity\Comments;
 use App\Form\CommentsType;
 use App\Repository\CommentsRepository;
+use App\Services\FlashesService;
+use App\Services\UserService;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,11 +18,32 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class CommentsController extends Controller
 {
+
+    /**
+     * @var UserService
+     */
+    private $userService;
+    /**
+     * @var FlashesService
+     */
+    private $flashesService;
+
+    public function __construct(UserService $userService, FlashesService $flashesService)
+    {
+        $this->userService = $userService;
+        $this->flashesService = $flashesService;
+    }
+
     /**
      * @Route("/", name="comments_index", methods="GET")
      */
-    public function index(CommentsRepository $commentsRepository, PaginatorInterface $paginator, Request $request): Response
+    public function comments_index(CommentsRepository $commentsRepository, PaginatorInterface $paginator, Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $q = $request->query->get('q');
         $queryBuilder = $commentsRepository->getCommentWithSearchQueryBuilder($q);
 
@@ -38,8 +61,13 @@ class CommentsController extends Controller
     /**
      * @Route("/new", name="comments_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function comments_new(Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $comment = new Comments();
         $form = $this->createForm(CommentsType::class, $comment);
         $form->handleRequest($request);
@@ -61,16 +89,26 @@ class CommentsController extends Controller
     /**
      * @Route("/{id}", name="comments_show", methods="GET")
      */
-    public function show(Comments $comment): Response
+    public function comments_show(Comments $comment, Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         return $this->render('back-office/comments/show.html.twig', ['comment' => $comment]);
     }
 
     /**
      * @Route("/{id}/edit", name="comments_edit", methods="GET|POST")
      */
-    public function edit(Request $request, Comments $comment): Response
+    public function comments_edit(Request $request, Comments $comment): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $form = $this->createForm(CommentsType::class, $comment);
         $form->handleRequest($request);
 
@@ -89,7 +127,7 @@ class CommentsController extends Controller
     /**
      * @Route("/{id}", name="comments_delete", methods="DELETE")
      */
-    public function delete(Request $request, Comments $comment): Response
+    public function comments_delete(Request $request, Comments $comment): Response
     {
         if ($this->isCsrfTokenValid('delete'.$comment->getId(), $request->request->get('_token'))) {
             $em = $this->getDoctrine()->getManager();
@@ -100,35 +138,3 @@ class CommentsController extends Controller
         return $this->redirectToRoute('comments_index');
     }
 }
-
-///**
-// * @Route("/comment", name="comment")
-// * @throws \Doctrine\ORM\ORMException
-// */
-//public function commentForm(Request $request)
-//{
-//    $entity = new Comments();
-//    $entityForm = $this->createForm(CommentType::class, $entity);
-//    $entityForm->handleRequest($request);
-//
-//    if ($entityForm->isSubmitted() && $entityForm->isValid()){
-//        $em = $this->get('doctrine.orm.entity_manager');
-//        $em->persist($entity);
-//        $em->flush();
-//    }
-//
-//    return $this->render('test/index.html.twig', [
-//        'form'  => $entityForm->createView()
-//    ]);
-//}
-//
-///**
-// * @Route("/comments/{article}", name="comments", defaults={"article"=1})
-// */
-//public function commentShow(CommentsService $commentsService, ArticleRepository $articleRepository, $article): Response
-//{
-//    $commentaires = $commentsService->getComments($articleRepository->find($article));
-//    dump($commentaires);
-//
-//    return new Response($this->renderView('test/index.html.twig'));
-//}

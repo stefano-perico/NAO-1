@@ -39,6 +39,11 @@ class ArticleController extends Controller
      */
     public function article_index(ArticleRepository $articleRepository, Request $request, PaginatorInterface $paginator): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $q = $request->query->get('q');
         $queryBuilder = $articleRepository->getArticleWithSearchQueryBuilder($q);
 
@@ -47,11 +52,6 @@ class ArticleController extends Controller
             $request->query->getInt('page', 1)/*page number*/,
             10/*limit per page*/
         );
-
-        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
-            $this->flashesService->setFlashes($this->userService->getFlash());
-            return $this->redirectToRoute('home');
-        };
 
         return $this->render('back-office/article/index.html.twig', [
             'pagination'    => $pagination
@@ -69,10 +69,6 @@ class ArticleController extends Controller
         };
 
         $article = new Article();
-//        $article
-//            ->setContent('Votre contenu ici')
-//            ->setSummary('Votre contenu ici')
-//        ;
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
 
@@ -131,7 +127,7 @@ class ArticleController extends Controller
     /**
      * @Route("/{id}", name="article_delete", methods="DELETE")
      */
-    public function delete(Request $request, Article $article): Response
+    public function article_delete(Request $request, Article $article): Response
     {
         if (!$this->userService->isAuthorized($request, __FUNCTION__)){
             $this->flashesService->setFlashes($this->userService->getFlash());

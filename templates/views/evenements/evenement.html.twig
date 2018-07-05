@@ -26,11 +26,10 @@
                         {% if event.image.image is defined %}
                             <figure>
                                 <img class="card-img-top" src="{{ asset('img/'~event.image.image.name) }}" alt="{{ event.image.image.name }}">
-                                <figcaption>{{ event.image.alt }}</figcaption>
                             </figure>
                         {% endif %}
                         <div class="card-body">
-                            <p class="card-text text-justify">{{ event.content }}</p>
+                            <p class="card-text text-justify">{{ event.content|raw }}</p>
                             <hr>
                             <p><strong>Lieux de lévénement: </strong><span>{{ event.location.villeNomSimple|upper }}, {{ event.location.villeDepartement }}</span></p>
                             <p><strong>Date: </strong><span>{{ event.date|date('d-m-Y') }}</span></p>

@@ -5,6 +5,8 @@ namespace App\Controller\backOffice;
 use App\Entity\Event;
 use App\Form\EventType;
 use App\Repository\EventRepository;
+use App\Services\FlashesService;
+use App\Services\UserService;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,10 +19,30 @@ use Symfony\Component\Routing\Annotation\Route;
 class EventController extends Controller
 {
     /**
+     * @var UserService
+     */
+    private $userService;
+    /**
+     * @var FlashesService
+     */
+    private $flashesService;
+
+    public function __construct(UserService $userService, FlashesService $flashesService)
+    {
+        $this->userService = $userService;
+        $this->flashesService = $flashesService;
+    }
+
+    /**
      * @Route("/", name="event_index", methods="GET")
      */
-    public function index(EventRepository $eventRepository, PaginatorInterface $paginator, Request $request): Response
+    public function event_index(EventRepository $eventRepository, PaginatorInterface $paginator, Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $q = $request->query->get('q');
         $queryBuilder = $eventRepository->getEventWithSearchQueryBuilder($q);
 
@@ -39,8 +61,13 @@ class EventController extends Controller
     /**
      * @Route("/new", name="event_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function event_new(Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $event = new Event();
         $form = $this->createForm(EventType::class, $event);
         $form->handleRequest($request);
@@ -62,16 +89,26 @@ class EventController extends Controller
     /**
      * @Route("/{id}", name="event_show", methods="GET")
      */
-    public function show(Event $event): Response
+    public function event_show(Event $event, Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         return $this->render('back-office/event/show.html.twig', ['event' => $event]);
     }
 
     /**
      * @Route("/{id}/edit", name="event_edit", methods="GET|POST")
      */
-    public function edit(Request $request, Event $event): Response
+    public function event_edit(Request $request, Event $event): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $form = $this->createForm(EventType::class, $event);
         $form->handleRequest($request);
 
@@ -90,8 +127,13 @@ class EventController extends Controller
     /**
      * @Route("/{id}", name="event_delete", methods="DELETE")
      */
-    public function delete(Request $request, Event $event): Response
+    public function event_delete(Request $request, Event $event): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         if ($this->isCsrfTokenValid('delete'.$event->getId(), $request->request->get('_token'))) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($event);

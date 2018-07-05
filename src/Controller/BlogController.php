@@ -24,10 +24,30 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class BlogController extends Controller
 {
     /**
+     * @var UserService
+     */
+    private $userService;
+    /**
+     * @var FlashesService
+     */
+    private $flashesService;
+
+    public function __construct(UserService $userService, FlashesService $flashesService)
+    {
+        $this->userService = $userService;
+        $this->flashesService = $flashesService;
+    }
+
+    /**
      * @Route(name="blogIndex")
      */
-    public function blogIndex(ArticleRepository $repository, Request $request, FlashesService $flashesService, UserService $userService, PaginatorInterface $paginator)
+    public function blogIndex(ArticleRepository $repository, Request $request, PaginatorInterface $paginator)
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $q = $request->query->get('q');
         $queryBuilder = $repository->getArticleWithSearchQueryBuilder($q);
 
@@ -52,16 +72,10 @@ class BlogController extends Controller
                 ->add('info', 'Bravo, vous venez de vous abonner à notre Newsletter');
         }
 
-
-        if (!$userService->isAuthorized($request, __FUNCTION__)){
-            $flashesService->setFlashes($userService->getFlash());
-            return $this->redirectToRoute('home');
-        };
-
         return $this->render('views/blog/index.html.twig', [
-            'pagination' => $pagination,
-            'newsForm'     => $newsletterForm->createView(),
-            'flashs'   => $flashesService->getFlashes($request)
+            'pagination'    => $pagination,
+            'newsForm'      => $newsletterForm->createView(),
+            'flashs'        => $this->flashesService->getFlashes($request)
         ]);
     }
 
@@ -69,10 +83,10 @@ class BlogController extends Controller
     /**
      * @Route("/{slug}", name="blogArticle")
      */
-    public function blogArticle(Request $request, FlashesService $flashesService, ArticleRepository $articleRepository,UserRepository $userRepository, CommentsService $commentsService, $slug, UserService $userService)
+    public function blogArticle(Request $request, ArticleRepository $articleRepository,UserRepository $userRepository, CommentsService $commentsService, $slug)
     {
-        if (!$userService->isAuthorized($request, __FUNCTION__)){
-            $flashesService->setFlashes($userService->getFlash());
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('home');
         };
 
@@ -102,7 +116,7 @@ class BlogController extends Controller
             'articlestodiscover'    => $articleRepository->findAll(),
             'comments'              => $commentsService->getComments($article),
             'comment'               => $form->createView(),
-            'flashs'                => $flashesService->getFlashes($request)
+            'flashs'                => $this->flashesService->getFlashes($request)
         ]);
     }
 }

@@ -5,6 +5,8 @@ namespace App\Controller\backOffice;
 use App\Entity\Image;
 use App\Form\BackOffice\ImageType;
 use App\Repository\ImageRepository;
+use App\Services\FlashesService;
+use App\Services\UserService;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,10 +19,30 @@ use Symfony\Component\Routing\Annotation\Route;
 class ImageController extends Controller
 {
     /**
+     * @var UserService
+     */
+    private $userService;
+    /**
+     * @var FlashesService
+     */
+    private $flashesService;
+
+    public function __construct(UserService $userService, FlashesService $flashesService)
+    {
+        $this->userService = $userService;
+        $this->flashesService = $flashesService;
+    }
+
+    /**
      * @Route("/", name="image_index", methods="GET")
      */
-    public function index(ImageRepository $imageRepository, PaginatorInterface $paginator, Request $request): Response
+    public function image_index(ImageRepository $imageRepository, PaginatorInterface $paginator, Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $q = $request->query->get('q');
         $queryBuilder = $imageRepository->getImageWithSearchQueryBuilder($q);
 
@@ -38,8 +60,13 @@ class ImageController extends Controller
     /**
      * @Route("/new", name="image_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function image_new(Request $request): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $image = new Image();
         $form = $this->createForm(ImageType::class, $image);
         $form->handleRequest($request);
@@ -61,17 +88,26 @@ class ImageController extends Controller
     /**
      * @Route("/{id}", name="image_show", methods="GET")
      */
-    public function show(Image $image): Response
+    public function image_show(Image $image, Request $request): Response
     {
-//        dd($image);
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         return $this->render('back-office/image/show.html.twig', ['image' => $image]);
     }
 
     /**
      * @Route("/{id}/edit", name="image_edit", methods="GET|POST")
      */
-    public function edit(Request $request, Image $image): Response
+    public function image_edit(Request $request, Image $image): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $form = $this->createForm(ImageType::class, $image);
         $form->handleRequest($request);
 
@@ -90,8 +126,13 @@ class ImageController extends Controller
     /**
      * @Route("/{id}", name="image_delete", methods="DELETE")
      */
-    public function delete(Request $request, Image $image): Response
+    public function image_delete(Request $request, Image $image): Response
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         if ($this->isCsrfTokenValid('delete'.$image->getId(), $request->request->get('_token'))) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($image);
