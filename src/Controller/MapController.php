@@ -40,23 +40,25 @@ class MapController extends Controller
     /**
      * @Route("/index", name="observation")
      */
-    public function observation(TaxrefRepository $repository, Request $request, PaginatorInterface $paginator)
+    public function observation(EntityManagerInterface $em, TaxrefRepository $repository, Request $request, PaginatorInterface $paginator)
     {
         if (!$this->userService->isAuthorized($request, __FUNCTION__)){
             $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('home');
         };
 
-        $q = $request->query->get('q');
-        $queryBuilder = $repository->getSpeciesObsWithSearchQueryBuilder($q);
+//        $q = $request->query->get('q');
+//        $queryBuilder = $repository->getSpeciesObsWithSearchQueryBuilder($q);
 
-        $pagination = $paginator->paginate(
-            $queryBuilder, /* query NOT result */
-            $request->query->getInt('page', 1)/*page number*/,
-            10/*limit per page*/
-        );
+//        $pagination = $paginator->paginate(
+//            $queryBuilder, /* query NOT result */
+//            $request->query->getInt('page', 1)/*page number*/,
+//            10/*limit per page*/
+//        );
 
-        return $this->render('views/map/index.html.twig', ['pagination' => $pagination]);
+        return $this->render('views/map/index.html.twig', [
+            'obs' => $em->getRepository('App:Observation')->isValidateOb()
+        ]);
     }
 
     /**

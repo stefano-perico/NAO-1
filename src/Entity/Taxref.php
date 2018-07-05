@@ -33,12 +33,6 @@ class Taxref
      */
     private $nom_fr;
 
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $obsCount;
-
-
     public function getId()
     {
         return $this->id;
@@ -78,25 +72,6 @@ class Taxref
         $this->nom_fr = $nom_fr;
 
         return $this;
-    }
-
-    public function getObsCount(): ?int
-    {
-        return $this->obsCount;
-    }
-
-    public function setObsCount(?int $obsCount): self
-    {
-        $this->obsCount = $obsCount;
-
-        return $this;
-    }
-
-    public function count()
-    {
-        $count = $this->getObsCount();
-        $count += 1;
-        $this->setObsCount($count);
     }
 
 }

@@ -40,4 +40,36 @@ class ObservationRepository extends ServiceEntityRepository
         return $qb;
     }
 
+    /**
+     *
+     */
+    public function isValidateOb()
+    {
+        $qb = $this
+            ->createQueryBuilder('observation')
+            ->where('observation.checked = true')
+            ->getQuery()
+            ->getResult()
+        ;
+
+        $observations = [];
+        foreach ($qb as $item) {
+            $observations[$item->getSpecies()->getId()][] = $item;
+        }
+
+        $formatedObs = [];
+        foreach ($observations as $item){
+            $species = $this->find($item[0]->getId());
+
+            $formatedObs[] = [
+                count($item),
+                $species->getSpecies()->getFamille(),
+                $species->getSpecies()->getLbNom(),
+                $species->getSpecies()->getNomFr(),
+                $species->getSpecies()->getId()];
+        }
+
+        return $formatedObs;
+    }
+
 }
