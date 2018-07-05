@@ -90,4 +90,28 @@ class Autocomplete extends Controller
         return $response;
     }
 
+
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     * @Route("/autocomplete_species_index", name="species_autocomplete_index")
+     */
+    public function autocompleteSpeciesIndexAction(Request $request, TaxrefRepository $repository)
+    {
+        $species = [];
+        $term = trim(strip_tags($request->get('term')));
+
+        $entities = $repository->findSpecies($term);
+
+        foreach ($entities as $entity)
+        {
+            $species[] = $entity->getNomFr();
+        }
+
+        $response = new JsonResponse();
+        $response->setData($species);
+
+        return $response;
+    }
+
 }

@@ -47,14 +47,6 @@ class MapController extends Controller
             return $this->redirectToRoute('home');
         };
 
-//        $q = $request->query->get('q');
-//        $queryBuilder = $repository->getSpeciesObsWithSearchQueryBuilder($q);
-
-//        $pagination = $paginator->paginate(
-//            $queryBuilder, /* query NOT result */
-//            $request->query->getInt('page', 1)/*page number*/,
-//            10/*limit per page*/
-//        );
 
         return $this->render('views/map/index.html.twig', [
             'obs' => $em->getRepository('App:Observation')->isValidateOb()

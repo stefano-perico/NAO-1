@@ -201,16 +201,4 @@ class Observation
         return $this;
     }
 
-    /**
-     * @ORM\PreFlush()
-     */
-    public function setCountSpecies()
-    {
-        if ($this->checked === true)
-        {
-            $species = $this->getSpecies();
-            $species->count();
-        }
-    }
-
 }
