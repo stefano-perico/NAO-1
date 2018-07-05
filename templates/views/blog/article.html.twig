@@ -26,11 +26,10 @@
                         {% if article.image.image is defined %}
                             <figure>
                                 <img class="card-img-top" src="{{ asset('img/'~article.image.image.name) }}" alt="{{ article.image.image.name }}">
-                                <figcaption>{{ article.image.alt }}</figcaption>
                             </figure>
                         {% endif %}
                         <div class="card-body">
-                            <p class="card-text text-justify">{{ article.content|striptags }}</p>
+                            <p class="card-text text-justify">{{ article.content|raw }}</p>
                             <div class="text-right">
                                 <a href="{{ path('blogArticle' ,{slug : article.Slug}) }}">
                                     <div class="col-12 mt-5">

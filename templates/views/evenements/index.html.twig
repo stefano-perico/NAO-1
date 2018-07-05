@@ -38,7 +38,7 @@
                     {% endif %}
                     <div class="card-body">
                         <h2 class="card-title">{{ event.title }} - <span>le {{ event.date|date('d-m-Y') }}</span></h2>
-                        <p class="card-text text-justify">{{ event.summary }}</p>
+                        <p class="card-text text-justify">{{ event.summary|raw }}</p>
                         <div class="text-right">
                             <a href="{{ path('evenement' ,{slug : event.Slug}) }}">
                                 <img src="{{ asset('imgSite/buttons/Symbole 3 – 6.png') }}" alt="" height="50px;">
