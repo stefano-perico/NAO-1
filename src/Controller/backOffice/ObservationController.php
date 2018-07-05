@@ -44,7 +44,7 @@ class ObservationController extends Controller
         };
 
         $q = $request->query->get('q');
-        $queryBuilder = $observationRepository->getSpeciesObsWithSearchQueryBuilder($q);
+        $queryBuilder = $observationRepository->getSpeciesObsWithSearchQueryBuilderIndex($q);
 
         $pagination = $paginator->paginate(
             $queryBuilder, /* query NOT result */
