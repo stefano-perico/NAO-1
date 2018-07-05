@@ -26,10 +26,30 @@ use Symfony\Component\Yaml\Yaml;
 class ObservationController extends Controller
 {
     /**
+     * @var UserService
+     */
+    private $userService;
+    /**
+     * @var FlashesService
+     */
+    private $flashesService;
+
+    public function __construct(UserService $userService, FlashesService $flashesService)
+    {
+        $this->userService = $userService;
+        $this->flashesService = $flashesService;
+    }
+
+    /**
      * @Route(name="observationIndex")
      */
-    public function observationIndex(ObservationRepository $observationRepository, Request $request, UserService $userService, FlashesService $flashesService)
+    public function observationIndex(ObservationRepository $observationRepository, Request $request)
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $newsletter =  new Newsletter();
         $newsletterForm =   $this->createForm(NewsletterType::class, $newsletter);
         $newsletterForm->handleRequest($request);
@@ -46,28 +66,23 @@ class ObservationController extends Controller
             ;
         }
 
-        if (!$userService->isAuthorized($request, __FUNCTION__)){
-            $flashesService->setFlashes($userService->getFlash());
-            return $this->redirectToRoute('home');
-        };
-
         return $this->render('views/observation/observationInfo.html.twig',[
             'observations' => $observationRepository->findBy([],['date'=>'desc']),
             'newsForm'      => $newsletterForm->createView(),
             'elementPage'  => Yaml::parseFile($this->getParameter('kernel.project_dir').'/translations/observation.yaml'),
-            'flashs'       => $flashesService->getFlashes($request)
+            'flashs'       => $this->flashesService->getFlashes($request)
         ]);
     }
 
     /**
      * @Route("/creer", name="observationCreate")
      */
-    public function observationCreate(Request $request, FlashesService $flashesService, UserService $userService, UserRepository $userRepository)
+    public function observationCreate(Request $request, UserRepository $userRepository)
     {
-        if (!$userService->isAuthorized($request, __FUNCTION__)){
-            $flashesService->setFlashes($userService->getFlash());
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('home');
-        }
+        };
 
         $observation = new Observation();
         $observationForm = $this->createForm(ObservationType::class, $observation);
@@ -99,7 +114,7 @@ class ObservationController extends Controller
         return new Response($this->renderView('views/observation/observationCreate.html.twig',[
             'elementPage'       => Yaml::parseFile($this->getParameter('kernel.project_dir').'/translations/observation.yaml'),
             'observationForm'   => $observationForm->createView(),
-            'flashs'            => $flashesService->getFlashes($request)
+            'flashs'            => $this->flashesService->getFlashes($request)
         ]));
     }
 

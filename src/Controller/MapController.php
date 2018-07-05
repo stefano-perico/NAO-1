@@ -23,9 +23,29 @@ use Symfony\Component\Routing\Annotation\Route;
 class MapController extends Controller
 {
     /**
+     * @var UserService
+     */
+    private $userService;
+    /**
+     * @var FlashesService
+     */
+    private $flashesService;
+
+    public function __construct(UserService $userService, FlashesService $flashesService)
+    {
+        $this->userService = $userService;
+        $this->flashesService = $flashesService;
+    }
+
+    /**
      * @Route("/index", name="observation")
      */
-    public function observation(TaxrefRepository $repository, Request $request, PaginatorInterface $paginator){
+    public function observation(TaxrefRepository $repository, Request $request, PaginatorInterface $paginator)
+    {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
 
         $q = $request->query->get('q');
         $queryBuilder = $repository->getSpeciesObsWithSearchQueryBuilder($q);
@@ -44,6 +64,11 @@ class MapController extends Controller
      */
     public function find(EntityManagerInterface $em, UserRepository $userRepository, Request $request, $id)
     {
+        if (!$this->userService->isAuthorized($request, __FUNCTION__)){
+            $this->flashesService->setFlashes($this->userService->getFlash());
+            return $this->redirectToRoute('home');
+        };
+
         $repository = $em->getRepository(Observation::class);
         $obs = $repository->findBy([
             'species' => $id

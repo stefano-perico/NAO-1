@@ -1,23 +1,103 @@
-observationIndex:    [visitor, professional, author, admin]
-observationCreate:   [visitor, professional, author, admin]
+#                                                          #
+#                       FRONT-OFFICE                       #
+#                                                          #
 
-blogIndex:      [visitor, professional, author, admin]
-blogArticle:    [visitor, professional, author, admin]
+#HomeController
+home:                 [visitor, professional, author, admin]
 
-evenementIndex: [visitor, professional, author, admin]
-evenement:      [visitor, professional, author, admin]
+#ObservationController
+observationIndex:     [visitor, professional, author, admin]
+observationCreate:    [professional, author, admin]
 
-connexion:      [visitor, professional, author, admin]
-createAccount:  [visitor, professional, author, admin]
-myAccount:      [visitor, professional, author, admin]
+#MapController
+observation:          [visitor, professional, author, admin]
+find:                 [visitor, professional, author, admin]
 
-#admin#
-article_index:  [author, admin]
-article_new:    [author, admin]
-article_show:   [author, admin]
-article_edit:   [author, admin]
+#EvenementController
+evenementIndex:       [visitor, professional, author, admin]
+evenement:            [visitor, professional, author, admin]
 
-category_index:  [author, admin]
-category_new:    [author, admin]
-category_show:   [author, admin]
-category_edit:   [author, admin]
+#BlogController
+blogIndex:            [visitor, professional, author, admin]
+blogArticle:          [visitor, professional, author, admin]
+
+#AccountController
+connexion:            [visitor, professional, author, admin]
+createAccount:        [visitor, professional, author, admin]
+myAccount:            [visitor, professional, author, admin]
+disconnect:           [visitor, professional, author, admin]
+
+#ContactController
+contact:              [visitor, professional, author, admin]
+
+#----------------------------------------------------------#
+
+#                                                          #
+#                       Back-OFFICE                        #
+#                                                          #
+
+#ArticleController
+article_index:        [professional, author, admin]
+article_new:          [author, admin]
+article_show:         [professional, author, admin]
+article_edit:         [author, admin]
+article_delete:       [admin]
+
+#CategoryController
+category_index:       [author, admin]
+category_new:         [admin]
+category_show:        [author, admin]
+category_edit:        [admin]
+category_delete:      [admin]
+
+#CommentController
+comments_index:       [author, admin]
+comments_new:         [author, admin]
+comments_show:        [author, admin]
+comments_edit:        [author, admin]
+comments_delete:      [author, admin]
+
+#ContactController
+contact_index:        [admin]
+contact_new:          [admin]
+contact_show:         [admin]
+contact_edit:         [admin]
+contact_delete:       [admin]
+
+#EventController
+event_index:          [professional, author, admin]
+event_new:            [author, admin]
+event_show:           [professional, author, admin]
+event_edit:           [author, admin]
+event_delete:         [admin]
+
+#ImageController
+image_index:          [author, admin]
+image_new:            [author, admin]
+image_show:           [author, admin]
+image_edit:           [author, admin]
+image_delete:         [admin]
+
+#NewsletterController
+newsletter_index:     [admin]
+
+#ObservationController
+observation_index:    [professional, admin]
+observation_new:      [professional, admin]
+observation_show:     [professional, admin]
+observation_edit:     [professional, admin]
+observation_delete:   [professional, admin]
+
+#PositionController
+position_index:       [professional, admin]
+position_new:         [professional, admin]
+position_show:        [professional, admin]
+position_edit:        [professional, admin]
+position_delete:      [professional, admin]
+
+#UserController
+user_index:           [admin]
+user_new:             [admin]
+user_show:            [admin]
+user_edit:            [admin]
+user_delete:          [admin]
