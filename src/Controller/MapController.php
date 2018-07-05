@@ -40,16 +40,21 @@ class MapController extends Controller
     /**
      * @Route("/index", name="observation")
      */
-    public function observation(EntityManagerInterface $em, TaxrefRepository $repository, Request $request, PaginatorInterface $paginator)
+    public function observation(EntityManagerInterface $em, Request $request, ObservationRepository $observationRepository)
     {
+        $obs = $em->getRepository('App:Observation')->isValidateOb();
         if (!$this->userService->isAuthorized($request, __FUNCTION__)){
             $this->flashesService->setFlashes($this->userService->getFlash());
             return $this->redirectToRoute('home');
         };
 
+        if($request->query->get('q'))
+        {
+            $obs = $em->getRepository('App:Observation')->test($request->query->get('q'));
+        }
 
         return $this->render('views/map/index.html.twig', [
-            'obs' => $em->getRepository('App:Observation')->isValidateOb()
+            'obs' => $obs
         ]);
     }
 

@@ -53,9 +53,36 @@ class ObservationRepository extends ServiceEntityRepository
                 'nomFr' => $species->getSpecies()->getNomFr(),
                 'id' => $species->getSpecies()->getId()];
         }
+        return $formatedObs;
+    }
+
+    public function test($term)
+    {
+        $qb = $this->createQueryBuilder('o')
+            ->innerJoin('o.species', 's')
+            ->andWhere('s.nom_fr LIKE :term OR s.lb_nom LIKE :term OR s.famille LIKE :term')
+            ->setParameter('term', '%' . $term . '%')
+            ->getQuery()
+            ->getResult();
+
+        $observations = [];
+        foreach ($qb as $item) {
+            $observations[$item->getSpecies()->getId()][] = $item;
+        }
+
+        $formatedObs = [];
+        foreach ($observations as $item){
+            $species = $this->find($item[0]->getId());
+
+            $formatedObs[] = [
+                'count' => count($item),
+                'famille' => $species->getSpecies()->getFamille(),
+                'lbNom' => $species->getSpecies()->getLbNom(),
+                'nomFr' => $species->getSpecies()->getNomFr(),
+                'id' => $species->getSpecies()->getId()];
+        }
 
         return $formatedObs;
-
     }
 
     /**
