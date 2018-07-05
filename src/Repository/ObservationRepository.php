@@ -24,6 +24,26 @@ class ObservationRepository extends ServiceEntityRepository
      * @param null|string $term
      * @return QueryBuilder
      */
+    public function getSpeciesObsWithSearchQueryBuilderIndex(?string $term): QueryBuilder
+    {
+        $qb = $this->createQueryBuilder('o')
+            ->innerJoin('o.species', 's');
+
+        if ($term) {
+            $qb
+                ->andWhere('s.obsCount > :val')
+                ->andWhere('s.nom_fr LIKE :term OR s.lb_nom LIKE :term OR s.famille LIKE :term')
+                ->setParameters(['val' => 0, 'term' => '%' . $term . '%'])
+            ;
+        }
+
+        return $qb;
+    }
+
+    /**
+     * @param null|string $term
+     * @return QueryBuilder
+     */
     public function getSpeciesObsWithSearchQueryBuilder(?string $term): QueryBuilder
     {
         $qb = $this->createQueryBuilder('o')
